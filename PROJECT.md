@@ -22,7 +22,9 @@ Menos del 0,04% de las 234.502 organizaciones de la sociedad civil (OSC) registr
 
 ### Evidencia cuantitativa disponible
 
-La memoria de título Ureta & Ruiz Tagle (2026) —primer output empírico del proyecto— estima que las cooperativas de ahorro y crédito en Chile contribuyen entre **0,04% y 0,08% del PIB nacional**, siendo estadísticamente invisibles dentro del Sistema de Cuentas Nacionales. Esta cifra sirve como caso piloto y punto de partida para la generalización metodológica al resto de la ESS.
+La memoria de título Ureta & Ruiz Tagle (2026) —primer output empírico del proyecto— estima que las cooperativas de ahorro y crédito en Chile contribuyen entre **0,07 % y 0,12 % del PIB nacional** (segmento CMF, 7 cooperativas, 2013–2025), manteniéndose en torno a **0,08–0,09 % en la mayor parte del período**. El segmento no supervisado (DAES, hasta 35 CAC, 2014–2024) aporta adicionalmente entre 0,001 % y 0,011 % del PIB como cota inferior. Ambas cifras son estadísticamente invisibles dentro del Sistema de Cuentas Nacionales, pese a que las CAC representan el 2,41 % del patrimonio consolidado del sistema bancario y cooperativo (CMF, diciembre 2025). Esta estimación sirve como caso piloto y punto de partida para la generalización metodológica al resto de la ESS.
+
+> **Nota de auditoría (julio 2026):** La cifra "0,04 %–0,08 %" que circulaba en versiones previas de este documento era incorrecta; el rango correcto para el segmento CMF es 0,07 %–0,12 %, verificado aritméticamente desde las tablas de la memoria.
 
 ### Hipótesis de investigación
 

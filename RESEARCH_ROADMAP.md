@@ -46,7 +46,7 @@ El equipo y el presupuesto son evaluados bien (4,0–4,5/5). El problema está e
 ### M1 — Artículo científico desde tesis (prioridad ALTA)
 **Objetivo**: Convertir Ureta & Ruiz Tagle (2026) en un paper enviable a revista Q1/Q2.
 
-**Contenido**: Metodología de cuentas satélite para cooperativas de ahorro y crédito en Chile. Resultado principal: contribución al PIB entre 0,04% y 0,08%.
+**Contenido**: Metodología de cuentas satélite para cooperativas de ahorro y crédito en Chile. Resultado principal: contribución al PIB entre **0,07 % y 0,12 %** (segmento CMF) y entre 0,001 % y 0,011 % (segmento DAES, cota inferior por cobertura parcial). Cifras verificadas en auditoría interna (julio 2026); la versión anterior "0,04 %–0,08 %" era incorrecta.
 
 **Revistas objetivo** (en orden de prioridad):
 - *Annals of Public and Cooperative Economics* (Wiley, Q2, ISSN 0003-5092)
@@ -163,7 +163,7 @@ El equipo y el presupuesto son evaluados bien (4,0–4,5/5). El problema está e
 - M6 en borrador → gobernanza del observatorio especificada
 
 **Cambios estratégicos recomendados para ID27**:
-1. Abrir la sección 1.1 con el dato empírico de la tesis (0,04–0,08% PIB) como cuantificación del problema, antes de cualquier argumento cualitativo
+1. Abrir la sección 1.1 con el dato empírico de la tesis (CMF: 0,07–0,12 % PIB; promedio ~0,08–0,09 %) como cuantificación del problema, antes de cualquier argumento cualitativo. Usar la formulación: "Las cooperativas de ahorro y crédito chilenas contribuyen entre 0,07 % y 0,12 % del PIB nacional —estadísticamente invisibles en el SCN— a pesar de representar el 2,41 % del patrimonio del sistema financiero cooperativo y bancario (CMF, 2025)."
 2. Incluir una tabla explícita de comparación con BIPS y plataformas internacionales (salida del M3)
 3. Añadir sección de "Validación de la plataforma" con el protocolo DiD (salida del M4)
 4. Añadir sección de "Modelo de gobernanza" (salida del M6)
@@ -210,6 +210,8 @@ Al decidir qué hacer primero, usar este orden de criterios:
 | Fecha | Cambio | Razón |
 |-------|--------|-------|
 | Julio 2026 | Creación inicial del roadmap | Primer ingreso de documentos al proyecto |
+| Julio 2026 | Corrección de cifra de aporte al PIB: de "0,04–0,08 %" a "0,07–0,12 % (CMF)" | Auditoría interna de la tesis (docs/auditoria/01_consistencia_interna.md) confirmó que el rango correcto del segmento CMF es 0,07–0,12 %. La cifra anterior no correspondía a ningún valor reportado en la memoria. |
+| Julio 2026 | Auditoría completa de Ureta & Ruiz Tagle (2026) completada — Fases 0, 1, 4, 5, 6 | Se identificó un error aritmético verificado (H-01, Cuadro 5.7 fila 2025) y se generó lista de solicitudes a autores para desbloquear Fases 2–3. Ver `docs/auditoria/`. |
 
 ---
 
