@@ -1,0 +1,24 @@
+# Datos locales (nunca versionar)
+data_local/
+*.Rdata
+*.rds
+
+# Entornos
+.Rproj.user/
+renv/library/
+.venv/
+__pycache__/
+*.pyc
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Quarto
+/_site/
+/.quarto/
+*_files/
+
+# Credenciales
+.env
+*.pem
