@@ -1,0 +1,60 @@
+\chapter{CONCLUSIONES Y RECOMENDACIONES}
+\label{ch:conclusion}
+
+\section{Síntesis del trabajo}
+
+Esta memoria abordó el problema de la ausencia de información sistemática sobre la contribución económica de las cooperativas de ahorro y crédito (CAC) al producto interno bruto chileno, en un contexto de vacíos documentados respecto de la medición de la economía social y solidaria a nivel nacional. Para enfrentar este problema se construyó un marco metodológico que articuló tres referencias internacionales convergentes —el Sistema de Cuentas Nacionales 2025, el Manual de la ONU sobre la Cuenta Satélite de las Instituciones Sin Fines de Lucro y la Economía Social (Naciones Unidas, 2018) y el Manual CIRIEC (Barea Tejeiro \& Monzón Campos, 2007)—, los cuales coincidieron en un núcleo común de variables: producción (P1), consumo intermedio (P2), valor agregado bruto (B1g), remuneraciones (D1) y excedente de explotación (B2g).
+
+A partir de este marco se integraron tres fuentes administrativas chilenas —el registro de la División de Asociatividad y Cooperativas (DAES), el archivo maestro de personas jurídicas del Servicio de Impuestos Internos y los estados financieros publicados por la Comisión para el Mercado Financiero (CMF)— en un panel unificado de 42 CAC, separado en dos segmentos: 7 cooperativas supervisadas por la CMF y hasta 35 cooperativas del segmento DAES con cobertura anual variable. Dado que el consumo intermedio no es observable directamente debido a la exención tributaria del artículo 78 del DFL N\textsuperscript{o} 5/2003, se estimó mediante un coeficiente técnico uniforme $\alpha = 0{,}3776$, derivado de la Matriz Insumo-Producto 2018 de Chile (sector 94), aplicado de manera homogénea a ambos segmentos para garantizar su comparabilidad.
+
+La aplicación de este modelo permitió calcular, para cada CAC y año disponible, las variables P1, P2, B1g, D1 y B2g, así como su agregación sectorial y su aporte al PIB nacional a precios de referencia del Banco Central de Chile. Los resultados evidenciaron una trayectoria creciente del valor agregado bruto del segmento DAES entre 2014 y 2024, una discontinuidad de cobertura asociada a la migración de las grandes cooperativas hacia supervisión CMF entre 2017 y 2019, y una marcada concentración de los activos y colocaciones del agregado total en el segmento CMF. Finalmente, estos resultados se implementaron en un dashboard interactivo —la plataforma conceptual Huella Social— que permite explorar las series por entidad, segmento y año, constituyendo un primer prototipo operacional para una futura cuenta satélite de la economía social.
+
+\section{Conclusiones}
+
+El desarrollo de esta memoria permite extraer las siguientes conclusiones respecto del diagnóstico general del trabajo.
+
+En primer lugar, se concluye que es metodológicamente viable construir una primera aproximación al aporte de las cooperativas de ahorro y crédito al PIB chileno utilizando exclusivamente información administrativa ya disponible, sin necesidad de levantamientos primarios de datos. La aplicación de un coeficiente técnico uniforme $\alpha$ para estimar P2 a partir de P1 demostró ser una solución operativa frente a la ausencia de declaraciones tributarias desagregadas, permitiendo calcular B1g y B2g de manera consistente para los 42 CAC del universo de análisis. No obstante, esta estimación tiene carácter de orden de magnitud y no de medición exacta, condición que debe explicitarse en cualquier uso posterior de las cifras.
+
+En segundo lugar, se confirma que las brechas de información identificadas en el diagnóstico metodológico —particularmente la imposibilidad de desagregar D2 y D3, la cobertura parcial e irregular del panel DAES, y la imposibilidad de calcular B1n de forma uniforme entre segmentos— constituyen las principales limitaciones estructurales para avanzar hacia una cuenta satélite robusta. Estas limitaciones no son atribuibles a errores de procesamiento, sino que reflejan la fragmentación y dispersión de la información sobre el sector cooperativo chileno, consistente con lo documentado previamente en la literatura (Radrigán Rubio et al., 2024; Muñoz et al., 2021).
+
+En tercer lugar, se concluye que la discontinuidad observada en las series del segmento DAES —en particular la caída en el número de cooperativas reportantes entre 2018 y 2019— corresponde a un fenómeno institucional real, asociado a la migración de las cooperativas de mayor tamaño hacia la supervisión de la CMF, y no a un problema de calidad de los datos. El tratamiento adoptado para la Cooperativa del Personal de la Universidad de Chile (identificada como Coopeuch previo a su transferencia a la CMF) permitió preservar la continuidad histórica de la serie sin incurrir en doble conteo, validando la importancia de la verificación documental de la identidad de las entidades antes de su inclusión en los paneles.
+
+En cuarto lugar, la comparación entre los segmentos CMF y DAES reveló una asimetría estructural relevante: el segmento CMF concentra la enorme mayoría de los activos, colocaciones y depósitos del sector, mientras que el segmento DAES, pese a su contribución marginal en términos de stocks agregados, representa un componente significativo en términos de cobertura territorial y de acceso financiero para poblaciones no atendidas por las grandes cooperativas. Esta asimetría debe considerarse al interpretar cualquier agregado conjunto, dado que la incomparabilidad temporal y de cobertura entre ambos segmentos impide, en el estado actual de la información, sumarlos para obtener una cifra única de aporte sectorial al PIB sin advertencias metodológicas explícitas.
+
+Finalmente, se concluye que el diseño e implementación de la plataforma Huella Social demostró ser un mecanismo efectivo para traducir los resultados de la cuenta satélite en un formato accesible para actores no técnicos, como el Instituto Nacional de Asociatividad y Cooperativismo (INAC) y los responsables de política pública vinculados al proyecto FONDEF. La organización del dashboard en pestañas temáticas y su capacidad de desagregación por entidad y año cumplen el objetivo de diseño conceptual planteado, sentando una base operacional concreta sobre la cual continuar el desarrollo de la plataforma.
+
+En conjunto, el diagnóstico general indica que esta memoria logró cubrir los objetivos planteados —estimar el aporte sectorial al PIB con la información disponible y diseñar una plataforma conceptual de visualización—, dejando al mismo tiempo claramente delimitada la agenda de mejoras necesarias para transitar desde una primera aproximación de orden de magnitud hacia una cuenta satélite formal y recurrente.
+
+Adicionalmente, el proyecto Huella Social fue postulado al concurso FONDEF IDeA I+D 2026 de ANID (Anexo \ref{anx:fondef}), no siendo seleccionado para financiamiento (folio ID26I10768, nota final 2,73/5). Los comentarios del panel evaluador constituyen una guía estratégica para el proyecto, y esta memoria representa una primera respuesta concreta a ellos. El panel destacó cuatro debilidades principales:
+
+\begin{itemize}
+    \item falta de cuantificación del problema por tipo de organización;
+    \item poca diferenciación frente a soluciones existentes, como el
+    Banco Integrado de Programas Sociales (BIPS) del Estado;
+    \item ausencia de indicadores de éxito por etapa de desarrollo;
+    \item falta de un proceso formal de validación cruzada de los datos.
+\end{itemize}
+
+De estas cuatro, la presente memoria aborda dos. La primera, de forma acotada pero directa: donde el formulario caracterizaba el problema en términos agregados y descriptivos, este trabajo entrega la cuantificación para un tipo específico de organización las cooperativas de ahorro y crédito, delimitando su universo, su valor agregado bruto y su aporte al PIB durante el período de estudio. La cuarta, mediante la validación cruzada de la Sección \ref{subsec:validacion-cmf}, que contrasta los resultados con evidencia externa de la CMF y el Banco Central. Las dos restantes, diferenciación frente a soluciones existentes e indicadores de éxito por etapa de desarrollo, exceden el alcance de este trabajo y se retoman como líneas prioritarias en las recomendaciones a continuación. En conjunto, la memoria constituye una evolución verificable respecto del formulario original: transforma parte de sus declaraciones en resultados medidos y procedimientos replicables, y delimita las brechas que las futuras memorias del proyecto deberán cubrir.
+
+\section{Recomendaciones para trabajos futuros}
+
+A partir de las limitaciones identificadas, se proponen las siguientes líneas de trabajo:
+
+\begin{itemize}
+    \item \textbf{Estimación directa de P2 para las cooperativas mayores.} Reemplazar el proxy $\alpha \times P1$ por una estimación directa a partir de los EEFF auditados de Coopeuch, Oriencoop y Coonfía, cuyos ratios P2/P1 (0,23--0,28) son plausibles, a diferencia de CAPUAL y AHORROCOOP (\textasciitilde0,72), que ameritan revisión.
+
+    \item \textbf{Análisis de sensibilidad del coeficiente $\alpha$.} Evaluar variaciones de entre un 10\% y un 20\% sobre $\alpha$ y comunicar el rango de incertidumbre resultante en el VAB agregado y el aporte al PIB.
+
+    \item \textbf{Estimación de servicios voluntarios (VOV).} Diseñar una encuesta directa a las CAC para cuantificar horas de voluntariado y aplicar un salario sombra, conforme al Manual ONU-TSE (Naciones Unidas, 2018).
+
+    \item \textbf{Factores de expansión para el segmento DAES.} Sustituir la regla de exclusión por cobertura parcial mediante factores de expansión que ajusten los agregados según la cobertura efectiva del panel cada año.
+
+    \item \textbf{Tratamiento de F2 y F4.} Definir si los depósitos y colocaciones netas se integran formalmente a la cuenta financiera o se mantienen como información contextual, y documentar el criterio de forma consistente.
+
+    \item \textbf{Plataforma operativa.} Migrar el dashboard de HTML estático a una solución interactiva (p. ej. Streamlit) con actualización periódica desde CMF y DAES, transformándolo en herramienta de monitoreo continuo para INAC.
+
+    \item \textbf{Serie histórica CMF.} Construir una serie anualizada para las 7 cooperativas supervisadas, equivalente a la ya disponible para DAES, que permita comparaciones temporales consistentes entre segmentos.
+\end{itemize}
+
+A modo de cierre, la principal contribución de esta memoria es haber realizado el primer ejercicio sistemático de integración de las bases CMF y DAES bajo un marco metodológico común, alineado con SCN 2025, ONU-TSE 2018 y CIRIEC. Más allá de la cifra obtenida, su aporte central es haber sentado las bases conceptuales, metodológicas y técnicas —materializadas en la plataforma Huella Social— sobre las cuales el proyecto FONDEF y el INAC podrán construir una cuenta satélite de la economía social formal y recurrente para Chile.

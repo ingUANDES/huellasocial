@@ -1,10 +1,679 @@
-% anexo_a.tex
 
 \chapter{Anexos}
-\label{}
+\label{anx}
+ 
+% ============================================================
+% ANEXO A: CONTEXTO INSTITUCIONAL
+% ============================================================
+ 
+\section{Contexto institucional: proyecto Huella Social y postulación FONDEF}
+\label{anx:fondef}
+ 
+Esta sección sintetiza los antecedentes del proyecto Huella Social relevantes para contextualizar
+las decisiones metodológicas de esta memoria. Para el detalle completo de la propuesta de
+postulación, véase el formulario ID26 adjunto como documento de referencia.
+ 
+\subsection{Trayectoria previa del proyecto}
+\label{anx:A.1.1}
+ 
+El proyecto Huella Social se sustenta en una trayectoria de investigación aplicada y desarrollo
+tecnológico orientada a mejorar la transparencia y la eficiencia de las organizaciones de la
+economía social. Los avances previos entregan evidencia de factibilidad técnica, validación
+metodológica y articulación institucional, lo que constituye una base sólida para la presente
+propuesta FONDEF.
+ 
+Entre los antecedentes más relevantes destacan los siguientes hitos:
+ 
+\begin{itemize}
+    \item \textbf{Mapa de Organizaciones de la Sociedad Civil (OSC):}
+    Proyecto impulsado por el Ministerio de Desarrollo Social y Familia con apoyo del Banco
+    Interamericano de Desarrollo (BID). Permitió caracterizar a miles de OSC en Chile y
+    evidenciar brechas críticas de información —registros desactualizados, duplicidad de fuentes
+    y ausencia de indicadores comparables de gestión y desempeño— que motivaron la necesidad
+    de avanzar hacia un sistema de información integrado.
+ 
+    \item \textbf{Manuales metodológicos de Naciones Unidas:}
+    Los documentos de referencia para la elaboración de estadísticas y cuentas satélite de
+    cooperativas y organizaciones sin fines de lucro aportaron los lineamientos conceptuales
+    incorporados al diseño de Huella Social, desarrollados en detalle en la Sección 3.3 de esta memoria.
+    
+ 
+    \item \textbf{Prototipo funcional en Shiny R:}
+    A través de proyectos de investigación aplicada se desarrolló un primer prototipo funcional,
+    capaz de integrar bases de datos administrativas heterogéneas. Este demostrador, actualmente
+    disponible en \url{https://sxclabs.shinyapps.io/cos-sxc/}, validó la viabilidad técnica del
+    sistema y sentó las bases para la migración hacia una arquitectura en \textit{React}, más
+    escalable y eficiente.
+ 
+    \item \textbf{Estudios académicos sobre economía social y gobernanza:}
+    Investigaciones recientes han identificado las principales debilidades de la institucionalidad
+    chilena, subrayando la fragmentación de los registros y la necesidad de un marco de
+    información común para mejorar la rendición de cuentas y la formulación de políticas
+    públicas \shortcite{radrigan_rubio_organizaciones_2024,munoz_exploring_2021}, véase la Sección \ref{sec:brechas}.
+
+    
+\end{itemize}
+ 
+\subsection{Resultados tecnológicos y plan del proyecto FONDEF}
+\label{anx:resultados tecnologicos}
+El objetivo general del proyecto FONDEF es generar un estándar de datos e información con
+múltiples fuentes, basado en metodología de cuentas satélite, aplicado a proyectos y organizaciones
+de la economía social, con el fin de mejorar la gestión operacional y transparentar el financiamiento
+del sector mediante un sistema integrado de visualización de indicadores.
+ 
+Los tres objetivos específicos son: (1) actualizar y definir el diagnóstico de las variables de
+desempeño de las organizaciones, identificando necesidades de información y vacíos actuales;
+(2) diseñar e implementar un sistema de gestión de datos sostenible que integre fuentes públicas
+y privadas; y (3) desarrollar un piloto funcional con reportes dinámicos y dashboards interactivos
+orientados a distintos tipos de usuario.
+ 
+El resultado tecnológico central es la implementación de una plataforma web con sistema API
+integrado que avanza de TRL~3 a TRL~5 en 24 meses, integrando al menos 15 fuentes de datos
+públicos. Los hitos asociados son: la finalización del diagnóstico de necesidades e indicadores,
+la implementación completa del sistema ETL con integración de múltiples fuentes, y la entrega del
+piloto funcional con dashboards en producción migrados a React.
+ 
+El proyecto contempla además la protección de propiedad intelectual mediante derecho de autor
+sobre la aplicación web y la metodología, el registro de la marca \textbf{Huella Social}, la
+publicación de un artículo académico sobre la metodología costo-efectiva (DEA y SFA), y la
+generación de mecanismos de transferencia tecnológica orientados al licenciamiento con las OTT
+de la Universidad de los Andes y la Universidad de Concepción.
+ 
+El proyecto se ejecuta bajo la colaboración entre la Universidad de los Andes
+(beneficiaria principal) y la Universidad de Chile (beneficiaria secundaria).
+Participan como entidades asociadas la Confederación Nacional de Cooperativas
+de Ahorro y Crédito (CONFECOOP), la Asociación Nacional de Cooperativas de
+Chile y la Fundación Rodelillo, y como instituciones colaboradoras el
+Instituto Nacional de Asociatividad y Cooperativismo (INAC), el Centro de
+Políticas Públicas UC y el Centro de Investigación en Economía Social y
+Cooperativismo (CIESCOOP).
+
+La relación entre este plan y la presente memoria puede resumirse por objetivo. El primer objetivo específico del proyecto FONDEF, que consiste en actualizar el diagnóstico de las variables de desempeño e identificar necesidades de información y vacíos actuales, se ejecuta para el caso piloto CAC en la Sección 4.2, donde se inventarían las fuentes disponibles, se sistematizan los requerimientos de los marcos internacionales (el detalle está en el Anexo A.6) y se diagnostican las brechas resultantes. El segundo objetivo, diseñar un sistema de gestión de datos que integre fuentes públicas y privadas, se materializa a escala metodológica en las Secciones 4.3.1 y 4.3.2 mediante la integración de las fuentes CMF, DAES y SII y la operacionalización de las variables del SCN. El tercero, desarrollar un piloto funcional con reportes dinámicos y dashboards interactivos, se concreta en el panel descrito en las Secciones 4.4 y 5.4. Adicionalmente, la Sección 5.3.3 implementa la validación cruzada cuya ausencia observó el panel evaluador del concurso, y la Sección 6.2 sistematiza esas observaciones como guía para la continuidad del proyecto. De este modo, el formulario y la memoria no constituyen documentos paralelos: el primero define la hoja de ruta y la segunda es su primera ejecución verificable.
+ 
+% ============================================================
+% ANEXO 2: PROPUESTA DE HITOS 2025-20
+% ============================================================
+ 
+\section{Propuesta de hitos semestre 2025-20}
+\label{anx:hitos2025}
+ 
+A continuación se presenta la propuesta de hitos correspondientes al primer semestre del proyecto
+de memoria, desarrollado en conjunto con el Instituto Nacional de Asociatividad y Cooperativismo
+(INAC). Durante este período el foco estuvo en la planificación, el diseño metodológico y la
+preparación de la postulación al fondo FONDEF, con el propósito de dejar todo listo para la fase
+de ejecución en el segundo semestre.
+ 
+\subsection{Hito 1: Elaboración y entrega de la propuesta FONDEF sobre plataforma de cuentas
+satélite para medir el aporte de la Economía Social y Solidaria}
+ 
+\textbf{Plazo:} 3 de octubre de 2025
+ 
+\textbf{Objetivo:}\\
+Definir y diseñar un \textit{sistema de integración de datos} que permita la construcción de una
+plataforma de Cuentas Satélite para la Economía Social y Solidaria (ESS), asegurando su coherencia
+con los requisitos establecidos por el concurso FONDEF. Como caso piloto, se aplicará inicialmente
+a cooperativas de ahorro y crédito, con posibilidad de escalamiento al conjunto de la ESS.
+ 
+\textbf{Entregables:}
+\begin{itemize}
+    \item Documento de postulación FONDEF, que incluya: identificación del proyecto (título,
+    palabras clave, tipo, línea, TRL, disciplina y área estratégica), resumen y objetivos (general
+    y específicos), resultados esperados (tecnológicos, de colaboración y otros), plan de trabajo
+    y carta Gantt, además de los formularios y declaraciones exigidos por las bases (ID26,
+    duplicidad, investigadores, director y asociados).
+    \item Justificación institucional: respaldo del INAC y marco legal (glosas de presupuesto y
+    reglamento).
+    \item Identificación de socios estratégicos: UANDES, FEN, INAC y Confederaciones.
+\end{itemize}
+ 
+\subsection{Hito 2: Avance de Memoria de Título (Planificación académica y metodológica)}
+ 
+\textbf{Plazo:} 31 de octubre de 2025
+ 
+\textbf{Objetivo:}\\
+Avanzar en la planificación académica y metodológica de la memoria mediante el análisis de bases
+de datos existentes y el diseño de un prototipo inicial de sistema de integración de datos,
+preparando la fase de ejecución para el segundo semestre.
+ 
+\textbf{Entregables:}
+\begin{itemize}
+    \item Análisis exploratorio de bases de datos relevantes (INE, DAES, SII, Banco Central,
+    entre otros), identificando brechas y oportunidades de integración.
+    \item Revisión bibliográfica complementaria sobre experiencias de integración de datos y
+    plataformas similares.
+    \item Propuesta de prototipo inicial de sistema de integración de datos, alineado con los
+    requisitos del FONDEF y con la plataforma existente como referencia.
+\end{itemize}
+ 
+% ============================================================
+% ANEXO 3: PROPUESTA DE HITOS 2026-10
+% ============================================================
+ 
+\section{Propuesta de hitos semestre 2026-10}
+\label{anx:hitos}
+ 
+A continuación se presenta la propuesta de hitos correspondientes al segundo semestre del
+proyecto de memoria, desarrollado en conjunto con el Instituto Nacional de Asociatividad y
+Cooperativismo (INAC). Durante este período el foco estará en la consolidación del marco teórico,
+el análisis metodológico y la implementación de resultados, con el propósito de avanzar hacia la
+versión final de la memoria de título.
+ 
+\subsection{Hito 1: Marco Teórico y Revisión de Literatura}
+ 
+\textbf{Plazo:} 26 de abril de 2026
+ 
+\textbf{Objetivo:}\\
+Consolidar el marco teórico y la revisión de literatura de la memoria, identificando los indicadores
+y bases de datos relevantes para la construcción de la plataforma de Cuentas Satélite para la
+Economía Social y Solidaria (ESS).
+ 
+\textbf{Entregables:}
+\begin{itemize}
+    \item Redacción de la propuesta de hitos para el semestre 2026-10.
+    \item Informe estructurado según la plantilla de memoria otorgada por la Universidad.
+    \item Construcción y actualización del archivo \texttt{.bib} con referencias académicas
+    relevantes para el marco teórico y la revisión de literatura.
+    \item Redacción de los bloques temáticos del marco teórico, incluyendo fundamentos
+    conceptuales y experiencias comparadas.
+    \item Desarrollo de una subsección orientada a la identificación y caracterización de
+    indicadores y fuentes de datos disponibles (INE, DAES, SII, Banco Central, entre otros),
+    vinculándolos con los requerimientos de información para la medición de la ESS.
+    \item Revisión iterativa del documento, incorporando mejoras de redacción, coherencia y
+    estilo, incluyendo retroalimentación del Centro de Escritura.
+\end{itemize}
+ 
+\subsection{Hito 2: Metodología, Análisis y Conclusión}
+ 
+\textbf{Plazo:} 7 de junio de 2026
+ 
+\textbf{Objetivo:}\\
+Desarrollar y consolidar la metodología de cálculo del Valor Agregado Bruto (VAB) para la ESS,
+implementar el análisis de resultados y redactar las conclusiones y recomendaciones de la memoria,
+culminando con la entrega del informe final.
+ 
+\textbf{Entregables:}
+\begin{itemize}
+    \item Comparación de metodologías disponibles y evaluación de su factibilidad para el
+    contexto de la ESS.
+    \item Esquema de cálculo del Valor Agregado Bruto (VAB) diseñado y documentado.
+    \item Identificación y documentación de las limitaciones de la metodología seleccionada.
+    \item Redacción de la recomendación metodológica final con justificación técnica.
+    \item Implementación del análisis de resultados y consolidación del informe del Hito 2.
+    \item Informe final de memoria consolidado, listo para entrega y evaluación.
+\end{itemize}
+ 
+% ============================================================
+% ANEXO 4: ANÁLISIS EXPLORATORIO DE BASES DE DATOS
+% ============================================================
+ 
+\newpage
+\section{Análisis exploratorio de las bases de datos}
+\label{anx:bases}
+ 
+El análisis exploratorio tuvo como propósito caracterizar la estructura, completitud y contenido
+de cada base de datos disponible para el proyecto, con el fin de evaluar su potencial de integración
+y sus limitaciones. Las bases provienen de organismos distintos (MDS, Ley 19.862, Registro Civil,
+SII e INE), lo que introduce heterogeneidad en formatos y calidad. Por ello, el análisis se desarrolla
+base por base, manteniendo una estructura narrativa y uniforme.
+ 
+\subsection{Revisión detallada de las bases}
+ 
+\subsubsection*{1. \texttt{19862\_organizaciones\_info\_jsonl.zip}}
+Esta base contiene información institucional de entidades que reciben transferencias bajo la Ley
+N°19.862. Incluye 272\,145 registros y 14 variables vinculadas a tipo de organización, área
+temática, patrimonio, capital social, composición del directorio y fecha de inscripción. Aunque
+variables clave como \textit{rut} y \textit{nombre} presentan buena completitud, existen brechas
+importantes: \textit{clasificacion\_presupuestaria} está prácticamente vacía (99,9\% de faltantes)
+y otras variables administrativas —\textit{numero\_pj}, \textit{otorgada\_por},
+\textit{fecha\_inscripcion}— presentan entre 50\% y 54\% de ausencia. Esto indica que la base es
+útil para identificar organizaciones, pero limitada para análisis institucional más profundos.
+ 
+\subsubsection*{2. \texttt{all\_donaciones.parquet}}
+Esta base reúne 6,48 millones de donaciones declaradas ante el MDS, con información sobre
+donante, donatario, montos y proyectos. Su estructura es relativamente completa, pero se
+identifican dos problemas significativos: la variable \textit{region} está ausente en 57,7\% de los
+registros y \textit{rut\_donante} falta en un 32,2\%. Estas ausencias afectan directamente el
+análisis territorial y la trazabilidad de los actores donantes.
+ 
+\subsubsection*{3. \texttt{all\_registros19862.parquet}}
+Contiene 3,57 millones de registros de transferencias públicas realizadas bajo la Ley N°19.862.
+Es una base estructurada y con alta completitud: sólo un 2,32\% de los registros carece de
+\textit{objetivo\_aporte} y un 0,57\% carece de \textit{marco\_legal}. Esto la convierte en una
+de las fuentes más sólidas para reconstruir flujos de financiamiento estatal hacia organizaciones.
+ 
+\subsubsection*{4. \texttt{rcivil\_ong\_jsonl.zip}}
+Reúne 377\,688 organizaciones no comerciales inscritas en el Registro Civil. Contiene información
+legal, territorial, de vigencia y clasificación. Sin embargo, presenta brechas importantes:
+\textit{codigoEjecucion} y \textit{descripcionEjecucion} tienen un 55,3\% de faltantes, y
+\textit{fechaPublicacion} un 33,6\%. Esto evidencia problemas de registro histórico y
+heterogeneidad en los documentos que alimentan la base.
+ 
+\subsubsection*{5. \texttt{sii\_company\_timeseries.parquet}}
+Incluye series de ventas, capital y empleo para RUT de empresas (767\,968 observaciones). Es
+fundamental para caracterizar la capacidad económica de organizaciones receptoras de donaciones.
+Su principal problema es la ausencia de \textit{capital\_bracket} en un 28,8\% de los casos,
+limitando los análisis de tamaño económico.
+ 
+
+ 
+\subsubsection*{6. \texttt{grupos\_registros.csv}}
+Agrupación semántica de proyectos de la Ley N°19.862, con 1,34 millones de registros. La base
+está prácticamente completa y sólo un 0,6\% carece de \textit{nombre\_proyecto\_normalizado},
+lo que no afecta significativamente su uso para análisis de clasificación.
+ 
+\subsubsection*{7. \texttt{registros19862\_agrupados\_rut\_ano\_proyecto.csv}}
+Base agregada de transferencias por RUT, proyecto y año (1,66 millones de registros). Presenta
+muy baja proporción de faltantes: 2 casos sin \textit{nombre\_donatario} y 0,7\% sin
+\textit{objetivo\_aporte\_normalizado}. Es una de las bases derivadas más limpias.
+ 
+\subsubsection*{8. \texttt{PUB\_NOM\_ACTECOS.txt}}
+Base del SII con actividades económicas para 3,57 millones de contribuyentes. Sus principales
+variables administrativas presentan entre 30\% y 57\% de faltantes, especialmente
+\textit{categoria\_tributaria}, \textit{fecha\_afecta\_iva} y \textit{otros}. Esto sugiere
+diferencias en criterios de registro entre tipos de contribuyentes y periodos.
+ 
+\subsubsection*{9. \texttt{PUB\_NOMBRES\_PJ.txt}}
+Incluye razón social y vigencia legal para 3,13 millones de personas jurídicas. Presenta una gran
+proporción de valores faltantes en las fechas de vigencia: 49\% en \textit{FECHA\_INICIO\_VIG}
+y 70\% en \textit{FECHA\_TG\_VIG}. Esto limita estudios longitudinales sobre creación y término
+de organizaciones.
+ 
+
+ 
+\subsection{Integración y potencial analítico de las bases}
+ 
+La revisión muestra que las bases disponibles son altamente complementarias: las transaccionales
+(donaciones MDS y transferencias Ley 19.862) permiten reconstruir flujos de financiamiento;
+las registrales (SII y Registro Civil) entregan información institucional y económica; y las bases
+derivadas facilitan la normalización de proyectos y la agregación por RUT.
+ 
+\paragraph{Cruces clave}
+La presencia del RUT en casi todas las bases habilita cruces directos fundamentales para el
+proyecto Huella Social:
+\begin{itemize}
+    \item \textbf{Financiamiento total por organización:} integrar donaciones privadas (MDS)
+    con transferencias públicas (Ley 19.862).
+    \item \textbf{Perfiles institucionales:} vincular financiamiento con tipo jurídico, actividad
+    económica, tamaño y vigencia (SII + Registro Civil).
+    \item \textbf{Análisis de proyectos:} utilizar las bases de proyectos normalizados para
+    comparar temáticas financiadas por sector público y privado.
+    \item \textbf{Contexto territorial:} cruzar montos por región con indicadores económicos
+    del INE.
+\end{itemize}
+ 
+\paragraph{Indicadores posibles}
+Estos cruces permiten construir indicadores directamente útiles para caracterizar a las
+organizaciones:
+\begin{itemize}
+    \item concentración y persistencia del financiamiento;
+    \item dependencia relativa de fondos públicos vs.\ privados;
+    \item distribución territorial del financiamiento ajustada por actividad económica regional;
+    \item tamaño económico de las organizaciones receptoras (ventas, empleo, capital).
+\end{itemize}
+ 
+\paragraph{Principales limitaciones}
+Tres problemas afectan la integración y deben ser considerados:
+\begin{itemize}
+    \item alta ausencia de información administrativa en SII y Registro Civil (fechas y
+    clasificaciones);
+    \item falta de región en donaciones MDS ($\approx$58\%), lo que limita análisis territoriales
+    sin imputación;
+    \item desalineación textual en nombres de proyectos, mitigada parcialmente por las bases
+    agrupadas.
+\end{itemize}
+ 
+\paragraph{Síntesis}
+En conjunto, las bases ofrecen una estructura sólida para construir un sistema integrado que
+caracterice organizaciones, cuantifique su financiamiento y analice su inserción económica y
+territorial. Su complementariedad permite avanzar hacia indicadores robustos para el proyecto,
+siempre que se apliquen procesos de limpieza y estandarización en los campos con mayor presencia
+de valores faltantes.
+ 
+% ============================================================
+% ANEXO 5: PLAN DE TRABAJO 2026-10
+% ============================================================
+ 
+\newpage
+\section{Plan de trabajo semestre 2026-10}
+\label{anx:plantrabajo}
+ 
+El objetivo es avanzar desde las bases de datos ya disponibles hacia el diseño metodológico y
+conceptual de la plataforma \textit{Huella Social}. Para ello, se definieron cinco etapas
+principales.
+ 
+\subsection{Objetivo general}
+ 
+Desarrollar y documentar la propuesta metodológica y conceptual de la plataforma
+\textit{Huella Social}, integrando las bases de datos disponibles y generando indicadores para
+caracterizar a cooperativas y otras Organizaciones de la Sociedad Civil (OSC), como insumo para
+una futura Cuenta Satélite de la Economía Social.
+ 
+\subsection{Objetivos específicos}
+ 
+\begin{enumerate}
+    \item Depurar, ordenar y documentar las bases de datos existentes, asegurando trazabilidad
+    y consistencia.
+    \item Construir indicadores exploratorios que permitan caracterizar a cooperativas y OSC.
+    \item Diseñar el modelo metodológico de integración de datos para la plataforma
+    \textit{Huella Social}.
+    \item Proponer una estructura de visualización de indicadores y un dashboard conceptual.
+    \item Redactar los capítulos metodológicos y los resultados preliminares de la memoria.
+\end{enumerate}
+ 
+\subsection{Metodología preliminar}
+ 
+El trabajo considera un enfoque mixto que combina análisis de datos, diseño metodológico y
+desarrollo conceptual. Las etapas son las siguientes:
+ 
+\begin{itemize}
+    \item \textbf{Etapa 1: Organización y depuración de datos (marzo).}
+    Limpieza inicial, revisión de duplicados, estandarización de variables y documentación de
+    las fuentes.
+ 
+    \item \textbf{Etapa 2: Análisis exploratorio (marzo -- abril).}
+    Construcción de indicadores descriptivos, análisis comparativos y evaluación de calidad de
+    datos.
+ 
+    \item \textbf{Etapa 3: Diseño del modelo metodológico (abril -- mayo).}
+    Desarrollo de la arquitectura conceptual, reglas de integración y selección final de
+    indicadores clave.
+ 
+    \item \textbf{Etapa 4: Prototipo conceptual (mayo -- junio).}
+    Diseño de mockups de la plataforma, estructura del dashboard y ejemplos de visualización
+    con datos reales.
+ 
+    \item \textbf{Etapa 5: Redacción de memoria (junio -- julio).}
+    Desarrollo de capítulos metodológicos, resultados preliminares y conclusiones.
+\end{itemize}
+ 
+\subsection{Carta Gantt}
+ 
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Actividad} & \textbf{Marzo} & \textbf{Abril} & \textbf{Mayo} & \textbf{Junio} & \textbf{Julio} \\
+\hline
+Depuración y documentación de datos & X &  &  &  &  \\
+\hline
+Análisis exploratorio e indicadores & X & X &  &  &  \\
+\hline
+Modelo metodológico de integración &  & X & X &  &  \\
+\hline
+Prototipo conceptual y visualizaciones &  &  & X & X &  \\
+\hline
+Redacción y cierre de memoria &  &  &  & X & X \\
+\hline
+\end{tabular}
+\caption{Plan de trabajo y actividades por mes.}
+\end{table}
+
+
+\section{Variables requeridas por marco metodológico}
+\label{anx:variables-marcos}
+
+Esta sección detalla el inventario completo de variables requeridas por cada 
+uno de los tres marcos metodológicos considerados en la cuenta satélite de 
+las cooperativas de ahorro y crédito. Su presentación separada busca no 
+interrumpir el flujo argumentativo del Capítulo~\ref{ch:metodologia}, donde 
+se trabaja únicamente con la síntesis de variables transversales 
+(Cuadro~\ref{tab:sintesis}).
+
+% ============================================================
+% CUADRO A — SCN 2025
+% ============================================================
+
+El Cuadro~\ref{tab:anx-scn2025} recoge las variables definidas por 
+\shortcite{united_nations_system_2025} como elementos centrales de la cuenta 
+satélite. Estas variables son comunes a cualquier unidad institucional y 
+constituyen el núcleo contable obligatorio sobre el que se construye la 
+estimación del VAB.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\caption{Variables requeridas según el SCN 2025}
+\label{tab:anx-scn2025}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}
+  c p{4cm} c p{5.5cm}}
+\toprule
+\textbf{\#} & \textbf{Variable} & \textbf{Código} & 
+  \textbf{Referencia SCN 2025} \\
+\midrule
+\multicolumn{4}{l}{\textit{Cuenta de producción}} \\
+\addlinespace
+1  & Producción total            & P1   & párr.~7.98 \\
+2  & Producción de mercado       & P11  & párr.~7.108, párr.~7.169 \\
+3  & Producción para uso propio  & P12  & párr.~7.108 \\
+4  & Producción no de mercado    & P13  & párr.~7.108 \\
+5  & Consumo intermedio          & P2   & párr.~7.82; Tabla~7.1 \\
+6  & Valor agregado bruto        & B1g  & párr.~7.82, párr.~7.85 \\
+7  & Depreciación                & P51d & párr.~1.30; Tabla~8.6 \\
+8  & Valor agregado neto         & B1n  & párr.~7.85 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Cuenta de generación del ingreso}} \\
+\addlinespace
+9  & Remuneración de empleados   & D1   & párr.~8.5, párr.~8.40--8.43 \\
+10 & Sueldos y salarios          & D11  & párr.~8.44--8.45; Tabla~8.4 \\
+11 & Cotizaciones empleadores    & D12  & párr.~8.57--8.58; Tabla~8.4 \\
+12 & Impuestos s/ producción     & D2   & párr.~8.72--8.79; Tabla~8.1 \\
+13 & Subsidios s/ producción     & D3   & párr.~8.103--8.104; Tabla~8.1 \\
+14 & Excedente bruto explotación & B2g  & párr.~8.9--8.12; Tabla~8.1 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Cuenta de asignación del ingreso primario}} \\
+\addlinespace
+15 & Renta de la propiedad (pagada)   & D4p  & párr.~8.113--8.115; Tabla~8.8 \\
+16 & Renta de la propiedad (recibida) & D4r  & párr.~8.113--8.115; Tabla~8.8 \\
+17 & Balance de ingresos ganados      & B5g  & párr.~8.19; Tabla~8.2 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Cuenta de distribución secundaria del ingreso}} \\
+\addlinespace
+18 & Otras transferencias corrientes  & D75  & Cap.~9, párr.~9.134 \\
+19 & Ingreso disponible bruto         & B6g  & Cap.~9, párr.~9.20 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Cuenta de capital}} \\
+\addlinespace
+20 & Formación bruta de capital fijo  & P51g & párr.~1.30; Cap.~11 \\
+21 & Transferencias de capital (rec.) & D9r  & Cap.~9, párr.~9.10 \\
+22 & Transferencias de capital (pag.) & D9p  & Cap.~9, párr.~9.10 \\
+23 & Cap./nec. de financiamiento      & B9   & párr.~1.46; Cap.~12 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Cuenta financiera}} \\
+\addlinespace
+24 & Depósitos captados  & F2 & Cap.~12; Cap.~29 \\
+25 & Préstamos otorgados & F4 & Cap.~12; Cap.~29 \\
+\bottomrule
+\end{tabular*}
+\\[0.8em]
+{\footnotesize \textit{Fuente: Elaboración propia en base 
+a \shortcite{united_nations_system_2025}.}}
+\end{table}
+
+% ============================================================
+% CUADRO B — MANUAL ONU TSE
+% ============================================================
+
+El Cuadro~\ref{tab:anx-onutse} recoge las variables que el Manual ONU-TSE 
+\cite{vereinte_nationen_satellite_2018} agrega o desagrega respecto del SCN, 
+usando los códigos de su archivo de datos estándar (Tabla~A.5 del manual).
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\caption{Variables adicionales requeridas según el Manual ONU-TSE}
+\label{tab:anx-onutse}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}
+  c p{5cm} c p{4.5cm}}
+\toprule
+\textbf{\#} & \textbf{Variable} & \textbf{Código} & 
+  \textbf{Referencia ONU TSE} \\
+\midrule
+\multicolumn{4}{l}{\textit{Desagregación de fuentes de ingreso}} \\
+\addlinespace
+1 & Ingresos totales de mercado & FEER & Tabla~4.3; párr.~4.9 \\
+2 & Ingresos del gobierno (contratos y reembolsos) & GOVR & Tabla~4.3; párr.~4.10 \\
+3 & Transferencias corrientes del gobierno & D75g\_r & Tabla~4.3; Tabla~A.5 \\
+4 & Transferencias corrientes de privados (hogares) & D75ph\_r & Tabla~4.3; Tabla~A.5 \\
+5 & Transferencias corrientes de privados (empresas) & D75pc\_r & Tabla~4.3; Tabla~A.5 \\
+6 & Transferencias corrientes del exterior & D75r\_r & Tabla~4.3; Tabla~A.5 \\
+7 & Cuotas de socios & MDR & Tabla~4.3; párr.~4.9 \\
+8 & Otros ingresos no clasificados & OTHR & Tabla~4.3; Tabla~A.5 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Variables de empleo remunerado}} \\
+\addlinespace
+9  & Empleo remunerado (personas)              & PEP & Tabla~4.5 \\
+10 & Empleo remunerado (equiv. tiempo completo) & PEF & Tabla~4.5 \\
+11 & Empleo remunerado (horas)                 & PEH & Tabla~4.5 \\
+\addlinespace
+\multicolumn{4}{l}{\textit{Variables de voluntariado}} \\
+\addlinespace
+12 & Voluntarios (personas)               & VOP & Tabla~4.5; párr.~4.35 \\
+13 & Voluntarios (equiv. tiempo completo) & VOF & Tabla~4.5; párr.~4.35 \\
+14 & Voluntarios (horas)                  & VOH & Tabla~4.5; párr.~4.35 \\
+15 & Valor económico del voluntariado     & VOV & Tabla~4.5; párr.~4.36 \\
+\bottomrule
+\end{tabular*}
+\\[0.8em]
+{\footnotesize \textit{Fuente: Elaboración propia en base 
+a \cite{vereinte_nationen_satellite_2018}.}}
+\end{table}
+
+% ============================================================
+% CUADRO C — MANUAL CIRIEC
+% ============================================================
+
+El Cuadro~\ref{tab:anx-ciriec} recoge las variables propias del Manual CIRIEC 
+\cite{barea_tejeiro_manual_2007}: directorio de entidades, indicadores de 
+estructura social y actividad financiera específica del modelo cooperativo.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\caption{Variables adicionales requeridas según el Manual CIRIEC}
+\label{tab:anx-ciriec}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}
+  c p{6cm} p{7cm}}
+\toprule
+\textbf{\#} & \textbf{Variable o dato} & 
+  \textbf{Referencia CIRIEC} \\
+\midrule
+\multicolumn{3}{l}{\textit{Directorio y delimitación}} \\
+\addlinespace
+1 & Nombre legal de la entidad              & Cap.~8 \\
+2 & Identificador tributario (RUT)          & Cap.~8 \\
+3 & Tipo de cooperativa                     & Cap.~8 \\
+4 & Región o provincia donde opera          & Cap.~8 \\
+5 & Fecha de constitución                   & Cap.~8 \\
+6 & Fecha de disolución o inactividad       & Cap.~8 \\
+7 & Estado de vigencia legal                & Cap.~8 \\
+8 & Clasificador de actividad (ISIC/CIIU)   & Cap.~6 \\
+9 & Tipo de supervisión regulatoria         & Cap.~8 \\
+\addlinespace
+\multicolumn{3}{l}{\textit{Estructura social}} \\
+\addlinespace
+10 & Número de socios por organización           & Cap.~7--8 \\
+11 & Número de beneficiarios o usuarios          & Cap.~7 \\
+12 & Inserción de grupos en riesgo de exclusión  & Cap.~8 \\
+13 & Incorporación de mujeres y jóvenes          & Cap.~8 \\
+\addlinespace
+\multicolumn{3}{l}{\textit{Actividad financiera específica}} \\
+\addlinespace
+14 & Número de créditos otorgados   & Cap.~7 \\
+15 & Monto de cartera de créditos   & Cap.~7 \\
+16 & Volumen de ahorro captado      & Cap.~7 \\
+17 & Tasa de morosidad              & Cap.~7 \\
+18 & Cuotas de socios               & Cap.~5 \\
+\addlinespace
+\multicolumn{3}{l}{\textit{Verificación de elegibilidad}} \\
+\addlinespace
+19 & Estructura democrática de gobierno    & Cap.~3 \\
+20 & Distribución limitada de excedentes   & Cap.~3 \\
+21 & Orientación al servicio de los socios & Cap.~3 \\
+22 & Carácter voluntario de la membresía   & Cap.~3 \\
+23 & Independencia del Estado              & Cap.~3 \\
+\bottomrule
+\end{tabular*}
+\\[0.8em]
+{\footnotesize \textit{Fuente: Elaboración propia en base 
+a \cite{barea_tejeiro_manual_2007}.}}
+\end{table}
 
 
 
-\section{Ejemplo Suma ponderada}\label{ej:sumapond}
-
-
+\begin{comment}
+% ============================================================
+% ANEXO 6: BITÁCORA
+% ============================================================
+ 
+\newpage
+\section{Bitácora de reuniones}
+\label{anx:bitacora}
+ 
+ 
+\subsection{3 sept 2025 — Revisión documentos requeridos en formulación FONDEF}
+ 
+\textbf{Asistentes:} Sebastián Cea, Ignacio Ureta, Antonio Ruiz-Tagle, Cristóbal Navarro.
+ 
+En esta sesión se revisaron los documentos exigidos en la etapa de formulación de la postulación
+al concurso FONDEF IDeA I+D 2026, contrastando las bases concursales, el formulario ID26 y
+las presentaciones internas. El objetivo fue identificar con claridad los entregables y secciones
+obligatorias, y alinear la propuesta de hitos de la memoria con dichos requerimientos.
+ 
+Se constató que la formulación requiere los siguientes componentes principales:
+\begin{itemize}
+    \item \textbf{Identificación del proyecto:} título, palabras clave, tipo de proyecto, línea
+    de investigación, TRL inicial y final, disciplina OCDE, área estratégica y objetivos
+    socioeconómicos (NABS).
+    \item \textbf{Resumen y objetivos:} resumen general, objetivo general y objetivos específicos.
+    \item \textbf{Resultados esperados:} al menos un resultado tecnológico (máx.\ 2), resultados
+    de colaboración (máx.\ 3) y otros resultados opcionales.
+    \item \textbf{Formulación administrativa:} formulario ID26, declaración de duplicidad,
+    planilla de costos, carta Gantt, declaración de investigadores, antecedentes de postulaciones
+    previas, declaración de director y director alterno, declaración de asociadas y síntesis.
+\end{itemize}
+ 
+\subsection{2 sept 2025 — Discusión sobre propuesta de hitos}
+ 
+\textbf{Asistentes:} Sebastián Cea, Joaquín Fernández, Cristóbal Navarro, Ignacio Ureta,
+Antonio Ruiz-Tagle.
+ 
+Se discutieron los siguientes temas:
+ 
+\begin{enumerate}
+    \item Alcance de la plataforma respecto al INAC: se acordó desarrollar un sistema que
+    tenga como subconjunto la muestra de interés del INAC, permitiendo escalamiento posterior
+    al conjunto de la ESS.
+    \item Se confirmó que la propuesta de hitos debía definirse en conjunto con el equipo guía.
+    \item Se acordó migrar el formato del documento de memoria a producto en Overleaf.
+    \item Se aclararon dudas sobre referencias y documentos sugeridos durante el lanzamiento
+    (manuales ONU sobre estadísticas de cooperativas, diagnósticos de estrategias regionales).
+    \item Se acordó no crear nuevos documentos y utilizar el anexo de la memoria como
+    repositorio de trabajo.
+    \item Se estableció que la bitácora tiene por función dejar registro de las reuniones para
+    quienes no hayan asistido.
+\end{enumerate}
+ 
+\textbf{Acuerdos:} revisión conjunta de archivos del Drive el miércoles 3 en la tarde; los
+memoristas comenzarán a transcribir su comprensión del tema en el capítulo introductorio.
+ 
+\subsection{28 agosto 2025 — Lanzamiento Hoja de Ruta INAC}
+ 
+En el lanzamiento de la Hoja de Ruta del Instituto Nacional de Asociatividad y Cooperativismo
+(INAC) se presentó la planificación estratégica sobre el desarrollo de las cooperativas en Chile.
+El INAC funciona a través de un comité Corfo, lo que le permite firmar convenios con organismos
+nacionales e internacionales, fortaleciendo su capacidad de gestión y articulación.
+ 
+En la presentación se destacó la necesidad de descentralizar el mundo cooperativo, dado que en
+las regiones extremas del país la presencia de cooperativas es aún baja. Se planteó la intención
+de implementar un sistema de monitoreo y observación para dar seguimiento al desempeño de las
+cooperativas, aspecto de interés directo para este proyecto de título. Se mencionó además que el
+cooperativismo tiene un fuerte impacto económico en sectores rurales y urbanos del país.
+ 
+En el conversatorio participó Daniela Encalada, subdirectora de Desarrollo Económico de la
+Municipalidad de La Pintana, quien señaló que las cooperativas son fundamentales para ampliar
+las oportunidades de producción y comercialización, especialmente para comunidades y
+emprendedores que no siempre acceden a los mercados formales.
+\end{comment}

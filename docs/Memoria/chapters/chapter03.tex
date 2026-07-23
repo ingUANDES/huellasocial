@@ -1,8 +1,379 @@
-% cap3.tex
+\chapter{MARCO TEÓRICO}
+\label{ch:marco}
 
-\chapter{Desarrollo Metodológico} \label{c3} % la etiqueta para referencias
+El presente capítulo desarrolla el marco conceptual que sustenta el objetivo de la 
+presente memoria. Se articulan seis bloques en progresión lógica. La 
+sección~\ref{sec:ess} define los principios fundantes de la Economía Social y 
+Solidaria. La sección~\ref{sec:cac} caracteriza a las cooperativas de ahorro y 
+crédito, abordando su institucionalidad, su tratamiento dentro del Sistema de Cuentas 
+Nacionales y las consecuencias que su marco legal tiene sobre la disponibilidad de 
+información estadística. La sección~\ref{sec:cuentas-satelite} desarrolla la 
+metodología de cuentas satélite y los marcos internacionales para medir el aporte de 
+la ESS al PIB. La sección~\ref{sec:transparencia} analiza las asimetrías de 
+información en organizaciones sociales. La sección~\ref{sec:institucionalidad} 
+describe los registros de información disponibles en Chile y las brechas que 
+condicionan la estimación. La sección~\ref{sec:sintesis-marco} sintetiza los tres 
+marcos metodológicos y justifica la estrategia adoptada en el 
+Capítulo~\ref{ch:metodologia}.
+
+El recorrido por estos bloques permite identificar una brecha concreta en el 
+contexto chileno: si bien existen registros administrativos relevantes y 
+experiencia nacional en la construcción de cuentas satélite para otros 
+sectores, no existe un sistema integrado que aplique esa metodología al 
+sector cooperativo. La presente memoria surge precisamente como 
+respuesta a ese vacío.
 
 
-\section{Modelos econométricos XXX}
+\section{Economía Social y Solidaria: definición y principios}
+\label{sec:ess}
+La Economía Social y Solidaria (ESS) constituye un campo de pensamiento y práctica 
+económica que agrupa a organizaciones cuyo funcionamiento se basa en principios de 
+solidaridad, autogestión democrática y primacía del ser humano sobre el capital. A 
+diferencia de las empresas convencionales, orientadas a maximizar la rentabilidad de 
+sus propietarios, las organizaciones de la ESS anteponen la satisfacción de necesidades 
+colectivas y la generación de valor social 
+\shortcite{caribbean_aproximacion_2023}. \\
 
-describir modelos y fuentes de datos
+El concepto reconoce dos tradiciones históricas complementarias. La tradición europea 
+de la \textit{economía social} ---asociada a cooperativas, mutualidades, asociaciones 
+y fundaciones--- pone énfasis en la forma jurídica y en la distribución limitada de 
+excedentes como criterios de pertenencia al sector \cite{barea_tejeiro_manual_2007}. La 
+tradición latinoamericana de la \textit{economía solidaria}, en cambio, amplía ese 
+campo hacia prácticas comunitarias y populares de producción, consumo y crédito que 
+no siempre adoptan formas jurídicas formalizadas, pero que comparten los principios 
+de propiedad colectiva y toma de decisiones democrática 
+\shortcite{caribbean_aproximacion_2023}.\\
+
+En términos de principios, la literatura identifica un conjunto de ejes transversales 
+que caracterizan a las organizaciones de la ESS: adhesión voluntaria, gobernanza 
+democrática (una persona, un voto), participación económica de los socios, autonomía 
+respecto del Estado y del mercado, educación y formación continua, cooperación entre 
+organizaciones, y compromiso con la comunidad y el medioambiente 
+\cite{barea_tejeiro_manual_2007}. Estos principios no son meramente declarativos, sino que 
+estructuran el modelo de gestión y condicionan el tipo de información necesaria para 
+evaluar el desempeño de este tipo de organizaciones.\\
+
+En Chile, la ESS comprende un conjunto heterogéneo de figuras jurídicas: cooperativas 
+de distintos tipos, corporaciones, fundaciones, mutuales, asociaciones gremiales y 
+organizaciones comunitarias, entre otras. \shortcite{radrigan_rubio_organizaciones_2024} 
+identifican que esta heterogeneidad, si bien refleja la diversidad del sector, dificulta 
+la construcción de marcos de información comparables y genera asimetrías en el acceso 
+a financiamiento público y en la supervisión estatal. La relevancia de la ESS para el 
+desarrollo económico y social del país no puede entenderse con claridad sin sistemas 
+de información que permitan cuantificar su aporte, vacío que motiva directamente la 
+presente memoria.
+
+ 
+\section{Cooperativas de ahorro y crédito: características, institucionalidad 
+y valor económico medible}
+\label{sec:cac}
+\subsection{Características, rol e institucionalidad en Chile}
+
+Las cooperativas de ahorro y crédito (CAC) son organizaciones financieras 
+de propiedad y control democrático de sus socios, cuyo objeto central es la 
+intermediación financiera al servicio de sus propios miembros. Su diferencia 
+estructural respecto de la banca comercial reside en que los usuarios son 
+simultáneamente propietarios: los excedentes se reinvierten en la organización 
+o se distribuyen entre los socios según su participación, y las decisiones 
+estratégicas se adoptan bajo el principio de un socio, un voto 
+\shortcite{perilleux_are_2016}.\\
+
+Su rol en la inclusión financiera es ampliamente reconocido en la literatura. 
+Al operar en territorios y segmentos de la población donde la banca convencional 
+tiene escasa presencia, las CAC movilizan el ahorro local, facilitan el acceso 
+al crédito para pequeños emprendedores y trabajadores, y refuerzan la cohesión 
+social en comunidades que de otro modo quedarían al margen del sistema financiero 
+formal \shortcite{perilleux_are_2016}.\\
+
+En Chile, el marco legal que regula a las CAC está dado principalmente por el 
+Decreto con Fuerza de Ley N°5 de 2003 y la Ley General de Cooperativas. La 
+supervisión ha sido históricamente dual: la División de Asociatividad y 
+Cooperativas (DAES) del Ministerio de Economía ejerce la supervisión de gobierno 
+corporativo, mientras que la Comisión para el Mercado Financiero (CMF) regula a 
+aquellas CAC con patrimonio superior a las 400.000 UF \cite{dfl5_cooperativas_2003}.\\ 
+Con la promulgación de la Ley N°21.641 de Resiliencia Financiera en diciembre de 
+2023, este esquema se modernizó: la CMF asumió la supervisión integral de las CAC 
+de mayor tamaño en materia de estándares prudenciales, con un mecanismo permanente 
+de coordinación con la DAES \cite{ley21641_resiliencia_2023}. Este crecimiento del 
+sector refuerza la relevancia de contar con sistemas de información que permitan 
+evaluar su desempeño de manera comparable y transparente, tanto para los organismos 
+públicos como para la ciudadanía.
+
+El marco legal de las CAC tiene consecuencias directas sobre la disponibilidad 
+de información para su medición estadística. El artículo~78 del DFL 
+N\textsuperscript{o}~5 de 2003 exime a las cooperativas del impuesto de 
+primera categoría, lo que suprime el registro tributario equivalente a una 
+declaración de sociedades. Esta exención ---que en España y Portugal constituye 
+la fuente principal para estimar el consumo intermedio--- obliga a recurrir 
+a procedimientos de estimación indirecta para esa variable en el contexto 
+chileno \shortcite{united_nations_system_2025}.
+
+Por otro lado, los flujos financieros que algunas CAC reciben del Estado 
+---principalmente a través del Programa de Acceso al Microfinanciamiento 
+bajo la Ley N\textsuperscript{o}~19.862--- corresponden a convenios de 
+prestación de servicios, no a subsidios a la producción en el sentido del 
+SCN 2025. Su contraprestación es la provisión de servicios financieros a 
+segmentos específicos de la población, por lo que no califican como D3 en 
+la cuenta de generación del ingreso \shortcite{united_nations_system_2025}. 
+Ambas condiciones condicionan directamente los supuestos del modelo de 
+estimación desarrollado en el Capítulo~\ref{ch:metodologia}.
+
+\subsection{Las cooperativas de ahorro y crédito en el Sistema de Cuentas Nacionales}
+\label{subsec:cac-scn}
+Dentro del Sistema de Cuentas Nacionales (SCN), las CAC se clasifican como unidades 
+institucionales del sector financiero, lo que las distingue estructuralmente de las 
+organizaciones sin fines de lucro tradicionales. Mientras estas últimas se financian 
+principalmente mediante donaciones y transferencias, y su producción se valora al costo, 
+las CAC generan producción de mercado medible: captan depósitos, otorgan créditos y 
+obtienen un margen financiero que constituye su principal fuente de ingresos 
+\cite{barea_tejeiro_manual_2007}. Esta diferencia es fundamental para efectos de medición, 
+ya que permite incorporar a las CAC en las cuentas de producción del SCN bajo criterios 
+similares a los de la banca comercial, aunque con variables institucionales propias de la 
+economía social.\\
+
+El valor económico que generan las CAC dentro del SCN se expresa 
+principalmente a través del Valor Agregado Bruto (VAB), que resulta de 
+restar el consumo intermedio a la producción total de la organización. En 
+el caso de las instituciones financieras cooperativas, la producción incluye 
+los servicios de intermediación financiera ---captación de ahorros y 
+colocación de créditos--- cuyo valor se estima a través de los márgenes de 
+interés y comisiones cobradas a los socios \cite{vereinte_nationen_satellite_2018}. 
+A diferencia de las organizaciones sin fines de lucro, cuya producción no 
+de mercado dificulta la estimación del VAB, las CAC disponen de estados 
+financieros auditados que permiten construir directamente estos indicadores 
+\cite{uzea_challenges_2015}.\\
+
+La distinción entre cooperativas y organizaciones sin fines de lucro no es 
+meramente conceptual: tiene consecuencias directas sobre la metodología de 
+medición. El manual de Naciones Unidas de 2018 resuelve esta tensión 
+introduciendo el criterio de distribución limitada de beneficios, que permite 
+incluir a las cooperativas en la cuenta satélite de la economía social sin 
+exigirles el criterio estricto de no distribución \cite{vereinte_nationen_satellite_2018}. 
+Esto habilita una medición integrada del sector que reconoce tanto la 
+dimensión económica de las CAC ---reflejada en su VAB, empleo y 
+remuneraciones--- como su dimensión social, expresada en la cobertura 
+financiera de segmentos excluidos de la banca convencional 
+\shortcite{perilleux_are_2016}.\\
+
+Estas propiedades de las CAC como unidades de producción de mercado tienen 
+consecuencias directas sobre la operacionalización de las variables del SCN. 
+En primer lugar, la producción total (P1) puede medirse directamente desde 
+los ingresos operacionales registrados en los estados financieros de cada 
+cooperativa ---ingresos por intereses, reajustes, inversiones y otros ingresos 
+de operación--- sin necesidad de recurrir a procedimientos de valoración al 
+costo propios de las organizaciones sin fines de lucro 
+\cite{vereinte_nationen_satellite_2018}. En segundo lugar, cuando el consumo 
+intermedio (P2) no es directamente observable en las fuentes administrativas 
+disponibles ---situación que se produce cuando las cooperativas están exentas 
+del impuesto a la renta y no generan el registro tributario equivalente a una 
+declaración de sociedades--- el SCN reconoce el uso de coeficientes técnicos 
+derivados de matrices insumo-producto sectoriales como procedimiento de 
+estimación indirecta \shortcite{united_nations_system_2025}. Ambas consecuencias 
+condicionan el diseño del modelo de estimación que se presenta en el 
+Capítulo~\ref{ch:metodologia}.
+
+
+\section{Cuentas Satélite para la Economía Social: fundamentos y marcos 
+metodológicos internacionales}
+\label{sec:cuentas-satelite}
+Las Cuentas Satélite son extensiones metodológicas del Sistema de Cuentas 
+Nacionales (SCN) que permiten visibilizar y cuantificar la actividad económica 
+de sectores que no quedan adecuadamente captados en las estadísticas nacionales 
+estándar. Su lógica consiste en construir, dentro del marco conceptual del SCN, 
+un subconjunto de cuentas que desagrega en detalle un sector de interés ---como 
+el turismo, la cultura o la economía social--- manteniendo la coherencia con las 
+macromagnitudes nacionales \cite{barea_tejeiro_manual_2007}. En el caso chileno, 
+la experiencia con cuentas satélite de cultura y tecnologías de la información 
+muestra que disponer de métricas sectoriales claras facilita la visibilidad del 
+sector y mejora el diseño de políticas públicas \cite{noauthor_cuenta_2006}.\\
+
+En el ámbito de la economía social, el referente metodológico internacional es 
+el \textit{Satellite Account on Nonprofit and Related Institutions and Volunteer 
+Work} (Manual ONU-TSE), publicado por la División de Estadística de Naciones 
+Unidas en 2018. Este manual ofrece una guía integral para construir una cuenta 
+satélite que abarca tres componentes: las instituciones sin fines de lucro no 
+controladas por el gobierno, ciertas instituciones relacionadas ---incluyendo 
+cooperativas elegibles, mutuales y empresas sociales--- y el trabajo voluntario 
+\cite{vereinte_nationen_satellite_2018}. Su innovación central respecto de la versión 
+anterior es reemplazar el criterio de no distribución de beneficios por el de 
+\textit{distribución limitada}, lo que permite incorporar a las cooperativas siempre 
+que su propósito principal no sea la maximización de utilidades para sus propietarios.
+Este criterio es directamente aplicable al caso chileno \cite{barea_tejeiro_manual_2007}.\\
+
+La construcción de una Cuenta Satélite de la Economía Social requiere, como insumo 
+esencial, un sistema integrado de registros administrativos que identifique a las 
+organizaciones del sector y caracterice sus variables económicas fundamentales: 
+valor agregado bruto, empleo, remuneraciones y excedente de explotación 
+\cite{vereinte_nationen_satellite_2018}. Esta brecha es precisamente la que estructura 
+las decisiones metodológicas adoptadas en el Capítulo~\ref{ch:metodologia}.\\
+
+Las experiencias de España, Portugal y Polonia ilustran cómo distintos contextos 
+nacionales han resuelto estos desafíos. España publicó en 2024 su Cuenta Satélite 
+de la Economía Social cubriendo el período 2019--2023, articulando directorio de 
+empresas, registros de seguridad social, datos tributarios y encuestas de trabajo, 
+con el identificador fiscal como variable de enlace entre bases 
+\cite{noauthor_cuenta_2024}. Portugal, por su parte, fue pionero en adoptar el 
+Manual ONU-TSE 2018 como referencia, publicando su cuarta edición en 2023 con 
+datos para 2019--2020; sus resultados muestran que la economía social representó 
+el 3,2\% del VAB nacional, con 73.851 entidades activas empleando el 5,0\% del 
+empleo total \shortcite{pedroso_conta_2023}. Polonia publicó en 2021 su primera cuenta 
+satélite con datos de 2018, construida en un entorno estadístico más limitado que 
+el español o el portugués, lo que la hace especialmente pertinente para el contexto 
+chileno \cite{statistics_poland_social_2021}.\\
+
+Desde el punto de vista operacional, estos marcos convergen en cuatro bloques de 
+información que toda cuenta satélite de cooperativas debe cubrir:
+
+\begin{enumerate}
+    \item \textbf{Registro de población elegible:} directorio que delimite el universo 
+    de organizaciones del sector.
+    \item \textbf{Variables económicas centrales del SCN:} producción, consumo intermedio, 
+    VAB, remuneraciones y excedente de explotación.
+    \item \textbf{Desagregación de fuentes de ingreso:} ingresos de mercado, transferencias 
+    del Estado, cuotas de socios y donaciones ---dimensión que el SCN estándar no 
+    captura por defecto \cite{vereinte_nationen_satellite_2018}.
+    \item \textbf{Variables de trabajo:} empleo remunerado y trabajo voluntario valorado 
+    económicamente \cite{barea_tejeiro_manual_2007}.
+\end{enumerate}
+
+La disponibilidad de estos datos en Chile es heterogénea, lo que determina 
+directamente las decisiones metodológicas adoptadas en el Capítulo~4.
+
+
+
+\section{Transparencia e información en organizaciones sociales: 
+asimetrías y sistemas de datos}
+\label{sec:transparencia}
+La teoría económica reconoce que las asimetrías de información generan 
+ineficiencias en la asignación de recursos y debilitan la confianza entre 
+los actores de un sector. En el caso de las organizaciones sociales, estas 
+asimetrías son especialmente pronunciadas: los donantes, el Estado y la 
+ciudadanía en general cuentan con información limitada sobre la gestión, 
+el desempeño y el impacto real de las organizaciones, lo que dificulta 
+tanto la toma de decisiones de financiamiento como la supervisión pública 
+\cite{coupet_toward_2019}.
+
+La literatura sobre medición de eficiencia en organizaciones sin fines de 
+lucro ha desarrollado metodologías para abordar este problema, combinando 
+enfoques cuantitativos ---como el Análisis Envolvente de Datos (DEA) y el 
+Análisis de Frontera Estocástica (SFA)--- con marcos de evaluación de 
+impacto social que van más allá de los indicadores financieros 
+\cite{coupet_toward_2019}. La condición de posibilidad para aplicar estas 
+metodologías es, sin embargo, contar con datos integrados, estandarizados 
+y comparables entre organizaciones \shortcite{brown_co-operatives_2015}.
+
+La experiencia internacional muestra que cuando esta condición se cumple, 
+los efectos son positivos y directos: la consolidación y estandarización de 
+datos sobre organizaciones sin fines de lucro aumenta la confianza de 
+donantes e inversionistas sociales, reduce las asimetrías de información y 
+mejora la eficiencia en la asignación de recursos hacia organizaciones con 
+mejor gestión y mayor impacto comprobado \cite{uzea_challenges_2015}. De 
+manera complementaria, \shortcite{munoz_exploring_2021} subraya la importancia 
+de contar con información accesible y confiable para sostener modelos de 
+gestión participativa en empresas sociales.
+
+
+\section{Registros de información disponibles en Chile}
+\label{sec:institucionalidad}
+Más allá del marco regulatorio descrito en la sección~\ref{sec:cac}, la medición 
+estadística del sector cooperativo enfrenta una limitación adicional: los registros 
+administrativos relevantes ---mantenidos por el SII, el Registro Civil, la DAES y 
+el Ministerio de Desarrollo Social--- presentan estructuras heterogéneas y coberturas 
+parciales que dificultan la construcción de indicadores homogéneos 
+\shortcite{radrigan_rubio_organizaciones_2024}.
+
+\subsection{Fuentes de información disponibles y su pertinencia para la medición de la ESS}
+A pesar de la fragmentación descrita, Chile cuenta con un conjunto de registros
+administrativos públicos que, articulados mediante el RUT como identificador común,
+permiten aproximar las variables necesarias para una cuenta satélite de las
+cooperativas de ahorro y crédito. El Cuadro~\ref{tab:fuentes_chile} caracteriza las
+cinco fuentes principales identificadas y las vincula con los requerimientos de los
+marcos internacionales.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\caption{Fuentes administrativas chilenas y su pertinencia para la cuenta satélite
+de las CAC}
+\label{tab:fuentes_chile}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}
+  p{2.5cm} p{4.5cm} p{5cm}}
+\toprule
+\textbf{Fuente} & \textbf{Variables disponibles} & \textbf{Limitación principal} \\
+\midrule
+DAES & Estados financieros de CAC no supervisadas por CMF;
+  tipo de cooperativa, región, RUT, estado de vigencia &
+  Documentos en formato PDF no estructurado; cobertura limitada
+  a cooperativas que publican memorias \\
+\addlinespace
+CMF & Estados financieros de las 7 CAC supervisadas;
+  datos agregados del sector &
+  Plataforma BEST reporta datos agregados; desglose por entidad
+  disponible solo en memorias anuales individuales \\
+\addlinespace
+SII & Validación de existencia legal; tramo de ventas
+  y número de trabajadores por RUT &
+  Ventas en tramos, no valores exactos; cobertura parcial
+  del universo cooperativo \\
+\addlinespace
+Ley N\degree19.862 & Transferencias públicas históricas
+  hacia organizaciones sociales &
+  No cubre financiamiento privado ni cuotas de socios \\
+\addlinespace
+MDS & Donaciones privadas recibidas por organizaciones sociales &
+  Región del donatario ausente en 57,7\% de registros;
+  RUT del donante falta en 32,2\% \\
+\bottomrule
+\end{tabular*}
+\\[0.8em]
+{\footnotesize \textit{Fuente: Elaboración propia.}}
+\end{table}
+
+\subsection{Brechas del estado del arte y oportunidad para Chile}
+\label{sec:brechas}
+La evidencia revisada muestra que la economía social enfrenta una limitación
+estructural asociada a su baja visibilidad en los sistemas estadísticos tradicionales
+y a la fragmentación de los registros administrativos. Aunque las cuentas satélite han
+demostrado ser una herramienta efectiva para cuantificar el aporte económico de
+sectores específicos, su aplicación al ámbito de la economía social sigue siendo
+limitada, especialmente en el contexto latinoamericano.
+
+En el caso chileno, existen registros administrativos relevantes y experiencias previas
+en la construcción de cuentas satélite sectoriales; no obstante, estos avances no se
+han traducido en una estimación sistemática del aporte del sector cooperativo al PIB
+nacional. Esta ausencia dificulta la generación de indicadores comparables y restringe
+la disponibilidad de información para la toma de decisiones públicas
+\shortcite{radrigan_rubio_organizaciones_2024,munoz_exploring_2021}.
+
+Este diagnóstico es también el que fundamenta la postulación del proyecto Huella Social al concurso FONDEF IDeA I+D 2026 (Anexo ~\ref{anx:fondef}), cuyo formulario identifica la dispersión de los registros y las asimetrías de información como el problema central que limita la transparencia del sector. Ante ello, la presente memoria desarrolla una propuesta metodológica concreta: la construcción de una cuenta satélite para las cooperativas de ahorro y crédito, aplicada al período 2014–2024, utilizando fuentes administrativas disponibles articuladas bajo el marco del Manual ONU-TSE y el SCN 2025. Con ello, el análisis de magnitud que el formulario planteaba en términos descriptivos adquiere aquí sustento cuantitativo para un clúster específico de organizaciones de la economía social. Esta propuesta estructura el diseño metodológico del Capítulo ~\ref{ch:metodologia}.
+
+
+
+\section{Síntesis del marco teórico}
+\label{sec:sintesis-marco}
+Los elementos desarrollados en los bloques anteriores construyen un argumento en tres niveles: 
+la caracterización de las CAC delimita el objeto de estudio; la revisión de los marcos 
+internacionales establece los estándares para medirlo; y el análisis de asimetrías de información 
+explicita el problema que motiva la construcción de un sistema integrado de datos.
+ 
+Los tres estándares revisados ---SCN 2025, Manual ONU-TSE \cite{vereinte_nationen_satellite_2018} 
+y Manual CIRIEC \cite{barea_tejeiro_manual_2007}--- comparten un núcleo común de variables: 
+producción, consumo intermedio, VAB, remuneraciones y empleo. Sin embargo, difieren en 
+cobertura. El SCN 2025 provee el marco contable universal pero no distingue a las cooperativas 
+de otras personas jurídicas. El Manual ONU-TSE amplía ese núcleo hacia cooperativas elegibles 
+e incorpora transferencias públicas y privadas, lo que lo hace especialmente pertinente para este 
+estudio. Esta pertinencia se ve reforzada por el hecho de que el SCN 2025 incorporó la 
+metodología del Manual ONU-TSE 2018 como cuenta temática (Capítulo 31), consolidando su 
+estatus como referente estadístico oficial para las instituciones de la economía social 
+\cite{united_nations_system_2025,carini_framework_2026}. El Manual CIRIEC agrega las 
+variables de delimitación del universo ---identificador tributario, tipo de cooperativa, criterios 
+de elegibilidad democrática--- indispensables para construir el directorio de unidades antes de 
+cualquier estimación.
+ 
+Por ello, el estudio adopta el Manual ONU-TSE como referencia principal para la estimación 
+del VAB, complementado con el Manual CIRIEC para la etapa de delimitación del universo, y 
+el SCN 2025 como marco de consistencia macroeconómica. Esta estrategia es coherente con 
+experiencias comparables como las cuentas satélite de Portugal \shortcite{pedroso_conta_2023} y 
+España \cite{noauthor_cuenta_2006}. El capítulo siguiente operacionaliza esta propuesta mediante 
+la integración de fuentes administrativas chilenas y el diseño del modelo de estimación.

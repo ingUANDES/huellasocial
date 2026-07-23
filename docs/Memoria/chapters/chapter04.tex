@@ -1,6 +1,835 @@
-% cap4.tex
+\chapter{Metodología}
+\label{ch:metodologia}
 
-\chapter{Análisis de Resultados}
-\label{c4} % la etiqueta para referencias
+El presente capítulo describe el enfoque metodológico utilizado para estimar 
+el aporte de las cooperativas de ahorro y crédito al producto interno bruto 
+de Chile, incluyendo las fuentes de información utilizadas, los métodos de 
+estimación aplicados y el panel interactivo desarrollado como herramienta de 
+visualización de los resultados. La sección~\ref{sec:aspectos-conceptuales} 
+sintetiza la estrategia de estimación derivada del marco conceptual del 
+Capítulo~\ref{ch:marco}; la sección~\ref{sec:fuentes-informacion} presenta las 
+fuentes de información disponibles y su diagnóstico de cobertura; la 
+sección~\ref{sec:metodos-estimacion} detalla los métodos de estimación, 
+incluyendo la integración de fuentes, la operacionalización de las variables 
+del SCN y el modelo de cálculo del VAB; y la sección~\ref{sec:panel} presenta 
+el panel interactivo de visualización desarrollado como complemento a los 
+resultados.
+
+\section{Aspectos conceptuales}
+\label{sec:aspectos-conceptuales}
+
+\subsection{Estrategia de estimación}
+\label{subsec:marco-referencia}
+
+El presente estudio se apoya en el marco conceptual desarrollado en el 
+Capítulo~\ref{ch:marco}. Como se estableció en las 
+secciones~\ref{sec:cac} y~\ref{sec:cuentas-satelite}, las CAC son unidades 
+institucionales del sector financiero cuya producción de mercado es 
+directamente medible, y los tres marcos metodológicos vinculantes ---SCN 
+2025, Manual ONU-TSE \cite{vereinte_nationen_satellite_2018} y Manual CIRIEC 
+\cite{barea_tejeiro_manual_2007}--- convergen en un núcleo común de variables: 
+producción (P1), consumo intermedio (P2), valor agregado bruto (B1g), 
+remuneraciones (D1) y excedente de explotación (B2g).
+
+La estrategia de estimación se deriva directamente de ese marco. Dado que 
+las CAC generan producción de mercado, P1 se obtiene desde los ingresos 
+operacionales de sus estados financieros, sin valoración al costo 
+(véase sección~\ref{subsec:cac-scn}). Dado que el consumo intermedio no es 
+observable en las fuentes administrativas chilenas ---por la exención 
+tributaria del artículo~78 del DFL N\textsuperscript{o}~5/2003---, P2 se 
+estima mediante un coeficiente técnico derivado de la Matriz Insumo-Producto, 
+procedimiento admitido por el SCN cuando no existe declaración tributaria 
+desagregada (véase sección~\ref{subsec:cac-scn}).
+
+La metodología combina tres componentes principales:
+
+\begin{enumerate}
+    \item[a)] \textbf{Identificación y caracterización de organizaciones}: 
+    extracción y validación de los RUTs de cooperativas de ahorro y crédito 
+    a partir de registros administrativos disponibles.
+    \item[b)] \textbf{Integración y estandarización de fuentes de datos}: 
+    articulación de bases de datos provenientes de distintos organismos 
+    públicos mediante el RUT como identificador común.
+    \item[c)] \textbf{Estimación del aporte económico}: construcción de 
+    variables compatibles con el SCN y cálculo del VAB mediante un modelo 
+    de estimación indirecta, cuyos fundamentos conceptuales se establecen 
+    en la sección~\ref{subsec:cac-scn}.
+\end{enumerate}
 
 
+\section{Fuentes de información}
+\label{sec:fuentes-informacion}
+
+La construcción de una cuenta satélite de las cooperativas de ahorro y crédito exige, como condición previa, identificar qué datos son necesarios según el marco metodológico internacional y en qué medida están disponibles en Chile. Esta sección presenta primero el inventario de fuentes administrativas públicas utilizadas en este estudio, luego sistematiza los requerimientos de información establecidos por los manuales internacionales, y finalmente contrasta ambos para identificar brechas y decisiones metodológicas resultantes.
+
+\subsection{Inventario de fuentes administrativas chilenas}
+\label{subsec:inventario-fuentes}
+El análisis integra tres fuentes de datos administrativos, todas disponibles en 
+formato digital y accesibles para investigación:
+
+\begin{itemize}
+    \item \textbf{División de Asociatividad y Cooperativas (DAES)}: registro oficial 
+    de cooperativas activas en Chile, incluyendo tipo, región y RUT. Constituye la 
+    fuente primaria para la identificación del universo de CAC no supervisadas por la 
+    CMF. Cada cooperativa publica en el portal DAES sus estados financieros anuales 
+    en formato PDF, de los cuales se extrajeron manualmente las variables económicas 
+    necesarias para la cuenta satélite.
+    \item \textbf{Comisión para el Mercado Financiero (CMF)}: provee información 
+    financiera de las 7 CAC bajo su supervisión a través de la plataforma BEST y las 
+    memorias anuales individuales de cada entidad. Constituye la fuente primaria para 
+    el segmento CMF de la estimación.
+    \item \textbf{Servicio de Impuestos Internos (SII)}: provee series de tiempo de 
+    ventas por tramo y número de trabajadores por RUT para personas jurídicas. Se 
+    utilizó como fuente complementaria para la caracterización institucional de las 
+    CAC presentes en sus registros.
+\end{itemize}
+
+El Cuadro~\ref{tab:cobertura_fuentes} resume la cobertura de cada fuente en términos 
+de entidades, período y variables disponibles.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\caption{Cobertura de las fuentes administrativas utilizadas}
+\label{tab:cobertura_fuentes}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}
+  p{2.5cm} p{2cm} p{2.5cm} p{6cm}}
+\toprule
+\textbf{Fuente} & \textbf{N entidades} & \textbf{Período} & \textbf{Variables principales} \\
+\midrule
+DAES & 35 CAC & 2014--2024 & P1, D1, activos, patrimonio, depósitos captados (F2), 
+  préstamos otorgados (F4); extraídos de estados financieros en PDF \\
+\addlinespace
+CMF  & 7 CAC  & 2013--2025 & P1, D1, activos, patrimonio, depósitos captados (F2), 
+  préstamos otorgados (F4); obtenidos de plataforma BEST y memorias anuales \\
+\addlinespace
+SII  & 12 CAC & Complementario & Tramo de ventas y número de trabajadores por RUT; 
+  utilizado para caracterización institucional \\
+\bottomrule
+\end{tabular*}
+\\[0.8em]
+{\footnotesize \textit{Fuente: Elaboración propia.}}
+\end{table}
+
+Este inventario dialoga directamente con el resultado tecnológico comprometido en el formulario FONDEF (Anexo ~\ref{anx:resultados tecnologicos}), que declara la integración de al menos 15 fuentes de datos públicos para el conjunto de la economía social. Frente a esa declaración de amplitud, esta memoria aporta la profundidad que el formulario no desarrollaba: selecciona las fuentes pertinentes al caso piloto CAC y documenta, para cada una, su cobertura efectiva de entidades, período y variables (Cuadro \ref{sec:aspectos-conceptuales}), su método de extracción y las brechas resultantes (Sección \ref{subsec:diagnostico-disponibilidad-ch4}). Con ello se responde, a escala piloto, a una de las observaciones del panel evaluador del concurso: la ausencia de procesos explícitos de verificación y normalización de los datos integrados.
+
+\subsection{Estadística descriptiva del panel}
+\label{subsec:estadistica-descriptiva}
+El panel consolidado comprende dos segmentos con características estructuralmente 
+distintas. El segmento DAES cubre 35 CAC no supervisadas por la CMF para el período 
+2014--2024, con un total de 129 observaciones para la variable de producción total 
+(P1). El segmento CMF cubre las 7 CAC supervisadas para el período 2013--2025, con 
+91 observaciones por variable. La diferencia de escala entre ambos segmentos es 
+sustantiva: la producción total media del segmento CMF (MM\$~42.668) supera en más 
+de 50 veces a la del segmento DAES (MM\$~828), lo que refleja la concentración del 
+sector en un número reducido de cooperativas de gran tamaño.
+
+Al interior de cada segmento, la dispersión es elevada. En el segmento DAES, la 
+mediana de P1 (MM\$~392) es menos de la mitad de la media (MM\$~828), evidenciando 
+la presencia de cooperativas de mayor tamaño que sesgan la distribución hacia arriba. 
+Este patrón se repite en activos, patrimonio, depósitos captados (F2) y préstamos 
+otorgados (F4). En el segmento CMF, la asimetría es aún más pronunciada: la mediana 
+de activos (MM\$~54.404) representa apenas el 15\% de la media (MM\$~359.223), 
+reflejo de la posición dominante de Coopeuch dentro del segmento supervisado. El 
+Cuadro~\ref{tab:estadistica_descriptiva} presenta el resumen estadístico completo 
+para ambos segmentos.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\caption{Estadística descriptiva de variables principales por segmento. 
+Cifras en millones de pesos corrientes (MM\$)}
+\label{tab:estadistica_descriptiva}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}
+  p{1.8cm} p{1.8cm} p{1cm} p{1.8cm} p{1.8cm} p{1.8cm} p{1.5cm} p{1.8cm}}
+\toprule
+\textbf{Segmento} & \textbf{Variable} & \textbf{N} & \textbf{Media} & 
+\textbf{Mediana} & \textbf{Desv. Est.} & \textbf{Mín.} & \textbf{Máx.} \\
+\midrule
+\multirow{6}{*}{DAES} 
+  & P1         & 129 & 827,8     & 392,2     & 1.119,6   & 0,0    & 10.773,7  \\
+  & D1         & 126 & 310,8     & 161,6     & 388,7     & 0,0    & 3.985,5   \\
+  & Activos    & 117 & 4.593,1   & 2.214,5   & 5.634,2   & 0,0    & 41.370,8  \\
+  & Patrimonio & 116 & 2.326,4   & 1.028,1   & 2.837,4   & 0,0    & 23.719,7  \\
+  & F2         & 106 & 2.070,0   & 623,9     & 2.779,8   & 0,0    & 28.369,7  \\
+  & F4         & 107 & 3.252,6   & 1.382,6   & 4.313,7   & 0,0    & 37.253,1  \\
+\addlinespace
+\multirow{6}{*}{CMF}  
+  & P1         & 91  & 42.668,0  & 9.393,3   & 87.957,3  & 1.915,0  & 359.492,0   \\
+  & D1         & 91  & 11.879,5  & 3.935,6   & 21.794,1  & 685,6    & 89.298,0    \\
+  & Activos    & 91  & 359.222,7 & 54.404,1  & 787.126,6 & 12.177,0 & 3.939.576,0 \\
+  & Patrimonio & 91  & 89.433,5  & 22.308,4  & 193.761,8 & 3.328,0  & 776.916,0   \\
+  & F2         & 91  & 200.216,4 & 40.714,9  & 418.888,6 & 1.857,8  & 2.402.025,0 \\
+  & F4         & 91  & 280.803,0 & 45.045,4  & 615.216,7 & 8.855,0  & 2.922.175,0 \\
+\bottomrule
+\end{tabular*}
+\\[0.8em]
+{\footnotesize \textit{Nota: N corresponde al total de observaciones cooperativa~$\times$~año 
+con dato disponible para cada variable, sobre el período 2014--2024 para el segmento 
+DAES (35 CAC) y 2013--2025 para el segmento CMF (7 CAC). Las diferencias en N entre 
+variables de un mismo segmento reflejan la disponibilidad parcial de información en 
+algunos estados financieros. P1~=~producción total; D1~=~remuneraciones; 
+F2~=~depósitos captados; F4~=~préstamos otorgados. La alta desviación estándar 
+refleja la heterogeneidad de tamaño entre cooperativas.}}
+\\[0.4em]
+{\footnotesize \textit{Fuente: Elaboración propia a partir de DAES y CMF.}}
+\end{table}
+
+\subsection{Requerimientos de información según los marcos internacionales}
+
+La revisión de los tres marcos metodológicos permite identificar el conjunto 
+de variables necesarias para construir una cuenta satélite del sector 
+cooperativo. El detalle completo de las variables requeridas por cada marco 
+---SCN 2025, Manual ONU-TSE y Manual CIRIEC--- se presenta en el 
+Anexo~\ref{anx:variables-marcos}. El Cuadro~\ref{tab:sintesis} sintetiza 
+qué variables son transversales a más de un marco ---y por tanto de mayor 
+prioridad para la estimación--- y cuáles son exclusivas de uno solo, 
+pudiendo documentarse como brechas en una primera implementación.
+% ============================================================
+% CUADRO 4.4 — SÍNTESIS DE VARIABLES TRANSVERSALES
+% ============================================================
+
+El cuadro siguiente cruza los tres marcos e identifica qué 
+variables son exigidas por más de uno. Las variables 
+transversales a los tres marcos son las de mayor prioridad 
+para la estimación, ya que su ausencia comprometería 
+simultáneamente la coherencia metodológica con todos los 
+referentes internacionales. Las variables exclusivas de un 
+solo marco tienen prioridad secundaria y pueden documentarse 
+como brechas en una primera implementación.
+
+\begin{table}[H]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{4pt}
+\caption[Síntesis: variables transversales y exclusivas por marco metodológico]{%
+Síntesis: variables transversales y exclusivas por marco metodológico}
+\label{tab:sintesis}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}
+  p{4.5cm} c c c c c}
+\toprule
+\textbf{Variable} & \textbf{Cód.} & 
+  \textbf{SCN 2025} & \textbf{ONU TSE} & 
+  \textbf{CIRIEC} & \textbf{Prioridad} \\
+\midrule
+\multicolumn{6}{l}{\textit{Transversales a los tres marcos}} \\
+\addlinespace
+Producción total          & P1   & \checkmark & \checkmark & \checkmark & Alta \\
+Consumo intermedio        & P2   & \checkmark & \checkmark & \checkmark & Alta \\
+Valor agregado bruto      & B1g  & \checkmark & \checkmark & \checkmark & Alta \\
+Remuneración empleados    & D1   & \checkmark & \checkmark & \checkmark & Alta \\
+Excedente bruto explot.   & B2g  & \checkmark & \checkmark & \checkmark & Alta \\
+Empleo remunerado (PEP)   & PEP  & \checkmark & \checkmark & \checkmark & Alta \\
+Clasificador actividad    & ---  & \checkmark & \checkmark & \checkmark & Alta \\
+Cuotas de socios          & MDR  & ---        & \checkmark & \checkmark & Alta \\
+\addlinespace
+\multicolumn{6}{l}{\textit{Transversales a SCN 2025 y ONU TSE}} \\
+\addlinespace
+Transferencias corrientes & D75  & \checkmark & \checkmark & ---        & Alta \\
+Transf. gobierno          & D75g\_r & \checkmark & \checkmark & ---     & Alta \\
+Donaciones privadas       & D75ph\_r & \checkmark & \checkmark & ---    & Alta \\
+Transf. exterior          & D75r\_r & \checkmark & \checkmark & ---     & Media \\
+Renta de la propiedad     & D4   & \checkmark & \checkmark & ---        & Media \\
+Formación bruta cap. fijo & P51g & \checkmark & \checkmark & ---        & Media \\
+Transferencias de capital & D9r  & \checkmark & \checkmark & ---        & Media \\
+Cap./nec. financiamiento  & B9   & \checkmark & \checkmark & ---        & Media \\
+Depósitos captados        & F2   & \checkmark & \checkmark & ---        & Media \\
+Préstamos otorgados       & F4   & \checkmark & \checkmark & ---        & Media \\
+ETC empleo                & PEF  & \checkmark & \checkmark & ---        & Media \\
+Horas trabajadas          & PEH  & \checkmark & \checkmark & ---        & Media \\
+\addlinespace
+\multicolumn{6}{l}{\textit{Exclusivas del ONU TSE}} \\
+\addlinespace
+Voluntarios (personas)    & VOP  & ---        & \checkmark & ---        & Media \\
+Voluntarios (ETC)         & VOF  & ---        & \checkmark & ---        & Media \\
+Valor econ. voluntariado  & VOV  & ---        & \checkmark & ---        & Media \\
+Ingresos mercado (FEER)   & FEER & ---        & \checkmark & ---        & Media \\
+Ingresos gobierno (GOVR)  & GOVR & ---        & \checkmark & ---        & Media \\
+\addlinespace
+\multicolumn{6}{l}{\textit{Exclusivas del CIRIEC}} \\
+\addlinespace
+Nombre legal              & ---  & ---        & ---        & \checkmark & Alta* \\
+RUT / identificador       & ---  & ---        & ---        & \checkmark & Alta* \\
+Tipo de cooperativa       & ---  & ---        & ---        & \checkmark & Alta* \\
+Región o provincia        & ---  & ---        & ---        & \checkmark & Alta* \\
+Número de socios          & ---  & ---        & ---        & \checkmark & Media \\
+Número de beneficiarios   & ---  & ---        & ---        & \checkmark & Media \\
+Tasa de morosidad         & ---  & ---        & ---        & \checkmark & Media \\
+Inserción grupos vulnerables & --- & ---      & ---        & \checkmark & Baja \\
+\bottomrule
+\end{tabular*}
+\\[0.8em]
+{\footnotesize * Alta prioridad aunque exclusiva del CIRIEC, 
+pues son datos de delimitación del universo sin los cuales 
+no es posible construir ninguna de las cuentas anteriores.\\
+\textit{Fuente: Elaboración propia en base a 
+\shortcite{united_nations_system_2025}, \cite{vereinte_nationen_satellite_2018} 
+y \cite{barea_tejeiro_manual_2007}.}}
+\end{table}
+
+\newpage
+\subsection{Diagnóstico de disponibilidad: brechas entre requerimientos y fuentes chilenas}
+\label{subsec:diagnostico-disponibilidad-ch4}  % CORREGIDO: label renombrado
+
+\begin{table}[htbp]
+\centering
+\caption{Diagnóstico de disponibilidad de información por bloque}
+\label{tab:diagnostico_bloques}
+\small
+\renewcommand{\arraystretch}{1.4}
+\begin{tabularx}{\textwidth}{@{} l X X c @{}}
+\toprule
+\textbf{Bloque} & \textbf{Fuente chilena disponible} & \textbf{Brecha principal} \\
+\midrule
+1. Delimitación de la población
+& Registro DAES; actividades económicas del SII; Registro Civil para vigencia legal.
+& Sin variable sistemática de fecha de constitución (\texttt{FECHA\_INICIO\_VIG}: 49\,\% de faltantes); transición regulatoria de la Ley N\textsuperscript{\underline{o}}~21.641 sin registro consolidado.
+ \\
+
+2. Variables económicas del SCN
+& Tramo de ventas del SII (\texttt{sales\_bracket}); estados financieros auditados para las 7 CAC supervisadas por la CMF.
+& Producción solo por rangos, no valor exacto; consumo intermedio sin fuente pública (exención del Impuesto a la Renta, art.~78); remuneraciones sin desagregación.
+ \\
+
+3. Fuentes de ingreso desagregadas
+& Transferencias estatales vía Ley N\textsuperscript{\underline{o}}~19.862 (0{,}57\,\% de faltantes); donaciones privadas vía registro MDS.
+& Donaciones con vacíos territoriales (57{,}7\,\%) y de RUT del donante (32{,}2\,\%); sin fuente alguna para cuotas y aportes de socios.
+\\
+
+4. Trabajadores y voluntarios
+& Número de trabajadores en el SII.
+& Sin desagregación por jornada, sexo ni edad; trabajo voluntario inexistente en todo registro administrativo.
+\\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.5em}
+\textit{Fuente: Elaboración propia }
+\end{table}
+
+Establecido el horizonte metodológico, esta subsección contrasta los requerimientos de los manuales internacionales con la disponibilidad efectiva de información en Chile, organizando el diagnóstico en los cuatro bloques del Cuadro~\ref{tab:diagnostico_bloques}.
+
+El diagnóstico revela un patrón consistente. En el Bloque~1, la población es identificable pero su datación es incompleta. En el Bloque~2, solo las transferencias del Estado se obtienen de forma directa: la producción se aproxima mediante el tramo de ventas del SII ---que clasifica a cada contribuyente en rangos sin revelar el importe exacto, a diferencia de España y Portugal--- y el consumo intermedio carece de fuente, ya que la exención del Impuesto sobre la Renta del artículo~78 de la Ley de Asociaciones Cooperativas elimina el registro administrativo que permitiría conocer los costos de operación.\footnote{Esta exención, si bien beneficia al sector, suprime el equivalente a la declaración del Impuesto sobre Sociedades utilizada en España para estimar el consumo intermedio. Solo las 7 CAC supervisadas por la CMF cuentan con estados financieros auditados que permiten cálculos directos.} En los Bloques~3 y~4, la brecha más estructural es la ausencia de un instrumento de encuesta directa a las organizaciones: las cuotas y aportes de socios y el trabajo voluntario ---que en Costa Rica, México, Polonia y Portugal se capturan mediante encuestas creadas para ese fin \shortcite{statistics_poland_social_2021,pedroso_conta_2023}
+no tienen equivalente en Chile.
+
+Se concluye que Chile dispone de los registros administrativos mínimos para construir una estimación del VAB de las CAC, pero que la cuenta satélite resultante opera con variables proxy en la mayoría de sus componentes. El Cuadro~\ref{tab:inventario_variables} amplía este diagnóstico con el inventario comparado de variables requeridas y su disponibilidad en los cuatro países considerados. Las brechas identificadas constituyen la agenda de datos pendiente para una versión más completa de la cuenta en el futuro \cite{archambault_lester_2022}.
+
+
+
+\begin{table}[htbp]
+\centering
+\caption{Inventario comparado de variables de la cuenta satélite de CAC}
+\label{tab:inventario_variables}
+\small
+\begin{tabular}{lllll}
+\toprule
+\textbf{Variable (SCN 2025)} & \textbf{España} & 
+\textbf{Portugal} & \textbf{Polonia} & \textbf{Chile} \\
+\midrule
+Producción (P1) & 
+  Declaración IS, & IES, estados & Encuesta SOF/ & 
+  Estados financieros \\
+  & cifra de negocios & financieros & ES-S + CIT-8 & DAES y CMF \\
+\addlinespace
+Consumo intermedio (P2) & 
+  Declaración IS, & IES, costos & Encuesta SOF/ & 
+  MIP BCCh 2018, \\
+  & gastos explotación & operacionales & ES-S + CIT-8 & 
+  $\alpha = 0{,}3776$ \\
+\addlinespace
+VAB (B1g = P1$-$P2) & 
+  Derivado & Derivado & Derivado & Derivado \\
+\addlinespace
+Remuneración de & TGSS, & IES, costos & Encuesta SOF/ & 
+  Estados financieros \\
+empleados (D1) & cotizaciones & de personal & ES-S + ZUS & DAES y CMF \\
+\addlinespace
+Excedente de explotación & 
+  Derivado & Derivado & Derivado & Derivado \\
+(B2g = B1g$-$D1) & & & & \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\small
+\item \textit{Nota}: IS = Impuesto sobre Sociedades; TGSS = 
+Tesorería General de la Seguridad Social; IES = Información 
+Empresarial Simplificada (Portugal); SOF = formulario de 
+organizaciones non-profit (Polonia); ES-S = encuesta de 
+cooperativas (Polonia); CIT-8 = declaración tributaria corporativa 
+(Polonia); ZUS = seguridad social polaco; MIP = Matriz 
+Insumo-Producto; BCCh = Banco Central de Chile. 
+B1g y B2g son variables derivadas en todos los países.
+\item \textit{Fuentes: Elaboración propia en base a 
+\cite{barea_tejeiro_manual_2007}; 
+\shortcite{pedroso_conta_2023}; 
+\cite{statistics_poland_social_2021}; 
+\shortcite{united_nations_system_2025}.}
+\end{tablenotes}
+\end{table}
+
+\newpage
+\section{Métodos de estimación}
+\label{sec:metodos-estimacion}
+
+Esta sección presenta el procedimiento mediante el cual los datos administrativos disponibles se transforman en estimaciones de las variables del SCN para las cooperativas de ahorro y crédito. Se describe primero la integración de las fuentes en una base unificada, luego la operacionalización de las variables del SCN a partir de los proxies disponibles, y finalmente el modelo de cálculo del Valor Agregado Bruto y su aporte al PIB nacional, junto con los supuestos y limitaciones que condicionan la estimación.
+
+% ============================================================
+% SECCIÓN 4.3 — MÉTODOS DE ESTIMACIÓN (versión final)
+% Subsecciones 4.3.1 y 4.3.2
+% ============================================================
+
+\subsection{Integración de fuentes administrativas}
+\label{subsec:integracion-fuentes}
+
+La estimación del VAB de las CAC requirió construir una base
+de datos unificada a partir de tres fuentes de información
+con estructuras y alcances distintos. El proceso se desarrolló
+en dos etapas: primero la consolidación de cada fuente por
+separado, y luego la construcción de un panel limpio con las
+variables específicas necesarias para la cuenta satélite.
+
+\paragraph{Fuente 1 — Registro institucional del universo CAC.}
+
+A partir del registro oficial de cooperativas de la División
+de Asociatividad y Cooperativas (DAES), obtenido mediante
+consulta directa a su portal en mayo de 2025, se construyó
+un registro del universo de análisis que abarca 38~CAC
+activas del segmento no supervisado. La delimitación sigue
+los criterios de elegibilidad establecidos en la
+sección~\ref{sec:cuentas-satelite}: organizaciones de
+propiedad democrática, con distribución limitada de
+excedentes e independencia del Estado, conforme a los
+criterios operacionales del Manual CIRIEC
+\cite{barea_tejeiro_manual_2007}.
+
+Este registro integra, mediante el RUT como llave de cruce,
+información proveniente de cuatro fuentes adicionales: el
+archivo maestro de personas jurídicas del SII, que permite
+validar la existencia legal de cada cooperativa y obtener su
+código de subtipo (817 para CAC); la serie de tiempo del SII,
+que aporta el tramo de ventas y el número de trabajadores
+para las CAC presentes en ese registro; el registro de
+transferencias de la Ley N\textsuperscript{o}~19.862, que
+documenta los flujos de financiamiento público hacia el
+sector; y los datos institucionales de la CMF, que aportan
+información sobre empleados y oficinas de las cooperativas
+supervisadas. El resultado es un panel de identificación y
+contexto para 35~CAC del segmento DAES y 7~CAC del segmento
+CMF, sin variables económicas en el sentido del SCN.
+
+\paragraph{Fuente 2 — Estados financieros por segmento.}
+
+Para construir las variables económicas del SCN se
+recopilaron los estados de resultados y balances generales
+de cada CAC para los períodos disponibles, organizados en
+dos segmentos según la procedencia de los documentos.
+
+Para las \textbf{CAC no supervisadas por la CMF}, los estados
+financieros fueron obtenidos directamente del portal DAES,
+donde cada cooperativa publica sus memorias anuales. La
+extracción se realizó cooperativa por cooperativa,
+procesando los documentos disponibles para cada período.\footnote{Las
+bases de datos consolidadas de la cuenta satélite están
+disponibles en el repositorio público del proyecto:
+\url{https://github.com/Iureta1/Dashboard_HuellaSocial}.} El
+resultado es un panel de 133~observaciones correspondientes
+a 35~CAC distintas para el período 2014--2024, con entre
+2~y~24~entidades por año según la disponibilidad de memorias
+en el portal.
+
+Para las \textbf{7~CAC supervisadas por la CMF}, se
+utilizaron dos fuentes complementarias: la plataforma BEST
+de la CMF, que reporta datos financieros del sector
+supervisado, y las memorias anuales individuales de cada
+cooperativa, revisadas para obtener el desglose por entidad
+que la plataforma no proporciona de forma desagregada. El
+resultado es un panel de 91~observaciones que cubre las
+7~CAC para el período 2013--2025, con cobertura completa en
+todos los años.
+
+\paragraph{Construcción del panel de estimación.}
+
+A partir de las fuentes anteriores se construyó una base
+limpia que contiene exclusivamente las variables necesarias
+para la cuenta satélite, organizada como un panel de
+observaciones CAC~$\times$~año. Cada fila corresponde a una
+cooperativa en un año determinado para el que existe
+información financiera disponible; las observaciones sin
+datos para un período específico no se incluyen en el panel
+y no se realiza imputación ni se utilizan proxies para cubrir
+años faltantes. El panel consolidado del segmento DAES suma
+133~observaciones y el del segmento CMF 91~observaciones,
+conformando en conjunto la base de estimación de la cuenta
+satélite.
+% ============================================================
+\newpage
+\subsection{Operacionalización de variables del SCN}
+\label{subsec:operacionalizacion-variables}
+
+A partir de la base de estimación, cada variable del SCN se
+construye según el procedimiento que se detalla a
+continuación.
+
+% -------------------------------------------------------
+\subsubsection*{Producción total (P1)}
+
+De acuerdo con lo establecido en la sección~\ref{subsec:cac-scn}, las CAC 
+son unidades de producción de mercado cuyos ingresos operacionales constituyen 
+una aproximación directa a P1 sin necesidad de valoración al costo. En 
+consecuencia, P1 se obtiene directamente de la línea 
+\texttt{Total\_Ingresos\_Operación} del estado de resultados de cada CAC, 
+que consolida los ingresos por intereses y reajustes, los ingresos por 
+inversiones y otros ingresos de operación, en línea con la definición de 
+producción de mercado de una institución financiera del SCN~2025 
+(párr.~7.169). El dato se extrae en pesos corrientes del año de reporte.
+
+% -------------------------------------------------------
+% -------------------------------------------------------
+\subsubsection*{Consumo intermedio (P2)}
+
+Como se estableció en la sección~\ref{subsec:cac-scn}, cuando el consumo 
+intermedio no es observable en las fuentes administrativas disponibles, el 
+SCN admite el uso de coeficientes técnicos derivados de matrices 
+insumo-producto como procedimiento de estimación indirecta. Este es 
+precisamente el caso de las CAC chilenas: la exención del impuesto de primera 
+categoría establecida en el artículo~78 del DFL N\textsuperscript{o}~5 de 
+2003 elimina el registro equivalente a la declaración del Impuesto sobre 
+Sociedades que utilizan España y Portugal para estimar esta variable. En 
+consecuencia, P2 se estima como proporción fija de la producción:
+
+\begin{equation}
+P2_{i,t} = \alpha \cdot P1_{i,t}, \qquad \alpha = 0{,}3776
+\label{eq:p2}
+\end{equation}
+
+\noindent donde $\alpha$ es la razón consumo intermedio/producción del 
+sector~94 (Intermediación financiera) en la Matriz Insumo-Producto de 
+Chile~2018, publicada por el Banco Central de Chile. El supuesto subyacente 
+es que la estructura de costos de las CAC es homogénea con el promedio del 
+sector financiero. Este coeficiente se aplica de forma uniforme a ambos
+segmentos ---DAES y CMF--- para garantizar la comparabilidad de los B1g
+resultantes, aun cuando las CAC supervisadas publican estados financieros
+auditados que permitirían una estimación directa de P2 para algunas
+entidades.\footnote{El análisis de los datos contables revela que CAPUAL
+y AHORROCOOP presentan razones P2/P1 implícitas de $0{,}72$, el doble del
+promedio sectorial, lo que sugiere que sus gastos de administración incorporan
+conceptos fuera del consumo intermedio en el sentido del SCN~2025. Estimar
+P2 directamente para las entidades con desglose contable confiable
+---Coopeuch, Oriencoop y Coonfía, con ratios entre $0{,}23$ y $0{,}28$---
+constituye una línea prioritaria para versiones futuras de la cuenta.}
+% -------------------------------------------------------
+\subsubsection*{Valor agregado bruto (B1g)}
+% -------------------------------------------------------
+
+Variable derivada calculada para cada observación del panel:
+
+\begin{equation}
+B1g_{i,t} = P1_{i,t} - P2_{i,t} = (1 - \alpha)\cdot P1_{i,t}
+\label{eq:b1g}
+\end{equation}
+
+\noindent El aporte agregado del sector al PIB se estima
+sumando el VAB de las CAC con información disponible en cada
+año:
+
+\begin{equation}
+\text{Aporte al PIB}_t =
+\frac{\displaystyle\sum_{i \in \mathcal{N}_t} B1g_{i,t}}
+     {\text{PIB}_t} \times 100
+\label{eq:aporte}
+\end{equation}
+
+\noindent donde $\mathcal{N}_t$ es el conjunto de CAC con
+P1 disponible en el año~$t$.
+
+% -------------------------------------------------------
+\subsubsection*{Remuneración de empleados (D1)}
+% -------------------------------------------------------
+
+D1 se obtiene directamente de la línea
+\texttt{Remuneraciones\_y\_Gastos\_del\_Personal} del
+estado de resultados. Esta línea consolida sueldos,
+cotizaciones patronales y otros gastos de personal,
+correspondiendo al agregado D1 del SCN~2025. En el estado
+de resultados de las CAC esta cifra aparece con signo
+negativo por convención contable; se utiliza su valor
+absoluto. Las observaciones para las que esta línea no
+está disponible en la memoria no se excluyen del panel,
+pero sí quedan fuera del cálculo de B2g y del ratio
+D1/B1g.
+
+% -------------------------------------------------------
+\subsubsection*{Excedente bruto de explotación (B2g)}
+% -------------------------------------------------------
+
+Variable residual calculada para las observaciones con
+tanto P1 como D1 disponibles:
+
+\begin{equation}
+B2g_{i,t} = B1g_{i,t} - D1_{i,t}
+\label{eq:b2g}
+\end{equation}
+
+\noindent Los impuestos sobre la producción (D2) y los
+subsidios (D3) se asumen nulos. D2 es nulo en virtud de la
+exención tributaria cooperativa (art.~78, DFL
+N\textsuperscript{o}~5/2003). D3 se asume nulo porque los
+flujos recibidos por algunas CAC bajo la Ley
+N\textsuperscript{o}~19.862 ---principalmente a través del
+Programa de Acceso al Microfinanciamiento--- corresponden a
+convenios de prestación de servicios con el Estado, no a
+subsidios a la producción en el sentido del SCN~2025.
+
+% -------------------------------------------------------
+\subsubsection*{Depreciación y VAB neto (P51d y B1n)}
+% -------------------------------------------------------
+
+La depreciación (P51d) no se incluye como variable del
+cálculo central de la cuenta satélite. La razón es una
+asimetría de cobertura entre segmentos: las 7~CAC
+supervisadas por la CMF reportan sus gastos de apoyo en
+una línea consolidada que agrupa remuneraciones,
+administración y depreciaciones sin desglose, por lo que
+P51d no es separable para ese segmento. Incluir B1n solo
+para las CAC con memorias DAES ---donde 32~de 35~entidades
+sí reportan la depreciación de forma desagregada--- generaría
+una comparación inconsistente entre segmentos. En
+consecuencia, el estudio reporta el \textbf{valor agregado
+bruto (B1g) como variable principal}, en línea con la
+práctica de Polonia en su primera iteración de cuenta
+satélite cooperativa~\cite{statistics_poland_social_2021}.
+
+A título contextual, la depreciación disponible en las
+memorias DAES permite estimar que el VAB neto del segmento
+DAES es en promedio inferior al bruto en un margen que se
+reporta en la sección de resultados, sin incorporarse al
+agregado sectorial.
+
+% -------------------------------------------------------
+\subsubsection*{Cuenta financiera: depósitos y colocaciones
+(F2 y F4)}
+% -------------------------------------------------------
+
+F2 (depósitos captados) y F4 (colocaciones netas) se
+obtienen directamente del balance general:
+
+\begin{itemize}
+  \item \textbf{F2} = \texttt{Total\_Depósitos}, que
+  consolida depósitos a la vista y depósitos a plazo.
+  \item \textbf{F4} = \texttt{Total\_Colocaciones\_Netas},
+  que corresponde al total de colocaciones vigentes menos
+  las provisiones sobre colocaciones.
+\end{itemize}
+
+Estas variables permiten caracterizar la escala de la
+actividad de intermediación financiera de cada CAC, aunque
+no forman parte del cálculo central del VAB.
+
+% -------------------------------------------------------
+\subsubsection*{Activos totales y patrimonio (Act y Pat)}
+% -------------------------------------------------------
+
+\texttt{Total\_Activos} y \texttt{Total\_Patrimonio} se
+extraen directamente del balance general y se utilizan como
+variables de escala para contextualizar los resultados de la
+cuenta de producción.
+
+% -------------------------------------------------------
+\subsubsection*{Remanente del ejercicio (Rem)}
+% -------------------------------------------------------
+
+El remanente del período se obtiene de la línea
+\texttt{Remanente\_del\_Período} del estado de resultados.
+Corresponde al resultado neto después de provisiones y
+corrección monetaria, y es el equivalente cooperativo del
+resultado del ejercicio. Puede ser positivo o negativo.
+
+% -------------------------------------------------------
+\subsubsection*{Variables de directorio e identificación}
+% -------------------------------------------------------
+
+Las variables de directorio ---RUT, razón social, tipo de
+cooperativa, región y número de socios--- provienen del
+registro DAES consolidado en
+\texttt{Consolidado\_cooperativas.xlsx}. Se incorporan al
+panel mediante cruce por RUT. El número de socios
+corresponde al dato puntual del registro DAES, sin
+desagregación temporal.
+
+% -------------------------------------------------------
+\subsubsection*{Empleo remunerado (PEP)}
+% -------------------------------------------------------
+
+El número de trabajadores (PEP) se obtiene de la variable
+\texttt{sii\_trabajadores} del panel DAES, que a su vez
+proviene de la serie de tiempo del SII. Este dato solo está
+disponible para las 12~CAC presentes en el archivo
+\texttt{sii\_company\_timeseries.parquet}, que corresponde
+a organizaciones con presencia en los registros de
+transferencias o donaciones públicas. Para las 26~CAC
+restantes no existe dato de empleo en ninguna fuente
+administrativa disponible.
+
+% -------------------------------------------------------
+\subsubsection*{Variables no construibles}
+% -------------------------------------------------------
+
+Las variables que no pudieron construirse con las fuentes
+disponibles quedan documentadas en el
+Cuadro~\ref{tab:brechas} y constituyen la agenda de datos
+prioritaria para versiones futuras de la cuenta.
+
+\begin{table}[htbp]
+\centering
+\caption{Variables no construibles con fuentes actuales}
+\label{tab:brechas}
+\small
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{@{} p{1.3cm} p{3.5cm} X @{}}
+\toprule
+\textbf{Cód.} & \textbf{Variable} &
+\textbf{Razón de exclusión} \\
+\midrule
+
+MDR &
+Cuotas de socios &
+Disponible en CMF~BEST para 7~CAC supervisadas bajo la
+cuenta «Capital pagado por socios» del balance. Sin
+equivalente público para las 31~restantes. Variable de alta
+prioridad en ONU~TSE y
+CIRIEC~\cite{barea_tejeiro_manual_2007,vereinte_nationen_satellite_2018}.\\
+
+PEF, PEH &
+Empleo en equivalentes a tiempo completo y horas
+trabajadas &
+El SII reporta solo \textit{head count}; microdatos de
+jornada no están disponibles públicamente. Brecha
+estructural en todos los países de la región en primera
+iteración~\shortcite{pedroso_conta_2023}. \\
+
+D11, D12 &
+Remuneración desagregada &
+Las memorias anuales reportan D1 como agregado. La
+desagregación entre sueldos (D11) y cotizaciones
+patronales (D12) requiere microdatos tributarios de acceso
+restringido. \\
+
+VOV &
+Trabajo voluntario &
+Sin encuesta de uso del tiempo equivalente en Chile. Las
+CAC operan con fuerza laboral remunerada; reportado como
+no aplicable. \\
+
+D75ph\_r &
+Donaciones privadas &
+Cruce con el registro MDS (Ley N\textsuperscript{o}~19.885):
+cero registros para CAC. Exclusión por diseño legal: las
+cooperativas no son elegibles por distribuir excedentes
+(DFL N\textsuperscript{o}~5/2003). \\
+
+\bottomrule
+\end{tabularx}
+\vspace{0.4em}
+{\footnotesize
+\textit{Fuente: Elaboración propia.}}
+\end{table}
+
+\subsection{Modelo de cálculo del Valor Agregado Bruto}
+\label{subsec:modelo-vab}
+
+A partir de las variables operacionalizadas en la
+sección~\ref{subsec:operacionalizacion-variables}, el VAB de cada
+CAC se calcula como:
+
+\begin{equation}
+VAB_{i,t} = P1_{i,t} - P2_{i,t} = (1-\alpha)\cdot P1_{i,t}
+\label{eq:vab}
+\end{equation}
+
+\noindent El aporte agregado del sector al PIB se obtiene sumando
+el VAB de todas las CAC identificadas:
+
+\begin{equation}
+\text{Aporte al PIB} = \frac{\sum_{i=1}^{N} VAB_{i,t}}{\text{PIB}_t}
+\times 100
+\label{eq:aporte-pib}
+\end{equation}
+\noindent La aplicación de este modelo a la base integrada produce, 
+para cada CAC $i$ y año $t$, los siguientes indicadores de resultado:
+(i)~producción estimada $P1_{i,t}$; (ii)~consumo intermedio imputado 
+$P2_{i,t}$; (iii)~valor agregado bruto $B1g_{i,t}$; 
+(iv)~remuneración de empleados estimada $D1_{i,t}$; 
+(v)~excedente bruto de explotación $B2g_{i,t}$; y 
+(vi)~empleo remunerado $\text{PEP}_{i,t}$. 
+A nivel agregado, el resultado central es el aporte del sector 
+al PIB nacional (ecuación~\ref{eq:aporte-pib}), desagregado por 
+año y, cuando los datos lo permiten, por región. 
+\subsection{Supuestos y limitaciones}
+\label{subsec:supuestos-limitaciones}
+
+La estimación descansa en los siguientes supuestos principales:
+
+\begin{itemize}
+    \item El tramo de ventas del SII es representativo de la
+    producción real de las CAC.
+    \item La razón CI/P es homogénea entre organizaciones
+    del mismo tipo ($\alpha = 0{,}3776$).
+    \item La remuneración media del sector financiero es
+    representativa del salario promedio de las CAC.
+    \item Las CAC identificadas en la DAES corresponden al
+    universo activo del sector durante el período analizado.
+\end{itemize}
+
+Las principales limitaciones son la imprecisión inherente
+al uso de tramos en lugar de valores exactos, la posible
+subestimación de organizaciones no registradas ante el SII,
+y la ausencia de datos sobre trabajo voluntario
+\cite{vereinte_nationen_satellite_2018}.
+
+
+\section{Panel interactivo}
+\label{sec:panel}
+
+
+Como complemento a los resultados presentados en los
+capítulos anteriores, se desarrolló un panel de visualización
+interactivo que permite explorar los datos de la cuenta
+satélite de forma dinámica. El panel está disponible en línea
+en el repositorio público del proyecto y fue construido en
+Python utilizando la librería Plotly, generando un archivo
+HTML autocontenido que no requiere instalación ni conexión
+a base de datos.\footnote{\url{https://github.com/Iureta1/Dashboard_HuellaSocial}}
+
+El panel se organiza en once pestañas temáticas que cubren
+los distintos componentes del análisis. Las pestañas
+\textit{Resumen CMF} y \textit{Entidades CMF} presentan la
+cuenta de producción agregada y el detalle individual de las
+7~CAC supervisadas para el período 2013--2025, con cifras en
+MM\$ corrientes referenciadas al PIB del Banco Central. La
+pestaña \textit{Segmento DAES} muestra los agregados
+sectoriales anuales del segmento no supervisado, mientras
+que \textit{Panel DAES} despliega el panel CAC~$\times$~año
+con todas las variables de la cuenta satélite por entidad.
+La pestaña \textit{Serie Histórica CMF} permite comparar la
+evolución del VAB entre las 7~cooperativas supervisadas
+mediante selección múltiple, y \textit{CMF vs DAES} contrasta
+las variables clave entre ambos segmentos en una vista
+unificada. La pestaña \textit{Distribución Regional} cruza
+el universo de 35~CAC DAES y 7~CAC CMF con su localización
+geográfica. Finalmente, las pestañas \textit{Cobertura},
+\textit{Estadística Descriptiva} y \textit{Supuestos
+Metodológicos} documentan respectivamente la proporción del
+universo con datos disponibles por variable y año, las
+estadísticas de resumen del panel, y los criterios
+metodológicos adoptados en la estimación.
+
+El panel constituye un instrumento de transparencia y
+replicabilidad: al exponer los datos consolidados en un
+formato accesible y navegable, permite verificar los
+agregados presentados en la cuenta satélite, identificar
+variaciones entre entidades y explorar la cobertura temporal
+del panel en cada segmento.
+
+En la trayectoria del proyecto Huella Social, este panel constituye además un avance concreto de la hoja de ruta tecnológica comprometida en el formulario FONDEF (Anexo \ref{anx:resultados tecnologicos}): materializa, para el caso piloto CAC, los reportes dinámicos y dashboards interactivos que la postulación proyecta escalar mediante una plataforma web en React con sistema API e integración de al menos 15 fuentes de datos. El panel se sitúa así como eslabón intermedio entre el prototipo exploratorio en Shiny R que antecede al proyecto (Anexo \ref{anx:A.1.1}) y la plataforma comprometida en la postulación, aportando lo que el formulario declaraba solo a nivel de diseño: una implementación operativa, documentada y verificable con datos reales del sector.

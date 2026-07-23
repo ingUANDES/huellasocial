@@ -1,90 +1,72 @@
 \begin{titlepage}
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt
 \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
 %uncomment if require: \path (0,869); %set diagram left start at 0, and has height of 869
-
-%Straight Lines [id:da23590902694809812] 
+%Straight Lines [id:da23590902694809812]
 \draw     (130,0) -- (130,900) ;
-%Straight Lines [id:da6870198378646561] 
+%Straight Lines [id:da6870198378646561]
 \draw  [line width=3]   (125,0) -- (125,900) ;
-%Straight Lines [id:da620103730055265] 
+%Straight Lines [id:da620103730055265]
 \draw    (120,0) -- (120,900) ;
-%Straight Lines [id:da9595418699780931] 
+%Straight Lines [id:da9595418699780931]
 \draw [line width=3]    (0,150) -- (660,150) ;
-%Straight Lines [id:da038904426968975336] 
+%Straight Lines [id:da038904426968975336]
 \draw    (0,155) -- (660,155) ;
-%Straight Lines [id:da3582574940086456] 
+%Straight Lines [id:da3582574940086456]
 \draw    (0,145) -- (660,145) ;
-%Image [id:dp2636455806851956] 
+%Image [id:dp2636455806851956]
 \draw (62,71.84) node  {\includegraphics[width=60pt,height=80.96pt]{logos/Logo-UANDES.png}};
-
 % Text Node
 \draw (260,37) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize] [align=left] {\begin{minipage}[lt]{179.57pt}\setlength\topsep{0pt}
 \begin{center}
 UNIVERSIDAD DE LOS ANDES\\FACULTAD DE INGENIERÍA Y\\CIENCIAS APLICADAS
 \end{center}
-
 \end{minipage}};
 % Text Node
-\draw (260,241.86) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE] [align=left] {\begin{minipage}[lt]{206.76pt}\setlength\topsep{0pt}
+\draw (238,230) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE] [align=left] {\begin{minipage}[lt]{240pt}\setlength\topsep{0pt}\setstretch{1.15}
 \begin{center}
 \titulo
 \end{center}
-
 \end{minipage}};
-
 % Text Node
-\draw (260,431) node [anchor=north west][inner sep=0.75pt] [font=\large]  [align=left] {\begin{minipage}[lt]{206.76pt}\setlength\topsep{0pt}
+\draw (260,400) node [anchor=north west][inner sep=0.75pt] [font=\large]  [align=left] {\begin{minipage}[lt]{206.76pt}\setlength\topsep{0pt}
 \begin{center}
 \nombreautor
 \end{center}
-
 \end{minipage}};
 % Text Node
 \draw (260,495) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{206.76pt}\setlength\topsep{0pt}
 \begin{center}
 TRABAJO PARA OPTAR AL TITULO\\ DE INGENIERO CIVIL INDUSTRIAL
 \end{center}
-
 \end{minipage}};
 % Text Node
 \draw (260,598) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{206.76pt}\setlength\topsep{0pt}
 \begin{center}
-PROFESOR GUÍA: {\sc \nombreprofuno}
+PROFESOR GUÍA: {\sc \nombreprofuno}\\
+PROFESOR CO-GUÍA: {\sc \nombreprofdos}
 \end{center}
-
 \end{minipage}};
 % Text Node
-\draw (260,681) node [anchor=north west][inner sep=0.75pt]   [align=left] {
+\draw (260,730) node [anchor=north west][inner sep=0.75pt]   [align=left] {
 \begin{minipage}[lt]{206.76pt}\setlength\topsep{0pt}
 \begin{center}
 {\small SANTIAGO, AGOSTO DE \the\year{}}
 \end{center}
 \end{minipage}};
-
 % Text Node
-\draw (260,755) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize] [align=left] {\begin{minipage}[lt]{206.76pt}\setlength\topsep{0pt}
+\draw (260,770) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize] [align=left] {\begin{minipage}[lt]{206.76pt}\setlength\topsep{0pt}
 \begin{center}
 UNIVERSIDAD DE LOS ANDES\\FACULTAD DE INGENIERÍA Y\\CIENCIAS APLICADAS
 \end{center}
-
 \end{minipage}};
-
 \end{tikzpicture}
-
 \end{titlepage}
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % Escribe la segunda pagina de titulo para ser firmada por la comision
-
 \cleardoublepage
 \thispagestyle{empty}
-
 \begin{center}
-
 \vspace*{2cm}
 \parbox{10cm}{
 \noindent
@@ -92,7 +74,6 @@ Certifico que he leído esta memoria y que en mi opinión
 su alcance y calidad son completamente adecuados como para ser considerada
 una memoria conducente al título de Ingeniero.
 \vspace{1cm}
-
 \hfill
 \begin{tabular}{c}
 \hspace{8cm} \\
@@ -100,21 +81,14 @@ una memoria conducente al título de Ingeniero.
 \nombreprofuno \\
 (Profesor Guía)
 \end{tabular}
-
 \vspace*{1.5cm}
-
 }
-
 \end{center}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % Espaciado entre lineas
   \onehalfspacing
   %\doublespacing
-
 % Hace pagina de derechos de autor
-
   \cleardoublepage
   \thispagestyle{empty}
   %\vspace*{0in}
@@ -122,32 +96,34 @@ una memoria conducente al título de Ingeniero.
     \copyright\ \nombreautor\ \the\year{} \\
     Todos los derechos reservados.
   \end{center}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 % Genera agradecimientos leyendo definicion de agradecimientos
-
   \cleardoublepage \addcontentsline{toc}{section}{Agradecimientos}
   \begin{center} \Large \textbf{Agradecimientos} \end{center}
-
-
+  Queremos expresar nuestros más sinceros agradecimientos a todas las personas que han contribuido en la realización de nuestro Proyecto de Título.
+En primer lugar, agradecer a nuestro profesor guía Sebastián Cea, por su constante apoyo, orientación y disposición a lo largo de toda la investigación. Su ayuda y conocimientos fueron fundamentales en el desarrollo de este trabajo, así como su disposición a discutir y afinar cada uno de los criterios metodológicos que dieron forma a esta memoria.
+Asimismo, queremos agradecer a nuestro profesor co-guía Joaquín Fernández, por su valiosa retroalimentación y por el tiempo dedicado a revisar y enriquecer los distintos avances de este trabajo. Su mirada crítica y sus comentarios oportunos permitieron fortalecer significativamente el resultado final de esta investigación.
+A ambos, gracias por su compromiso y por acompañarnos en este proceso con paciencia y dedicación.
 % Genera resumen leyendo definicion de resumen
-
-
   \cleardoublepage
   \refstepcounter{dummy} \addcontentsline{toc}{section}{Resumen}
   \begin{center} \Large \textbf{Resumen} \end{center}
-describir resumen del trabajo
-
-
-
+Las cooperativas de ahorro y crédito cumplen un rol relevante en la inclusión financiera y en el sistema económico de Chile. Sin embargo, su contribución se encuentra dispersa dentro de los sectores institucionales del Sistema de Cuentas Nacionales, lo que las mantiene estadísticamente invisibles. Esta ausencia de medición limita la capacidad del Estado para diseñar políticas públicas, dificulta el reconocimiento y la comparación internacional del sector.\\
+Esta memoria busca contribuir a visibilizar ese aporte, tomando las cooperativas de ahorro y crédito como caso piloto para construir evidencia comparable y replicable. El objetivo central es estimar su contribución al Producto Interno Bruto de Chile mediante la metodología de cuentas satélite, integrando registros administrativos de la División de Asociatividad y Cooperativas del Ministerio de Economía (DAES), el Servicio de Impuestos Internos (SII) y la Comisión para el Mercado Financiero (CMF) en una plataforma integral de datos. El trabajo toma como punto de partida una sistematización inicial de datos administrativos del sector, sobre la cual se identifican brechas, inconsistencias y oportunidades de mejora. A partir de ese diagnóstico, se proponen criterios para actualizar y mantener la sistematización de forma sistemática y replicable.\\
+Para ello, se revisa el estado del arte nacional e internacional sobre economía social y cuentas satélite, se comparan los marcos metodológicos existentes y se analiza el Sistema de Cuentas Nacionales 2025 \cite{united_nations_system_2025} como marco contable de referencia, junto con el Manual de la ONU sobre cuentas satélite de las Organizaciones sin Fines de Lucro (ONU-TSE 2018) \cite{vereinte_nationen_satellite_2018} como referencia principal para la construcción de la cuenta satélite. También se caracterizan las fuentes de información disponibles en Chile y se diseña un esquema de cálculo del Valor Agregado Bruto aplicable al sector.\\
+Como resultado se obtiene una estimación del Valor Agregado Bruto (VAB) de las cooperativas de
+ahorro y crédito, entendido como la diferencia entre la producción total del sector y su consumo
+intermedio, e interpretable como la contribución neta del sector al PIB nacional. El aporte estimado
+se ubica en torno al 0,08\,\% del PIB nacional, una magnitud consistente con el peso patrimonial
+del sector dentro del sistema financiero, donde las cooperativas representan cerca de un 2,4\,\% del
+patrimonio consolidado del sistema bancario y cooperativo \cite{comision_para_el_mercado_financiero_informe_2025}. Junto con esta
+estimación se entrega una propuesta metodológica documentada y replicable que, fundamentada en
+estándares internacionales, permite reducir la invisibilidad estadística del sector y sentar las bases
+para una futura Cuenta Satélite de la Economía Social en Chile.
 % Genera dedicatoria
-
  % \cleardoublepage \vspace*{1.5in}
   %\begin{flushright} \dedicatoria %\end{flushright}
-
 % Produce indice general, listas de figuras y de tablas
-
   \cleardoublepage
   \tableofcontents
   \cleardoublepage
@@ -155,8 +131,6 @@ describir resumen del trabajo
   \cleardoublepage
   \listoftables
   \cleardoublepage
-
   \normalsize
   \pagenumbering{arabic}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

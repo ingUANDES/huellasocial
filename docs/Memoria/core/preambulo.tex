@@ -24,17 +24,28 @@
 \usepackage{amsmath}   
 \usepackage{amsthm}
 \usepackage{latexsym}
+\usepackage{latexsym}
+\usepackage{textcase}
 \usepackage{cancel}
-\usepackage{physics}
+% \usepackage{physics}
 \usepackage{bbm}
 \usepackage{listings}
-\usepackage{pgfplots}
+% \usepackage{pgfplots}
 \usepackage{eurosym}
+\setlength {\marginparwidth }{2cm}
 \usepackage{changes} % para usar comando \added \comment
+\definechangesauthor[name={Seba Cea}, color=teal]{SC}
+\definechangesauthor[name={Ignacio Ureta}, color=blue]{IU}
+\definechangesauthor[name={Antonio Ruiz-Tagle}, color=orange]{ART}
+\usepackage{comment}
+\usepackage{lscape}
+\usepackage{colortbl}
+\usepackage{caption}
+
 
 % Logo Julia
 
-\usepackage{core/julialogo}
+% \usepackage{core/julialogo}
 
 % Cool code highlight
 % https://es.overleaf.com/learn/latex/Code_Highlighting_with_minted
@@ -54,10 +65,11 @@
 \usepackage{tabularx}
 \usepackage{extarrows}
 \usepackage{booktabs}
+\usepackage{threeparttable}
 \usetikzlibrary{fadings}
 \usetikzlibrary{patterns}
 \usetikzlibrary{shadows.blur}
-\usetikzlibrary{shapes}
+% \usetikzlibrary{shapes}
 
 
 % Libreria para ajustar espaciado entre lineas
@@ -96,7 +108,7 @@
 
 \usepackage{fontspec}
  
-\setmainfont{Times New Roman}
+% \setmainfont{Times New Roman}
 
 
 
@@ -155,7 +167,7 @@
 
 % Nombres fijos de Latex pueden ser cambiados al Espaniol
 \renewcommand{\contentsname}{Índice General}
-\renewcommand{\chaptername}{Capítulo}
+\renewcommand{\chaptername}{}
 \renewcommand{\appendixname}{Anexo}
 \renewcommand{\bibname}{Bibliografía}
 \renewcommand{\figurename}{Ilustración}
@@ -198,3 +210,24 @@
 \usepackage{longtable}
 \setcounter{MaxMatrixCols}{40}
 \usepackage{bm}
+
+% ===== Configuración de títulos =====
+\usepackage{titlesec}
+\titleformat{\chapter}[block]
+  {\bfseries\LARGE}      % grande y negrita
+  {\thechapter.}         % número de capítulo + punto
+  {1em}                  % espacio entre número y título
+  {\MakeTextUppercase} % centrado y en mayúsculas
+                  
+
+% Ajustar espacios arriba/abajo
+\titlespacing*{\chapter}{0pt}{0pt}{1.2\baselineskip}
+\setlength{\parskip}{6pt}
+
+% Tabla con comentarios aplicados
+
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xcolor}
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      

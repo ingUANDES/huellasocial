@@ -1,0 +1,272 @@
+\chapter{Evaluación}
+\section{Evaluación Hito 1 2025-20}
+\pagenumbering{gobble}
+% \begin{sidewaystable}
+% \centering
+% \caption{Rúbrica de Evaluación Completa}
+<<echo=FALSE, cache=TRUE>>=
+pres<-5
+res<-4.5
+intro<-4
+desa<-4
+ayc<-3
+ref<-3.5
+relalno<-5
+mapeo_logros <- c(
+    "1" = "Deficiente",
+    "2" = "Deficiente-Suficiente",
+    "3" = "Suficiente",
+    "4" = "Suficiente-Excelente",
+    "5" = "Excelente"
+  )
+@
+
+\renewcommand{\arraystretch}{1.5} % Aumentar el espaciado vertical de las filas
+\scalebox{0.55}[0.31]{
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.5cm}|c|c|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|}
+\hline
+\textbf{Indicador} & \textbf{Tipo} & \textbf{\%} & \textbf{0 - No presente} & \textbf{1 - Deficiente} & \textbf{3 - Suficiente} & \textbf{5 - Excelente} & Retro\\
+\hline \hline
+\multicolumn{8}{c}{\added{$\Sexpr{pres}\cdot10\%+\Sexpr{res}\cdot5\%+\Sexpr{intro}\cdot15\%+\Sexpr{desa}\cdot20\%+\Sexpr{ayc}\cdot30\%+\Sexpr{ref}\cdot5\%+\Sexpr{relalno}\cdot15\%=\Sexpr{0.1*pres+0.05*res+0.15*intro+3*0.2+4*0.3+2*0.05+4*0.15}\text{ (Escala 1-5)}\equiv\Sexpr{((6*(0.1*pres+0.05*res+0.15*intro+desa*0.2+ayc*0.3+ref*0.05+relalno*0.15))/5)+1}\text{ (Escala 1-7)}$}}\\
+\hline
+% --- Contenido de la primera imagen ---
+\textbf{Presentación y expresión escrita} & A & 10\% & Abundantes errores ortográficos y gramaticales, no se respeta el formato, no hay figuras/diagramas/tablas de apoyo. No denota un trabajo de selección y planificación del escrito. & El trabajo presenta errores ortográficos y gramaticales, se respeta el formato y presenta errores de consistencia con el formato. La utilización de figuras/diagramas/tablas es pobre y desordenada. Varias secciones podrían haberse omitido. & El trabajo presenta reducidos errores ortográficos y gramaticales, se respeta el formato y este se mantiene durante todo el trabajo. El uso de figuras/diagramas/tablas es adecuado, aunque nuevas figuras/diagramas ayudarían a un mejor entendimiento. & El trabajo no presenta errores ortográficos y gramaticales, es consistente con el formato. Se utilizan figuras/diagramas/tablas de forma adecuada y precisa, fomentando con ellas la claridad y explicación del escrito. La longitud del trabajo es la adecuada. & \added{\Sexpr{pres} (\Sexpr{mapeo_logros[pres]})} \\
+\hline
+\textbf{Resumen} & A & 5\% & No hay resumen. & El resumen presenta un exceso de errores de escritura, así como ausencia de temas relevantes como la motivación o los resultados alcanzados. & El resumen tiene algunos errores de escritura y falta considerar una de las áreas principales: motivación, trabajo realizado, resultados/conclusiones. & El resumen está bien escrito, presenta tanto la motivación, lo desarrollado como los resultados y conclusiones. & \added{\Sexpr{res} (\Sexpr{mapeo_logros[res]})} \\
+\hline
+\textbf{\ref{ch:intro} Introducción y motivación} & B & 15\% & No hay introducción y motivación. & La introducción tiene falencias para presentar el problema y la motivación es inexistente. El alcance del trabajo se presenta de forma vaga sin coincidir con lo realizado. & La introducción presenta con claridad el problema, aunque la motivación no es tan clara. Si bien se presenta el alcance del trabajo, este no coincide exactamente con lo finalmente realizado. & La introducción presenta con claridad el problema y la motivación para resolverlo. Además define con precisión el alcance del trabajo que se realizará, lo que coincide con lo realmente hecho. &\added{\Sexpr{intro} (\Sexpr{mapeo_logros[intro]})} \\
+\hline
+\textbf{Desarrollo} & B & 20\% & No hay desarrollo del trabajo. & Las tareas realizadas para la resolución del problema son pobres, debiendo haber realizado tareas adicionales para obtener el resultado mínimo esperado. No se presenta el detalle mínimo necesario para comprender las tareas realizadas, ni se entrega material complementario que ayude a esto. & Las tareas realizadas para la resolución del problema son correctas, aunque podría haber realizado algunas adicionales para un mejor resultado. El material entregado no permite comprender a cabalidad las tareas realizadas. & Las tareas realizadas son las más adecuadas para la resolución del problema planteado. Estas se presentan con claridad, permitiendo así evaluar su pertinencia sin dificultades. El material complementario entregado permite observar en detalle las tareas realizadas. & \added{\Sexpr{desa} (\Sexpr{mapeo_logros[desa]})} \\
+\hline
+
+% --- Contenido de la segunda imagen ---
+\textbf{Análisis y conclusiones} & B & 30\% & No hay análisis del trabajo. & Los métodos y herramientas de análisis utilizados no son los adecuados al problema y a la especialidad del alumno. Al presentarlos se omite información, lo que hace difícil comprender los resultados obtenidos. Las conclusiones no están justificadas con los métodos y herramientas utilizadas. & Los métodos y herramientas de análisis utilizados son adecuados al problema aunque no suficientes. Hacen falta algunos detalles para la real comprensión de los resultados. Las conclusiones obtenidas concuerdan con el alcance de los métodos y herramientas utilizadas. & Los métodos y herramientas de análisis utilizados son los adecuados al problema y a la especialidad del alumno. Se presentan comparaciones relevantes que permiten situar el resultado. Hay claridad y lógica en el análisis, informando específicamente las conclusiones obtenidas de los resultados y el alcance de estos. & \added{\Sexpr{ayc} (\Sexpr{mapeo_logros[ayc]})}\\
+\hline
+\textbf{Referencias} & A & 5\% & No se utilizan referencias. & Tiene un conjunto de referencias, pero no se encuentran correctamente citadas en el texto del documento. & Todas las aseveraciones relevantes tiene cita a una o más referencias (según corresponda). Las fuentes utilizadas son correctas para confirmar la aseveración que se plantea. Citas y fuentes no son abundantes. & Todas las afirmaciones relevantes realizadas en el trabajo cuentan con referencias correctas. Todos los planteamientos no evidentes y que no son parte del desarrollo de la memoria están referenciados y la calidad de las fuentes es alta. & \added{\Sexpr{ref} (\Sexpr{mapeo_logros[ref]})} \\
+\hline
+\textbf{Relevancia, alcance y novedad} & B & 15\% &  & El trabajo es poco relevante y sin novedad para el área de especialización y la profundidad con la que se abarcó el tema es baja para el tiempo y herramientas entregadas al alumno. & El trabajo es medianamente relevante y novedoso para el área de especialización, y la profundidad con la que se abarcó el tema es adecuada, aunque era posible profundizar más dado el tiempo y las herramientas entregadas al alumno. & El trabajo realizado es muy relevante para el área de especialidad del alumno y la profundidad con la que se abarcó el tema es excelente para el tiempo y capacidades del alumno como futuro ingeniero. & \added{\Sexpr{relalno} (\Sexpr{mapeo_logros[relalno]})}\\
+\hline
+
+\end{tabular}
+}
+% \end{sidewaystable}
+\newpage
+
+Comentarios adicionales
+
+\begin{enumerate}
+    \item Presentación
+    \begin{enumerate}
+        \item En el informe mantenemos un formato ordenado y claro.
+        \item Usamos tablas y figuras cuando es necesario (por ejemplo, la carta Gantt).      \item Podríamos mejorar algunos detalles de diseño.
+    \end{enumerate}
+    \item Introducción
+    \begin{enumerate}
+        \item En la introducción presentamos el problema de la falta de información sobre la Economía Social y Solidaria, explicamos por qué es relevante y mostramos la oportunidad que abre para la política pública y las cooperativas.
+        \item Dejamos más claro la solución que proponemos de las cuentas satélite, el caso piloto en cooperativas de ahorro y crédito.
+    \end{enumerate}
+    \item Desarrollo
+    \begin{enumerate}
+        \item Describimos los objetivos, los resultados esperados, el plan de trabajo, el TRL y los socios estratégicos del proyecto.
+        \item Incorporamos las observaciones de la postulación 2025 en la tabla O1–O14, mostrando qué cambiamos.
+
+    \end{enumerate}
+    \item Conclusiones: 
+    \item Referencias: 
+\end{enumerate}
+
+\section{Evaluación Hito 1 2026-10}
+<<echo=FALSE, cache=TRUE>>=
+pres<-4.5
+res<-4.5
+intro<-4.5
+desa<-5
+ayc<-4.5
+ref<-4.5
+relalno<-5
+mapeo_logros <- c(
+    "1" = "Deficiente",
+    "2" = "Deficiente-Suficiente",
+    "3" = "Suficiente",
+    "4" = "Suficiente-Excelente",
+    "5" = "Excelente"
+  )
+@
+\scalebox{0.55}[0.31]{
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.5cm}|c|c|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|}
+\hline
+\textbf{Indicador} & \textbf{Tipo} & \textbf{\%} & \textbf{0 - No presente} & \textbf{1 - Deficiente} & \textbf{3 - Suficiente} & \textbf{5 - Excelente} & Retro\\
+\hline \hline
+\multicolumn{8}{c}{\added{$\Sexpr{pres}\cdot10\%+\Sexpr{res}\cdot5\%+\Sexpr{intro}\cdot15\%+\Sexpr{desa}\cdot20\%+\Sexpr{ayc}\cdot30\%+\Sexpr{ref}\cdot5\%+\Sexpr{relalno}\cdot15\%=\Sexpr{0.1*pres+0.05*res+0.15*intro+3*0.2+4*0.3+2*0.05+4*0.15}\text{ (Escala 1-5)}\equiv\Sexpr{((6*(0.1*pres+0.05*res+0.15*intro+desa*0.2+ayc*0.3+ref*0.05+relalno*0.15))/5)+1}\text{ (Escala 1-7)}$}}\\
+\hline
+% --- Contenido de la primera imagen ---
+\textbf{Presentación y expresión escrita} & A & 10\% & Abundantes errores ortográficos y gramaticales, no se respeta el formato, no hay figuras/diagramas/tablas de apoyo. No denota un trabajo de selección y planificación del escrito. & El trabajo presenta errores ortográficos y gramaticales, se respeta el formato y presenta errores de consistencia con el formato. La utilización de figuras/diagramas/tablas es pobre y desordenada. Varias secciones podrían haberse omitido. & El trabajo presenta reducidos errores ortográficos y gramaticales, se respeta el formato y este se mantiene durante todo el trabajo. El uso de figuras/diagramas/tablas es adecuado, aunque nuevas figuras/diagramas ayudarían a un mejor entendimiento. & El trabajo no presenta errores ortográficos y gramaticales, es consistente con el formato. Se utilizan figuras/diagramas/tablas de forma adecuada y precisa, fomentando con ellas la claridad y explicación del escrito. La longitud del trabajo es la adecuada. & \added{\Sexpr{pres} (\Sexpr{mapeo_logros[pres]})} \\
+\hline
+\textbf{Resumen} & A & 5\% & No hay resumen. & El resumen presenta un exceso de errores de escritura, así como ausencia de temas relevantes como la motivación o los resultados alcanzados. & El resumen tiene algunos errores de escritura y falta considerar una de las áreas principales: motivación, trabajo realizado, resultados/conclusiones. & El resumen está bien escrito, presenta tanto la motivación, lo desarrollado como los resultados y conclusiones. & \added{\Sexpr{res} (\Sexpr{mapeo_logros[res]})} \\
+\hline
+\textbf{\ref{ch:intro} Introducción y motivación} & B & 15\% & No hay introducción y motivación. & La introducción tiene falencias para presentar el problema y la motivación es inexistente. El alcance del trabajo se presenta de forma vaga sin coincidir con lo realizado. & La introducción presenta con claridad el problema, aunque la motivación no es tan clara. Si bien se presenta el alcance del trabajo, este no coincide exactamente con lo finalmente realizado. & La introducción presenta con claridad el problema y la motivación para resolverlo. Además define con precisión el alcance del trabajo que se realizará, lo que coincide con lo realmente hecho. &\added{\Sexpr{intro} (\Sexpr{mapeo_logros[intro]})} \\
+\hline
+\textbf{Desarrollo} & B & 20\% & No hay desarrollo del trabajo. & Las tareas realizadas para la resolución del problema son pobres, debiendo haber realizado tareas adicionales para obtener el resultado mínimo esperado. No se presenta el detalle mínimo necesario para comprender las tareas realizadas, ni se entrega material complementario que ayude a esto. & Las tareas realizadas para la resolución del problema son correctas, aunque podría haber realizado algunas adicionales para un mejor resultado. El material entregado no permite comprender a cabalidad las tareas realizadas. & Las tareas realizadas son las más adecuadas para la resolución del problema planteado. Estas se presentan con claridad, permitiendo así evaluar su pertinencia sin dificultades. El material complementario entregado permite observar en detalle las tareas realizadas. & \added{\Sexpr{desa} (\Sexpr{mapeo_logros[desa]})} \\
+\hline
+
+% --- Contenido de la segunda imagen ---
+\textbf{Análisis y conclusiones} & B & 30\% & No hay análisis del trabajo. & Los métodos y herramientas de análisis utilizados no son los adecuados al problema y a la especialidad del alumno. Al presentarlos se omite información, lo que hace difícil comprender los resultados obtenidos. Las conclusiones no están justificadas con los métodos y herramientas utilizadas. & Los métodos y herramientas de análisis utilizados son adecuados al problema aunque no suficientes. Hacen falta algunos detalles para la real comprensión de los resultados. Las conclusiones obtenidas concuerdan con el alcance de los métodos y herramientas utilizadas. & Los métodos y herramientas de análisis utilizados son los adecuados al problema y a la especialidad del alumno. Se presentan comparaciones relevantes que permiten situar el resultado. Hay claridad y lógica en el análisis, informando específicamente las conclusiones obtenidas de los resultados y el alcance de estos. & \added{\Sexpr{ayc} (\Sexpr{mapeo_logros[ayc]})}\\
+\hline
+\textbf{Referencias} & A & 5\% & No se utilizan referencias. & Tiene un conjunto de referencias, pero no se encuentran correctamente citadas en el texto del documento. & Todas las aseveraciones relevantes tiene cita a una o más referencias (según corresponda). Las fuentes utilizadas son correctas para confirmar la aseveración que se plantea. Citas y fuentes no son abundantes. & Todas las afirmaciones relevantes realizadas en el trabajo cuentan con referencias correctas. Todos los planteamientos no evidentes y que no son parte del desarrollo de la memoria están referenciados y la calidad de las fuentes es alta. & \added{\Sexpr{ref} (\Sexpr{mapeo_logros[ref]})} \\
+\hline
+\textbf{Relevancia, alcance y novedad} & B & 15\% &  & El trabajo es poco relevante y sin novedad para el área de especialización y la profundidad con la que se abarcó el tema es baja para el tiempo y herramientas entregadas al alumno. & El trabajo es medianamente relevante y novedoso para el área de especialización, y la profundidad con la que se abarcó el tema es adecuada, aunque era posible profundizar más dado el tiempo y las herramientas entregadas al alumno. & El trabajo realizado es muy relevante para el área de especialidad del alumno y la profundidad con la que se abarcó el tema es excelente para el tiempo y capacidades del alumno como futuro ingeniero. & \added{\Sexpr{relalno} (\Sexpr{mapeo_logros[relalno]})}\\
+\hline
+
+\end{tabular}
+}
+
+\section*{Autoevaluación Hito 1 2026-10}
+
+El Hito 1 corresponde a la consolidación del Marco Teórico y la Revisión de 
+Literatura, según lo establecido en el Anexo A.3.1. Por ello, la evaluación se 
+focaliza en los Capítulos 2 y 3, que constituyen los entregables principales de 
+este hito. Los indicadores de Análisis y Conclusiones, Resultados y secciones 
+pendientes corresponden al Hito 2 y no se evalúan aquí.
+
+\textbf{Entregables cumplidos (según Anexo A.3.1):}
+\begin{itemize}
+    \item Redacción de la propuesta de hitos para el semestre 2026-10 (Anexo A.3).
+    \item Informe estructurado según la plantilla de memoria otorgada por la 
+    Universidad.
+    \item Archivo .bib construido y actualizado con referencias académicas 
+    relevantes para el marco teórico y la revisión de literatura.
+    \item Redacción de los bloques temáticos del marco teórico, incluyendo 
+    fundamentos conceptuales (secciones 3.1 a 3.4) y experiencias comparadas 
+    (sección 2.2, con los casos de España, Portugal y Polonia).
+    \item Subsección orientada a la identificación y caracterización de 
+    indicadores y fuentes de datos disponibles en Chile (DAES, SII, registros 
+    de la Ley No 19.862, Registro Civil), vinculándolos con los requerimientos 
+    de información para la medición de la ESS (sección 3.5.1 y Cuadro 3.1).
+    \item Revisión iterativa del documento, incorporando mejoras de redacción, 
+    coherencia y estilo, con retroalimentación del Centro de Escritura ya 
+    incorporada.
+\end{itemize}
+
+\textbf{Evaluación según rúbrica (aplicada a Capítulos 2 y 3):}
+\begin{itemize}
+    \item \textbf{Presentación y expresión escrita (10\%):} El informe respeta 
+    el formato de la plantilla y mantiene consistencia de estilo a lo largo de 
+    ambos capítulos, reforzada por la revisión del Centro de Escritura 
+    incorporada en esta versión. El uso de tablas (Cuadro 3.1) apoya la 
+    exposición. \textbf{Nota: 4,5.}
+    
+    \item \textbf{Resumen (5\%):} Presenta motivación, objetivo y metodología. 
+    Los resultados son prospectivos, consistente con el estado de avance. 
+    \textbf{Nota: 4,5.}
+    
+    \item \textbf{Introducción y motivación (15\%):} El problema, la motivación 
+    y el alcance están presentados con claridad. Los objetivos son coherentes 
+    con los capítulos desarrollados. \textbf{Nota: 4,5.}
+    
+    \item \textbf{Desarrollo (20\%):} Los Capítulos 2 y 3 cubren con profundidad 
+    los bloques temáticos solicitados: economía social, cooperativas financieras, 
+    cuentas satélite, marcos metodológicos internacionales, fuentes disponibles 
+    en Chile y asimetrías de información. La revisión comparada de España, 
+    Portugal y Polonia (sección 2.2.2) aporta detalle metodológico fino, y el 
+    anclaje institucional chileno (DFL No 5/2003, Ley No 21.641) en la sección 
+    3.2.1 conecta directamente el marco legal con las decisiones metodológicas 
+    del Capítulo 4. \textbf{Nota: 5.}
+    
+    \item \textbf{Análisis y conclusiones (30\%):} Evaluado sobre Capítulos 2 
+    y 3. La sección 3.5.2 identifica brechas del estado del arte y la oportunidad 
+    para Chile. La sección 3.6 compara los tres marcos metodológicos 
+    internacionales y justifica con argumento teórico la elección del Manual 
+    ONU-TSE como referencia principal, cumpliendo el requisito de anclar la 
+    metodología en el marco conceptual. Ambas secciones presentan comparaciones 
+    relevantes y conclusiones fundamentadas. \textbf{Nota: 4,5.}
+    
+    \item \textbf{Referencias (5\%):} Las referencias son de alta calidad y 
+    están correctamente citadas en formato autor-año a lo largo de ambos 
+    capítulos. \textbf{Nota: 4,5.}
+    
+    \item \textbf{Relevancia, alcance y novedad (15\%):} No existe en Chile un 
+    trabajo previo que integre DAES, SII y CMF para estimar el VAB de las CAC 
+    bajo el marco ONU-TSE 2018. La revisión de literatura documenta ese vacío 
+    y el marco teórico lo fundamenta con los estándares más recientes. 
+    \textbf{Nota: 5.}
+\end{itemize}
+
+\textbf{Nota ponderada: 3,85 (escala 1--5) $\equiv$ 6,61 (escala 1--7).}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%     EVALUCIÓN HITO 2     %%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Evaluación Hito 2 2026-10}
+<<echo=FALSE, cache=TRUE>>=
+pres<-5
+res<-5
+intro<-5
+desa<-4.5
+ayc<-4.5
+ref<-4.5
+relalno<-5
+mapeo_logros <- c(
+    "1" = "Deficiente",
+    "2" = "Deficiente-Suficiente",
+    "3" = "Suficiente",
+    "4" = "Suficiente-Excelente",
+    "5" = "Excelente"
+  )
+@
+\scalebox{0.55}[0.31]{
+\begin{tabular}{|>{\raggedright\arraybackslash}p{2.5cm}|c|c|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|>{\raggedright\arraybackslash}p{4.5cm}|}
+\hline
+\textbf{Indicador} & \textbf{Tipo} & \textbf{\%} & \textbf{0 - No presente} & \textbf{1 - Deficiente} & \textbf{3 - Suficiente} & \textbf{5 - Excelente} & Retro\\
+\hline \hline
+\multicolumn{8}{c}{\added{$\Sexpr{pres}\cdot10\%+\Sexpr{res}\cdot5\%+\Sexpr{intro}\cdot15\%+\Sexpr{desa}\cdot20\%+\Sexpr{ayc}\cdot30\%+\Sexpr{ref}\cdot5\%+\Sexpr{relalno}\cdot15\%=\Sexpr{0.1*pres+0.05*res+0.15*intro+0.2*desa+0.3*ayc+0.05*ref+0.15*relalno}\text{ (Escala 1-5)}\equiv\Sexpr{((6*(0.1*pres+0.05*res+0.15*intro+desa*0.2+ayc*0.3+ref*0.05+relalno*0.15))/5)+1}\text{ (Escala 1-7)}$}}\\
+\hline
+\textbf{Presentación y expresión escrita} & A & 10\% & Abundantes errores ortográficos y gramaticales, no se respeta el formato, no hay figuras/diagramas/tablas de apoyo. No denota un trabajo de selección y planificación del escrito. & El trabajo presenta errores ortográficos y gramaticales, se respeta el formato y presenta errores de consistencia con el formato. La utilización de figuras/diagramas/tablas es pobre y desordenada. Varias secciones podrían haberse omitido. & El trabajo presenta reducidos errores ortográficos y gramaticales, se respeta el formato y este se mantiene durante todo el trabajo. El uso de figuras/diagramas/tablas es adecuado, aunque nuevas figuras/diagramas ayudarían a un mejor entendimiento. & El trabajo no presenta errores ortográficos y gramaticales, es consistente con el formato. Se utilizan figuras/diagramas/tablas de forma adecuada y precisa, fomentando con ellas la claridad y explicación del escrito. La longitud del trabajo es la adecuada. & \added{\Sexpr{pres} (\Sexpr{mapeo_logros[pres]})} \\
+\hline
+\textbf{Resumen} & A & 5\% & No hay resumen. & El resumen presenta un exceso de errores de escritura, así como ausencia de temas relevantes como la motivación o los resultados alcanzados. & El resumen tiene algunos errores de escritura y falta considerar una de las áreas principales: motivación, trabajo realizado, resultados/conclusiones. & El resumen está bien escrito, presenta tanto la motivación, lo desarrollado como los resultados y conclusiones. & \added{\Sexpr{res} (\Sexpr{mapeo_logros[res]})} \\
+\hline
+\textbf{\ref{ch:intro} Introducción y motivación} & B & 15\% & No hay introducción y motivación. & La introducción tiene falencias para presentar el problema y la motivación es inexistente. El alcance del trabajo se presenta de forma vaga sin coincidir con lo realizado. & La introducción presenta con claridad el problema, aunque la motivación no es tan clara. Si bien se presenta el alcance del trabajo, este no coincide exactamente con lo finalmente realizado. & La introducción presenta con claridad el problema y la motivación para resolverlo. Además define con precisión el alcance del trabajo que se realizará, lo que coincide con lo realmente hecho. &\added{\Sexpr{intro} (\Sexpr{mapeo_logros[intro]})} \\
+\hline
+\textbf{Desarrollo} & B & 20\% & No hay desarrollo del trabajo. & Las tareas realizadas para la resolución del problema son pobres, debiendo haber realizado tareas adicionales para obtener el resultado mínimo esperado. No se presenta el detalle mínimo necesario para comprender las tareas realizadas, ni se entrega material complementario que ayude a esto. & Las tareas realizadas para la resolución del problema son correctas, aunque podría haber realizado algunas adicionales para un mejor resultado. El material entregado no permite comprender a cabalidad las tareas realizadas. & Las tareas realizadas son las más adecuadas para la resolución del problema planteado. Estas se presentan con claridad, permitiendo así evaluar su pertinencia sin dificultades. El material complementario entregado permite observar en detalle las tareas realizadas. & \added{\Sexpr{desa} (\Sexpr{mapeo_logros[desa]})} \\
+\hline
+\textbf{Análisis y conclusiones} & B & 30\% & No hay análisis del trabajo. & Los métodos y herramientas de análisis utilizados no son los adecuados al problema y a la especialidad del alumno. Al presentarlos se omite información, lo que hace difícil comprender los resultados obtenidos. Las conclusiones no están justificadas con los métodos y herramientas utilizadas. & Los métodos y herramientas de análisis utilizados son adecuados al problema aunque no suficientes. Hacen falta algunos detalles para la real comprensión de los resultados. Las conclusiones obtenidas concuerdan con el alcance de los métodos y herramientas utilizadas. & Los métodos y herramientas de análisis utilizados son los adecuados al problema y a la especialidad del alumno. Se presentan comparaciones relevantes que permiten situar el resultado. Hay claridad y lógica en el análisis, informando específicamente las conclusiones obtenidas de los resultados y el alcance de estos. & \added{\Sexpr{ayc} (\Sexpr{mapeo_logros[ayc]})}\\
+\hline
+\textbf{Referencias} & A & 5\% & No se utilizan referencias. & Tiene un conjunto de referencias, pero no se encuentran correctamente citadas en el texto del documento. & Todas las aseveraciones relevantes tiene cita a una o más referencias (según corresponda). Las fuentes utilizadas son correctas para confirmar la aseveración que se plantea. Citas y fuentes no son abundantes. & Todas las afirmaciones relevantes realizadas en el trabajo cuentan con referencias correctas. Todos los planteamientos no evidentes y que no son parte del desarrollo de la memoria están referenciados y la calidad de las fuentes es alta. & \added{\Sexpr{ref} (\Sexpr{mapeo_logros[ref]})} \\
+\hline
+\textbf{Relevancia, alcance y novedad} & B & 15\% &  & El trabajo es poco relevante y sin novedad para el área de especialización y la profundidad con la que se abarcó el tema es baja para el tiempo y herramientas entregadas al alumno. & El trabajo es medianamente relevante y novedoso para el área de especialización, y la profundidad con la que se abarcó el tema es adecuada, aunque era posible profundizar más dado el tiempo y las herramientas entregadas al alumno. & El trabajo realizado es muy relevante para el área de especialidad del alumno y la profundidad con la que se abarcó el tema es excelente para el tiempo y capacidades del alumno como futuro ingeniero. & \added{\Sexpr{relalno} (\Sexpr{mapeo_logros[relalno]})}\\
+\hline
+\end{tabular}
+}
+
+\newpage
+
+Comentarios adicionales
+
+\begin{enumerate}
+    \item Presentación
+    \begin{enumerate}
+        \item El informe mantiene el formato de la plantilla a lo largo de los seis capítulos, con tablas y figuras (cuadros de resultados, dashboard) que apoyan la exposición.
+        \item Se incorporó la retroalimentación pendiente del Centro de Escritura.
+    \end{enumerate}
+    \item Metodología
+    \begin{enumerate}
+        \item Se comparó la factibilidad de los tres marcos metodológicos (SCN 2025, ONU-TSE, CIRIEC) para el contexto chileno, justificando la elección del Manual ONU-TSE como referencia principal.
+        \item Se documentó el esquema de cálculo del VAB y los supuestos y limitaciones asociados (tramo de ventas del SII, homogeneidad de $\alpha$, exención tributaria de D2 y D3).
+    \end{enumerate}
+    \item Resultados
+    \begin{enumerate}
+        \item Se implementó el análisis para los segmentos DAES y CMF por separado, documentando los efectos de composición del panel DAES y la incomparabilidad temporal entre segmentos.
+        \item Los resultados se visualizan en el Dashboard Cuenta Satélite CAC, disponible en el repositorio del proyecto.
+    \end{enumerate}
+    \item Conclusiones
+    \begin{enumerate}
+        \item El Capítulo 6 sintetiza los hallazgos y propone una agenda de mejoras concreta para futuras versiones de la cuenta satélite (estimación directa de P2, análisis de sensibilidad de $\alpha$, encuesta de voluntariado, entre otras).
+    \end{enumerate}
+    \item Referencias
+    \begin{enumerate}
+        \item Se mantiene el formato autor-año de forma consistente entre los capítulos metodológicos y de resultados y el marco teórico del Hito 1.
+    \end{enumerate}
+\end{enumerate}
+
+
+

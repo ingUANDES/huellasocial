@@ -2,11 +2,13 @@
 \input{core/preambulo.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\nombreautor}{ALUMNO}
-\newcommand{\mes}{Julio}
-\newcommand{\titulo}{Definir el título}
-\newcommand{\nombreprofuno}{PROFESOR}
-\newcommand{\nombreprofdos}{Nombre Profe 2}
+\newcommand{\nombreautor}{Ignacio Ureta\\
+Antonio Ruiz Tagle}
+\newcommand{\mes}{Agosto}
+\newcommand{\titulo}{Propuesta metodológica para una cuenta satélite de las cooperativas de ahorro y crédito en Chile}
+
+\newcommand{\nombreprofuno}{Sebastián Cea}
+\newcommand{\nombreprofdos}{Joaquín Fernández}
 \newcommand{\nombreproftres}{Nombre Profesor Invitado}
 \newcommand{\codigo}{ING-IN-001/11}
 
@@ -37,7 +39,7 @@ ok..
 	{\hbox{\large{i}}}
 \newcommand{\RR}{\mathbb{R}}
 
-
+\geometry{margin=2cm}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -53,10 +55,17 @@ ok..
 %%%%%%%%%%%%%%%%Ingreso de capitulos%%%%%%%%%%%%%%%%%%%%%%
 
 \input{chapters/chapter01.tex}
+
 \input{chapters/chapter02.tex}
+
 \input{chapters/chapter03.tex}
+
 \input{chapters/chapter04.tex}
+
 \input{chapters/chapter05.tex}
+
+\input{chapters/chapter06.tex}
+
 % Ingenieros prefieren la bibliografia antes que los anexos
 
 \cleardoublepage
@@ -64,7 +73,7 @@ ok..
 \addcontentsline{toc}{chapter}{Bibliografía}
 
 \bibliographystyle{newapa}
-\bibliography{referencias}
+\bibliography{references}
 
 \appendix % seguido de archivos de apendices
 
@@ -73,9 +82,11 @@ ok..
 % Escribe 'Anexos' en el Indice General
 \addcontentsline{toc}{chapter}{Anexos}
 
-\input{attachments/anexo_a.tex}    % archivo de apendice
+\input{docs/Memoria/attachments/anexo_a}    % archivo de apendice
 
-%\input{apendice_b}    % otro archivo de apendice
+ \input{docs/Memoria/attachments/anexo_b}     % otro archivo de apendice
+
+\input{docs/Memoria/attachments/Comentarios}     % Tabla de comentairos
 
 \label{end}
 \end{document}
