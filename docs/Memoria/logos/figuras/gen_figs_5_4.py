@@ -107,7 +107,7 @@ plt.close(fig)
 # ─────────────────────────────────────────────────────────────────────────
 regiones = ["Los Lagos","Arica y Parinacota","Antofagasta","Coquimbo",
             "Biobío","Maule","Araucanía","Valparaíso","R. Metropolitana"]
-conteos  = [1,1,1,2,2,2,3,5,22]
+conteos  = [1,1,1,2,2,2,3,4,20]
 total = sum(conteos)
 
 fig, ax = plt.subplots(figsize=(6.3, 3.6))

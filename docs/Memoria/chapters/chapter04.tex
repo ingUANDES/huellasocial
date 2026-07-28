@@ -118,8 +118,7 @@ Este inventario dialoga directamente con el resultado tecnológico comprometido 
 \label{subsec:estadistica-descriptiva}
 El panel consolidado comprende dos segmentos con características estructuralmente 
 distintas. El segmento DAES cubre 35 CAC no supervisadas por la CMF para el período 
-2014--2024, con un total de 129 observaciones para la variable de producción total 
-(P1). El segmento CMF cubre las 7 CAC supervisadas para el período 2013--2025, con 
+2014--2024, con un total de 122 observaciones para la variable de producción total, tras excluir registros duplicados de carga de la misma cooperativa y año. El segmento CMF cubre las 7 CAC supervisadas para el período 2013--2025, con 
 91 observaciones por variable. La diferencia de escala entre ambos segmentos es 
 sustantiva: la producción total media del segmento CMF (MM\$~42.668) supera en más 
 de 50 veces a la del segmento DAES (MM\$~828), lo que refleja la concentración del 
@@ -149,7 +148,7 @@ Cifras en millones de pesos corrientes (MM\$)}
 \textbf{Mediana} & \textbf{Desv. Est.} & \textbf{Mín.} & \textbf{Máx.} \\
 \midrule
 \multirow{6}{*}{DAES} 
-  & P1         & 129 & 827,8     & 392,2     & 1.119,6   & 0,0    & 10.773,7  \\
+  & P1         & 122 & 827,8     & 392,2     & 1.119,6   & 0,0    & 10.773,7  \\
   & D1         & 126 & 310,8     & 161,6     & 388,7     & 0,0    & 3.985,5   \\
   & Activos    & 117 & 4.593,1   & 2.214,5   & 5.634,2   & 0,0    & 41.370,8  \\
   & Patrimonio & 116 & 2.326,4   & 1.028,1   & 2.837,4   & 0,0    & 23.719,7  \\
@@ -436,7 +435,7 @@ disponibles en el repositorio público del proyecto:
 \url{https://github.com/Iureta1/Dashboard_HuellaSocial}.} El
 resultado es un panel de 133~observaciones correspondientes
 a 35~CAC distintas para el período 2014--2024, con entre
-2~y~24~entidades por año según la disponibilidad de memorias
+2~y~22~entidades por año según la disponibilidad de memorias
 en el portal.
 
 Para las \textbf{7~CAC supervisadas por la CMF}, se
@@ -772,12 +771,13 @@ año y, cuando los datos lo permiten, por región.
 La estimación descansa en los siguientes supuestos principales:
 
 \begin{itemize}
-    \item El tramo de ventas del SII es representativo de la
-    producción real de las CAC.
+    \item Los ingresos operacionales del estado de resultados
+    (línea \texttt{Total\_Ingresos\_Operación}) constituyen una
+    aproximación válida de la producción total (P1) en el
+    sentido del SCN 2025 (párr.~7.169) para cooperativas
+    financieras de mercado.
     \item La razón CI/P es homogénea entre organizaciones
     del mismo tipo ($\alpha = 0{,}3776$).
-    \item La remuneración media del sector financiero es
-    representativa del salario promedio de las CAC.
     \item Las CAC identificadas en la DAES corresponden al
     universo activo del sector durante el período analizado.
 \end{itemize}
