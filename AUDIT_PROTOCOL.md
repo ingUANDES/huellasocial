@@ -58,6 +58,24 @@ hecho, un problema de reproducibilidad que debe quedar registrado como hallazgo
 crítico. Redacta de inmediato la lista de lo que hay que pedir al alumno para
 desbloquear el resto.
 
+### 2.1 Ecosistemas multi-repositorio
+
+Cuando el documento referencie repositorios externos (notas al pie, URLs de GitHub) en vez de
+alojar todo en un único repo, la Fase 0 debe además:
+- **Clonar** cada repositorio referenciado fuera del repo principal (nunca copiar su contenido
+  hacia adentro).
+- **Registrar el commit SHA** exacto usado en la auditoría, y verificar si es plausible que
+  corresponda a la versión que produjo las cifras de la memoria (comparar fechas de commit vs.
+  fecha de entrega/defensa). Un repo externo que sigue recibiendo commits después de la entrega es,
+  en sí, un riesgo de trazabilidad que debe reportarse.
+- **Verificar la pertinencia real** de cada repositorio: que un repo pertenezca al mismo equipo o
+  proyecto no implica que contenga los datos o el código de la memoria auditada. Distingue repos
+  que son la fuente real de una memoria de repos "hermanos" (mismo equipo, propósito distinto).
+- **Vigilar homónimos entre repos.** Un archivo con el mismo nombre en dos repositorios distintos
+  puede corresponder a poblaciones o contenidos distintos. No asumas que el nombre de archivo
+  implica el mismo contenido — confirma el universo de datos (filtros, RUTs, período) antes de
+  usarlo como insumo de la Fase 2.
+
 ---
 
 ## 3. Fases de la auditoría

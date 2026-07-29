@@ -212,6 +212,7 @@ Al decidir qué hacer primero, usar este orden de criterios:
 | Julio 2026 | Creación inicial del roadmap | Primer ingreso de documentos al proyecto |
 | Julio 2026 | Corrección de cifra de aporte al PIB: de "0,04–0,08 %" a "0,07–0,12 % (CMF)" | Auditoría interna de la tesis (docs/auditoria/01_consistencia_interna.md) confirmó que el rango correcto del segmento CMF es 0,07–0,12 %. La cifra anterior no correspondía a ningún valor reportado en la memoria. |
 | Julio 2026 | Auditoría completa de Ureta & Ruiz Tagle (2026) completada — Fases 0, 1, 4, 5, 6 | Se identificó un error aritmético verificado (H-01, Cuadro 5.7 fila 2025) y se generó lista de solicitudes a autores para desbloquear Fases 2–3. Ver `docs/auditoria/`. |
+| Julio 2026 | Mapeo de relación entre `huellasocial`, `huellasocialdata` y `Dashboard_HuellaSocial`; AUDIT_PROTOCOL.md ampliado con §2.1 "Ecosistemas multi-repositorio" | Se verificó que `huellasocialdata` es el repo "donaciones" de PROJECT.md bajo otro nombre/org, y que no es fuente de datos de la memoria (pipelines de donaciones, no de CAC). Se confirmó que `Dashboard_HuellaSocial` sí contiene el código y datos (D-01/D-02/D-03) que desbloquean la Fase 2. Se detectó un riesgo de homónimo: `sii_company_timeseries.parquet` existe en ambos repos con poblaciones distintas. Ver `docs/auditoria/00b_relacion_repositorios.md`. También se detectó que la tabla "Repositorios del proyecto" de PROJECT.md está desactualizada (nombre/org de `huellasocialdata` y ausencia de `Dashboard_HuellaSocial`) — pendiente de corrección en PROJECT.md. |
 
 ---
 

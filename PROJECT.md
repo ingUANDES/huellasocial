@@ -66,10 +66,16 @@ El proyecto se sitúa en la intersección de:
 
 | Repositorio | URL | Rol |
 |-------------|-----|-----|
-| **huellasocial** (principal) | [https://github.com/ingUANDES/huellasocial](https://github.com/ingUANDES/huellasocial) | Plataforma, análisis, documentación científica |
-| **donaciones** (hermano) | [https://github.com/viantirreau/donaciones](https://github.com/viantirreau/donaciones) | Pipeline de consolidación de bases de datos fuente |
+| **huellasocial** (principal) | [https://github.com/ingUANDES/huellasocial](https://github.com/ingUANDES/huellasocial) | Research OS: documentación científica, memoria, auditoría. `src/`, `data/` y `analysis/` aún vacíos (sin pipeline propio) |
+| **huellasocialdata** (hermano, antes "donaciones") | [https://github.com/ingUANDES/huellasocialdata](https://github.com/ingUANDES/huellasocialdata) | Pipeline de consolidación de donaciones y registro legal de OSC (Ley 19.862, MDS, Registro Civil ONG). No contiene datos de cooperativas de ahorro y crédito |
+| **Dashboard_HuellaSocial** | [https://github.com/Iureta1/Dashboard_HuellaSocial](https://github.com/Iureta1/Dashboard_HuellaSocial) | Código y datos de la cuenta satélite de CAC (Ureta & Ruiz Tagle, 2026): dashboard, paneles CMF/DAES. Fuente real de las cifras del Capítulo 5 de la memoria |
 
-Los repositorios son independientes pero comparten estándares de documentación y componentes de pipeline reutilizables. Los datos procesados en `donaciones` alimentan la capa de ingesta de `huellasocial`.
+**Nota de auditoría (julio 2026):** esta tabla estaba desactualizada — nombraba `viantirreau/donaciones` (ahora `ingUANDES/huellasocialdata`) y no listaba `Dashboard_HuellaSocial`, pese a que este último es el repositorio que aloja el código y los datos del único output científico completado. Ver `docs/auditoria/00b_relacion_repositorios.md`.
+
+Los tres repositorios son independientes pero comparten equipo y estándares de documentación.
+`huellasocialdata` alimenta potencialmente la Línea 2 de investigación (eficiencia en distribución
+de donaciones), **no** el módulo de cuentas satélite de CAC, cuyos datos y código viven en
+`Dashboard_HuellaSocial` y aún no están integrados a `huellasocial`.
 
 ---
 
