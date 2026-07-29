@@ -68,10 +68,18 @@ La auditoría de la memoria *Propuesta metodológica para una cuenta satélite d
 
 | Prioridad | Insumos | Qué desbloquea |
 |-----------|---------|----------------|
-| 🔴 Urgente | D-02, D-03, C-02 | Verificar H-01 (error Cuadro 5.7, fila 2025) y H-03 (inconsistencia de N) |
-| 🟡 Alta | D-06, C-01 | Verificar α = 0,3776 y proceso de integración de fuentes |
-| 🟢 Normal | D-01, D-04, D-05, D-07, D-08, C-03, C-04, C-05, E-01/02/03, M-01–M-04 | Auditoría completa de reproducibilidad y estadística |
+| ~~🔴 Urgente~~ ✅ | ~~D-02, D-03, C-02~~ | Recibidos vía `Dashboard_HuellaSocial` (`HuellaSocial_Consolidado.xlsx`, `Dashboard_cuentasatelite.py`). H-01 y H-03 verificados en Fase 2 — ver `02_reproduccion_calculos.md`. |
+| 🟡 Alta | D-06, C-01 | Verificar α = 0,3776 y proceso de integración de fuentes. **C-01 sigue sin entregarse**: `Dashboard_cuentasatelite.py` solo formatea la hoja `Agregado Total` ya calculada en el Excel; el pipeline que produce esa hoja desde el panel CMF/DAES no está en el repositorio. |
+| 🟢 Normal | D-01, D-04, D-05, D-07, D-08, C-03, C-04, E-01/02/03, M-01–M-04 | Auditoría completa de reproducibilidad y estadística |
 
 ---
 
-*Este documento fue generado en la Fase 0 de la auditoría, en cumplimiento del AUDIT_PROTOCOL.md §2.*
+## Actualización post-Fase 2 (julio 2026)
+
+1. **Corregir el dato fuente, no solo el texto.** La memoria fue corregida a mano en Overleaf (commit `81cd560`) con los valores correctos para H-01, pero `HuellaSocial_Consolidado.xlsx` (hoja `🏦 Agregado Total`) y `dashboard_huellasocial.html` **siguen reproduciendo el error original** (ver H-10 en `02_reproduccion_calculos.md`). Se solicita: (a) corregir la fila 2025 del bloque "Cuenta de producción" y las filas 2015–2024 del bloque "Cuenta financiera" (N incorrecto) en el Excel; (b) regenerar el dashboard; (c) confirmar si existe una versión corregida del Excel aún no subida al repositorio.
+2. **Entregar C-01** (pipeline de integración CMF+DAES → hoja `Agregado Total`), no solo el formateador del dashboard.
+3. **Documentar en `decision_log.md`** (ya creado por esta auditoría en `huellasocial/docs/reports/decision_log.md`) las tres decisiones metodológicas detectadas sin registro en el commit `81cd560`: cambio de proxy de P1 (tramo de ventas SII → `Total_Ingresos_Operación`), eliminación del supuesto de remuneración media sectorial, y cambio de criterio de deduplicación DAES (129→122 observaciones).
+
+---
+
+*Este documento fue generado en la Fase 0 de la auditoría, en cumplimiento del AUDIT_PROTOCOL.md §2. Actualizado en Fase 2.*
