@@ -1,10 +1,12 @@
 # FASE 6 — Proyección científica y continuidad de la línea de investigación
 ## Ureta & Ruiz Tagle (2026) · Auditoría Research OS — Huella Social
 
-**Fecha:** julio 2026  
+**Fecha:** julio 2026 (actualizado tras el cierre de las Fases 1–5)
 **Auditor:** Research Engineering Assistant (en rol de co-investigador permanente)  
 **Esta fase no es evaluativa — es generativa.**  
 **Nota metodológica:** Las preguntas y propuestas marcadas con [AUTORES] fueron identificadas o sugeridas explícitamente en la memoria (§6.3). Las marcadas con [EQUIPO] son aportaciones del equipo de investigación como co-investigador. Las marcadas con [EQUIPO+] son síntesis o extensiones que amplían lo que los autores sugirieron.
+
+> **Actualización:** esta versión reemplaza referencias obsoletas a un H-01 aún abierto (ya cerrado y verificado en las Fases 2–3) y a "código en repo externo, no integrado" (parcialmente resuelto: `Dashboard_HuellaSocial` ya tiene el dato corregido, el Readme documenta el cruce por RUT y el entorno de ejecución, aunque el pipeline sigue viviendo como fórmulas de Excel — ver `02_reproduccion_calculos.md` y `04_evaluacion_rubrica.md`). El resto del contenido generativo de esta fase se mantiene vigente.
 
 ---
 
@@ -35,10 +37,10 @@ La contribución metodológica específica (sustitución de la declaración de r
 
 ### Qué debe reforzarse para pasar revisión por pares
 
-1. **Corrección H-01** (obligatoria): el error del Cuadro 5.7 fila 2025 debe corregirse antes de cualquier envío.
-2. **Análisis de sensibilidad de α** (alta prioridad): sin este análisis, los revisores preguntarán invariablemente qué pasa si α varía ±15 %. Los autores ya lo reconocen en §6.3.
+1. ~~Corrección H-01~~ ✅ **Ya resuelto**: el error del Cuadro 5.7 fila 2025 fue corregido de punta a punta (texto, dato fuente, dashboard) y verificado de forma independiente en las Fases 2–3.
+2. **Análisis de sensibilidad de α** (alta prioridad, aún pendiente): sin este análisis, los revisores preguntarán invariablemente qué pasa si α varía ±15 %, o si se usa P2 directo para las entidades con desglose contable propio. Ver F-03 en `05_feedback_alumno.md` — es un ejercicio de bajo costo con datos ya disponibles, ideal como primer paso hacia el paper.
 3. **Estado del arte internacional más explícito**: la memoria conoce bien los casos europeos pero no los posiciona en un marco comparativo estructurado. Para un paper, la Tabla 1 debería ser "Methodological approaches to cooperative satellite accounts by country: data sources, P2 estimation, and coverage" (Chile, Spain, Portugal, Poland, Mexico).
-4. **Repositorio reproducible**: los revisores pedirán acceso a los datos o al código. Un repositorio limpio con datos de ejemplo y código documentado (M2 del RESEARCH_ROADMAP) es condición para muchas revistas Q1.
+4. **Repositorio reproducible**: `Dashboard_HuellaSocial` ya resolvió gran parte de esto (dato corregido, Readme con cruce por RUT y entorno documentado — ver Fase 2), pero el pipeline sigue siendo fórmulas de Excel transcritas a mano, no un script. Para una revista Q1, conviene automatizar al menos la generación de las tablas antes de someter el paper.
 5. **Discusión de generalización**: el paper debería responder explícitamente: ¿el método es replicable a otros países con restricciones similares? ¿A otros tipos de cooperativas?
 
 ---
@@ -75,12 +77,12 @@ Las propuestas se ordenan en secuencia lógica: cada una toma los outputs de la 
 
 ### Propuesta 1 — Análisis de sensibilidad y P2 diferenciado (Pregrado, urgente)
 **Pregunta central:** ¿Cuánto cambia el VAB estimado si α se diferencia entre grandes (Coopeuch, Oriencoop, Coonfía) y pequeñas CAC?  
-**Por qué ahora:** Es la extensión más directa y necesaria para el paper M1. Puede ser una memoria breve o un capítulo del paper mismo.  
-**Datos:** Ya disponibles (el panel de la memoria auditada + los EEFF auditados de las 3 CAC grandes).  
-**Método:** Calcular P2 directamente para las 3 CAC con desglose confiable; usar α diferenciado por tamaño; comparar VAB agregado con el resultado actual.  
-**Nivel:** Pregrado (1 semestre, foco cuantitativo).  
-**Reutilizable del pipeline actual:** Todo el código de cálculo de VAB (C-02); solo cambiar la función de α.  
-**Qué reconstruir:** Nada mayor; añadir una función de α(i) condicional.
+**Por qué ahora:** Es la extensión más directa y necesaria para el paper M1, y coincide exactamente con el hallazgo F-03 de la Fase 5 (`05_feedback_alumno.md`) — puede resolverse como un anexo breve de la memoria antes de la defensa, no solo como trabajo post-titulación.
+**Datos:** Ya disponibles (el panel de la memoria auditada + los EEFF auditados de las 5 CAC con desglose contable propio — Coopeuch, Oriencoop, Coonfía, CAPUAL, AHORROCOOP).
+**Método:** Calcular P2 directamente para esas 5 CAC con desglose confiable; usar α diferenciado por tamaño; comparar VAB agregado con el resultado actual.  
+**Nivel:** Pregrado (1 semestre, foco cuantitativo) — o incluso un anexo de la memoria actual.
+**Reutilizable del pipeline actual:** El panel y las fórmulas de `HuellaSocial_Consolidado.xlsx`; solo agregar una columna de α(i) condicional.
+**Qué reconstruir:** Nada mayor.
 
 ### Propuesta 2 — Extensión a fundaciones y ONG (Pregrado / Magíster)
 **Pregunta central:** ¿Cuál es el VAB de las fundaciones y ONG con FECU Social, y cómo se compara con el caso CAC?  
@@ -162,7 +164,7 @@ Las propuestas se ordenan en secuencia lógica: cada una toma los outputs de la 
 | Brown et al. (2015) | Citado — bien |
 | Uzea & Duguid (2015) | Citado — bien |
 | Carini & Bouchard (2026) | Citado como borrador de revisión interna. Al momento de enviar el paper, verificar si fue publicado oficialmente como reporte de UNTFSSE. Si sigue siendo borrador, debería moverse a "comunicación personal" o eliminarse. |
-| Akerlof (1970). "The Market for Lemons". *QJE*. | El marco teórico de PROJECT.md lo usa; la memoria lo menciona implícitamente pero no lo cita. Para el paper, si se argumenta la asimetría de información como motivación, debe aparecer en bibliografía. |
+| Akerlof (1970). "The Market for Lemons". *QJE*. | **Verificado**: no está en `references.bib`. La memoria discute asimetrías de información en organizaciones sociales (§3.5, `chapter03.tex`) citando `coupet_toward_2019`, que es una fuente de dominio específico legítima — no es estrictamente necesario citar a Akerlof si ya se cita literatura de aplicación directa. Se mantiene como sugerencia opcional (no crítica) para el paper, si se quiere anclar el argumento en la teoría económica fundacional. |
 
 ### Literatura latinoamericana que fortalecería el estado del arte
 
@@ -175,18 +177,19 @@ Las propuestas se ordenan en secuencia lógica: cada una toma los outputs de la 
 
 ## Resumen de acciones para el equipo (Research OS)
 
-| Acción | Plazo recomendado | Milestone |
-|--------|------------------|-----------|
-| Corregir H-01 (Cuadro 5.7 fila 2025) en el PDF | Antes de la defensa | — |
-| Solicitar a Ureta y Ruiz Tagle los insumos D-02, D-03, C-02 (ver SOLICITUD_AUTORES.md) | Inmediato | M2 |
-| Integrar código y datos de Dashboard_HuellaSocial al repositorio principal | Q3 2026 | M2 |
-| Añadir análisis de sensibilidad de α al borrador del paper | Q3 2026 | M1 |
-| Redactar borrador IMRAD del paper (estructura: abstract / intro / método / resultados / discusión / conclusiones) | Q3–Q4 2026 | M1 |
-| Añadir tabla comparativa de metodologías por país al paper | Q4 2026 | M1 |
-| Enviar a Annals of Public and Cooperative Economics | Q4 2026 | M1 |
-| Iniciar M5 (extensión a fundaciones) usando este pipeline como plantilla | Q1 2027 | M5 |
-| Actualizar RESEARCH_ROADMAP.md con la cifra verificada (0,07–0,12 % PIB) y con la corrección H-01 | Inmediato | — |
+| Acción | Estado | Plazo recomendado | Milestone |
+|--------|--------|------------------|-----------|
+| ~~Corregir H-01 (Cuadro 5.7 fila 2025)~~ | ✅ Hecho y verificado (Fases 2–3) | — | — |
+| ~~Solicitar a Ureta y Ruiz Tagle los insumos D-02, D-03, C-02~~ | ✅ Recibidos vía `Dashboard_HuellaSocial` | — | M2 |
+| Subir D-04 y D-07 al repositorio; sincronizar cambios de texto ya reportados (D-06/D-08/M-01–M-04) | 🟡 Pendiente (ver F-01/F-02, Fase 5) | Antes de la defensa | M2 |
+| Calibrar α contra las 5 CAC con desglose contable propio (Propuesta 1) | 🟡 Pendiente | Antes de la defensa o como anexo | M1 |
+| Automatizar la generación de tablas desde el Excel (reemplazar transcripción manual) | ⚪ No urgente para la defensa; sí para publicación | Q3 2026 | M1/M2 |
+| Redactar borrador IMRAD del paper (estructura: abstract / intro / método / resultados / discusión / conclusiones) | ⚪ Pendiente | Q3–Q4 2026 | M1 |
+| Añadir tabla comparativa de metodologías por país al paper | ⚪ Pendiente | Q4 2026 | M1 |
+| Enviar a Annals of Public and Cooperative Economics | ⚪ Pendiente | Q4 2026 | M1 |
+| Iniciar M5 (extensión a fundaciones) usando este pipeline como plantilla | ⚪ Pendiente | Q1 2027 | M5 |
+| ~~Actualizar RESEARCH_ROADMAP.md con la corrección H-01~~ | ✅ Hecho | — | — |
 
 ---
 
-*Salida de FASE 6 — conforme a AUDIT_PROTOCOL.md §3 (adición de FASE 6). Esta fase alimenta el RESEARCH_ROADMAP.md.*
+*Salida de FASE 6 — conforme a AUDIT_PROTOCOL.md §3 (adición de FASE 6). Esta fase alimenta el RESEARCH_ROADMAP.md. Con esta fase concluyen las seis fases del protocolo de auditoría para Ureta & Ruiz Tagle (2026).*
