@@ -61,3 +61,9 @@
 \newunicodechar{×}{\ensuremath{\times}}
 \newunicodechar{≈}{\ensuremath{\approx}}
 \newunicodechar{−}{\ensuremath{-}}
+
+% ─── Tope de altura para las figuras ─────────────────────────────────────────
+% Los gráficos son apaisados (10:5). A \linewidth completo desbordan el área de
+% texto del frame y quedan cortados por abajo. Con keepaspectratio, el tope de
+% altura los reduce proporcionalmente hasta que caben junto al título y la nota.
+\setkeys{Gin}{width=\linewidth,height=0.63\textheight,keepaspectratio}

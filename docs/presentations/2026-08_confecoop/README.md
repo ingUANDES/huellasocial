@@ -27,8 +27,14 @@ quarto render home.qmd --to revealjs    # → home.html (autocontenido)
 quarto render home.qmd --to beamer      # → home.pdf  (33 láminas, 16:9)
 ```
 
+Verificación de encuadre: la salida Beamer no debe producir ningún
+`Overfull \vbox`, que es como LaTeX reporta una lámina cuyo contenido se corta
+por abajo. Para comprobarlo, poner `keep-tex: true`, renderizar y correr
+`xelatex home.tex`; `grep -c 'Overfull \vbox'` debe dar 0. Es más confiable que
+revisar las láminas a ojo, sobre todo en miniaturas.
+
 Beamer requiere XeLaTeX con `beamer`, `fontspec`, `tcolorbox` (con `breakable`),
-`listings` y `lmodern`. En Debian/Ubuntu:
+`listings`, `newunicodechar` y `lmodern`. En Debian/Ubuntu:
 `texlive-xetex texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
 texlive-lang-spanish lmodern`.
 

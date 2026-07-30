@@ -4,7 +4,7 @@ subtitle: "Primera cuenta satélite de las CAC chilenas — resultados 2013–20
 author: "Ignacio Ureta · Antonio Ruiz Tagle"
 date: today
 lang: es
-institute: "Proyecto Huella Social — FICA, Universidad de los Andes. Prof. guía: Sebastián Cea Echenique"
+institute: "Proyecto Huella Social — FICA, Universidad de los Andes.\\newline Prof. guía: Sebastián Cea Echenique · Prof. co-guía: Joaquín Fernández"
 
 # ─── Salida PDF (Beamer) ───────────────────────────────────────────────────
 # Compilar:  quarto render home.qmd --to beamer
@@ -52,7 +52,7 @@ format:
 Dejar 10' de preguntas.
 :::
 
-# 1. Por qué el sector necesita una cifra propia
+# Por qué el sector necesita una cifra propia
 
 ## El problema en una frase
 
@@ -119,7 +119,7 @@ Todas las cifras de esta presentación son **cotas inferiores**: el aporte real 
 mayor. La razón está en la lámina 20 — y es una razón que el gremio puede cambiar.
 :::
 
-# 2. Cómo se mide: la lógica de una cuenta satélite
+# Cómo se mide: la lógica de una cuenta satélite
 
 ## Los tres manuales que definen las reglas
 
@@ -139,14 +139,11 @@ que permite que la cifra chilena sea comparable con la europea.
 ![](figuras/fig_ecuacion.png){width=78%}
 
 ::: {.callout-note title="En castellano cooperativo"}
-**Producción (P1)** = todo lo que la cooperativa ingresa por su operación
-(intereses, reajustes, inversiones).
+**P1** = todo lo que la cooperativa ingresa por su operación.
+**P2** = lo que le compra a terceros para operar.
 
-**Consumo intermedio (P2)** = lo que le compra a terceros para operar
-(servicios, insumos, arriendos).
-
-**Valor agregado (B1g)** = lo que la cooperativa *agrega* con su propio trabajo.
-Eso, y solo eso, es lo que entra al PIB.
+**B1g** = lo que la cooperativa *agrega* con su propio trabajo. Eso, y solo eso,
+es lo que entra al PIB.
 :::
 
 ## De los ingresos al aporte al PIB
@@ -154,8 +151,8 @@ Eso, y solo eso, es lo que entra al PIB.
 ![](figuras/fig_cascada.png)
 
 ::: {.aside-text}
-El valor agregado se reparte entre quienes trabajan en la cooperativa (D1) y el
-excedente que queda para socios y reservas (B2g). Cifras 2025, MM\$ corrientes.
+Cifras 2025, MM\$ corrientes. El valor agregado se reparte entre remuneraciones
+(D1) y el excedente que queda para socios y reservas (B2g).
 :::
 
 ## El nudo metodológico: nadie sabe cuánto compran las CAC
@@ -202,7 +199,7 @@ Esto es una estimación de **orden de magnitud**, no una medición exacta. Afina
 desglose contable que hoy solo publican cinco entidades.
 :::
 
-# 3. De dónde salen los datos
+# De dónde salen los datos
 
 ## Tres fuentes públicas, ningún dato levantado a mano
 
@@ -212,9 +209,11 @@ desglose contable que hoy solo publican cinco entidades.
 | **CMF** | 7 CAC | 2013–2025 | Estados financieros auditados + plataforma BEST |
 | **SII** | 12 CAC | complementario | Trabajadores y tramo de ventas por RUT |
 
+: {tbl-colwidths="[24,14,17,45]"}
+
 ::: {.callout-note title="Todo el insumo es información pública"}
-Ningún dato reservado, ninguna encuesta: el estudio se construye sobre lo que las
-cooperativas **ya publican**. La calidad del resultado depende de cuánto publiquen.
+Ningún dato reservado ni encuesta: el estudio se construye sobre lo que las
+cooperativas **ya publican**.
 :::
 
 ## Un sector partido en dos por la regulación
@@ -275,7 +274,7 @@ Costa Rica, México, Polonia y Portugal capturan estas variables con **encuestas
 creadas para ese fin**. Chile no tiene ninguna. Ésa es la brecha estructural.
 :::
 
-# 4. El sector en cifras
+# El sector en cifras
 
 ## La escala: dos mundos dentro del mismo sector
 
@@ -302,9 +301,8 @@ segmentos, indica que unas pocas entidades grandes arrastran el agregado.
 ![](figuras/fig_vab_segmentos.png)
 
 ::: {.aside-text}
-El segmento CMF explica más del 90 % del valor agregado en todos los años. El
-salto de 2022–2023 refleja en parte más cooperativas DAES incorporadas al panel,
-no solo crecimiento real.
+El segmento CMF explica más del 90 % del valor agregado. El salto de 2022–2023
+refleja en parte más cooperativas DAES en el panel, no solo crecimiento real.
 :::
 
 ## A dónde va ese valor agregado
@@ -312,8 +310,7 @@ no solo crecimiento real.
 ![](figuras/fig_reparto_vab.png)
 
 ::: {.aside-text}
-Entre 38 % y 52 % del valor agregado se paga como remuneraciones — una
-participación salarial estable durante trece años, sin cambios estructurales.
+Participación salarial estable durante trece años, sin cambios estructurales.
 :::
 
 ## El balance: activos, depósitos y colocaciones
@@ -321,8 +318,8 @@ participación salarial estable durante trece años, sin cambios estructurales.
 ![](figuras/fig_balance.png)
 
 ::: {.aside-text}
-Las colocaciones netas representan entre 68 % y 90 % de los activos en todo el
-período: el sector es, estructuralmente, un sector de crédito a sus socios.
+Las colocaciones son entre 68 % y 90 % de los activos: el sector es,
+estructuralmente, un sector de crédito a sus socios.
 :::
 
 ## Dónde están las cooperativas
@@ -330,21 +327,19 @@ período: el sector es, estructuralmente, un sector de crédito a sus socios.
 ![](figuras/fig_regional.png)
 
 ::: {.aside-text}
-20 de las 36 CAC del catastro del proyecto están en la Región Metropolitana (56 %);
-Valparaíso (4) y La Araucanía (3) siguen. El segmento DAES pesa poco en stocks
-agregados, pero es el que sostiene la cobertura territorial fuera de la RM.
+El segmento DAES pesa poco en stocks agregados, pero es el que sostiene la
+cobertura territorial fuera de la Región Metropolitana.
 :::
 
-# 5. Resultados y hallazgos
+# Resultados y hallazgos
 
 ## El aporte al PIB — y su validación independiente
 
 ![](figuras/fig_aporte_pib.png)
 
 ::: {.aside-text}
-Aporte esperado = participación de "Servicios financieros" en el PIB (BCCh) × 2,41 %
-(peso patrimonial de las cooperativas en el sistema bancario y cooperativo, CMF
-dic-2025). Dos caminos de cálculo totalmente distintos llegan al mismo orden de magnitud.
+Aporte esperado = "Servicios financieros" en el PIB (BCCh) × 2,41 % de peso
+patrimonial (CMF dic-2025). Dos cálculos independientes, el mismo orden de magnitud.
 :::
 
 ## Hallazgo 1 — La caída del aporte no es una caída del sector
@@ -405,9 +400,8 @@ reportar el desglose.
 ![](figuras/fig_cobertura_daes.png)
 
 ::: {.aside-text}
-En ningún año el panel cubre las 38 CAC vigentes del registro DAES. El mejor año
-(2023) llega a 22. Cada memoria no publicada es valor agregado real que
-simplemente no entra en la cifra.
+Ningún año cubre las 38 CAC vigentes; el mejor (2023) llega a 22. Cada memoria no
+publicada es valor agregado real que no entra en la cifra.
 :::
 
 ## Hallazgo 5 — El resultado resiste una auditoría independiente
@@ -429,7 +423,7 @@ Para un gremio que quiere usar estas cifras ante la autoridad, la trazabilidad
 del número importa tanto como el número.
 :::
 
-# 6. Qué falta — y qué puede hacer el gremio
+# Qué falta — y qué puede hacer el gremio
 
 ## Las cuatro limitaciones que hay que declarar siempre
 
@@ -450,14 +444,13 @@ sin sus supuestos es un número que el primer contradictor desarma.
 ## Tres cosas que el gremio puede cambiar — y que el investigador no
 
 ::: {.callout-important title="1. Publicación oportuna de memorias"}
-La cobertura de 2024 cae a 11 CAC porque las memorias no estaban publicadas. Un
-acuerdo gremial de publicación en plazo **sube la cifra del sector sin cambiar una
-sola línea de metodología**.
+La cobertura de 2024 cae a 11 CAC por memorias no publicadas. Un acuerdo gremial
+de publicación en plazo **sube la cifra sin cambiar una línea de metodología**.
 :::
 
 ::: {.callout-important title="2. Formato común de estado de resultados"}
 Una plantilla mínima común (P1, D1, depreciación, depósitos, colocaciones)
-reemplaza la extracción manual y automatiza la actualización anual.
+automatiza la actualización anual.
 :::
 
 ::: {.callout-important title="3. Un dato de empleo"}
@@ -514,7 +507,8 @@ depende de cuánto publique el propio sector.
 **Ignacio Ureta · Antonio Ruiz Tagle**
 
 Memoria de título, Ingeniería Civil Industrial — FICA, Universidad de los Andes
-Profesor guía: Sebastián Cea Echenique
+
+Profesor guía: Sebastián Cea Echenique · Profesor co-guía: Joaquín Fernández
 
 ::: {.aside-text}
 Tablero interactivo con todas las series por entidad y año:
