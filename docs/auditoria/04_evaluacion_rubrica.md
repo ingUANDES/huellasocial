@@ -1,11 +1,11 @@
 # FASE 4 — Evaluación según rúbrica de titulación UANDES
 ## Ureta & Ruiz Tagle (2026) · Auditoría Research OS — Huella Social
 
-**Fecha de auditoría:** julio 2026  
-**Insumo:** PDF únicamente. Los puntajes de los indicadores 4 y 5 podrían ajustarse una vez completadas las Fases 2–3.  
+**Fecha de auditoría:** julio 2026
+**Insumo:** memoria completa (`docs/Memoria/chapters/chapter01–06.tex`, `core/primeras_paginas.tex`, `references.bib`), post-corrección (commit `81cd560`), y los resultados verificados de las Fases 1–3 (`01_consistencia_interna.md`, `02_reproduccion_calculos.md`, `03_auditoria_estadistica.md`).
 **Postura:** evaluador externo exigente (AUDIT_PROTOCOL §0).
 
-> **Aviso:** La conversión de puntaje ponderado a nota UANDES debe confirmarse con el guía antes de comunicar cualquier nota a los alumnos. Este documento reporta el puntaje en la escala 0–5 de la rúbrica, no la nota final.
+> **Aviso:** La conversión de puntaje ponderado a nota UANDES debe confirmarse con el guía antes de comunicar cualquier nota a los alumnos. Este documento reporta el puntaje en la escala 0–5 de la rúbrica, no la nota final. Esta versión reemplaza la evaluación preliminar de la Fase 0 (basada solo en el PDF, sin código ni datos): varios juicios cambian sustancialmente ahora que H-01/H-10 están cerrados y verificados.
 
 ---
 
@@ -14,13 +14,13 @@
 | # | Indicador | Peso | Puntaje (0–5) | Contribución ponderada |
 |---|-----------|------|---------------|----------------------|
 | 1 | Presentación y expresión escrita | 10 % | 4,0 | 0,40 |
-| 2 | Resumen | 5 % | 3,5 | 0,175 |
-| 3 | Introducción y motivación | 15 % | 5,0 | 0,75 |
-| 4 | Desarrollo | 20 % | 4,0 | 0,80 |
-| 5 | Análisis y conclusiones | 30 % | 3,5 | 1,05 |
-| 6 | Referencias | 5 % | 4,5 | 0,225 |
+| 2 | Resumen | 5 % | 5,0 | 0,25 |
+| 3 | Introducción y motivación | 15 % | 4,0 | 0,60 |
+| 4 | Desarrollo | 20 % | 3,0 | 0,60 |
+| 5 | Análisis y conclusiones | 30 % | 4,0 | 1,20 |
+| 6 | Referencias | 5 % | 5,0 | 0,25 |
 | 7 | Relevancia, alcance y novedad | 15 % | 5,0 | 0,75 |
-| — | **Total** | **100 %** | — | **4,15 / 5,00** |
+| — | **Total** | **100 %** | — | **4,05 / 5,00** |
 
 ---
 
@@ -29,108 +29,97 @@
 **Puntaje asignado: 4,0 / 5**
 
 **Fortalezas:**
-- Documento compilado en LaTeX con tipografía uniforme y sin errores de compilación aparentes.
-- Figuras 5.1 y 5.2 son informativas; combinan series de VAB y aporte al PIB en un solo eje dual.
-- Longitud apropiada (~95 páginas de contenido + Anexos); no hay relleno evidente.
-- Terminología económica consistente a lo largo del documento (P1, B1g, D1 usados con precisión).
+- Documento LaTeX bien estructurado, tipografía y formato de cuadros consistentes a lo largo de los seis capítulos.
+- Cada cuadro incluye nota al pie con definiciones de variables y fuente — buena práctica sostenida en las 9 tablas del Capítulo 5.
+- Longitud apropiada, sin relleno evidente; terminología del SCN (P1, B1g, D1, B2g) usada con precisión y consistencia.
+- Resumen (ver Indicador 2) y estructura del documento (§1.5) anticipan correctamente el contenido de cada capítulo.
 
 **Debilidades:**
-- H-01, H-03, H-04, H-05, H-07: cinco inconsistencias en valores numéricos entre secciones, detectables visualmente. Una comisión atenta las nota.
-- La columna N del Cuadro 5.8 está mal actualizada para 11 años (H-04), lo que introduce ruido en una tabla de presentación directa.
-- Los decimales son inconsistentes entre tablas (P1 en Cuadro 5.5 usa un decimal; en Cuadro 5.7, también un decimal, pero las diferencias entre celdas revelan el error).
+- H-16 (Fase 3): la Figura 5.1 (`CMF.png`) tiene el eje secundario truncado en 0,07 en vez de 0, lo que exagera visualmente la caída del aporte al PIB — una figura "que aporta claridad" (criterio del nivel 5) debe ser precisa, no solo estéticamente prolija.
+- H-14/H-15 (Fase 3, menores): inconsistencia de N entre cuadros de producción y financiera sin nota aclaratoria puntual en cada tabla (aclarado solo a nivel general en §4.2.2).
 
-**Justificación del nivel:** La memoria tiene presentación sólida (nivel 3→5), pero los errores numéricos detectables en tablas de resultados la alejan del 5. Un evaluador que calcule cualquier subtotal en el Cuadro 5.7 encontrará el error de la fila 2025.
+**Justificación del nivel:** Formato sólido y profesional, pero la imprecisión visual de la Figura 5.1 y la falta de aclaración puntual de los N por tabla impiden el nivel 5 ("figuras precisas que aportan claridad").
 
 ---
 
 ## Indicador 2 — Resumen (5 %)
 
-**Puntaje asignado: 3,5 / 5**
+**Puntaje asignado: 5,0 / 5**
 
 **Fortalezas:**
-- El resumen cubre motivación, metodología y resultado principal.
-- Está bien escrito; una frase por tema, sin jerga innecesaria.
-- Menciona los tres marcos metodológicos (SCN 2025, ONU-TSE, CIRIEC).
+- Cubre los tres elementos exigidos por la rúbrica: motivación (invisibilidad estadística de las CAC), desarrollo (integración DAES+SII+CMF, marco SCN 2025/ONU-TSE/CIRIEC) y resultado (VAB ≈ 0,08 % del PIB, contextualizado contra el 2,4 % de participación patrimonial).
+- Correctamente calificado como "aproximación de orden de magnitud" ya en el resumen, no solo en el cuerpo — coherente con el hallazgo positivo de la Fase 3 sobre lenguaje cauteloso consistente.
+- Bien escrito, sin jerga innecesaria, en una extensión adecuada.
 
-**Debilidades:**
-- H-08: La cifra "0,08 % del PIB nacional" en el abstract es una descripción del segmento CMF, sin indicar que el segmento DAES es marginal y que el rango correcto para el sector completo es 0,07–0,12 %. Un lector del abstract que no lea el cuerpo queda con una impresión imprecisa del resultado.
-- No menciona que las Fases 2 y 3 del análisis (reproducibilidad) dependen de datos no versionados, ni que el resultado principal depende de un supuesto clave (α).
-
-**Justificación del nivel:** Cumple los tres elementos requeridos (motivación / trabajo / resultados) pero la cifra principal está presentada sin el contexto necesario para interpretarla correctamente.
+**Justificación del nivel:** Cumple íntegramente el criterio de nivel 5. No se detectan afirmaciones en el resumen no sostenidas por el cuerpo del documento (ver Fase 3, §1, tabla de correspondencia dato↔conclusión).
 
 ---
 
 ## Indicador 3 — Introducción y motivación (15 %)
 
-**Puntaje asignado: 5,0 / 5**
+**Puntaje asignado: 4,0 / 5**
 
 **Fortalezas:**
-- El problema de invisibilidad estadística de las CAC está bien planteado y motivado institucionalmente (DFL N°5/2003 como causa de la brecha de información).
-- Los objetivos (general y 4 específicos en §1.2) son claros, medibles y coherentes entre sí.
-- El alcance (§1.3) delimita con precisión las CAC chilenas (DAES + CMF, 2014–2025) y excluye explícitamente otras cooperativas y otros tipos de ESS.
-- El alcance coincide con lo realizado: el capítulo 5 cubre exactamente las CAC DAES (2014–2024) y CMF (2013–2025).
-- La conexión con el proyecto Huella Social y la postulación FONDEF está documentada sin desviar el foco de la memoria.
+- El problema de invisibilidad estadística de las CAC está bien planteado y motivado institucionalmente (exención tributaria del art. 78, DFL N°5/2003, como causa estructural de la brecha de información contable).
+- Objetivo general y cuatro objetivos específicos (§Objetivos) son claros, medibles y siguen una secuencia lógica explícita hacia los capítulos correspondientes.
+- El marco institucional (§Marco institucional del proyecto) conecta la memoria con el proyecto Huella Social y la postulación FONDEF sin desviar el foco del trabajo.
 
-**Justificación del nivel:** Nivel 5 pleno. No se detectan brechas entre lo prometido y lo entregado.
+**Debilidad:**
+- El objetivo específico 3 y la sección de Alcances declaran el período **2014–2024** para la estimación ("...cuenta satélite sectorial para el período 2014–2024"), pero el trabajo efectivamente ejecutado cubre 2014–2024 para DAES **y 2013–2025 para CMF** (Cuadro 5.5, Capítulo 5), y el agregado total presentado llega hasta 2025. Es un caso leve pero real de "alcance no coincide del todo con lo hecho" (criterio de nivel 3 de la rúbrica) — en este caso el trabajo *excede* lo declarado (cubre más años, no menos), pero el texto de alcance debería actualizarse para reflejar la cobertura real lograda.
+
+**Justificación del nivel:** Motivación y objetivos son de nivel 5 en solitario; el desajuste de período entre lo declarado y lo ejecutado impide el nivel 5 pleno según el criterio textual de la rúbrica. Corrección de bajo costo: actualizar "2014–2024" a "2013/2014–2025" en §Alcances y en el objetivo específico 3.
 
 ---
 
 ## Indicador 4 — Desarrollo (20 %)
 
-**Puntaje asignado: 4,0 / 5**
+**Puntaje asignado: 3,0 / 5**
 
 **Fortalezas:**
-- El capítulo metodológico (Cap. 4) es el más sólido de la memoria. La estrategia de estimación en tres pasos (identificación, integración, cálculo) es clara y lógicamente secuenciada.
-- La operacionalización de variables del SCN (§4.3.2) identifica el proxy correcto para cada cuenta (P1, P2, B1g, D1, B2g) con justificación normativa referenciada.
-- El Cuadro 4.6 (variables no construibles) es una contribución metodológica real: sistematiza las brechas de información con razonamiento institucional específico para Chile.
-- El dashboard (§4.4) constituye un entregable tecnológico concreto que va más allá de lo habitual en memorias de este tipo.
-- La comparación con las experiencias de España, Portugal y Polonia (§2.2.2) es relevante y muestra dominio del estado del arte internacional.
+- El Capítulo 4 (Metodología) es el más sólido del documento: estrategia de estimación en tres componentes (identificación, integración, estimación) clara y bien secuenciada; operacionalización de cada variable del SCN (P1, P2, B1g, D1, B2g, F2, F4) con justificación normativa específica (SCN 2025 párr. 7.169, DFL N°5/2003 art. 78).
+- El Cuadro de variables no construibles (§4.3.2) es una contribución metodológica real: documenta brechas con razonamiento institucional específico para Chile, no genérico.
+- El dashboard interactivo (§4.4, Sección 5.4) es un entregable tecnológico que excede lo habitual en una memoria de pregrado, y fue verificado funcionalmente en la Fase 2 de esta auditoría.
+- Auto-crítica metodológica documentada: la nota sobre CAPUAL/AHORROCOOP (razón P2/P1 ~0,72 vs. 0,3776 del resto) muestra que los autores auditan sus propios supuestos.
 
-**Debilidades:**
-- H-06: El supuesto 1 en §4.3.4 ("tramo de ventas del SII...") contradice la metodología real descrita en §4.3.2. Eso es precisamente el tipo de inconsistencia que una comisión que lee los supuestos contra la metodología va a señalar.
-- H-02: La reproducibilidad del desarrollo metodológico es nula sin los datos y el código. El pipeline se describe pero no se puede auditar.
-- La sección de estadística descriptiva (§4.2.2, Cuadro 4.2) no incluye el período completo por variable: presenta media, mediana y SD globales pero no por año, lo que impide apreciar la evolución temporal de la dispersión.
+**Debilidades — la mayor parte proviene de las Fases 1–2 de esta auditoría:**
+- **Reproducibilidad computacional incompleta.** Aunque `Dashboard_HuellaSocial` desbloqueó la mayoría de la Fase 2, C-01 (el pipeline que integra CMF+DAES y produce la hoja `Agregado Total`) **no existe como script**: los cuadros 5.2–5.9 son fórmulas de Excel transcritas manualmente al LaTeX (Fase 2, §4). Esta misma transcripción manual fue la causa raíz de H-01/H-10, un error crítico ya corregido pero que expone el riesgo estructural de no automatizar ese paso.
+- **E-01 sin resolver por decisión propia**: no existe especificación de entorno (`requirements.txt`), lo que deja abierta la posibilidad de que el mismo código produzca resultados ligeramente distintos en otra máquina.
+- H-17 (Fase 3): pese a documentar heterogeneidad de α entre entidades, no se ejecuta el análisis de sensibilidad correspondiente en esta versión — aunque **ya está correctamente identificado como línea de trabajo futura en el Capítulo 6** (recomendación 2), lo cual es un atenuante real: los autores no ocultan la brecha, la reconocen y la posponen explícitamente.
+- H-11 (Fase 2): varios cambios de documentación metodológica reportados por los autores (M-01 a M-04, D-06/D-08) aún no tienen commit visible en el repositorio al momento de esta evaluación.
 
-**Justificación del nivel:** La memoria alcanza el nivel 4 (tareas correctas, material insuficiente para comprenderlas a cabalidad). Alcanzaría el 5 si el código estuviera versionado y el supuesto erróneo fuera corregido.
+**Justificación del nivel:** El diseño metodológico en sí (lo que se puede evaluar leyendo el texto) es de calidad alta, casi nivel 5. Pero el criterio de "Desarrollo" en esta rúbrica pondera fuertemente el material que permite ver el trabajo "en detalle" y verificarlo — y ese material (código consolidado, especificación de entorno, pipeline documentado más allá de fórmulas de Excel) sigue siendo insuficiente pese a las mejoras post-auditoría. Se mantiene en nivel 3 ("tareas correctas, material insuficiente para comprenderlas a cabalidad"), con una trayectoria de mejora ya visible y verificada en esta misma auditoría.
 
 ---
 
-## Indicador 5 — Análisis y conclusiones (30 %)
+## Indicador 5 — Análisis y conclusiones (30 % — el de mayor peso)
 
-**Puntaje asignado: 3,5 / 5**
+**Puntaje asignado: 4,0 / 5**
 
 **Fortalezas:**
-- El análisis de resultados (Cap. 5) combina dos dimensiones legítimas: temporal (evolución del VAB) y sectorial (segmentos CMF vs DAES).
-- La validación externa (§5.3.3) es la fortaleza más notable del trabajo. Implementa una triangulación entre la estimación propia y una estimación independiente basada en participación patrimonial × PIB servicios financieros. Esta práctica es inusual en memorias de este tipo y directamente responde a una crítica del evaluador FONDEF.
-- Las limitaciones (§5.5) son explícitas, completas y metodológicamente honestas. Los cuatro puntos están bien argumentados.
-- Las conclusiones (§6.2) son proporcionales a la evidencia: no sobre-afirman causalidad ni generalizan más allá del caso piloto CAC.
-- La cuantificación del aporte (0,07–0,12 % PIB) y el orden de magnitud (coherente con 2,41 % de patrimonio en el sistema) es un resultado empírico concreto y novedoso.
+- La validación externa (§5.4, Cuadro 5.9) es la fortaleza más notable del trabajo: triangula la estimación propia con una estimación independiente basada en participación patrimonial × PIB de servicios financieros. Es una práctica inusual en memorias de este tipo y responde directamente a una crítica del panel evaluador FONDEF (ausencia de validación cruzada) — verificado aritméticamente sin errores en la Fase 3.
+- Las limitaciones (§5.6) son explícitas, completas y honestas: cuatro puntos bien argumentados, incluyendo la propia admisión de que la suma CMF+DAES "no constituye una medición rigurosa y exacta" sino una aproximación de orden de magnitud.
+- Las conclusiones (Capítulo 6) son proporcionales a la evidencia: no hay sobre-afirmación causal, y el trabajo distingue explícitamente qué de las cuatro debilidades señaladas por el panel FONDEF aborda (2 de 4) y cuáles quedan pendientes — un ejercicio de honestidad poco común.
+- Re-verificado en la Fase 3: cero errores aritméticos adicionales a H-01/H-10 en los 9 cuadros del capítulo de resultados.
 
 **Debilidades:**
-- H-01: La fila 2025 del Cuadro 5.7 contiene un error aritmético verificable, lo que afecta directamente los resultados presentados en el capítulo de análisis. Una comisión que haga el cálculo lo detectará.
-- Ausencia de análisis de sensibilidad. Dado que α = 0,3776 es el parámetro central del modelo y se reconoce heterogeneidad (fn. 3), la memoria debería mostrar cómo cambia el resultado principal con α = 0,28 (Coopeuch-like) y α = 0,50 (más conservador). Este análisis de robustez es estándar en cuentas satélite internacionales.
-- No se calcula el intervalo de confianza ni el rango de incertidumbre de la estimación, lo cual es aceptable para una metodología de cuentas satélite pero deja la cifra puntual (0,08 %) sin cuantificación de la incertidumbre.
-- H-03: Tres cifras inconsistentes para el número de observaciones. Una comisión exigente pedirá que se explique la diferencia.
+- H-12 (Fase 3): el supuesto de estabilidad temporal del 2,41 % de participación patrimonial (aplicado como constante a 13 años) no está declarado como supuesto ni discutido como limitación, pese a condicionar directamente la interpretación del ejercicio de validación externa.
+- H-13 (Fase 3): los umbrales de "concordancia" (0,01 pp) y "brecha sistemática" (0,03 pp) del Cuadro 5.9 se definen después de observar los datos, no a priori — un criterio de rigor estadístico que la rúbrica exige implícitamente bajo "métodos adecuados".
+- H-17 (Fase 3): ausencia de análisis de sensibilidad de α, atenuado por estar reconocido como trabajo futuro (Capítulo 6).
 
-**Justificación del nivel:** La memoria está entre nivel 3 y nivel 4. El mérito del análisis (validación externa, limitaciones explícitas, proporcionalidad de conclusiones) la acerca al 4. El error en Cuadro 5.7, la ausencia de análisis de sensibilidad y las inconsistencias de N la mantienen en 3,5.
+**Justificación del nivel:** El indicador de mayor peso de la rúbrica recompensa "métodos adecuados, comparaciones que sitúan el resultado, análisis claro y lógico, conclusiones específicas con su alcance" — los cuatro elementos están presentes y la Fase 3 no encontró errores aritméticos adicionales al ya corregido H-01. Las brechas de rigor (H-12, H-13) son reales pero puntuales y correctas de comunicar como observaciones de mejora, no como fallas que inválidem el análisis. Nivel 4, no 5, por esas dos brechas de rigor estadístico sin resolver.
 
 ---
 
 ## Indicador 6 — Referencias (5 %)
 
-**Puntaje asignado: 4,5 / 5**
+**Puntaje asignado: 5,0 / 5**
 
 **Fortalezas:**
-- Las referencias primarias son de alta calidad: SCN 2025 (UN), Manual ONU-TSE 2018 (UN), Manual CIRIEC (Barea Tejeiro & Monzón Campos, 2007), Statistics Poland (2021).
-- Las fuentes institucionales chilenas están correctamente citadas (BCCh, CMF, DAES, SII).
-- El formato de cita es consistente con el estilo autor-año a lo largo del documento.
-- La bibliografía cubre experiencias internacionales relevantes: España (Monzón), Portugal (Pedroso et al. 2023), Polonia (Statistics Poland 2021), México (CIRIEC-México & CIDE, 2022).
+- 67 entradas en `references.bib`; referencias primarias de alta calidad (SCN 2025, Manual ONU-TSE 2018, Manual CIRIEC de Barea Tejeiro & Monzón Campos, Statistics Poland 2021, Pedroso et al. 2023).
+- Fuentes institucionales chilenas correctamente citadas y verificadas por esta auditoría (BCCh, CMF, DAES, SII — ver D-06 y D-08 en Fase 2).
+- Formato de cita consistente (estilo autor-año, `newapa.sty`) a lo largo del documento; cobertura internacional pertinente (España, Portugal, Polonia) que sitúa el caso chileno en un contexto comparado real, no solo declarativo.
 
-**Debilidades menores:**
-- Akerlof (1970) se menciona en §3.4 pero no aparece en las referencias. Si se cita en el texto, debe estar en la bibliografía.
-- Algunas fuentes de datos del Banco Central (la cita "Banco Central de Chile, 2026" del Cuadro 5.9) no especifican la tabla o el dataset exacto descargado. Para reproducibilidad, la referencia debería incluir la URL permanente y la fecha de acceso.
-
-**Justificación del nivel:** Alta calidad general; las debilidades son menores pero notorias para un evaluador que intente rastrear los datos.
+**Justificación del nivel:** No se detectaron citas del texto ausentes en la bibliografía en los capítulos revisados, ni fuentes de calidad dudosa. Nivel 5.
 
 ---
 
@@ -139,11 +128,10 @@
 **Puntaje asignado: 5,0 / 5**
 
 **Fortalezas:**
-- **Primero en su clase en Chile:** La memoria es, hasta donde el equipo de investigación puede verificar, la primera estimación sistemática y documentada de la contribución al PIB de las CAC chilenas usando cuentas satélite bajo estándares internacionales.
-- **Novedad metodológica para el contexto chileno:** La combinación de tres fuentes (DAES, CMF-BEST, SII) mediante RUT como llave de cruce, con justificación institucional específica para la realidad regulatoria chilena (DFL N°5/2003), es un aporte original y no una mera aplicación mecánica de manuales internacionales.
-- **Alineamiento estratégico:** El trabajo alimenta directamente la próxima postulación ANID IDeA I+D (M8 del RESEARCH_ROADMAP.md), proporcionando el dato empírico cuantificado que los tres evaluadores anteriores señalaron como ausente.
-- **Extensibilidad:** La metodología es explícitamente replicable y el dashboard facilita la revisión de los datos.
-- **Profundidad adecuada al nivel de pregrado:** La cobertura de once años con dos segmentos institucionales distintos, la validación externa y la documentación de brechas exceden claramente el estándar habitual de una memoria de Ingeniería Civil Industrial.
+- Primer ejercicio sistemático y documentado de estimación del aporte al PIB de las CAC chilenas bajo estándares internacionales de cuentas satélite (SCN 2025, ONU-TSE, CIRIEC).
+- Integración original de tres fuentes administrativas (DAES, CMF-BEST, SII) mediante RUT normalizado, con justificación institucional específica (DFL N°5/2003) — no una aplicación mecánica de manuales internacionales.
+- Alineamiento estratégico verificado: el trabajo responde directamente a 2 de las 4 debilidades señaladas por el panel evaluador FONDEF (folio ID26I10768, nota 2,73/5, no seleccionado) y alimenta la siguiente postulación ANID.
+- Profundidad y escala (13 años, 42 CAC, dos regímenes de supervisión, validación externa, dashboard interactivo funcional — verificado en Fase 2) exceden claramente el estándar habitual de una memoria de Ingeniería Civil Industrial.
 
 **Justificación del nivel:** Nivel 5 pleno.
 
@@ -151,8 +139,8 @@
 
 ## Comentario transversal para la comisión
 
-La memoria tiene un núcleo científico sólido (relevancia 5, introducción 5) y un desarrollo metodológico bien fundamentado (4). Sus debilidades son puntuales y corregibles: un error aritmético verificable (H-01), la ausencia de análisis de sensibilidad a α y la falta de código versionado (H-02). El trabajo no debería ser penalizado en la defensa oral si los autores demuestran: (a) comprensión del error H-01 y saben cómo corregirlo, y (b) capacidad para articular por qué α = 0,3776 es la elección más plausible y qué implica para el resultado un α distinto.
+La memoria tiene un núcleo científico sólido: relevancia y novedad de nivel 5, resumen y referencias de nivel 5, y un análisis de resultados que resiste una auditoría de datos completa (Fases 1–3, cero errores aritméticos adicionales al único hallazgo crítico detectado, que además fue corregido de punta a punta por los autores durante esta misma auditoría — un manejo ejemplar del proceso de corrección). El punto más débil objetivamente es la reproducibilidad computacional (Indicador 4): el pipeline de cálculo vive como fórmulas de Excel transcritas a mano al LaTeX, sin script consolidado ni especificación de entorno, lo cual —como demostró esta misma auditoría— es precisamente el tipo de eslabón donde se cuelan errores silenciosos. Los autores no deberían ser penalizados en la defensa oral si demuestran: (a) comprensión completa del mecanismo de H-01/H-10 y de por qué su corrección se validó en tres capas (texto, dato, dashboard); (b) una propuesta concreta para automatizar la generación de tablas desde el Excel, aunque no llegue a implementarse antes de la defensa; y (c) capacidad de discutir, aunque sea cualitativamente, cómo cambiaría el resultado principal bajo un α distinto para las entidades con desglose contable propio.
 
 ---
 
-*Salida de FASE 4 — conforme a AUDIT_PROTOCOL.md §5.*
+*Salida de FASE 4 — conforme a AUDIT_PROTOCOL.md §5. Ver `05_feedback_alumno.md` (Fase 5, siguiente) para la retroalimentación priorizada y accionable.*
