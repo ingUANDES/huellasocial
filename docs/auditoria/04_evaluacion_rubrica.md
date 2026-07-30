@@ -7,6 +7,8 @@
 
 > **Aviso:** La conversión de puntaje ponderado a nota UANDES debe confirmarse con el guía antes de comunicar cualquier nota a los alumnos. Este documento reporta el puntaje en la escala 0–5 de la rúbrica, no la nota final. Esta versión reemplaza la evaluación preliminar de la Fase 0 (basada solo en el PDF, sin código ni datos): varios juicios cambian sustancialmente ahora que H-01/H-10 están cerrados y verificados.
 
+> **Corrección de criterio (julio 2026, tras revisión del guía):** la primera versión de esta Fase 4 evaluaba el Indicador 4 (Desarrollo) exigiendo un pipeline de software consolidado y versionado — un estándar más propio de una memoria de Ingeniería en Computación que de Ingeniería Civil Industrial, donde lo exigible es el rigor de la *aplicación de la metodología* (cuentas satélite), no la ingeniería de software del código que la implementa. Se corrigió el puntaje del Indicador 4 (de 3,0 a 4,0) reemplazando esa exigencia por debilidades metodológicas específicas del dominio de cuentas satélite (ver más abajo). También se corrigió el Indicador 3 (de 4,0 a 4,9): el desajuste de período entre lo declarado en Alcances (2014–2024) y lo efectivamente cubierto (2013–2025 para CMF) no amerita penalización relevante porque el trabajo *excede* lo comprometido, no lo incumple — se registra como corrección textual pendiente para los alumnos, no como falla de rigor. Y el Indicador 5 (de 4,0 a 4,5): H-12 y H-13 (Fase 3) son observaciones de rigor estadístico reales pero de alcance acotado, insuficientes para restar un punto completo dado el resto de fortalezas del indicador de mayor peso.
+
 ---
 
 ## Resumen de puntajes
@@ -15,12 +17,12 @@
 |---|-----------|------|---------------|----------------------|
 | 1 | Presentación y expresión escrita | 10 % | 4,0 | 0,40 |
 | 2 | Resumen | 5 % | 5,0 | 0,25 |
-| 3 | Introducción y motivación | 15 % | 4,0 | 0,60 |
-| 4 | Desarrollo | 20 % | 3,0 | 0,60 |
-| 5 | Análisis y conclusiones | 30 % | 4,0 | 1,20 |
+| 3 | Introducción y motivación | 15 % | 4,9 | 0,735 |
+| 4 | Desarrollo | 20 % | 4,0 | 0,80 |
+| 5 | Análisis y conclusiones | 30 % | 4,5 | 1,35 |
 | 6 | Referencias | 5 % | 5,0 | 0,25 |
 | 7 | Relevancia, alcance y novedad | 15 % | 5,0 | 0,75 |
-| — | **Total** | **100 %** | — | **4,05 / 5,00** |
+| — | **Total** | **100 %** | — | **4,54 / 5,00** |
 
 ---
 
@@ -57,43 +59,46 @@
 
 ## Indicador 3 — Introducción y motivación (15 %)
 
-**Puntaje asignado: 4,0 / 5**
+**Puntaje asignado: 4,9 / 5**
 
 **Fortalezas:**
 - El problema de invisibilidad estadística de las CAC está bien planteado y motivado institucionalmente (exención tributaria del art. 78, DFL N°5/2003, como causa estructural de la brecha de información contable).
 - Objetivo general y cuatro objetivos específicos (§Objetivos) son claros, medibles y siguen una secuencia lógica explícita hacia los capítulos correspondientes.
 - El marco institucional (§Marco institucional del proyecto) conecta la memoria con el proyecto Huella Social y la postulación FONDEF sin desviar el foco del trabajo.
 
-**Debilidad:**
-- El objetivo específico 3 y la sección de Alcances declaran el período **2014–2024** para la estimación ("...cuenta satélite sectorial para el período 2014–2024"), pero el trabajo efectivamente ejecutado cubre 2014–2024 para DAES **y 2013–2025 para CMF** (Cuadro 5.5, Capítulo 5), y el agregado total presentado llega hasta 2025. Es un caso leve pero real de "alcance no coincide del todo con lo hecho" (criterio de nivel 3 de la rúbrica) — en este caso el trabajo *excede* lo declarado (cubre más años, no menos), pero el texto de alcance debería actualizarse para reflejar la cobertura real lograda.
+**Observación menor (no penalizable):**
+- El objetivo específico 3 y la sección de Alcances declaran el período **2014–2024** para la estimación, pero el trabajo efectivamente ejecutado cubre además **2013–2025 para el segmento CMF** (Cuadro 5.5, Capítulo 5) y el agregado total llega hasta 2025. A diferencia de un alcance incumplido (el escenario que penaliza la rúbrica: "alcance no coincide del todo con lo hecho" por *quedarse corto*), aquí el trabajo **excede** lo declarado — cubre más años y un segmento adicional (CMF completo) de los comprometidos. No se penaliza porque no hay sobre-promesa ni brecha de ejecución; el ajuste correspondiente es puramente textual. **Acción recomendada para los alumnos:** actualizar el texto de §Alcances y el objetivo específico 3 a "2013/2014–2025" para que la redacción refleje con precisión la cobertura efectivamente lograda — una corrección de forma, no de fondo.
 
-**Justificación del nivel:** Motivación y objetivos son de nivel 5 en solitario; el desajuste de período entre lo declarado y lo ejecutado impide el nivel 5 pleno según el criterio textual de la rúbrica. Corrección de bajo costo: actualizar "2014–2024" a "2013/2014–2025" en §Alcances y en el objetivo específico 3.
+**Justificación del nivel:** Motivación, objetivos y alcance institucional son de nivel 5 en todos los criterios sustantivos de la rúbrica. Se descuenta una décima solo por la imprecisión textual del período declarado, dado que una comisión rigurosa notará la discrepancia aunque no derive de ella ningún cuestionamiento al trabajo realizado.
 
 ---
 
 ## Indicador 4 — Desarrollo (20 %)
 
-**Puntaje asignado: 3,0 / 5**
+**Puntaje asignado: 4,0 / 5**
+
+> **Nota de criterio:** esta memoria es de Ingeniería Civil Industrial, no de Ingeniería en Computación. Lo exigible en "Desarrollo" es el rigor de la *aplicación de la metodología de cuentas satélite* (diseño de la estimación, tratamiento del panel, calibración de supuestos) — no un pipeline de software consolidado y versionado al estándar de un producto de ingeniería de software. La versión anterior de esta evaluación penalizaba con fuerza la ausencia de un script único (C-01) y de `requirements.txt` (E-01); ese criterio se corrige aquí. Esos puntos siguen siendo reales y están documentados en la Fase 2 (`02_reproduccion_calculos.md`), pero pesan como observación operativa menor, no como debilidad central de este indicador.
 
 **Fortalezas:**
 - El Capítulo 4 (Metodología) es el más sólido del documento: estrategia de estimación en tres componentes (identificación, integración, estimación) clara y bien secuenciada; operacionalización de cada variable del SCN (P1, P2, B1g, D1, B2g, F2, F4) con justificación normativa específica (SCN 2025 párr. 7.169, DFL N°5/2003 art. 78).
 - El Cuadro de variables no construibles (§4.3.2) es una contribución metodológica real: documenta brechas con razonamiento institucional específico para Chile, no genérico.
 - El dashboard interactivo (§4.4, Sección 5.4) es un entregable tecnológico que excede lo habitual en una memoria de pregrado, y fue verificado funcionalmente en la Fase 2 de esta auditoría.
-- Auto-crítica metodológica documentada: la nota sobre CAPUAL/AHORROCOOP (razón P2/P1 ~0,72 vs. 0,3776 del resto) muestra que los autores auditan sus propios supuestos.
+- Auto-crítica metodológica documentada: la nota sobre CAPUAL/AHORROCOOP (razón P2/P1 ~0,72 vs. 0,3776 del resto) muestra que los autores auditan sus propios supuestos con los datos que ya tenían.
 
-**Debilidades — la mayor parte proviene de las Fases 1–2 de esta auditoría:**
-- **Reproducibilidad computacional incompleta.** Aunque `Dashboard_HuellaSocial` desbloqueó la mayoría de la Fase 2, C-01 (el pipeline que integra CMF+DAES y produce la hoja `Agregado Total`) **no existe como script**: los cuadros 5.2–5.9 son fórmulas de Excel transcritas manualmente al LaTeX (Fase 2, §4). Esta misma transcripción manual fue la causa raíz de H-01/H-10, un error crítico ya corregido pero que expone el riesgo estructural de no automatizar ese paso.
-- **E-01 sin resolver por decisión propia**: no existe especificación de entorno (`requirements.txt`), lo que deja abierta la posibilidad de que el mismo código produzca resultados ligeramente distintos en otra máquina.
-- H-17 (Fase 3): pese a documentar heterogeneidad de α entre entidades, no se ejecuta el análisis de sensibilidad correspondiente en esta versión — aunque **ya está correctamente identificado como línea de trabajo futura en el Capítulo 6** (recomendación 2), lo cual es un atenuante real: los autores no ocultan la brecha, la reconocen y la posponen explícitamente.
-- H-11 (Fase 2): varios cambios de documentación metodológica reportados por los autores (M-01 a M-04, D-06/D-08) aún no tienen commit visible en el repositorio al momento de esta evaluación.
+**Debilidades de aplicación metodológica (dominio propio de cuentas satélite, no de software):**
+- **α aplicado sin ejercicio de calibración empírica.** Los autores identifican que 2 de 5 entidades con desglose contable confiable (CAPUAL, AHORROCOOP) tienen razón P2/P1 real de ~0,72, el doble del α = 0,3776 aplicado a todo el panel, mientras que las otras 3 (Coopeuch, Oriencoop, Coonfía) tienen razones entre 0,23 y 0,28. Es decir, **ya contaban con los datos** para al menos comparar el resultado agregado bajo α uniforme contra un cálculo con P2 directo para esas 5 entidades, y no lo hicieron — es un ejercicio de validación metodológica de bajo costo (no requiere datos adicionales) que quedó fuera del capítulo de métodos. Distinto del análisis de sensibilidad general (H-17, Fase 3, ya reconocido como trabajo futuro): esto es una calibración puntual con datos ya en mano.
+- **Tratamiento del panel DAES desbalanceado por exclusión simple, sin justificación comparativa.** El método adoptado (incluir solo CAC-año con dato disponible, sin imputación ni factores de expansión) se declara pero no se justifica frente a alternativas metodológicas estándar en paneles desbalanceados (p. ej. ponderación por cobertura, imputación por año-cohorte). El propio Capítulo 6 propone "factores de expansión" como recomendación futura, lo que sugiere que los autores reconocen la alternativa pero no explican en el capítulo de métodos por qué optaron por exclusión en esta versión.
+- **Criterios de inclusión/exclusión de entidades en el panel incompletos en el texto** (M-01 de la Fase 2, `SOLICITUD_AUTORES.md`): no se documenta explícitamente qué condiciones debe cumplir una CAC para incorporarse al panel ni cómo se trataron entidades disueltas o que cambiaron de régimen de supervisión durante el período — el caso de Coopeuch (migración DAES→CMF) se resuelve bien narrativamente en el Capítulo 6, pero no hay una regla general documentada aplicable a casos futuros similares.
 
-**Justificación del nivel:** El diseño metodológico en sí (lo que se puede evaluar leyendo el texto) es de calidad alta, casi nivel 5. Pero el criterio de "Desarrollo" en esta rúbrica pondera fuertemente el material que permite ver el trabajo "en detalle" y verificarlo — y ese material (código consolidado, especificación de entorno, pipeline documentado más allá de fórmulas de Excel) sigue siendo insuficiente pese a las mejoras post-auditoría. Se mantiene en nivel 3 ("tareas correctas, material insuficiente para comprenderlas a cabalidad"), con una trayectoria de mejora ya visible y verificada en esta misma auditoría.
+**Observación operativa menor (no central para este indicador):** el pipeline de cálculo vive como fórmulas de Excel transcritas manualmente al LaTeX, sin script consolidado (C-01) ni especificación de entorno (E-01) — documentado y verificado en la Fase 2. Vale la pena mencionarlo brevemente en la defensa, pero no debe pesar como debilidad de diseño metodológico de una memoria de Ingeniería Civil Industrial.
+
+**Justificación del nivel:** El diseño metodológico central (estrategia de estimación, operacionalización SCN, diagnóstico de brechas) es de calidad alta. Se mantiene en nivel 4, no 5, por las tres debilidades de aplicación metodológica señaladas — todas del dominio de cuentas satélite/estimación aplicada, no de ingeniería de software — que son corregibles con los datos que los propios autores ya poseen.
 
 ---
 
 ## Indicador 5 — Análisis y conclusiones (30 % — el de mayor peso)
 
-**Puntaje asignado: 4,0 / 5**
+**Puntaje asignado: 4,5 / 5**
 
 **Fortalezas:**
 - La validación externa (§5.4, Cuadro 5.9) es la fortaleza más notable del trabajo: triangula la estimación propia con una estimación independiente basada en participación patrimonial × PIB de servicios financieros. Es una práctica inusual en memorias de este tipo y responde directamente a una crítica del panel evaluador FONDEF (ausencia de validación cruzada) — verificado aritméticamente sin errores en la Fase 3.
@@ -103,10 +108,10 @@
 
 **Debilidades:**
 - H-12 (Fase 3): el supuesto de estabilidad temporal del 2,41 % de participación patrimonial (aplicado como constante a 13 años) no está declarado como supuesto ni discutido como limitación, pese a condicionar directamente la interpretación del ejercicio de validación externa.
-- H-13 (Fase 3): los umbrales de "concordancia" (0,01 pp) y "brecha sistemática" (0,03 pp) del Cuadro 5.9 se definen después de observar los datos, no a priori — un criterio de rigor estadístico que la rúbrica exige implícitamente bajo "métodos adecuados".
+- H-13 (Fase 3): los umbrales de "concordancia" (0,01 pp) y "brecha sistemática" (0,03 pp) del Cuadro 5.9 se definen después de observar los datos, no a priori.
 - H-17 (Fase 3): ausencia de análisis de sensibilidad de α, atenuado por estar reconocido como trabajo futuro (Capítulo 6).
 
-**Justificación del nivel:** El indicador de mayor peso de la rúbrica recompensa "métodos adecuados, comparaciones que sitúan el resultado, análisis claro y lógico, conclusiones específicas con su alcance" — los cuatro elementos están presentes y la Fase 3 no encontró errores aritméticos adicionales al ya corregido H-01. Las brechas de rigor (H-12, H-13) son reales pero puntuales y correctas de comunicar como observaciones de mejora, no como fallas que inválidem el análisis. Nivel 4, no 5, por esas dos brechas de rigor estadístico sin resolver.
+**Justificación del nivel:** El indicador de mayor peso de la rúbrica recompensa "métodos adecuados, comparaciones que sitúan el resultado, análisis claro y lógico, conclusiones específicas con su alcance" — los cuatro elementos están presentes con calidad alta, y la Fase 3 no encontró errores aritméticos adicionales al ya corregido H-01. H-12 y H-13 son observaciones de rigor estadístico reales, pero acotadas en alcance: afectan la interpretación fina de un solo cuadro de validación (5.9), no la robustez del análisis central del capítulo (Cuadros 5.1–5.8) ni la lógica de las conclusiones. Por eso se descuenta medio punto, no uno completo: el mérito del análisis (validación externa como práctica infrecuente y bien ejecutada, limitaciones explícitas, conclusiones proporcionales) domina el balance del indicador.
 
 ---
 
@@ -139,7 +144,7 @@
 
 ## Comentario transversal para la comisión
 
-La memoria tiene un núcleo científico sólido: relevancia y novedad de nivel 5, resumen y referencias de nivel 5, y un análisis de resultados que resiste una auditoría de datos completa (Fases 1–3, cero errores aritméticos adicionales al único hallazgo crítico detectado, que además fue corregido de punta a punta por los autores durante esta misma auditoría — un manejo ejemplar del proceso de corrección). El punto más débil objetivamente es la reproducibilidad computacional (Indicador 4): el pipeline de cálculo vive como fórmulas de Excel transcritas a mano al LaTeX, sin script consolidado ni especificación de entorno, lo cual —como demostró esta misma auditoría— es precisamente el tipo de eslabón donde se cuelan errores silenciosos. Los autores no deberían ser penalizados en la defensa oral si demuestran: (a) comprensión completa del mecanismo de H-01/H-10 y de por qué su corrección se validó en tres capas (texto, dato, dashboard); (b) una propuesta concreta para automatizar la generación de tablas desde el Excel, aunque no llegue a implementarse antes de la defensa; y (c) capacidad de discutir, aunque sea cualitativamente, cómo cambiaría el resultado principal bajo un α distinto para las entidades con desglose contable propio.
+La memoria tiene un núcleo científico sólido: relevancia y novedad de nivel 5, resumen y referencias de nivel 5, introducción prácticamente perfecta, y un análisis de resultados que resiste una auditoría de datos completa (Fases 1–3, cero errores aritméticos adicionales al único hallazgo crítico detectado, que además fue corregido de punta a punta por los autores durante esta misma auditoría — un manejo ejemplar del proceso de corrección). El punto más débil, evaluado con el criterio correcto para una memoria de Ingeniería Civil Industrial, es la aplicación metodológica en el Indicador 4: los autores documentan heterogeneidad real en el parámetro central (α) y en la cobertura del panel DAES, pero no ejecutan los ejercicios de calibración/validación de bajo costo que esos mismos datos ya permitían. Los autores no deberían ser penalizados en la defensa oral si demuestran: (a) comprensión completa del mecanismo de H-01/H-10 y de por qué su corrección se validó en tres capas (texto, dato, dashboard); (b) capacidad de recalcular, aunque sea a mano o de forma aproximada, cómo cambiaría el B1g agregado si se usara P2 directo para las 5 entidades con desglose contable confiable en vez de α uniforme; y (c) una justificación explícita de por qué se optó por excluir años sin dato en el panel DAES en vez de ponderar por cobertura.
 
 ---
 

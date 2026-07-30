@@ -4,6 +4,16 @@
 
 ---
 
+## 2026-07-30 — Corrección de criterio de evaluación en Fase 4 (Indicador "Desarrollo")
+
+- **Decisión:** el guía (Sebastián Cea) corrigió el criterio con que esta auditoría evaluaba el Indicador 4 de la rúbrica UANDES ("Desarrollo") para la memoria de Ureta & Ruiz Tagle. La primera versión penalizaba fuertemente la ausencia de un pipeline de software consolidado y versionado (script único C-01, `requirements.txt` E-01) — un estándar más propio de Ingeniería en Computación que de Ingeniería Civil Industrial.
+- **Razonamiento:** para una memoria industrial, lo exigible en "Desarrollo" es el rigor de la *aplicación de la metodología* (cuentas satélite: diseño de la estimación, tratamiento del panel, calibración de supuestos), no la ingeniería de software del código que la implementa. Reevaluado con ese criterio, el indicador subió de 3,0 a 4,0/5, sustituyendo las debilidades de reproducibilidad computacional por debilidades metodológicas específicas del dominio (α sin calibración empírica pese a datos disponibles; panel DAES tratado por exclusión sin justificar frente a alternativas; criterios de inclusión de entidades incompletos).
+- **Decisiones relacionadas en la misma revisión:** el Indicador 3 (Introducción) subió de 4,0 a 4,9 — el desajuste de período entre lo declarado (2014–2024) y lo ejecutado (2013–2025 para CMF) no amerita penalización porque el trabajo excede lo comprometido, no lo incumple. El Indicador 5 (Análisis y conclusiones) subió de 4,0 a 4,5 — H-12 y H-13 (Fase 3) son observaciones de rigor estadístico reales pero de alcance acotado a un solo cuadro (5.9), insuficientes para restar un punto completo al indicador de mayor peso.
+- **Alternativas consideradas:** mantener el criterio original (rechazado: aplica un estándar de disciplina distinta a la de la memoria evaluada).
+- **Impacto:** puntaje ponderado total de la Fase 4 sube de 4,05/5 a 4,54/5. Ver `docs/auditoria/04_evaluacion_rubrica.md`.
+
+---
+
 ## 2026-07-28 — Cambio de proxy para P1 (producción total) en la cuenta satélite de CAC
 
 - **Decisión:** la producción total (P1) se estima a partir de los ingresos operacionales del estado de resultados (línea `Total_Ingresos_Operación`), en vez del tramo de ventas declarado al SII.
