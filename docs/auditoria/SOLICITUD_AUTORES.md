@@ -95,11 +95,13 @@ Los autores respondieron a la ronda 1. Estado verificado de cada punto (detalle 
 | C-04 | ✅ Verificado sin cambios necesarios | — |
 | E-02, E-03 | ✅ Documentados en el Readme | Python 3.11.5, Windows (sin versión de build) |
 | E-01 | ⚠️ Decisión de no generarlo, ahora registrada | Ver `decision_log.md`. Riesgo de reproducibilidad medio persiste. |
-| D-04 | 🔴 Sigue sin subirse al repositorio | Reportado como "disponible" pero no está en `Dashboard_HuellaSocial` a la fecha. |
-| D-07 | 🔴 Sigue pendiente | No mencionado en la respuesta. |
+| D-04 | 🟡 Requisito reducido (ver corrección de criterio 2026-07-30) | Ya no se exige subir el binario al repositorio — mala práctica de gestión de repos. Basta con registrar la URL original del SII y un respaldo externo (Drive/similar) en `data/metadata/fuentes_externas.md` (creado por esta auditoría). **Pendiente que los autores completen ambos datos** en esa tabla. |
+| D-07 | 🔴 Sigue pendiente | No mencionado en la respuesta. Mismo criterio de D-04 aplicará una vez que se entregue: no requiere subir el binario, sí registrar URL + respaldo. |
 | D-06 (cita en texto), D-08 (fecha de acceso), M-01, M-02, M-03, M-04 | 🔴 **No verificable — cambios de texto de la memoria no sincronizados al repositorio** | Nuevo hallazgo H-11 (`02_reproduccion_calculos.md`): mismo patrón que produjo H-10 (corrección reportada pero no versionada). Se solicita subir estos cambios a `huellasocial/docs/Memoria/` antes de darlos por cerrados. |
 
-**Pendiente para la próxima ronda:** D-04, D-07, y confirmar via commit los cambios de texto de la memoria (D-06/D-08/M-01–M-04).
+**Pendiente para la próxima ronda:** completar la URL del SII y el enlace de respaldo para D-04 en `data/metadata/fuentes_externas.md`; entregar D-07; confirmar via commit los cambios de texto de la memoria (D-06/D-08/M-01–M-04).
+
+> **Nota sobre gestión de datos (2026-07-30):** en general, los archivos de datos crudos de gran tamaño (Excel, TXT) no deben subirse directamente a ningún repositorio git del proyecto — incluye los ya versionados en `Dashboard_HuellaSocial`. La migración de esos archivos a almacenamiento externo con solo la referencia en el repo es una tarea de mantenimiento futura, no retroactiva a los insumos ya entregados en esta auditoría. Ver `docs/reports/decision_log.md`, entrada 2026-07-30.
 
 ---
 

@@ -14,6 +14,16 @@
 
 ---
 
+## 2026-07-30 — D-04 no requiere subir el binario al repositorio; se registra URL + respaldo externo
+
+- **Decisión:** el guía (Sebastián Cea) determinó que, para cerrar el insumo D-04 (`PUB_NOMBRES_PJ.txt`, archivo maestro de personas jurídicas del SII), no es necesario subir el archivo al repositorio git. Basta con documentar (a) la URL original de la fuente pública en el portal del SII, y (b) la ubicación de un respaldo externo (p. ej. carpeta de Google Drive del proyecto).
+- **Razonamiento:** alojar archivos de datos crudos de gran tamaño (Excel, TXT) directamente en un repositorio git es una mala práctica — infla el historial del repo, dificulta el versionado real (diffs binarios), y no es lo que un repositorio de código debe versionar. La trazabilidad (saber de dónde viene el dato y dónde encontrarlo) es lo que importa para la reproducibilidad, no el binario en sí.
+- **Alternativas consideradas:** exigir la subida del archivo al repositorio (rechazada: mala práctica de gestión de repositorios); no registrar nada (rechazada: rompe trazabilidad).
+- **Acción tomada:** se creó `data/metadata/fuentes_externas.md` con una tabla para registrar URL original + respaldo externo por cada insumo de datos externo, empezando por D-04 (pendiente que los autores completen la URL exacta y el enlace de respaldo).
+- **Alcance de la decisión:** aplica a D-04 específicamente. El mismo principio probablemente aplica a otros insumos de datos crudos grandes (p. ej. D-07, o los `.xlsx` ya versionados en `Dashboard_HuellaSocial`), pero migrar lo ya entregado a este esquema es una tarea de mantenimiento futura, no retroactiva a esta auditoría.
+
+---
+
 ## 2026-07-28 — Cambio de proxy para P1 (producción total) en la cuenta satélite de CAC
 
 - **Decisión:** la producción total (P1) se estima a partir de los ingresos operacionales del estado de resultados (línea `Total_Ingresos_Operación`), en vez del tramo de ventas declarado al SII.

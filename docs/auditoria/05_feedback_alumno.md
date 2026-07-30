@@ -45,11 +45,15 @@ No hay hallazgos críticos abiertos. El único detectado en toda la auditoría (
 
 **Qué hacer:** subir ese commit a `huellasocial` antes de la entrega final. Mientras no lo vean reflejado ahí, para efectos de esta auditoría estos puntos siguen "reportados, no verificados".
 
-### F-02 — Subir D-04 y entregar D-07
+### F-02 — Completar el registro de D-04 y entregar D-07
 
 **Qué está mal:** `PUB_NOMBRES_PJ.txt` (archivo maestro de personas jurídicas del SII) lo reportan como "disponible" pero no está en `Dashboard_HuellaSocial`. El extracto crudo de CMF-BEST (D-07) no fue mencionado en la última respuesta.
 
-**Qué hacer:** subir ambos archivos (o, si D-04 tiene restricciones de uso, documentar por qué no puede subirse y qué extracto derivado sí puede compartirse).
+**Corrección de criterio (2026-07-30):** para D-04 **no hace falta subir el archivo** al repositorio — es mala práctica versionar binarios de datos grandes en git. Ya creamos `data/metadata/fuentes_externas.md` con una tabla para esto.
+
+**Qué hacer exactamente:**
+1. Para D-04: completar en `data/metadata/fuentes_externas.md` (a) la URL exacta del portal SII desde donde descargaron `PUB_NOMBRES_PJ.txt`, y (b) dónde guardaron el respaldo (carpeta de Drive del proyecto u otro almacenamiento externo). Con eso el ítem queda resuelto — no necesitan subir el archivo.
+2. Para D-07: entregar el extracto (mismo criterio aplicará: no hace falta subirlo al repo, sí registrar URL/respaldo en la misma tabla).
 
 ### F-03 — Calibrar α contra las 5 entidades con desglose contable propio
 

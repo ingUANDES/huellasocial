@@ -1,7 +1,7 @@
 # FASE 2 — Reproducción de cálculos
 ## Ureta & Ruiz Tagle (2026) · Auditoría Research OS — Huella Social
 
-**Estado: 🟢 SUSTANCIALMENTE COMPLETA** (H-01/H-10 corregidos y verificados en el dato fuente y el dashboard; D-06 verificado; C-01/C-03/E-02/E-03 documentados en `Dashboard_HuellaSocial`. Sigue pendiente: D-04 (subir el archivo), D-07, y verificar en `huellasocial` los cambios de texto que los autores reportan haber hecho — ver §5)
+**Estado: 🟢 SUSTANCIALMENTE COMPLETA** (H-01/H-10 corregidos y verificados en el dato fuente y el dashboard; D-06 verificado; C-01/C-03/E-02/E-03 documentados en `Dashboard_HuellaSocial`. Sigue pendiente: D-04 (registrar URL + respaldo externo, no subir el binario — ver corrección de criterio 2026-07-30), D-07, y verificar en `huellasocial` los cambios de texto que los autores reportan haber hecho — ver §5)
 
 ---
 
@@ -94,7 +94,7 @@ Los autores reportaron por escrito haber resuelto la mayoría de los insumos pen
 | E-02 | Versión de Python | 3.11.5 | ✅ Documentado en el Readme de `Dashboard_HuellaSocial` ("Entorno de ejecución"). |
 | E-03 | Sistema operativo | Windows, sin versión de build | ✅ Documentado en el mismo bloque del Readme. |
 | E-01 | `requirements.txt`/`environment.yml` | Decisión de no generarlo | ⚠️ Aceptado como decisión, pero **sin registrar en `decision_log.md`** — agregado retroactivamente por esta auditoría (ver abajo). Sigue siendo un riesgo real: sin fijar versiones de pandas/numpy/openpyxl, no hay garantía de que este mismo script reproduzca bit-a-bit los resultados en otra máquina. |
-| D-04 | `PUB_NOMBRES_PJ.txt` | Disponible, pendiente de subir | 🔴 **NO VERIFICABLE**: el archivo no está en `Dashboard_HuellaSocial` a la fecha de esta revisión. Sigue bloqueando la verificación de subtipo 817 (CAC) contra el registro SII. |
+| D-04 | `PUB_NOMBRES_PJ.txt` | Disponible, pendiente de subir | 🟡 **Requisito corregido (2026-07-30):** no es necesario subir el binario al repositorio (mala práctica de gestión de repos git). Basta con registrar la URL original del portal SII y la ubicación del respaldo externo en `data/metadata/fuentes_externas.md` (creado por esta auditoría). Pendiente que los autores completen ambos datos — sin ellos, sigue sin poder verificarse el subtipo 817 (CAC) contra el registro SII. |
 | D-07 | Extracto CMF-BEST crudo | No reportado en la respuesta | 🔴 Sigue pendiente, no mencionado. |
 | D-06 (cita en memoria), D-08 (fecha de acceso CMF), M-01/M-03 (§4.3.1) | Cambios de texto en la memoria (`docs/Memoria/`) | Reportados como ya incorporados | 🔴 **NO VERIFICABLE TODAVÍA**: a la fecha de esta revisión, el repositorio `huellasocial` (rama `main`, HEAD `8699f59`) no tiene commits posteriores a `81cd560`/`e2eed60` que toquen `docs/Memoria/`. Es decir, estos cambios de texto existen (según los autores) en Overleaf o localmente, pero **no han sido sincronizados al repositorio** — la misma brecha de trazabilidad que produjo H-10 originalmente. Se solicita a los autores subir estos cambios al repo antes de darlos por cerrados. |
 | M-02 | Criterio de extracción P1/D1 desde PDFs DAES | Ya cubierto en §4.3.2, sin cambios | ⚪ No verificable de forma independiente sin el commit correspondiente (mismo problema que el punto anterior), pero no se objeta la afirmación. |
@@ -106,7 +106,7 @@ Los autores reportaron por escrito haber resuelto la mayoría de los insumos pen
 
 ## 5. Pendiente para completar la Fase 2
 
-- **D-04, D-07**: siguen sin entregarse/subirse.
+- **D-04**: no requiere subir el archivo — registrar URL SII + respaldo externo en `data/metadata/fuentes_externas.md` (pendiente que los autores completen la tabla). **D-07**: sigue sin entregarse.
 - **Sincronización pendiente**: los cambios de texto reportados para D-06/D-08/M-01/M-03/M-02/M-04 en la memoria deben verse reflejados en un commit de `huellasocial` antes de considerarse cerrados.
 - **C-01/C-03**: documentados honestamente como inexistentes (fórmulas de Excel + transcripción manual). Recomendación abierta: automatizar la generación de las tablas LaTeX desde el Excel para eliminar el riesgo de transcripción manual que originó H-01.
 - **E-01**: decisión de no generar especificación de entorno, ahora registrada en `decision_log.md`, pero sigue siendo un riesgo de reproducibilidad de severidad media.
