@@ -28,6 +28,7 @@ La auditoría de consistencia interna identifica **1 error crítico verificado a
 | **Severidad** | 🔴 CRÍTICO |
 | **Ubicación** | §5.3.1, Cuadro 5.7, fila "2025"; §5.3.3, Cuadro 5.9, fila "2025" |
 | **Tipo** | VERIFICADO — prueba aritmética reproducible desde el PDF |
+| **Estado (actualizado Fase 2)** | ✅ **RESUELTO Y VERIFICADO.** Corregido primero en el texto de la memoria (commit `81cd560`, "Updates from Overleaf", 2026-07-28), y luego en la causa raíz — una fórmula de la hoja `🏦 Agregado Total` que sumaba el total DAES a la fila 2025 — corregida en `HuellaSocial_Consolidado.xlsx` y propagada al dashboard público (commits `6fca63e`/`37f6051`, `Dashboard_HuellaSocial`, 2026-07-29). Verificado de forma independiente recalculando desde el Excel y leyendo el HTML regenerado: coincide exactamente con la memoria en las 3 capas (texto, dato, dashboard). Ver H-10 en `02_reproduccion_calculos.md`. |
 
 **Descripción:** El Cuadro 5.7 presenta la cuenta de producción y generación del ingreso total (CMF + DAES). La nota al pie del cuadro dice explícitamente: *"Los años 2013 y 2025 corresponden exclusivamente al segmento CMF (N = 7)."* Por lo tanto, los valores de la fila 2025 en el Cuadro 5.7 deberían ser idénticos a los del Cuadro 5.5 (Segmento CMF) para el mismo año.
 

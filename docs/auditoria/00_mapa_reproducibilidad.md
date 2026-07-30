@@ -21,6 +21,8 @@ La memoria está disponible únicamente como PDF. El código de análisis reside
 **Fases habilitadas con insumos actuales:** 0, 1, 4, 5 (parcial), 6  
 **Fases bloqueadas:** 2 (reproducción de cálculos), 3 (auditoría estadística)
 
+> **Actualización (julio 2026):** este estado corresponde al momento en que solo existía el PDF. Con la incorporación de `Dashboard_HuellaSocial` la Fase 2 quedó sustancialmente completa y H-02 pasó a estado 🟡 (código y datos ya localizados, aunque con brechas — ver `02_reproduccion_calculos.md` y `00b_relacion_repositorios.md`). Este documento se conserva como registro histórico de la Fase 0 original y no se reescribe retroactivamente.
+
 ---
 
 ## H-02 — Reproducibilidad bloqueada: ausencia de código y datos en el repositorio

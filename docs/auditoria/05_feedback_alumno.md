@@ -1,124 +1,126 @@
 # FASE 5 — Retroalimentación accionable para los autores
 ## Ureta & Ruiz Tagle (2026) · Auditoría Research OS — Huella Social
 
-**Fecha:** julio 2026  
-**Destinatarios:** Ignacio Ureta, Antonio Ruiz Tagle  
-**Propósito:** Que defiendan la memoria con pleno conocimiento de sus puntos débiles y cómo responderlos.
+**Fecha:** julio 2026
+**Destinatarios:** Ignacio Ureta, Antonio Ruiz Tagle
+**Propósito:** Que defiendan la memoria con pleno conocimiento de sus puntos fuertes, lo ya corregido, y lo que aún falta.
+
+> Esta versión reemplaza el borrador de la Fase 0 (basado solo en el PDF, antes de tener acceso al código y los datos). Varios de esos hallazgos iniciales (error de 2025, conteos de N) **ya fueron corregidos y verificados** en las Fases 2–3; se retiran de esta lista y se documenta su cierre. Lo que sigue es el estado real a julio de 2026.
 
 ---
 
 ## Resumen ejecutivo (leer primero)
 
-La memoria es metodológicamente sólida, relevante y bien escrita. Su contribución empírica —la primera estimación sistemática de la contribución al PIB de las CAC chilenas bajo estándares internacionales— es genuina y publicable. Antes de la defensa, deben corregir un error aritmético en el Cuadro 5.7 que es verificable en segundos por cualquier evaluador con una calculadora, y preparar una respuesta clara sobre la reproducibilidad del trabajo (el código y los datos no están en el repositorio del proyecto). Los demás hallazgos son correcciones editoriales que fortalecen la presentación pero no afectan el resultado principal.
+La memoria es metodológicamente sólida, relevante y bien escrita — el puntaje ponderado según la rúbrica de titulación es **4,54/5** (Fase 4; pendiente que el guía confirme la conversión a nota). Ya corrigieron, de punta a punta y de forma verificada de manera independiente, el único error crítico que esta auditoría encontró (el Cuadro 5.7, fila 2025). Eso habla bien de ustedes: pocas memorias reciben una auditoría de datos completa y la resisten con un solo hallazgo crítico, ya cerrado. Lo que queda pendiente antes de la defensa es menor: dos archivos por subir/sincronizar, dos observaciones de rigor estadístico acotadas a un solo cuadro, un ajuste de eje en una figura, y dos ejercicios de calibración metodológica de bajo costo que ya tienen los datos para hacer.
 
 ---
 
-## 🔴 CRÍTICO — Corregir antes de cualquier presentación
+## ✅ Ya corregido — sepan explicarlo en la defensa
 
-### C-01 — Error en Cuadro 5.7, fila 2025
+### Cierre de H-01/H-10 — error del Cuadro 5.7, fila 2025
 
-**Qué está mal:** La fila 2025 del Cuadro 5.7 (cuenta de producción total CMF + DAES) contiene los totales acumulados del panel DAES (fila "Total" del Cuadro 5.2) sumados a los valores del segmento CMF para el año 2025. La nota del cuadro dice explícitamente que "2025 corresponde exclusivamente al segmento CMF (N = 7)", lo que hace que la inconsistencia sea verificable de inmediato.
+Detectamos aritméticamente que la fila 2025 del Cuadro 5.7 sumaba el total acumulado del panel DAES a los valores CMF de ese año. Ustedes corrigieron primero el texto de la memoria (commit `81cd560`) y luego —lo más importante— la causa raíz: la fórmula en `HuellaSocial_Consolidado.xlsx` (hoja "Agregado Total") que producía el error, y regeneraron el dashboard público desde el dato corregido (commits `6fca63e`/`37f6051`). Verificamos de forma independiente, recalculando desde el Excel y leyendo el HTML: coincide exactamente en las tres capas (texto, dato fuente, dashboard).
 
-**Prueba:** P1(Cuadro 5.7, 2025) = 577.398,6. P1(Cuadro 5.5, CMF, 2025) = 445.885,0. Diferencia = 131.513,6 = Total DAES (Cuadro 5.2). Lo mismo se verifica para B1g, D1, B2g y Rem.
+**Para la defensa:** si les preguntan por el error, la respuesta correcta es "sí, lo detectamos y corregido en la fórmula fuente, no solo en el texto — verificado de forma independiente". Es una buena historia de proceso, no algo que ocultar.
 
-**Consecuencia:** El aporte al PIB de 2025 en el Cuadro 5.9 (0,106 %) está inflado. El valor correcto (CMF-solo) es aproximadamente **0,087 %**, que encuadra perfectamente dentro del rango esperado (0,075–0,113 %) y elimina la "anomalía" que el texto (§5.3.3) trata con cautela. La buena noticia: corregido el error, la validación externa queda aún más limpia.
+### D-06 — fuente de α = 0,3776
+
+Agregaron `2018_MIP_111x111.xlsx` al repositorio y documentaron que α es la suma de la columna de coeficientes técnicos directos de la actividad 94 ("Intermediación financiera") de la MIP 2018 del Banco Central. Verificamos el cálculo directamente sobre el archivo: da 0,3776461, coincide.
+
+---
+
+## 🔴 CRÍTICO — nada pendiente
+
+No hay hallazgos críticos abiertos. El único detectado en toda la auditoría (H-01/H-10) está cerrado y verificado.
+
+---
+
+## 🟡 IMPORTANTE — resolver antes de la entrega final
+
+### F-01 — Sincronizar al repositorio los cambios de texto ya reportados
+
+**Qué está mal:** Nos informaron que ya agregaron a la memoria la cita de D-06 en el texto, la fecha de acceso de D-08, y las precisiones de M-01 a M-04 (definición de "observación", criterios de inclusión DAES, fuente del PIB). Pero a la fecha de esta revisión, `huellasocial` (rama principal) no tiene ningún commit posterior a `81cd560` que modifique `docs/Memoria/`. Es decir, el cambio puede existir en su Overleaf o en su máquina, pero no en el repositorio.
+
+**Por qué importa:** es el mismo patrón que produjo el error original (H-01): una corrección real que no queda registrada donde un tercero pueda verla.
+
+**Qué hacer:** subir ese commit a `huellasocial` antes de la entrega final. Mientras no lo vean reflejado ahí, para efectos de esta auditoría estos puntos siguen "reportados, no verificados".
+
+### F-02 — Completar el registro de D-04 y entregar D-07
+
+**Qué está mal:** `PUB_NOMBRES_PJ.txt` (archivo maestro de personas jurídicas del SII) lo reportan como "disponible" pero no está en `Dashboard_HuellaSocial`. El extracto crudo de CMF-BEST (D-07) no fue mencionado en la última respuesta.
+
+**Corrección de criterio (2026-07-30):** para D-04 **no hace falta subir el archivo** al repositorio — es mala práctica versionar binarios de datos grandes en git. Ya creamos `data/metadata/fuentes_externas.md` con una tabla para esto.
 
 **Qué hacer exactamente:**
-1. Reemplazar todos los valores de la fila 2025 del Cuadro 5.7 con los del Cuadro 5.5 (año 2025): P1=445.885,0; B1g=277.518,8; D1=122.763,2; B2g=154.755,6; Rem=108.265,0; D1/B1g=0,44.
-2. Recalcular el aporte estimado 2025 en el Cuadro 5.9 usando el B1g correcto dividido por el PIB 2025.
-3. En §5.3.3, actualizar el texto que califica la cifra de 2025: con la corrección, el valor se ubica dentro del rango esperado y no requiere interpretación "con cautela".
+1. Para D-04: completar en `data/metadata/fuentes_externas.md` (a) la URL exacta del portal SII desde donde descargaron `PUB_NOMBRES_PJ.txt`, y (b) dónde guardaron el respaldo (carpeta de Drive del proyecto u otro almacenamiento externo). Con eso el ítem queda resuelto — no necesitan subir el archivo.
+2. Para D-07: entregar el extracto (mismo criterio aplicará: no hace falta subirlo al repo, sí registrar URL/respaldo en la misma tabla).
 
-**Para la defensa (si aún no corrigen el documento):** Deben poder describir el error, su magnitud y la corrección de memoria. Un evaluador que lo encuentre y no obtenga una respuesta sólida puede interpretarlo como desconocimiento del propio trabajo.
+### F-03 — Calibrar α contra las 5 entidades con desglose contable propio
 
----
+**Qué está mal:** ustedes mismos documentan (nota al pie, §4.3.2) que CAPUAL y AHORROCOOP tienen razón P2/P1 real de ~0,72 (el doble del α aplicado) y que Coopeuch, Oriencoop y Coonfía tienen razones entre 0,23 y 0,28. Tienen los datos para comparar el B1g agregado bajo α uniforme contra un cálculo con P2 directo para esas 5 entidades, y esa comparación no está en el capítulo de métodos ni en resultados.
 
-### C-02 — Reproducibilidad: preparar respuesta para la comisión
+**Qué hacer:** agregar un párrafo (o una nota al pie ampliada) que muestre cuánto cambia el B1g de esas 5 entidades si se usa su P2 real en vez de α×P1. No hace falta rehacer el agregado completo — con mostrar el efecto en esas 5 entidades ya demuestran que evaluaron la robustez del supuesto central del modelo, que es justamente lo que la rúbrica pide en el indicador de mayor peso (Análisis y conclusiones).
 
-**Qué está mal:** El código de análisis y los datos fuente no están versionados en el repositorio del proyecto (huellasocial). El repositorio Dashboard_HuellaSocial existe y es público, pero no está integrado al Research OS y no contiene instrucciones de reproducción completas.
+### F-04 — Justificar la exclusión simple del panel DAES desbalanceado
 
-**Por qué importa ante la comisión:** Una comisión exigente preguntará "¿un tercero puede reproducir sus resultados desde cero?". La respuesta honesta hoy es "parcialmente, con el dashboard descargable". Eso no es suficiente para una auditoría completa.
+**Qué está mal:** el panel DAES incluye solo CAC-año con dato disponible, sin ponderar por cobertura ni imputar. La decisión se declara pero no se justifica frente a alternativas (factores de expansión, que ustedes mismos proponen como trabajo futuro en el Capítulo 6).
 
-**Qué hacer exactamente antes de la defensa:**
-1. Asegurarse de que el repositorio https://github.com/Iureta1/Dashboard_HuellaSocial contiene: (a) el código que genera los cuadros del capítulo 5, (b) un README con instrucciones de ejecución, y (c) el archivo de requerimientos (requirements.txt).
-2. Incluir en la memoria (§4.4 o Anexos) el SHA del commit exacto del repositorio que corresponde a la versión presentada. Ejemplo: "Los resultados son reproducibles desde el commit `abc1234` del repositorio Dashboard_HuellaSocial (https://github.com/Iureta1/Dashboard_HuellaSocial/commit/abc1234)."
-3. Para la defensa, tener preparada la demostración de que el dashboard descargable reproduce los cuadros 5.2 y 5.5 exactamente.
+**Qué hacer:** una frase en §4.3.2 o §5.6 explicando por qué exclusión simple es preferible a expansión en esta primera versión (por ejemplo: "se prefirió exclusión sobre expansión para no introducir supuestos adicionales sobre la representatividad de las entidades no reportantes, dejando la expansión como línea futura una vez validado el sesgo de selección").
 
 ---
 
-## 🟡 IMPORTANTE — Corregir en la versión final entregada a la Facultad
+## 🟢 PULIDO — mejoras editoriales, no bloquean la defensa
 
-### I-01 — Unificar el conteo de observaciones DAES
+### P-01 — Eje truncado en la Figura 5.1 (dashboard CMF)
 
-**Dónde:** §4.2.2 dice "129 observaciones"; §4.3.1 dice "133 observaciones" (dos veces); Cuadro 5.2 suma N=122.
+**Dónde:** `logos/figuras/CMF.png`, eje derecho ("Aporte PIB %"), que empieza en 0,07 en vez de 0.
 
-**Qué hacer:** Definir en una sola oración qué es una "observación" (ej.: "CAC-año con P1 disponible"). Luego usar esa cifra en todas las secciones. Si las tres cifras representan subconjuntos distintos (todas las variables vs. P1 vs. P1 y D1), explicarlo explícitamente con una frase en §4.2.2.
+**Qué hacer:** regenerar la figura con el eje secundario partiendo de 0, o agregar una nota al pie aclarando que el eje no parte de cero. Tal como está, la caída de 0,119% a 0,073% se ve visualmente más dramática de lo que realmente es (una caída relativa del 39%, no del 90% que sugiere el gráfico).
 
-### I-02 — Corregir N en Cuadro 5.8
+### P-02 — Declarar el supuesto de estabilidad temporal del 2,41% patrimonial
 
-**Dónde:** §5.3.2, Cuadro 5.8, columna N.
+**Dónde:** Cuadro 5.9 (validación externa) y §5.6 (limitaciones).
 
-**Qué hacer:** Sumar el N del Cuadro 5.4 (DAES financiero) al N del Cuadro 5.6 (CMF, siempre 7) para cada año. Los valores monetarios del cuadro son correctos; solo la columna N está desactualizada.
+**Qué hacer:** una frase reconociendo que el 2,41% es una fotografía de diciembre de 2025 aplicada retroactivamente a 13 años, y que la comparación pierde precisión en los años más alejados de esa fecha.
 
-### I-03 — Reconciliar "39 cooperativas" (Figura 5.3) con "42 CAC" (§6.1)
+### P-03 — Fijar (o relativizar) el umbral de "concordancia" del Cuadro 5.9
 
-**Dónde:** Pie de Figura 5.3 vs. §6.1.
+**Dónde:** §5.4, interpretación del Cuadro 5.9.
 
-**Qué hacer:** Determinar cuántas CAC son "vigentes" al momento de la Figura (puede ser 32 DAES vigentes + 7 CMF = 39 si hubo disoluciones). Si eso es correcto, explicarlo en el pie de figura: "32 cooperativas DAES vigentes al [fecha] más 7 supervisadas por la CMF". Si el "39" es un error tipográfico, corregirlo a 42 (35 + 7).
+**Qué hacer:** los umbrales de 0,01 pp ("concordante") y 0,03 pp ("brecha") aparecen recién al interpretar los resultados. Alternativa simple: cambiar el lenguaje a algo explícitamente cualitativo ("la diferencia es visualmente menor en 2013, 2014, 2021 y 2025") en vez de presentarlo como un criterio con umbral numérico fijo.
 
-### I-04 — Corregir supuesto 1 en §4.3.4
+### P-04 — Actualizar el período declarado en Alcances
 
-**Dónde:** §4.3.4, primer bullet.
+**Dónde:** §Alcances y objetivo específico 3, que dicen "2014–2024".
 
-**Qué hacer:** El supuesto "El tramo de ventas del SII es representativo de la producción real de las CAC" no describe la metodología real: P1 viene de estados financieros, no del SII. Reemplazarlo por el supuesto correcto, por ejemplo: "Los ingresos operacionales del estado de resultados son una aproximación válida de P1 en el sentido del SCN 2025 (párr. 7.169) para cooperativas financieras de mercado."
+**Qué hacer:** actualizar a "2013/2014–2025" para reflejar que el trabajo cubre más de lo comprometido (CMF llega hasta 2025). No es una falla — es una mejora de precisión textual sencilla.
 
-### I-05 — Máximo anual DAES: 24 vs 22
+### P-05 — Nota aclaratoria de N en los cuadros de cuenta financiera
 
-**Dónde:** §4.3.1 dice "entre 2 y 24 entidades por año"; Cuadro 5.1 muestra máximo N=22 (2023).
+**Dónde:** Cuadros 5.4, 5.6, 5.8 (cuenta financiera).
 
-**Qué hacer:** Corregir el texto: "entre 2 y 22 entidades por año."
+**Qué hacer:** el N de estos cuadros difiere del N de los cuadros de producción para el mismo año (por disponibilidad distinta de datos de balance vs. estado de resultados) — ya explicado en general en §4.2.2, pero conviene repetir brevemente en la nota al pie de cada cuadro financiero para que no parezca una inconsistencia al comparar tablas.
 
----
+### P-06 — Reconciliar en un solo lugar los conteos 35/36/38/42 de cooperativas
 
-## 🟢 PULIDO — Mejoras editoriales que elevan la calidad
+**Dónde:** dispersos entre §4.2.2, §4.3.1, Figura 5.3 y Capítulo 6.
 
-### P-01 — Calificar "0,08 %" en el abstract
-
-**Dónde:** Resumen, segunda frase del tercer párrafo.
-
-**Qué hacer:** Añadir: "para el segmento de cooperativas supervisadas por la CMF, que representa más del 90 % del VAB total del sector; el segmento no supervisado (DAES) aporta adicionalmente entre 0,001 % y 0,011 % del PIB según la disponibilidad de información."
-
-### P-02 — Revisar supuesto 3 en §4.3.4
-
-**Dónde:** §4.3.4, tercer bullet: "La remuneración media del sector financiero es representativa del salario promedio de las CAC."
-
-**Qué hacer:** Si D1 siempre se toma de los estados financieros (es una observación directa), este supuesto sobra. Eliminarlo o precisar: aplica solo a los casos en que D1 no está disponible (si los hay). Si D1 siempre está disponible en los estados de resultados, este supuesto es innecesario y puede confundir a la comisión.
-
-### P-03 — Añadir referencia de Akerlof (1970) a la bibliografía
-
-**Dónde:** §3.4 menciona las "asimetrías de información" que remiten conceptualmente a Akerlof (1970), y PROJECT.md cita a Akerlof explícitamente. Si la memoria lo cita, debe aparecer en la bibliografía formal.
-
-### P-04 — Precisar fuente de datos del BCCh (URL permanente)
-
-**Dónde:** Nota al pie del Cuadro 5.9 y Cuadro 5.3.
-
-**Qué hacer:** Añadir la URL permanente del dataset del Banco Central usado (ej. https://si3.bcentral.cl/...) y la fecha de acceso. Esto facilita la replicabilidad y es estándar en papers de cuentas nacionales.
+**Qué hacer:** una única nota (sugerido: en la tabla de fuentes, §4.1) que explique a qué universo corresponde cada cifra: 35 (DAES con dato financiero), 38 (DAES vigentes en el registro oficial), 36 (catastro propio del proyecto), 42 (35 DAES + 7 CMF, panel unificado).
 
 ---
 
 ## Preparación para preguntas de la comisión
 
-Estas son las preguntas que un evaluador exigente probablemente hará:
+1. **"¿Por qué α = 0,3776 y no otro valor?"** → De la MIP 2018 del Banco Central, sector 94 (Intermediación financiera) — verificado por esta auditoría contra el archivo fuente. Mencionar que detectaron heterogeneidad (CAPUAL/AHORROCOOP ~0,72 vs. Coopeuch/Oriencoop/Coonfía 0,23–0,28) y, si alcanzan a resolver F-03, mostrar cuánto cambia el resultado con P2 directo para esas 5 entidades.
 
-1. **"¿Por qué α = 0,3776 y no otro valor?"** → Respuesta esperada: proviene del sector 94 de la MIP BCCh 2018, que es la metodología estándar cuando no se dispone de datos de consumo intermedio por exención tributaria. Mencionar la nota 3: se detectó heterogeneidad, el análisis de sensibilidad queda pendiente para versiones futuras.
+2. **"¿Cómo reproducimos sus cálculos?"** → Señalar `Dashboard_HuellaSocial` con el commit específico. Ser honestos sobre que el pipeline vive como fórmulas de Excel transcritas al LaTeX, no como un script único — y que ya documentaron ese proceso en el Readme del repositorio.
 
-2. **"¿Cómo reproducimos sus cálculos?"** → Respuesta esperada: señalar el repositorio Dashboard_HuellaSocial con el commit SHA específico. Si el código no está limpio, ser honestos: "El código que generó los resultados está disponible en [URL]; la documentación para replicación completa es una mejora prioritaria para la versión journal del trabajo."
+3. **"¿La suma CMF + DAES es metodológicamente válida?"** → No es una suma exacta; se presenta explícitamente como "aproximación de orden de magnitud" dado que los períodos y coberturas difieren. La validación externa (Cuadro 5.9) muestra que el orden de magnitud es consistente con una fuente independiente (patrimonio CMF/BCCh).
 
-3. **"¿La suma CMF + DAES es metodológicamente válida?"** → Respuesta esperada: no es una suma exacta; §5.3 la presenta como "aproximación de orden de magnitud" dado que los períodos difieren y el DAES nunca cubre el universo completo. La validación externa (§5.3.3) muestra que el orden de magnitud es consistente.
+4. **"Encontramos un error en el Cuadro 5.7, fila 2025. ¿Lo sabían?"** → Sí: detectado, corregido en la fórmula fuente (no solo en el texto) y verificado de forma independiente. Pueden mencionar que fue parte de un proceso de auditoría de datos que también revisó los otros 8 cuadros del capítulo sin encontrar errores adicionales.
 
-4. **"¿Por qué hay diferencias entre 129, 133 y 122 observaciones?"** → Respuesta esperada: [deberían saber la respuesta exacta; ver I-01].
-
-5. **"La fila 2025 del Cuadro 5.7 tiene un error. ¿Lo detectaron?"** → Si corrigen antes de la defensa: "Sí, corregido en la versión final." Si no: "Sí, lo detectamos durante la revisión; los valores correctos son [los del Cuadro 5.5 para 2025]; el error no afecta ningún año del período 2013–2024."
+5. **"¿Por qué no hicieron un análisis de sensibilidad de α si ya sabían que hay heterogeneidad?"** → Está reconocido como línea de trabajo futura (Capítulo 6). Si alcanzan a resolver F-03 antes de la defensa, mejor: pueden mostrar un cálculo concreto, aunque sea acotado a las 5 entidades con datos suficientes.
 
 ---
 
-*Salida de FASE 5 — conforme a AUDIT_PROTOCOL.md §3.*
+*Salida de FASE 5 — conforme a AUDIT_PROTOCOL.md §5 (numeración de fases del protocolo actualizado; ver `AUDIT_PROTOCOL.md`). Ver `06_proyeccion_cientifica.md` (Fase 6) para la proyección hacia la línea de investigación.*
