@@ -1,0 +1,175 @@
+% =====================================================================
+%  uandes.sty  --  Shared Beamer theme for Universidad de los Andes (FICA).
+%
+%  Requires XeLaTeX (fontspec + DM Sans).
+%  Asset layout (relative to the compile directory):
+%    assets/fonts/   — DM Sans .ttf files
+%    assets/logos/   — Flecha-Uandes-Blanco.png, logoFICA.png, etc.
+%
+%  Usage in a deck preamble:
+%     \documentclass[xcolor=dvipsnames,aspectratio=169]{beamer}
+%     \usepackage{uandes}
+%     \title[short]{Long title}
+%     \author{...}\institute{...}\date{\today}
+% =====================================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{uandes}[2026/07/29 Uandes bargaining theme]
+
+% ---- Core packages --------------------------------------------------
+\RequirePackage{graphicx}
+\RequirePackage{array}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{booktabs}
+\RequirePackage{fontspec}
+
+% ---- Asset paths ----------------------------------------------------
+\def\uandesfontdir{assets/fonts/}
+\def\uandeslogodir{assets/logos/}
+\graphicspath{{\uandeslogodir}{./}}
+
+% ---- Fonts (DM Sans via fontspec) -----------------------------------
+\setsansfont{DMSans}[
+    Path            = \uandesfontdir,
+    Extension       = .ttf,
+    UprightFont     = *-Medium,
+    BoldFont        = *-Bold,
+    ItalicFont      = *-Italic,
+    Ligatures       = TeX,
+]
+\newfontfamily\DMSansMedium[
+    Path=\uandesfontdir, Extension=.ttf,
+    BoldFont=DMSans-Bold, ItalicFont=DMSans-Italic, Ligatures=TeX
+]{DMSans-Medium}
+\newfontfamily\DMSansBold[
+    Path=\uandesfontdir, Extension=.ttf, Ligatures=TeX
+]{DMSans-Bold}
+\newfontfamily\DMSansSemiBold[
+    Path=\uandesfontdir, Extension=.ttf,
+    ItalicFont=DMSans-Italic, Ligatures=TeX
+]{DMSans-SemiBold}
+\newfontfamily\DMSansItalic[
+    Path=\uandesfontdir, Extension=.ttf, Ligatures=TeX
+]{DMSans-Italic}
+
+% ---- Palette (Universidad de los Andes, Chile) ----------------------
+\definecolor{Pantone3546C}{HTML}{CE0019}  % primary red
+\definecolor{Pantone187C}{HTML}{BA001A}
+\definecolor{Pantone188C}{HTML}{A30D12}
+\definecolor{Pantone7626C}{HTML}{CA3025}
+\definecolor{Pantone7547C}{HTML}{131E29}  % primary navy (text)
+\definecolor{Pantone7546}{HTML}{25384A}
+\definecolor{Pantone7545C}{HTML}{415569}
+\definecolor{Pantone7544C}{HTML}{76879C}
+\definecolor{WarmGray1C}{HTML}{D6D1CA}
+\definecolor{White}{HTML}{FFFFFF}
+
+% convenience aliases
+\colorlet{uared}{Pantone3546C}
+\colorlet{uanavy}{Pantone7547C}
+\colorlet{uagray}{WarmGray1C}
+
+% ---- Beamer theme ---------------------------------------------------
+\usetheme{Madrid}
+\usefonttheme[onlymath]{serif}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamercolor{palette primary}{bg=Pantone3546C,fg=White}
+\setbeamercolor{palette secondary}{bg=Pantone187C,fg=White}
+\setbeamercolor{palette tertiary}{bg=Pantone7547C,fg=White}
+\setbeamercolor{palette quaternary}{bg=Pantone7546,fg=White}
+\setbeamercolor{structure}{fg=Pantone3546C}
+\setbeamercolor{section in head/foot}{bg=Pantone3546C,fg=White}
+\setbeamercolor{subsection in head/foot}{bg=Pantone187C,fg=White}
+\setbeamercolor{title}{bg=Pantone3546C,fg=White}
+\setbeamercolor{frametitle}{bg=Pantone3546C,fg=White}
+\setbeamercolor{normal text}{fg=Pantone7547C}
+\setbeamercolor{item}{fg=Pantone3546C}
+\setbeamercolor{block title}{bg=Pantone3546C,fg=White}
+\setbeamercolor{block body}{bg=WarmGray1C,fg=Pantone7547C}
+\setbeamercolor{block title example}{bg=Pantone7546,fg=White}
+\setbeamercolor{block body example}{bg=WarmGray1C,fg=Pantone7547C}
+\setbeamercolor{block title alerted}{bg=Pantone7626C,fg=White}
+\setbeamercolor{block body alerted}{bg=WarmGray1C,fg=Pantone7547C}
+\setbeamercolor{author in head/foot}{bg=Pantone3546C,fg=White}
+\setbeamercolor{title in head/foot}{bg=Pantone187C,fg=White}
+\setbeamercolor{date in head/foot}{bg=Pantone7547C,fg=White}
+
+% ---- Apply DM Sans to Beamer elements -------------------------------
+\setbeamerfont{title}{family=\DMSansBold}
+\setbeamerfont{subtitle}{family=\DMSansMedium,size=\normalsize}
+\setbeamerfont{frametitle}{family=\DMSansSemiBold,size={\fontsize{14}{18}}}
+\setbeamerfont{frametitle continuation}{family=\DMSansMedium}
+\setbeamerfont{block title}{family=\DMSansSemiBold}
+\setbeamerfont{block body}{family=\DMSansMedium}
+\setbeamerfont{itemize/enumerate body}{family=\DMSansMedium}
+\setbeamerfont{itemize/enumerate subbody}{family=\DMSansMedium}
+\setbeamerfont{normal text}{family=\DMSansMedium}
+\setbeamerfont{footline}{family=\DMSansMedium,size=\tiny}
+\setbeamerfont{author}{family=\DMSansMedium}
+\setbeamerfont{date}{family=\DMSansMedium}
+\setbeamerfont{structure}{family=\DMSansMedium}
+
+% ---- Item markers ---------------------------------------------------
+\setbeamertemplate{itemize item}{\textcolor{Pantone3546C}{\textbf{>}}}
+\setbeamertemplate{itemize subitem}{\textcolor{Pantone7544C}{\textbf{--}}}
+
+% ---- Custom footline (author | title | logo + page number) ----------
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.34\paperwidth,ht=2.3ex,dp=1ex,left]{palette primary}%
+      \hspace*{1.5mm}\usebeamerfont{author in head/foot}\insertshortauthor%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.3ex,dp=1ex,center]{palette secondary}%
+      \usebeamerfont{title in head/foot}\insertshorttitle%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.3ex,dp=1ex,right]{palette tertiary}%
+      \IfFileExists{\uandeslogodir Flecha-Uandes-Blanco.png}{%
+        \raisebox{-0.25ex}{\includegraphics[height=1.8ex]{\uandeslogodir Flecha-Uandes-Blanco.png}}%
+        \hspace*{0.8mm}%
+      }{}%
+      \insertframenumber\,/\,\inserttotalframenumber\hspace*{1.5mm}%
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+% ---- Custom title page ---------------------------------------------
+\setbeamertemplate{title page}{
+  \begin{centering}
+    \IfFileExists{\uandeslogodir logoFICA.png}{%
+      % Sin trim: el logoFICA.png de assets/logos/ es un banner ancho y
+      % corto (1749x366px); el trim original asumía una imagen mucho
+      % más alta y dejaba solo un filamento del logo tras recortar.
+      \includegraphics[width=0.5\textwidth]{logoFICA.png}%
+    }{}
+    \vfill
+    \begin{beamercolorbox}[sep=8pt,center]{title}
+      \usebeamerfont{title}\inserttitle\par
+      \vspace{4pt}
+      {\usebeamerfont{subtitle}\insertsubtitle\par}
+    \end{beamercolorbox}
+    \vfill
+    \begin{beamercolorbox}[sep=6pt,center]{author}
+      \usebeamerfont{author}\insertauthor
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=6pt,center]{palette quaternary}
+      \IfFileExists{\uandeslogodir Flecha-Uandes-Blanco.png}{%
+        \includegraphics[height=0.34cm]{\uandeslogodir Flecha-Uandes-Blanco.png}\\[3pt]%
+      }{}%
+      \usebeamerfont{author}\insertinstitute
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[sep=6pt,center]{date in head/foot}
+      \usebeamerfont{date}\insertdate
+    \end{beamercolorbox}
+    \vfill
+  \end{centering}
+}
+
+% ---- Small helpers --------------------------------------------------
+\newcommand{\highlight}[1]{\textcolor{uared}{\textbf{#1}}}
+\newcommand{\R}{\mathbb{R}}
+\providecommand{\argmax}{\operatorname*{arg\,max}}
+
+\endinput
