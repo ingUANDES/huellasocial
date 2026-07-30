@@ -25,6 +25,19 @@
 - **Decisión:** el panel DAES pasa de 129 a 122 observaciones de P1, "tras excluir registros duplicados de carga de la misma cooperativa y año".
 - **Estado:** ⚠️ Sin entrada de decision log de los autores. No se especifica el criterio exacto de deduplicación (¿cuál registro se conserva cuando hay duplicado? ¿por fecha de carga, por completitud de variables?). Corresponde a M-03 en `SOLICITUD_AUTORES.md`, aún no resuelto.
 
+## 2026-07-29 — Decisión de no generar especificación de entorno (E-01)
+
+- **Decisión:** los autores optaron explícitamente por no generar `requirements.txt`/`environment.yml` para `Dashboard_HuellaSocial`, dejando E-01 sin resolver "por decisión propia" (respuesta a `SOLICITUD_AUTORES.md`, ronda 2).
+- **Razonamiento reportado:** ninguno más allá de la decisión misma.
+- **Alternativas consideradas:** ninguna registrada.
+- **Riesgo:** sin versiones fijadas de pandas/numpy/openpyxl, no hay garantía de reproducibilidad bit-a-bit del pipeline en otra máquina u otra fecha (las versiones de estas librerías cambian su comportamiento numérico/de parseo entre releases). Documentado como riesgo residual, no bloqueante, en `02_reproduccion_calculos.md`.
+
+## 2026-07-29 — Corrección de causa raíz de H-01/H-10 verificada
+
+- **Decisión:** corregir la fórmula de la hoja `🏦 Agregado Total` de `HuellaSocial_Consolidado.xlsx` que sumaba el total acumulado DAES a la fila 2025 (CMF-solo), y regenerar el dashboard desde el dato corregido, en vez de mantener el parche manual solo en el `.tex` de la memoria.
+- **Verificación independiente:** confirmada por esta auditoría recalculando desde el Excel descargado (commit `37f6051`) y leyendo el HTML regenerado — ver H-10 en `docs/auditoria/02_reproduccion_calculos.md`.
+- **Nota positiva:** este es el primer caso en la auditoría donde una corrección se propaga correctamente desde la causa raíz hasta todos los artefactos derivados (Excel → dashboard → memoria), cerrando la brecha de trazabilidad señalada en la entrada anterior de este log.
+
 ---
 
 *Este log fue iniciado por el Research Engineering Assistant en julio 2026 al detectar, durante la Fase 2 de la auditoría de Ureta & Ruiz Tagle (2026), decisiones metodológicas incorporadas al repositorio sin registro. Los autores deben mantenerlo actualizado hacia adelante.*

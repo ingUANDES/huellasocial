@@ -1,7 +1,7 @@
 # FASE 2 — Reproducción de cálculos
 ## Ureta & Ruiz Tagle (2026) · Auditoría Research OS — Huella Social
 
-**Estado: 🟡 PARCIALMENTE EJECUTADA** (D-02/D-03/C-02/C-05 disponibles vía `Dashboard_HuellaSocial`; siguen faltando D-04, D-06, D-07, D-08, C-01, C-03, C-04, E-01/E-02/E-03)
+**Estado: 🟢 SUSTANCIALMENTE COMPLETA** (H-01/H-10 corregidos y verificados en el dato fuente y el dashboard; D-06 verificado; C-01/C-03/E-02/E-03 documentados en `Dashboard_HuellaSocial`. Sigue pendiente: D-04 (subir el archivo), D-07, y verificar en `huellasocial` los cambios de texto que los autores reportan haber hecho — ver §5)
 
 ---
 
@@ -57,7 +57,19 @@ Al revisar el historial de `docs/Memoria/chapters/chapter05.tex` se encontró el
 - *"Cambios de contenido siempre se hacen en el repositorio, nunca en Overleaf"* — el flujo real fue inverso: la corrección se hizo en Overleaf y se sincronizó al repositorio como texto estático, no como resultado de recalcular desde datos/código corregidos.
 - *Regla anti-duplicación (§Integración con Quarto y Overleaf, punto 1)*: los resultados deben generarse **una sola vez** desde el código; aquí se generaron dos veces con dos resultados distintos (Excel/dashboard vs. texto de memoria), y no hay ninguna referencia cruzada ni control de versión que reconcilie ambas.
 
-**Nuevo hallazgo — H-10 (🔴 CRÍTICO):** El error aritmético de H-01 sigue vivo en el dato fuente (`HuellaSocial_Consolidado.xlsx`) y en el dashboard público, pese a que el texto de la memoria ya fue corregido. Cualquier lector que consulte el dashboard (citado en la memoria, nota al pie 4, como el repositorio público de referencia) verá una cifra de aporte al PIB para 2025 (0,106 %) que la propia memoria ya reconoce como incorrecta (0,082 %). Acción requerida: corregir la hoja `🏦 Agregado Total` en el Excel fuente (ambos bloques) y regenerar `dashboard_huellasocial.html`, en vez de mantener el parche manual solo en el `.tex`.
+**Hallazgo H-10 (🔴 CRÍTICO):** El error aritmético de H-01 sigue vivo en el dato fuente (`HuellaSocial_Consolidado.xlsx`) y en el dashboard público, pese a que el texto de la memoria ya fue corregido. Cualquier lector que consulte el dashboard (citado en la memoria, nota al pie 4, como el repositorio público de referencia) verá una cifra de aporte al PIB para 2025 (0,106 %) que la propia memoria ya reconoce como incorrecta (0,082 %). Acción requerida: corregir la hoja `🏦 Agregado Total` en el Excel fuente (ambos bloques) y regenerar `dashboard_huellasocial.html`, en vez de mantener el parche manual solo en el `.tex`.
+
+### H-10 — RESUELTO Y VERIFICADO (commits `6fca63e` y `37f6051`, `Dashboard_HuellaSocial`, 2026-07-29)
+
+Los autores reportaron haber ubicado la causa raíz (una fórmula en la hoja `Agregado Total` que apuntaba a la fila de total acumulado del panel DAES en vez de dejar 2025 como CMF-solo) y corregido el Excel y el dashboard. Se verificó de forma independiente, re-descargando el repositorio y re-ejecutando la cadena completa:
+
+| Verificación | Resultado |
+|---|---|
+| Fila 2025, hoja `Agregado Total` (bloque producción) | P1 = 445.885,0 · P2 = 168.366,176 · B1g = 277.518,824 · D1 = 122.763,2 · B2g = 154.755,624 · Rem = 108.265,0 · D1/B1g = 0,44236 — **idéntico a la hoja `Agregados CMF` y a la memoria corregida** |
+| Bloque Cuenta Financiera, N por año 2015–2024 | 14, 14, 14, 17, 13, 16, 15, 22, 25, 18 — **coincide exactamente** con lo ya corregido en el `.tex` (commit `81cd560`) |
+| `dashboard_huellasocial.html` regenerado y leído programáticamente | `total_agg` 2025: N=7, P1=445.885,0, B1g=277.518,824, Aporte = 0,0816 % — consistente con el 0,082 % de la memoria (la diferencia de milésimas es redondeo). Las cadenas `577398`, `359372`, `0.1057` (huellas del valor erróneo) **no aparecen en ningún lugar del HTML**. |
+
+**Conclusión:** H-01/H-10 quedan **cerrados**. Esta es la primera vez en esta auditoría que un hallazgo crítico se corrige de punta a punta (causa raíz → dato fuente → artefacto público) y se verifica de forma independiente y reproducible. Buen manejo por parte de los autores.
 
 ---
 
@@ -69,12 +81,36 @@ De igual forma, la fila 2025 de la hoja `🏦 Agregados CMF` (445.885,0 / 277.51
 
 ---
 
-## 4. Pendiente para completar la Fase 2
+## 4. Respuesta de los autores a `SOLICITUD_AUTORES.md` (2026-07-29) — verificación ítem por ítem
 
-- **C-01** (pipeline de integración de fuentes): no está en `Dashboard_HuellaSocial`. Sin él, no se puede auditar cómo se llegó a los valores CMF/DAES por entidad (solo se puede verificar la agregación desde el panel ya consolidado).
-- **D-04 a D-08, E-01/E-02/E-03**: siguen sin entregarse.
-- Pendiente confirmar con los autores: ¿la corrección del 2026-07-28 fue hecha en respuesta a este hallazgo (H-01) u obtenida de forma independiente? ¿Existe una versión corregida de `HuellaSocial_Consolidado.xlsx` que aún no se ha subido a `Dashboard_HuellaSocial`?
+Los autores reportaron por escrito haber resuelto la mayoría de los insumos pendientes. Se verificó cada uno contra el estado real de los repositorios (`Dashboard_HuellaSocial` @ `37f6051`, `huellasocial` @ `8699f59`):
+
+| # | Ítem | Reportado por los autores | Verificación independiente |
+|---|------|---------------------------|----------------------------|
+| D-06 | Fuente de α = 0,3776 | Suma de la columna de coeficientes técnicos directos, actividad 94, MIP 111×111 (BCCh 2018) | ✅ **VERIFICADO**: se agregó `2018_MIP_111x111.xlsx` a `Dashboard_HuellaSocial` (commit `37f6051`). Se recalculó directamente: hoja "2" (Matriz de coeficientes directos), columna de actividad 94 (glosa confirmada: "Intermediación financiera"), suma de los 111 valores = **0,3776461...** — coincide con α a 4 decimales. |
+| C-01 | Pipeline de integración | Documentado en el Readme de `Dashboard_HuellaSocial`: cruce por RUT normalizado, fórmulas explicadas | 🟡 **PARCIAL**: el Readme ahora aclara honestamente que **no existe un script** — los cuadros 5.2–5.9 son fórmulas de Excel transcritas manualmente al LaTeX ("no existe un script que genere esos cuadros directamente"). Esto es una mejora de transparencia real, pero no resuelve el riesgo estructural: la transcripción manual Excel→LaTeX es exactamente el tipo de paso que produjo H-01/H-10. Se recomienda automatizar esa transcripción (script que lea el Excel y genere el `.tex` de las tablas) para eliminar el riesgo de raíz, no solo documentarlo. |
+| C-03 | Script de cuenta financiera | Documentado como fórmulas de Excel, no script independiente | ✅ Coherente con el hallazgo de C-01 — mismo mecanismo, correctamente documentado ahora. |
+| C-04 | Script de figuras | Ya actualizado, sin cambios necesarios | ✅ Consistente: `gen_figs_5_4.py` ya reflejaba los conteos corregidos desde el commit `81cd560` (2026-07-28), antes de esta respuesta. |
+| E-02 | Versión de Python | 3.11.5 | ✅ Documentado en el Readme de `Dashboard_HuellaSocial` ("Entorno de ejecución"). |
+| E-03 | Sistema operativo | Windows, sin versión de build | ✅ Documentado en el mismo bloque del Readme. |
+| E-01 | `requirements.txt`/`environment.yml` | Decisión de no generarlo | ⚠️ Aceptado como decisión, pero **sin registrar en `decision_log.md`** — agregado retroactivamente por esta auditoría (ver abajo). Sigue siendo un riesgo real: sin fijar versiones de pandas/numpy/openpyxl, no hay garantía de que este mismo script reproduzca bit-a-bit los resultados en otra máquina. |
+| D-04 | `PUB_NOMBRES_PJ.txt` | Disponible, pendiente de subir | 🔴 **NO VERIFICABLE**: el archivo no está en `Dashboard_HuellaSocial` a la fecha de esta revisión. Sigue bloqueando la verificación de subtipo 817 (CAC) contra el registro SII. |
+| D-07 | Extracto CMF-BEST crudo | No reportado en la respuesta | 🔴 Sigue pendiente, no mencionado. |
+| D-06 (cita en memoria), D-08 (fecha de acceso CMF), M-01/M-03 (§4.3.1) | Cambios de texto en la memoria (`docs/Memoria/`) | Reportados como ya incorporados | 🔴 **NO VERIFICABLE TODAVÍA**: a la fecha de esta revisión, el repositorio `huellasocial` (rama `main`, HEAD `8699f59`) no tiene commits posteriores a `81cd560`/`e2eed60` que toquen `docs/Memoria/`. Es decir, estos cambios de texto existen (según los autores) en Overleaf o localmente, pero **no han sido sincronizados al repositorio** — la misma brecha de trazabilidad que produjo H-10 originalmente. Se solicita a los autores subir estos cambios al repo antes de darlos por cerrados. |
+| M-02 | Criterio de extracción P1/D1 desde PDFs DAES | Ya cubierto en §4.3.2, sin cambios | ⚪ No verificable de forma independiente sin el commit correspondiente (mismo problema que el punto anterior), pero no se objeta la afirmación. |
+| M-04 | Fuente del PIB | Ya cubierto, título de tabla y fecha de acceso agregados en D-08 | ⚪ Mismo caso: depende de la sincronización de D-08 al repositorio. |
+
+**Hallazgo H-11 (🟡 IMPORTANTE) — brecha recurrente entre lo reportado y lo versionado:** por segunda vez en esta auditoría (la primera fue H-10), los autores reportan cambios de contenido de la memoria que aún no existen como commits en `huellasocial`. Se recomienda establecer como práctica mínima: ningún ítem de `SOLICITUD_AUTORES.md` se marca ✅ resuelto hasta que el commit correspondiente sea visible en el repositorio, no solo reportado por chat.
 
 ---
 
-*Fase 2 ejecutada julio 2026, tras la incorporación de `Dashboard_HuellaSocial` como insumo. Ver `00b_relacion_repositorios.md` para el mapeo de repositorios y `01_consistencia_interna.md` para H-01 original.*
+## 5. Pendiente para completar la Fase 2
+
+- **D-04, D-07**: siguen sin entregarse/subirse.
+- **Sincronización pendiente**: los cambios de texto reportados para D-06/D-08/M-01/M-03/M-02/M-04 en la memoria deben verse reflejados en un commit de `huellasocial` antes de considerarse cerrados.
+- **C-01/C-03**: documentados honestamente como inexistentes (fórmulas de Excel + transcripción manual). Recomendación abierta: automatizar la generación de las tablas LaTeX desde el Excel para eliminar el riesgo de transcripción manual que originó H-01.
+- **E-01**: decisión de no generar especificación de entorno, ahora registrada en `decision_log.md`, pero sigue siendo un riesgo de reproducibilidad de severidad media.
+
+---
+
+*Fase 2 ejecutada julio 2026, tras la incorporación de `Dashboard_HuellaSocial` como insumo, y actualizada tras la respuesta de los autores a `SOLICITUD_AUTORES.md` (2026-07-29). Ver `00b_relacion_repositorios.md` para el mapeo de repositorios y `01_consistencia_interna.md` para H-01 original.*

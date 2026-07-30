@@ -74,7 +74,7 @@ La auditoría de la memoria *Propuesta metodológica para una cuenta satélite d
 
 ---
 
-## Actualización post-Fase 2 (julio 2026)
+## Actualización post-Fase 2, ronda 1 (julio 2026)
 
 1. **Corregir el dato fuente, no solo el texto.** La memoria fue corregida a mano en Overleaf (commit `81cd560`) con los valores correctos para H-01, pero `HuellaSocial_Consolidado.xlsx` (hoja `🏦 Agregado Total`) y `dashboard_huellasocial.html` **siguen reproduciendo el error original** (ver H-10 en `02_reproduccion_calculos.md`). Se solicita: (a) corregir la fila 2025 del bloque "Cuenta de producción" y las filas 2015–2024 del bloque "Cuenta financiera" (N incorrecto) en el Excel; (b) regenerar el dashboard; (c) confirmar si existe una versión corregida del Excel aún no subida al repositorio.
 2. **Entregar C-01** (pipeline de integración CMF+DAES → hoja `Agregado Total`), no solo el formateador del dashboard.
@@ -82,4 +82,25 @@ La auditoría de la memoria *Propuesta metodológica para una cuenta satélite d
 
 ---
 
-*Este documento fue generado en la Fase 0 de la auditoría, en cumplimiento del AUDIT_PROTOCOL.md §2. Actualizado en Fase 2.*
+## Actualización post-Fase 2, ronda 2 (2026-07-29) — respuesta de los autores, verificada
+
+Los autores respondieron a la ronda 1. Estado verificado de cada punto (detalle completo en `02_reproduccion_calculos.md` §4):
+
+| # | Estado | Nota |
+|---|--------|------|
+| H-10 (dato fuente + dashboard) | ✅ Resuelto y verificado | Causa raíz identificada y corregida en `HuellaSocial_Consolidado.xlsx` y `dashboard_huellasocial.html` (commits `6fca63e`, `37f6051`). Recalculado de forma independiente — coincide exactamente. |
+| D-06 | ✅ Resuelto y verificado | `2018_MIP_111x111.xlsx` agregado al repo; suma de la columna de actividad 94 ("Intermediación financiera") = 0,3776461 ≈ α. |
+| C-01 | 🟡 Documentado, no resuelto de raíz | El Readme de `Dashboard_HuellaSocial` ahora aclara honestamente que no existe pipeline: los cuadros son fórmulas de Excel transcritas a mano al LaTeX. Transparencia real, pero el riesgo de transcripción manual (origen de H-01) sigue intacto. Recomendación: automatizar Excel→LaTeX. |
+| C-03 | ✅ Documentado (mismo mecanismo que C-01) | — |
+| C-04 | ✅ Verificado sin cambios necesarios | — |
+| E-02, E-03 | ✅ Documentados en el Readme | Python 3.11.5, Windows (sin versión de build) |
+| E-01 | ⚠️ Decisión de no generarlo, ahora registrada | Ver `decision_log.md`. Riesgo de reproducibilidad medio persiste. |
+| D-04 | 🔴 Sigue sin subirse al repositorio | Reportado como "disponible" pero no está en `Dashboard_HuellaSocial` a la fecha. |
+| D-07 | 🔴 Sigue pendiente | No mencionado en la respuesta. |
+| D-06 (cita en texto), D-08 (fecha de acceso), M-01, M-02, M-03, M-04 | 🔴 **No verificable — cambios de texto de la memoria no sincronizados al repositorio** | Nuevo hallazgo H-11 (`02_reproduccion_calculos.md`): mismo patrón que produjo H-10 (corrección reportada pero no versionada). Se solicita subir estos cambios a `huellasocial/docs/Memoria/` antes de darlos por cerrados. |
+
+**Pendiente para la próxima ronda:** D-04, D-07, y confirmar via commit los cambios de texto de la memoria (D-06/D-08/M-01–M-04).
+
+---
+
+*Este documento fue generado en la Fase 0 de la auditoría, en cumplimiento del AUDIT_PROTOCOL.md §2. Actualizado en Fase 2, rondas 1 y 2.*
