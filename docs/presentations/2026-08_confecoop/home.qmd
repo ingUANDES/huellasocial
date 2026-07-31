@@ -1,0 +1,553 @@
+---
+title: "¿Cuánto vale el cooperativismo de ahorro y crédito en Chile?"
+subtitle: "Primera cuenta satélite de las CAC chilenas — resultados 2013–2025"
+author: "Ignacio Ureta · Antonio Ruiz Tagle"
+date: today
+lang: es
+institute: "Proyecto Huella Social — FICA, Universidad de los Andes.\\newline Prof. guía: Sebastián Cea Echenique · Prof. co-guía: Joaquín Fernández"
+
+# ─── Salida PDF (Beamer) ───────────────────────────────────────────────────
+# Compilar:  quarto render home.qmd --to beamer
+format:
+  beamer:
+    pdf-engine: xelatex
+    theme: Madrid
+    aspectratio: 169
+    section-titles: false
+    keep-tex: false
+    include-in-header: uandes-beamer-preamble.tex
+
+# ─── Salida HTML (RevealJS) ────────────────────────────────────────────────
+# Compilar:  quarto render home.qmd --to revealjs
+  revealjs:
+    theme: [default, uandes-revealjs.scss]
+    slide-number: c/t
+    transition: none
+    center: false
+    logo: assets/logos/Flecha-Uandes.png
+    footer: "Cuenta satélite de las CAC — Huella Social, UANDES"
+    width: 1280
+    height: 720
+    margin: 0.05
+    embed-resources: true
+---
+
+## Agenda
+
+```{=latex}
+\tableofcontents
+```
+
+::: {.content-visible when-format="revealjs"}
+1. Por qué el sector necesita una cifra propia
+2. Cómo se mide: la lógica de una cuenta satélite
+3. De dónde salen los datos
+4. El sector en cifras
+5. Resultados y hallazgos
+6. Qué falta — y qué puede hacer el gremio
+:::
+
+::: {.notes}
+30 minutos: 4' problema · 6' método · 5' datos · 6' cifras · 6' hallazgos · 3' agenda.
+Dejar 10' de preguntas.
+:::
+
+# Por qué el sector necesita una cifra propia
+
+## El problema en una frase
+
+::: {.callout-important title="El sector existe, pero no aparece"}
+Las cooperativas de ahorro y crédito mueven **4,5 billones de pesos en activos**
+y prestan a cientos de miles de socios — pero no existía **ninguna cifra oficial**
+de cuánto valor agregado producen para la economía chilena.
+:::
+
+Lo que sí existe:
+
+- Estados financieros individuales, dispersos en dos reguladores distintos
+- Estadísticas bancarias donde las CAC aparecen como nota al pie
+- Cuentas nacionales que no distinguen a la cooperativa del banco
+
+::: {.aside-text}
+Sin cifra sectorial no hay línea base, y sin línea base toda política pública
+dirigida al sector se discute sobre percepciones.
+:::
+
+## Qué cambia cuando el sector tiene su número
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.callout-note title="Sin cuenta satélite"}
+- "El sector es importante"
+- Comparaciones ad-hoc, año a año
+- Cada gremio con su propia metodología
+- Imposible comparar con España, Portugal o Polonia
+:::
+:::
+::: {.column width="50%"}
+::: {.callout-tip title="Con cuenta satélite"}
+- "El sector aporta 0,082 % del PIB"
+- Serie comparable 2013–2025
+- Una metodología auditable y pública
+- Homologable con los países que ya la tienen
+:::
+:::
+::::
+
+::: {.aside-text}
+Una cuenta satélite es el instrumento estándar de Naciones Unidas para medir un
+sector que las cuentas nacionales no aíslan por sí solas: turismo, salud,
+economía social.
+:::
+
+## Lo que este estudio entrega hoy
+
+::: {.callout-tip title="Primer resultado"}
+En 2025 las CAC chilenas generaron **277.519 millones de pesos** de valor agregado
+bruto — equivalente al **0,082 % del PIB nacional** — y destinaron
+**122.763 millones** directamente a remuneraciones.
+:::
+
+Y tres cosas más que la cifra:
+
+1. Una **serie de 13 años** (2013–2025), no una fotografía
+2. Un **método replicable** y documentado, alineado a tres manuales internacionales
+3. Un **tablero público** que permite verificar cada número, entidad por entidad
+
+::: {.aside-text}
+Todas las cifras de esta presentación son **cotas inferiores**: el aporte real es
+mayor. La razón está en la lámina 20 — y es una razón que el gremio puede cambiar.
+:::
+
+# Cómo se mide: la lógica de una cuenta satélite
+
+## Los tres manuales que definen las reglas
+
+| Marco | Origen | Qué aporta |
+|:--|:--|:--|
+| **SCN 2025** | Naciones Unidas | Define producción, valor agregado y su lugar en el PIB |
+| **Manual ONU-TSE** (2018) | Naciones Unidas | Adapta el SCN a organizaciones de la economía social |
+| **Manual CIRIEC** (2007) | CIRIEC / Comisión Europea | Define qué organización entra y cuál no |
+
+::: {.aside-text}
+Los tres convergen en un mismo núcleo de cinco variables. Esa convergencia es lo
+que permite que la cifra chilena sea comparable con la europea.
+:::
+
+## La ecuación central
+
+![](figuras/fig_ecuacion.png){width=78%}
+
+::: {.callout-note title="En castellano cooperativo"}
+**P1** = todo lo que la cooperativa ingresa por su operación.
+**P2** = lo que le compra a terceros para operar.
+
+**B1g** = lo que la cooperativa *agrega* con su propio trabajo. Eso, y solo eso,
+es lo que entra al PIB.
+:::
+
+## De los ingresos al aporte al PIB
+
+![](figuras/fig_cascada.png)
+
+::: {.aside-text}
+Cifras 2025, MM\$ corrientes. El valor agregado se reparte entre remuneraciones
+(D1) y el excedente que queda para socios y reservas (B2g).
+:::
+
+## El nudo metodológico: nadie sabe cuánto compran las CAC
+
+::: {.callout-important title="La exención tributaria tiene un costo estadístico"}
+El artículo 78 del DFL N.º 5/2003 exime a las cooperativas del impuesto de primera
+categoría. Excelente para el sector — pero **elimina el registro** que en España y
+Portugal se usa para conocer los costos de operación.
+:::
+
+Solución adoptada, admitida por el SCN cuando no hay declaración desagregada:
+
+::: {.callout-tip title="El coeficiente técnico"}
+**P2 = α × P1**,  con  **α = 0,3776** — el coeficiente del sector 94
+(Intermediación financiera) de la **Matriz Insumo-Producto 2018 del Banco Central**.
+:::
+
+::: {.aside-text}
+Verificado de forma independiente contra el archivo fuente del Banco Central.
+:::
+
+## Qué supone ese coeficiente — y dónde falla
+
+:::: {.columns}
+::: {.column width="52%"}
+**El supuesto:** la estructura de costos de una CAC se parece al promedio del
+sector financiero.
+
+**Se aplica igual a los dos segmentos** para que los resultados sean comparables
+entre sí.
+:::
+::: {.column width="48%"}
+::: {.callout-note title="Heterogeneidad detectada"}
+Coopeuch, Oriencoop y Coonfía: **0,23–0,28**
+
+CAPUAL y AHORROCOOP: **≈ 0,72**
+:::
+:::
+::::
+
+::: {.callout-tip title="Lectura honesta"}
+Esto es una estimación de **orden de magnitud**, no una medición exacta. Afinar
+α por tipo de cooperativa es la primera mejora pendiente — y requiere
+desglose contable que hoy solo publican cinco entidades.
+:::
+
+# De dónde salen los datos
+
+## Tres fuentes públicas, ningún dato levantado a mano
+
+| Fuente | Entidades | Período | Qué aporta |
+|:--|:--|:--|:--|
+| **DAES** (Min. Economía) | 35 CAC | 2014–2024 | Estados financieros en PDF, memoria por memoria |
+| **CMF** | 7 CAC | 2013–2025 | Estados financieros auditados + plataforma BEST |
+| **SII** | 12 CAC | complementario | Trabajadores y tramo de ventas por RUT |
+
+: {tbl-colwidths="[24,14,17,45]"}
+
+::: {.callout-note title="Todo el insumo es información pública"}
+Ningún dato reservado ni encuesta: el estudio se construye sobre lo que las
+cooperativas **ya publican**.
+:::
+
+## Un sector partido en dos por la regulación
+
+:::: {.columns}
+::: {.column width="50%"}
+::: {.callout-tip title="Segmento CMF — 7 CAC"}
+- Patrimonio sobre 400.000 UF
+- Supervisión equivalente a la bancaria
+- EEFF auditados y publicados
+- **Cobertura completa 2013–2025**
+:::
+:::
+::: {.column width="50%"}
+::: {.callout-note title="Segmento DAES — 35 CAC"}
+- Registro del Ministerio de Economía
+- Memorias anuales en PDF
+- Formatos heterogéneos
+- **Cobertura variable: 2 a 22 por año**
+:::
+:::
+::::
+
+::: {.aside-text}
+Panel total: **42 CAC** con dato financiero en al menos un año — 213 observaciones
+cooperativa × año. La división de 2019 (Ley 20.881) explica la discontinuidad de
+las series DAES: las cooperativas grandes migraron a CMF, no desaparecieron.
+:::
+
+## Cómo se construyó el panel
+
+1. **Delimitar el universo** — registro DAES, validado con el archivo maestro de
+   personas jurídicas del SII (subtipo 817 = CAC)
+2. **Cruzar por RUT** las cinco fuentes en un solo registro institucional
+3. **Extraer** P1, D1, activos, patrimonio, depósitos y colocaciones de cada
+   estado financiero
+4. **Depurar** duplicados de carga (133 → 122 observaciones de P1 en DAES)
+5. **Estimar** P2, B1g y B2g, y agregar por año
+
+::: {.callout-note title="Sin imputación"}
+Si una cooperativa no publicó su memoria de un año, ese año simplemente **no está**
+en el panel. No se rellena, no se interpola, no se proyecta. Es la decisión más
+conservadora posible — y la razón por la que todas las cifras son pisos.
+:::
+
+## Lo que todavía no se puede medir en Chile
+
+| Variable | Por qué no se puede |
+|:--|:--|
+| Cuotas y aportes de socios (MDR) | Solo público para las 7 CAC de CMF |
+| Empleo en jornada completa (PEF) | El SII reporta solo número de personas |
+| Horas trabajadas (PEH) | Sin microdatos de jornada públicos |
+| Trabajo voluntario (VOV) | Chile no tiene encuesta de uso del tiempo |
+| Depreciación uniforme (B1n) | CMF consolida gastos de apoyo sin desglose |
+
+::: {.aside-text}
+Costa Rica, México, Polonia y Portugal capturan estas variables con **encuestas
+creadas para ese fin**. Chile no tiene ninguna. Ésa es la brecha estructural.
+:::
+
+# El sector en cifras
+
+## La escala: dos mundos dentro del mismo sector
+
+| Segmento | Producción media | Mediana | Máximo |
+|:--|--:|--:|--:|
+| **CMF** (7 CAC) | 42.668 | 9.393 | 359.492 |
+| **DAES** (35 CAC) | 828 | 392 | 10.774 |
+
+::: {.callout-important title="Dos asimetrías, no una"}
+**Entre segmentos:** la producción media de una CAC supervisada es **50 veces**
+la de una no supervisada.
+
+**Dentro del segmento CMF:** la mediana de activos es apenas el **15 % de la
+media** — Coopeuch domina el segmento supervisado.
+:::
+
+::: {.aside-text}
+Cifras en MM\$ corrientes. La media muy por encima de la mediana, en ambos
+segmentos, indica que unas pocas entidades grandes arrastran el agregado.
+:::
+
+## El valor agregado del sector, 2013–2025
+
+![](figuras/fig_vab_segmentos.png)
+
+::: {.aside-text}
+El segmento CMF explica más del 90 % del valor agregado. El salto de 2022–2023
+refleja en parte más cooperativas DAES en el panel, no solo crecimiento real.
+:::
+
+## A dónde va ese valor agregado
+
+![](figuras/fig_reparto_vab.png)
+
+::: {.aside-text}
+Participación salarial estable durante trece años, sin cambios estructurales.
+:::
+
+## El balance: activos, depósitos y colocaciones
+
+![](figuras/fig_balance.png)
+
+::: {.aside-text}
+Las colocaciones son entre 68 % y 90 % de los activos: el sector es,
+estructuralmente, un sector de crédito a sus socios.
+:::
+
+## Dónde están las cooperativas
+
+![](figuras/fig_regional.png)
+
+::: {.aside-text}
+El segmento DAES pesa poco en stocks agregados, pero es el que sostiene la
+cobertura territorial fuera de la Región Metropolitana.
+:::
+
+# Resultados y hallazgos
+
+## El aporte al PIB — y su validación independiente
+
+![](figuras/fig_aporte_pib.png)
+
+::: {.aside-text}
+Aporte esperado = "Servicios financieros" en el PIB (BCCh) × 2,41 % de peso
+patrimonial (CMF dic-2025). Dos cálculos independientes, el mismo orden de magnitud.
+:::
+
+## Hallazgo 1 — La caída del aporte no es una caída del sector
+
+::: {.callout-note title="Lo que dice el gráfico"}
+El aporte pasa de 0,119 % (2013) a 0,082 % (2025).
+:::
+
+::: {.callout-tip title="Lo que realmente ocurrió"}
+El valor agregado de las CAC **creció 71 % en términos nominales**. Lo que pasa es
+que el PIB de Chile creció más rápido. El sector no se contrajo: creció más lento
+que la economía.
+:::
+
+::: {.aside-text}
+Distinción crítica para el uso público de la cifra: una caída de participación
+relativa no es evidencia de deterioro sectorial, y presentarla así sería un
+autogol comunicacional.
+:::
+
+## Hallazgo 2 — El sector es un empleador estable
+
+- **122.763 MM\$** en remuneraciones en 2025, creciendo todos los años de la serie
+- Participación salarial entre **0,38 y 0,52** durante trece años, sin quiebres
+- El crecimiento reciente del valor agregado se explica más por excedente que por
+  masa salarial
+
+::: {.callout-tip title="Argumento disponible para el gremio"}
+La estabilidad de la participación salarial es un dato duro sobre el
+comportamiento del sector en crisis (2019–2020 incluidas) que hoy nadie más
+puede documentar con serie propia.
+:::
+
+## Hallazgo 3 — La concentración es estructural
+
+:::: {.columns}
+::: {.column width="50%"}
+- 7 cooperativas: **> 90 %** del valor agregado
+- 7 cooperativas: **> 95 %** de los activos
+- 35 cooperativas: el resto
+:::
+::: {.column width="50%"}
+::: {.callout-note title="Pero"}
+El segmento DAES es marginal en stocks y **decisivo en cobertura territorial y
+acceso financiero** para poblaciones que las grandes no atienden.
+:::
+:::
+::::
+
+::: {.aside-text}
+Consecuencia para el gremio: una cifra única de "aporte del sector" invisibiliza
+al segmento que más justifica una política pública diferenciada. Conviene siempre
+reportar el desglose.
+:::
+
+## Hallazgo 4 — Todas las cifras son pisos, no techos
+
+![](figuras/fig_cobertura_daes.png)
+
+::: {.aside-text}
+Ningún año cubre las 38 CAC vigentes; el mejor (2023) llega a 22. Cada memoria no
+publicada es valor agregado real que no entra en la cifra.
+:::
+
+## Hallazgo 5 — El resultado resiste una auditoría independiente
+
+::: {.callout-tip title="Proceso de verificación"}
+Los resultados fueron sometidos a una auditoría de datos completa: revisión
+aritmética de los nueve cuadros de resultados, recálculo desde los archivos
+fuente, y verificación del parámetro α contra la Matriz Insumo-Producto
+original del Banco Central.
+:::
+
+- Un error aritmético detectado, corregido **en la fórmula fuente** y verificado de
+  forma independiente en las tres capas: texto, dato y tablero público
+- Cero errores adicionales en los ocho cuadros restantes
+- Registro de decisiones metodológicas público y fechado
+
+::: {.aside-text}
+Para un gremio que quiere usar estas cifras ante la autoridad, la trazabilidad
+del número importa tanto como el número.
+:::
+
+# Qué falta — y qué puede hacer el gremio
+
+## Las cuatro limitaciones que hay que declarar siempre
+
+1. **Cobertura parcial del segmento DAES** — el panel nunca cubre el universo
+   completo en un mismo año
+2. **Consumo intermedio uniforme** — un solo α para cooperativas de tamaños
+   muy distintos
+3. **Segmentos no comparables en el tiempo** — DAES cubre 2014–2024, CMF 2013–2025;
+   la suma es aproximación de orden de magnitud
+4. **Sin dato de empleo para 26 CAC** — impide calcular productividad laboral
+   sectorial
+
+::: {.callout-note title="Por qué decirlo en voz alta"}
+Estas limitaciones no debilitan la cifra: la hacen defendible. Un número presentado
+sin sus supuestos es un número que el primer contradictor desarma.
+:::
+
+## Tres cosas que el gremio puede cambiar — y que el investigador no
+
+::: {.callout-important title="1. Publicación oportuna de memorias"}
+La cobertura de 2024 cae a 11 CAC por memorias no publicadas. Un acuerdo gremial
+de publicación en plazo **sube la cifra sin cambiar una línea de metodología**.
+:::
+
+::: {.callout-important title="2. Formato común de estado de resultados"}
+Una plantilla mínima común (P1, D1, depreciación, depósitos, colocaciones)
+automatiza la actualización anual.
+:::
+
+::: {.callout-important title="3. Un dato de empleo"}
+Trabajadores y jornada: la variable que hoy bloquea el indicador de productividad
+sectorial — y la más fácil de aportar.
+:::
+
+## La agenda técnica pendiente
+
+| Línea | Qué resuelve |
+|:--|:--|
+| Estimar P2 directo para las CAC con desglose | Reemplaza el supuesto de α uniforme |
+| Análisis de sensibilidad de α (±10–20 %) | Comunica el rango de incertidumbre |
+| Factores de expansión para DAES | Convierte el piso en estimación del universo |
+| Encuesta sectorial (cuotas, empleo, voluntariado) | Cierra la brecha con España y Portugal |
+| Tablero con actualización periódica | Convierte el estudio en monitoreo continuo |
+
+::: {.aside-text}
+Las tres primeras son trabajo de investigación en curso. Las dos últimas requieren
+al sector como contraparte activa, no como objeto de estudio.
+:::
+
+## Hacia una cuenta satélite de la economía social
+
+::: {.callout-tip title="Este piloto es el primer eslabón"}
+Las CAC fueron el caso piloto porque son el subsector con **mejores datos
+disponibles**. El método probado aquí es directamente extensible a cooperativas de
+trabajo, de servicios, mutuales y al resto de la economía social chilena.
+:::
+
+Lo que se necesita para escalar:
+
+- Sostener la serie CAC año a año (no dejarla como fotografía 2026)
+- Un convenio de datos con DAES, CMF e INAC
+- Financiamiento para el instrumento de encuesta que hoy no existe
+
+## Para llevarse
+
+::: {.callout-tip title="Tres frases utilizables desde mañana"}
+**1.** Las cooperativas de ahorro y crédito chilenas generan **277.519 millones de
+pesos** de valor agregado al año — **0,082 % del PIB** — con **4,5 billones en
+activos** y **3,4 billones colocados** en sus socios.
+
+**2.** Esa cifra está construida con la metodología de **Naciones Unidas**, es
+comparable internacionalmente, y fue verificada contra una fuente externa
+independiente.
+
+**3.** Es un **piso**, no un techo — y la distancia entre el piso y la cifra real
+depende de cuánto publique el propio sector.
+:::
+
+## Gracias
+
+**Ignacio Ureta · Antonio Ruiz Tagle**
+
+Memoria de título, Ingeniería Civil Industrial — FICA, Universidad de los Andes
+
+Profesor guía: Sebastián Cea Echenique · Profesor co-guía: Joaquín Fernández
+
+::: {.aside-text}
+Tablero interactivo con todas las series por entidad y año:
+[github.com/Iureta1/Dashboard\_HuellaSocial](https://github.com/Iureta1/Dashboard_HuellaSocial)
+
+Metodología completa, cuadros de resultados y registro de decisiones:
+proyecto Huella Social, `ingUANDES/huellasocial`
+:::
+
+# Anexo
+
+## Fuentes de los datos presentados
+
+| Cifra | Cuadro de origen |
+|:--|:--|
+| VAB por segmento y total | Cuadros 5.2, 5.5 y 5.7 |
+| Aporte al PIB | Cuadro 5.7; PIB: BCCh, Cuentas Nacionales Anuales |
+| Cuenta financiera agregada | Cuadro 5.8 |
+| Cobertura del panel DAES | Cuadro 5.1 |
+| Estadística descriptiva | Cuadro 4.3 |
+| Validación externa | Cuadro 5.9; CMF (dic-2025) y BCCh |
+| α = 0,3776 | MIP 2018 BCCh, actividad 94 |
+
+::: {.aside-text}
+Ureta, I. & Ruiz Tagle, A. (2026). *Propuesta metodológica para una cuenta
+satélite de las cooperativas de ahorro y crédito en Chile*. Memoria de título,
+Universidad de los Andes.
+:::
+
+## Nota sobre los gráficos
+
+Todos los gráficos de esta presentación se generan desde
+`gen_figuras.py`, directamente a partir de los cuadros de resultados de la memoria.
+
+Criterios aplicados:
+
+- **Un solo eje por gráfico** — nunca doble eje, que exagera o disimula
+  divergencias entre series
+- **Ejes de porcentaje anclados en cero** — la caída del aporte al PIB es de 39 %,
+  no del 90 % que sugiere un eje truncado
+- **Paleta verificada para daltonismo** (protanopia, deuteranopia, tritanopia) y
+  con contraste suficiente para proyección

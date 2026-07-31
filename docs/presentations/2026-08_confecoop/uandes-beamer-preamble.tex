@@ -1,0 +1,69 @@
+%% uandes-beamer-preamble.tex — Preamble Beamer compartido
+%% Uso en Quarto (include-in-header) y en home.tex (\input, para Overleaf).
+%% Requiere: pdf-engine/motor xelatex  |  theme: Madrid  |  aspectratio: 169
+%%
+%% Carga uandes.sty para fuentes, colores y tema base, luego agrega
+%% los extras usados por las diapositivas de la memoria (tarjetas de
+%% definición, estilo de código para snippets R/Python).
+%% NO es un documento completo — no tiene \documentclass ni \begin{document}.
+
+% ─── Tema compartido ──────────────────────────────────────────────────────────
+\usepackage{uandes}
+
+% ─── Paquetes adicionales ──────────────────────────────────────────────────────
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc}
+\usepackage[skins,raster,breakable]{tcolorbox}
+% `breakable` es obligatorio: Quarto renderiza los callouts (.callout-tip,
+% .callout-note, etc.) a Beamer con tcolorbox[breakable, ...]; sin esta
+% librería cargada, pgfkeys no reconoce la clave y aborta la compilación
+% ("I do not know the key '/tcb/breakable'").
+\usepackage{listings}
+
+% ─── Entorno card (tcolorbox con encabezado coloreado) ─────────────────────────
+%   \begin{card}[COLOR]{Título} ... \end{card}
+%   COLOR por defecto: Pantone3546C (rojo)
+%   Variantes: Pantone7546 (azul marino), Pantone7626C (naranja-rojo)
+\newtcolorbox{card}[2][Pantone3546C]{
+  enhanced,
+  colback=White, colframe=#1,
+  coltitle=White, colbacktitle=#1,
+  title={\DMSansSemiBold #2},
+  boxrule=0.4pt, arc=1.5mm,
+  toptitle=1mm, bottomtitle=1mm,
+  top=1.5mm, bottom=1.5mm, left=2.5mm, right=2.5mm,
+  fonttitle=\small,
+}
+
+% ─── Estilo de código (snippets R/Python) ──────────────────────────────────────
+\lstdefinestyle{rpy}{
+  basicstyle=\fontsize{7.2}{8.6}\selectfont\ttfamily,
+  commentstyle=\color{Pantone7544C}\itshape,
+  keywordstyle=\color{Pantone3546C}\bfseries,
+  stringstyle=\color{Pantone7626C},
+  showstringspaces=false,
+  breaklines=true,
+  columns=fullflexible,
+  frame=single,
+  framesep=3pt, framerule=0.4pt,
+  rulecolor=\color{WarmGray1C},
+  backgroundcolor=\color{White},
+  xleftmargin=0pt,
+}
+\lstset{style=rpy}
+
+% ─── Símbolos Unicode usados en el cuerpo del texto ───────────────────────────
+% El texto de las láminas usa α y × directamente (en vez de math inline) para
+% que la salida RevealJS no dependa de MathJax/KaTeX vía CDN. XeLaTeX los
+% redirige aquí al modo matemático, donde sí existen en la fuente.
+\usepackage{newunicodechar}
+\newunicodechar{α}{\ensuremath{\alpha}}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{≈}{\ensuremath{\approx}}
+\newunicodechar{−}{\ensuremath{-}}
+
+% ─── Tope de altura para las figuras ─────────────────────────────────────────
+% Los gráficos son apaisados (10:5). A \linewidth completo desbordan el área de
+% texto del frame y quedan cortados por abajo. Con keepaspectratio, el tope de
+% altura los reduce proporcionalmente hasta que caben junto al título y la nota.
+\setkeys{Gin}{width=\linewidth,height=0.63\textheight,keepaspectratio}
