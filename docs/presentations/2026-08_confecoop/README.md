@@ -11,7 +11,7 @@ Está estructurada en dos niveles:
 1. **Marco general** (láminas 3–7): qué es una cuenta satélite, qué manuales la
    rigen, cuál es su ecuación central y dónde se traba toda aplicación (el
    consumo intermedio). Transferible a cualquier organización sin ánimo de lucro.
-2. **Caso de aplicación** (láminas 8–33): las cooperativas de ahorro y crédito
+2. **Caso de aplicación** (láminas 8–32): las cooperativas de ahorro y crédito
    chilenas, a partir de la memoria de título de Ignacio Ureta y Antonio Ruiz
    Tagle (2026), cuya autoría se declara explícitamente en la lámina 8 y en el
    cierre.
@@ -38,7 +38,7 @@ respaldo metodológico, y lo que el sector puede hacer para mejorarla.
 ```bash
 python3 gen_figuras.py                  # solo si cambian los datos
 quarto render home.qmd --to revealjs    # → home.html (autocontenido)
-quarto render home.qmd --to beamer      # → home.pdf  (35 láminas, 16:9)
+quarto render home.qmd --to beamer      # → home.pdf  (36 láminas, 16:9)
 ```
 
 Verificación de encuadre: la salida Beamer no debe producir ningún
@@ -57,15 +57,18 @@ texlive-lang-spanish lmodern`.
 | Bloque | Láminas | Minutos |
 |:--|:--|--:|
 | 1. Marco general: qué es una cuenta satélite y qué exige | 3–7 | 7 |
-| 2. Caso de aplicación: las CAC | 8–12 | 5 |
-| 3. De dónde salen los datos | 13–16 | 4 |
-| 4. El sector en cifras | 17–22 | 6 |
-| 5. Resultados y hallazgos | 23–27 | 5 |
-| 6. Qué falta — y qué puede hacer el sector | 28–31 | 3 |
-| Cierre + anexo | 32–35 | — |
+| 2. Caso de aplicación: las CAC | 8–11 | 5 |
+| 3. De dónde salen los datos | 12–15 | 4 |
+| 4. El sector en cifras | 16–21 | 6 |
+| 5. Resultados y hallazgos | 22–26 | 5 |
+| 6. Qué falta — y qué puede hacer el sector | 27–30 | 3 |
+| Cierre | 31–32 | — |
+| Anexos | 33–36 | — |
 
-Las láminas del anexo (fuentes de cada cifra, nota sobre los gráficos) son de
-respaldo para preguntas, no se pasan en la exposición.
+Los anexos (láminas 33–36) **no se exponen**: son respaldo para preguntas. La
+lámina 33 los abre e indica qué contienen. La cascada P1 → P2 → B1g (lámina 34)
+vive ahí porque el detalle del cálculo solo hace falta si alguien lo pregunta:
+la lámina 6 ya entrega la ecuación, que es lo que la exposición necesita.
 
 ## Trazabilidad de las cifras
 

@@ -195,15 +195,6 @@ Todas las cifras que siguen son **cotas inferiores**: el aporte real es mayor,
 por una razón de cobertura que se aborda más adelante.
 :::
 
-## De los ingresos al aporte al PIB
-
-![](figuras/fig_cascada.png)
-
-::: {.aside-text}
-Cifras 2025, MM\$ corrientes. El valor agregado se reparte entre remuneraciones
-(D1) y el excedente que queda para socios y reservas (B2g).
-:::
-
 ## El nudo metodológico: nadie sabe cuánto compran las CAC
 
 ::: {.callout-important title="La exención tributaria tiene un costo estadístico"}
@@ -573,7 +564,31 @@ Tablero interactivo: [github.com/Iureta1/Dashboard\_HuellaSocial](https://github
 Metodología y registro de decisiones: `ingUANDES/huellasocial`
 :::
 
-# Anexo
+# Anexos
+
+## Anexos — material de respaldo
+
+::: {.callout-note title="Qué son estas láminas"}
+Lo que sigue **no se expone**: son láminas de respaldo, para responder preguntas
+sin tener que improvisar una cifra o un supuesto.
+:::
+
+Contenido:
+
+1. **De los ingresos al aporte al PIB** — la cascada P1 → P2 → B1g → D1 + B2g,
+   con las cifras de 2025
+2. **Fuentes de los datos presentados** — de qué cuadro de la memoria sale cada
+   número de esta presentación
+3. **Nota sobre los gráficos** — criterios de diseño y cómo se generan
+
+## De los ingresos al aporte al PIB
+
+![](figuras/fig_cascada.png)
+
+::: {.aside-text}
+Cifras 2025, MM\$ corrientes. El valor agregado se reparte entre remuneraciones
+(D1) y el excedente que queda para socios y reservas (B2g).
+:::
 
 ## Fuentes de los datos presentados
 
