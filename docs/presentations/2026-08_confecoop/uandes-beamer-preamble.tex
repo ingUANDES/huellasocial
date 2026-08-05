@@ -67,3 +67,16 @@
 % texto del frame y quedan cortados por abajo. Con keepaspectratio, el tope de
 % altura los reduce proporcionalmente hasta que caben junto al título y la nota.
 \setkeys{Gin}{width=\linewidth,height=0.63\textheight,keepaspectratio}
+
+% ─── Título corto para el footline ───────────────────────────────────────────
+% El footline de uandes.sty imprime \insertshorttitle en una caja de
+% 0,33\paperwidth. Pandoc emite \title{...} sin variante corta, así que el
+% título largo se corta a media palabra. Como include-in-header se inserta
+% ANTES de \title, fijar aquí \title[corto]{...} no serviría —lo sobrescribiría
+% pandoc—; se fija en cambio la variable que \insertshorttitle expande, ya
+% iniciado el documento.
+% \makeatletter es obligatorio: en el preámbulo del documento (a diferencia
+% de un .sty) la arroba no es letra, y sin él \beamer@shorttitle no se define.
+\makeatletter
+\AtBeginDocument{\def\beamer@shorttitle{Huella Social LIF · Cuentas satélite}}
+\makeatother
