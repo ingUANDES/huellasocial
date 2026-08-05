@@ -1,10 +1,10 @@
 ---
-title: "¿Cuánto vale el cooperativismo de ahorro y crédito en Chile?"
-subtitle: "Primera cuenta satélite de las CAC chilenas — resultados 2013–2025"
-author: "Ignacio Ureta · Antonio Ruiz Tagle"
+title: "Aplicación de metodología de cuentas satélite a organizaciones sin ánimo de lucro"
+subtitle: "Caso de aplicación: las cooperativas de ahorro y crédito en Chile"
+author: "Sebastián Cea Echenique · Joaquín Fernández"
 date: today
 lang: es
-institute: "Proyecto Huella Social — FICA, Universidad de los Andes.\\newline Prof. guía: Sebastián Cea Echenique · Prof. co-guía: Joaquín Fernández"
+institute: "Proyecto Huella Social — FICA, Universidad de los Andes"
 
 # ─── Salida PDF (Beamer) ───────────────────────────────────────────────────
 # Compilar:  quarto render home.qmd --to beamer
@@ -25,7 +25,7 @@ format:
     transition: none
     center: false
     logo: assets/logos/Flecha-Uandes.png
-    footer: "Cuenta satélite de las CAC — Huella Social, UANDES"
+    footer: "Cuentas satélite para organizaciones sin ánimo de lucro — Huella Social, UANDES"
     width: 1280
     height: 720
     margin: 0.05
@@ -39,87 +39,74 @@ format:
 ```
 
 ::: {.content-visible when-format="revealjs"}
-1. Por qué el sector necesita una cifra propia
-2. Cómo se mide: la lógica de una cuenta satélite
+1. Marco general: qué es una cuenta satélite y qué exige
+2. Caso de aplicación: las cooperativas de ahorro y crédito
 3. De dónde salen los datos
 4. El sector en cifras
 5. Resultados y hallazgos
-6. Qué falta — y qué puede hacer el gremio
+6. Qué falta — y qué puede hacer el sector
 :::
 
 ::: {.notes}
-30 minutos: 4' problema · 6' método · 5' datos · 6' cifras · 6' hallazgos · 3' agenda.
-Dejar 10' de preguntas.
+30 minutos: 7' marco general · 5' el caso y sus datos · 6' cifras · 6' hallazgos
+· 3' agenda. Dejar 10' de preguntas.
+
+El marco general (bloque 1) es transferible a cualquier organización sin ánimo
+de lucro; los bloques 2 a 6 son el caso CAC desarrollado por Ureta & Ruiz Tagle.
 :::
 
-# Por qué el sector necesita una cifra propia
+# Marco general: cuentas satélite para organizaciones sin ánimo de lucro
 
-## El problema en una frase
+## El problema: un sector que produce valor y no aparece
 
-::: {.callout-important title="El sector existe, pero no aparece"}
-Las cooperativas de ahorro y crédito mueven **4,5 billones de pesos en activos**
-y prestan a cientos de miles de socios — pero no existía **ninguna cifra oficial**
-de cuánto valor agregado producen para la economía chilena.
+::: {.callout-important title="La economía social es invisible para las cuentas nacionales"}
+Cooperativas, mutuales, fundaciones y asociaciones producen bienes y servicios,
+emplean trabajadores y generan valor agregado — pero el Sistema de Cuentas
+Nacionales **no las aísla como sector**. Sus cifras quedan repartidas dentro de
+las actividades económicas convencionales.
 :::
 
-Lo que sí existe:
+Consecuencias prácticas:
 
-- Estados financieros individuales, dispersos en dos reguladores distintos
-- Estadísticas bancarias donde las CAC aparecen como nota al pie
-- Cuentas nacionales que no distinguen a la cooperativa del banco
+- No hay línea base contra la cual evaluar ninguna política dirigida al sector
+- Cada gremio produce sus propias cifras, con metodologías no comparables
+- Chile no puede contrastarse con países que ya miden su economía social
 
 ::: {.aside-text}
-Sin cifra sectorial no hay línea base, y sin línea base toda política pública
-dirigida al sector se discute sobre percepciones.
+No es un problema de falta de datos: es que los datos existentes no están
+organizados bajo un marco contable común.
 :::
 
-## Qué cambia cuando el sector tiene su número
+## Qué es una cuenta satélite
+
+::: {.callout-note title="Definición operativa"}
+Una **cuenta satélite** es una extensión del Sistema de Cuentas Nacionales que
+aísla y mide un sector que las cuentas centrales no distinguen por sí solas,
+usando **las mismas definiciones y reglas contables** que el PIB.
+:::
 
 :::: {.columns}
 ::: {.column width="50%"}
-::: {.callout-note title="Sin cuenta satélite"}
-- "El sector es importante"
-- Comparaciones ad-hoc, año a año
-- Cada gremio con su propia metodología
-- Imposible comparar con España, Portugal o Polonia
-:::
+**Ya existen para:**
+
+- Turismo
+- Salud
+- Trabajo no remunerado
+- Economía social y sin fines de lucro
 :::
 ::: {.column width="50%"}
-::: {.callout-tip title="Con cuenta satélite"}
-- "El sector aporta 0,082 % del PIB"
-- Serie comparable 2013–2025
-- Una metodología auditable y pública
-- Homologable con los países que ya la tienen
-:::
+**Lo que aporta el "satélite":**
+
+- Cifra comparable internacionalmente
+- Serie temporal, no fotografía
+- Método auditable y replicable
 :::
 ::::
 
 ::: {.aside-text}
-Una cuenta satélite es el instrumento estándar de Naciones Unidas para medir un
-sector que las cuentas nacionales no aíslan por sí solas: turismo, salud,
-economía social.
+Satélite significa que orbita las cuentas nacionales: usa sus reglas, pero
+mira un objeto que ellas no enfocan.
 :::
-
-## Lo que este estudio entrega hoy
-
-::: {.callout-tip title="Primer resultado"}
-En 2025 las CAC chilenas generaron **277.519 millones de pesos** de valor agregado
-bruto — equivalente al **0,082 % del PIB nacional** — y destinaron
-**122.763 millones** directamente a remuneraciones.
-:::
-
-Y tres cosas más que la cifra:
-
-1. Una **serie de 13 años** (2013–2025), no una fotografía
-2. Un **método replicable** y documentado, alineado a tres manuales internacionales
-3. Un **tablero público** que permite verificar cada número, entidad por entidad
-
-::: {.aside-text}
-Todas las cifras de esta presentación son **cotas inferiores**: el aporte real es
-mayor. La razón está en la lámina 20 — y es una razón que el gremio puede cambiar.
-:::
-
-# Cómo se mide: la lógica de una cuenta satélite
 
 ## Los tres manuales que definen las reglas
 
@@ -131,19 +118,81 @@ mayor. La razón está en la lámina 20 — y es una razón que el gremio puede 
 
 ::: {.aside-text}
 Los tres convergen en un mismo núcleo de cinco variables. Esa convergencia es lo
-que permite que la cifra chilena sea comparable con la europea.
+que permite que una cifra nacional sea comparable con la europea.
 :::
 
 ## La ecuación central
 
 ![](figuras/fig_ecuacion.png){width=78%}
 
-::: {.callout-note title="En castellano cooperativo"}
-**P1** = todo lo que la cooperativa ingresa por su operación.
+::: {.callout-note title="Las cinco variables del núcleo común"}
+**P1** = todo lo que la organización ingresa por su operación.
 **P2** = lo que le compra a terceros para operar.
 
-**B1g** = lo que la cooperativa *agrega* con su propio trabajo. Eso, y solo eso,
-es lo que entra al PIB.
+**B1g** = lo que la organización *agrega* con su propio trabajo — eso, y solo
+eso, entra al PIB. Luego se reparte entre remuneraciones (**D1**) y excedente
+de explotación (**B2g**).
+:::
+
+## El cuello de botella es siempre el mismo: P2
+
+::: {.callout-important title="Dónde se traba toda aplicación"}
+P1, D1 y los stocks salen de los estados financieros. **P2 casi nunca es
+observable**: las organizaciones sin ánimo de lucro suelen estar exentas de los
+impuestos cuya declaración lo revelaría.
+:::
+
+| País | Cómo resuelve la captura de datos |
+|:--|:--|
+| **España** | Impuesto sobre Sociedades + cotizaciones a seguridad social |
+| **Portugal** | Información Empresarial Simplificada (IES) |
+| **Polonia** | Encuesta sectorial SOF/ES-S + declaración CIT-8 |
+| **Chile** | Registros administrativos dispersos; **sin encuesta al sector** |
+
+: {tbl-colwidths="[16,84]"}
+
+::: {.aside-text}
+Sin declaración desagregada, el SCN admite estimar P2 con un coeficiente técnico
+de la Matriz Insumo-Producto. Es la salida que toma el caso que sigue.
+:::
+
+# Caso de aplicación: las cooperativas de ahorro y crédito en Chile
+
+## Por qué las CAC como caso piloto
+
+::: {.callout-tip title="El subsector con mejores datos disponibles"}
+Dentro de la economía social chilena, las cooperativas de ahorro y crédito son
+las que **más información publican**: siete están supervisadas por la CMF con
+estados financieros auditados, y el resto publica memorias anuales en el portal
+DAES.
+:::
+
+Eso las hace el banco de pruebas natural: si el método no funciona aquí, no va a
+funcionar en subsectores con menos información.
+
+::: {.callout-note title="Autoría del caso"}
+La aplicación que se presenta a continuación corresponde a la memoria de título
+de **Ignacio Ureta y Antonio Ruiz Tagle** (Ingeniería Civil Industrial, FICA
+UANDES, 2026), desarrollada en el marco del proyecto Huella Social.
+:::
+
+## Lo que el caso entrega hoy
+
+::: {.callout-tip title="Primer resultado"}
+En 2025 las CAC chilenas generaron **277.519 millones de pesos** de valor agregado
+bruto — equivalente al **0,082 % del PIB nacional** — y destinaron
+**122.763 millones** directamente a remuneraciones.
+:::
+
+Y tres cosas más que la cifra:
+
+1. Una **serie de 13 años** (2013–2025), no una fotografía
+2. Un **método replicable** y documentado, alineado a los tres manuales
+3. Un **tablero público** que permite verificar cada número, entidad por entidad
+
+::: {.aside-text}
+Todas las cifras que siguen son **cotas inferiores**: el aporte real es mayor,
+por una razón de cobertura que se aborda más adelante.
 :::
 
 ## De los ingresos al aporte al PIB
@@ -423,7 +472,7 @@ Para un gremio que quiere usar estas cifras ante la autoridad, la trazabilidad
 del número importa tanto como el número.
 :::
 
-# Qué falta — y qué puede hacer el gremio
+# Qué falta — y qué puede hacer el sector
 
 ## Las cuatro limitaciones que hay que declarar siempre
 
@@ -475,21 +524,23 @@ al sector como contraparte activa, no como objeto de estudio.
 
 ## Hacia una cuenta satélite de la economía social
 
-::: {.callout-tip title="Este piloto es el primer eslabón"}
+::: {.callout-tip title="Del caso particular al marco general"}
 Las CAC fueron el caso piloto porque son el subsector con **mejores datos
-disponibles**. El método probado aquí es directamente extensible a cooperativas de
-trabajo, de servicios, mutuales y al resto de la economía social chilena.
+disponibles**. Lo que se probó aquí no es una cifra: es que **el método funciona
+con registros administrativos chilenos**, y por tanto es extensible a cooperativas
+de trabajo y servicios, mutuales, fundaciones y asociaciones.
 :::
 
-Lo que se necesita para escalar:
+Lo que cambia al pasar a otros subsectores:
 
-- Sostener la serie CAC año a año (no dejarla como fotografía 2026)
-- Un convenio de datos con DAES, CMF e INAC
-- Financiamiento para el instrumento de encuesta que hoy no existe
+- **P1 y D1** siguen saliendo de estados financieros — misma lógica
+- **P2** se vuelve más difícil: menos entidades con contabilidad auditada
+- Aparecen variables que las CAC no tienen: **voluntariado, donaciones, cuotas**
+- Sin encuesta sectorial, esas variables seguirán en cero — como hoy
 
 ## Para llevarse
 
-::: {.callout-tip title="Tres frases utilizables desde mañana"}
+::: {.callout-tip title="Cuatro frases utilizables desde mañana"}
 **1.** Las cooperativas de ahorro y crédito chilenas generan **277.519 millones de
 pesos** de valor agregado al año — **0,082 % del PIB** — con **4,5 billones en
 activos** y **3,4 billones colocados** en sus socios.
@@ -500,22 +551,26 @@ independiente.
 
 **3.** Es un **piso**, no un techo — y la distancia entre el piso y la cifra real
 depende de cuánto publique el propio sector.
+
+**4.** El método es **transferible**: lo que se validó en las CAC sirve para medir
+al resto de la economía social chilena.
 :::
 
 ## Gracias
 
-**Ignacio Ureta · Antonio Ruiz Tagle**
+**Sebastián Cea Echenique · Joaquín Fernández**
 
-Memoria de título, Ingeniería Civil Industrial — FICA, Universidad de los Andes
+Proyecto Huella Social — Facultad de Ingeniería y Ciencias Aplicadas,
+Universidad de los Andes
 
-Profesor guía: Sebastián Cea Echenique · Profesor co-guía: Joaquín Fernández
+::: {.callout-note title="Caso de aplicación"}
+Ignacio Ureta y Antonio Ruiz Tagle — memoria de título, Ingeniería Civil
+Industrial, FICA UANDES (2026).
+:::
 
 ::: {.aside-text}
-Tablero interactivo con todas las series por entidad y año:
-[github.com/Iureta1/Dashboard\_HuellaSocial](https://github.com/Iureta1/Dashboard_HuellaSocial)
-
-Metodología completa, cuadros de resultados y registro de decisiones:
-proyecto Huella Social, `ingUANDES/huellasocial`
+Tablero interactivo: [github.com/Iureta1/Dashboard\_HuellaSocial](https://github.com/Iureta1/Dashboard_HuellaSocial) ·
+Metodología y registro de decisiones: `ingUANDES/huellasocial`
 :::
 
 # Anexo

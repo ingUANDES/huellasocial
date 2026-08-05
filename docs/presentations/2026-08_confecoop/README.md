@@ -1,12 +1,26 @@
-# Presentación — Cuenta satélite de las CAC (audiencia gremial)
+# Presentación — Cuentas satélite para organizaciones sin ánimo de lucro
 
-Presentación de 30 minutos sobre la memoria de Ureta & Ruiz Tagle (2026),
-adaptada a una audiencia de dirigentes del cooperativismo de ahorro y crédito
-(asociación / confederación nacional de cooperativas), cuyo interés es **valorizar
-el sector** ante la autoridad y la opinión pública.
+*Aplicación de metodología de cuentas satélite a organizaciones sin ánimo de
+lucro*, de Sebastián Cea Echenique y Joaquín Fernández. Presentación de 30
+minutos ante una audiencia de dirigentes del cooperativismo de ahorro y crédito
+(asociación / confederación nacional de cooperativas), cuyo interés es
+**valorizar el sector** ante la autoridad y la opinión pública.
+
+Está estructurada en dos niveles:
+
+1. **Marco general** (láminas 3–7): qué es una cuenta satélite, qué manuales la
+   rigen, cuál es su ecuación central y dónde se traba toda aplicación (el
+   consumo intermedio). Transferible a cualquier organización sin ánimo de lucro.
+2. **Caso de aplicación** (láminas 8–33): las cooperativas de ahorro y crédito
+   chilenas, a partir de la memoria de título de Ignacio Ureta y Antonio Ruiz
+   Tagle (2026), cuya autoría se declara explícitamente en la lámina 8 y en el
+   cierre.
+
+El cierre (lámina 31) vuelve del caso al marco general: qué cambia al aplicar el
+mismo método a mutuales, fundaciones y asociaciones.
 
 No es la presentación de defensa de la memoria: el énfasis está en la cifra, su
-respaldo metodológico, y lo que el gremio puede hacer para mejorarla.
+respaldo metodológico, y lo que el sector puede hacer para mejorarla.
 
 ## Archivos
 
@@ -24,7 +38,7 @@ respaldo metodológico, y lo que el gremio puede hacer para mejorarla.
 ```bash
 python3 gen_figuras.py                  # solo si cambian los datos
 quarto render home.qmd --to revealjs    # → home.html (autocontenido)
-quarto render home.qmd --to beamer      # → home.pdf  (33 láminas, 16:9)
+quarto render home.qmd --to beamer      # → home.pdf  (35 láminas, 16:9)
 ```
 
 Verificación de encuadre: la salida Beamer no debe producir ningún
@@ -42,13 +56,13 @@ texlive-lang-spanish lmodern`.
 
 | Bloque | Láminas | Minutos |
 |:--|:--|--:|
-| 1. Por qué el sector necesita una cifra propia | 3 | 4 |
-| 2. Cómo se mide: la lógica de una cuenta satélite | 5 | 6 |
-| 3. De dónde salen los datos | 4 | 5 |
-| 4. El sector en cifras | 5 | 6 |
-| 5. Resultados y hallazgos | 6 | 6 |
-| 6. Qué falta — y qué puede hacer el gremio | 5 | 3 |
-| Cierre + anexo | 5 | — |
+| 1. Marco general: qué es una cuenta satélite y qué exige | 3–7 | 7 |
+| 2. Caso de aplicación: las CAC | 8–12 | 5 |
+| 3. De dónde salen los datos | 13–16 | 4 |
+| 4. El sector en cifras | 17–22 | 6 |
+| 5. Resultados y hallazgos | 23–27 | 5 |
+| 6. Qué falta — y qué puede hacer el sector | 28–31 | 3 |
+| Cierre + anexo | 32–35 | — |
 
 Las láminas del anexo (fuentes de cada cifra, nota sobre los gráficos) son de
 respaldo para preguntas, no se pasan en la exposición.
