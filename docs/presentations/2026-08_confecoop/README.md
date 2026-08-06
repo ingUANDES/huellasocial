@@ -1,12 +1,26 @@
-# Presentación — Cuenta satélite de las CAC (audiencia gremial)
+# Presentación — Cuentas satélite para organizaciones sin ánimo de lucro
 
-Presentación de 30 minutos sobre la memoria de Ureta & Ruiz Tagle (2026),
-adaptada a una audiencia de dirigentes del cooperativismo de ahorro y crédito
-(asociación / confederación nacional de cooperativas), cuyo interés es **valorizar
-el sector** ante la autoridad y la opinión pública.
+*Aplicación de metodología de cuentas satélite a organizaciones sin ánimo de
+lucro*, de Sebastián Cea y Joaquín Fernández. Presentación de 30
+minutos ante una audiencia de dirigentes del cooperativismo de ahorro y crédito
+(asociación / confederación nacional de cooperativas), cuyo interés es
+**valorizar el sector** ante la autoridad y la opinión pública.
+
+Está estructurada en dos niveles:
+
+1. **Marco general** (láminas 3–7): qué es una cuenta satélite, qué manuales la
+   rigen, cuál es su ecuación central y dónde se traba toda aplicación (el
+   consumo intermedio). Transferible a cualquier organización sin ánimo de lucro.
+2. **Caso de aplicación** (láminas 8–32): las cooperativas de ahorro y crédito
+   chilenas, a partir de la memoria de título de Ignacio Ureta y Antonio Ruiz
+   Tagle (2026), cuya autoría se declara explícitamente en la lámina 8 y en el
+   cierre.
+
+El cierre (lámina 31) vuelve del caso al marco general: qué cambia al aplicar el
+mismo método a mutuales, fundaciones y asociaciones.
 
 No es la presentación de defensa de la memoria: el énfasis está en la cifra, su
-respaldo metodológico, y lo que el gremio puede hacer para mejorarla.
+respaldo metodológico, y lo que el sector puede hacer para mejorarla.
 
 ## Archivos
 
@@ -24,7 +38,7 @@ respaldo metodológico, y lo que el gremio puede hacer para mejorarla.
 ```bash
 python3 gen_figuras.py                  # solo si cambian los datos
 quarto render home.qmd --to revealjs    # → home.html (autocontenido)
-quarto render home.qmd --to beamer      # → home.pdf  (33 láminas, 16:9)
+quarto render home.qmd --to beamer      # → home.pdf  (40 láminas, 16:9)
 ```
 
 Verificación de encuadre: la salida Beamer no debe producir ningún
@@ -42,16 +56,69 @@ texlive-lang-spanish lmodern`.
 
 | Bloque | Láminas | Minutos |
 |:--|:--|--:|
-| 1. Por qué el sector necesita una cifra propia | 3 | 4 |
-| 2. Cómo se mide: la lógica de una cuenta satélite | 5 | 6 |
-| 3. De dónde salen los datos | 4 | 5 |
-| 4. El sector en cifras | 5 | 6 |
-| 5. Resultados y hallazgos | 6 | 6 |
-| 6. Qué falta — y qué puede hacer el gremio | 5 | 3 |
-| Cierre + anexo | 5 | — |
+| 1. Marco general: qué es una cuenta satélite y qué exige | 3–7 | 7 |
+| 2. Caso de aplicación: las CAC | 8–11 | 5 |
+| 3. De dónde salen los datos y cómo se verifican | 12–17 | 5 |
+| 4. El sector en cifras | 18–24 | 6 |
+| 5. Contraste y hallazgos | 25–30 | 5 |
+| 6. Qué falta — y qué puede hacer el sector | 31–34 | 3 |
+| Cierre | 35 | — |
+| Referencias | 36–37 | — |
+| Anexos | 38–40 | — |
 
-Las láminas del anexo (fuentes de cada cifra, nota sobre los gráficos) son de
-respaldo para preguntas, no se pasan en la exposición.
+El bloque 3 cierra con dos láminas de método, no de resultado: la **15** hace
+rastreable cada cifra hasta su cuadro de origen, y la **16** documenta la
+auditoría de datos. Esta última era el "Hallazgo 5": presentarla como control de
+calidad del método, y no como un hallazgo del caso, evita que se lea como un
+resultado del sector cuando es una propiedad del procedimiento.
+
+Las referencias van juntas en las láminas 33–34, y ninguna otra lámina repite
+citas completas. Los anexos (35–37) **no se exponen**: son respaldo para
+preguntas.
+
+## Contraste de órdenes de magnitud (láminas 24–25)
+
+Las láminas 24 y 25 comparan la cifra chilena con países que ya tienen cuenta
+satélite de la economía social. La comparación es deliberadamente incómoda y hay
+que exponerla con cuidado: España (4,0 % del VAB, 2023), Portugal (3,2 %, 2020) y
+Polonia (1,94 %, 2018) miden **toda** su economía social, mientras Chile midió
+**un solo subsector** (0,082 %). La brecha mide cobertura de medición, no tamaño
+económico, y la lámina 25 lo dice explícitamente para que nadie la lea al revés.
+
+El contraste que sí es válido va en la misma lámina 25: dentro del sistema
+financiero chileno las CAC son 0,082 % del PIB frente al 3,1 % de los servicios
+financieros completos (BCCh), es decir un 2,6 % del sector — coherente con el
+2,41 % de participación patrimonial que la CMF calcula por una vía
+independiente.
+
+Fuentes internacionales verificadas contra la publicación original de cada
+oficina estadística; van citadas en la lámina 35.
+
+## Numeración de figuras y cuadros
+
+Cada figura y cuadro de la presentación lleva su propio número correlativo
+(Figura 1–9, Cuadro 1–3) **y** la referencia al cuadro o figura equivalente de la
+memoria, para poder saltar de la lámina al documento. El mapeo:
+
+| Presentación | Memoria |
+|:--|:--|
+| Figura 1 — VAB por segmento | Cuadros 5.2, 5.5 y 5.7 |
+| Figura 2 — reparto del VAB en niveles | Cuadro 5.7 |
+| Figura 3 — reparto del VAB en proporción (0–100 %) | Cuadro 5.7, normalizado |
+| Figura 4 — balance agregado | Cuadro 5.8 |
+| Figura 5 — distribución regional | Figura 5.3 |
+| Figura 6 — aporte al PIB y validación | Cuadros 5.7 y 5.9 |
+| Figura 7 — contraste internacional | sin equivalente (nueva) |
+| Figura 8 — cobertura del panel DAES | Cuadro 5.1 |
+| Figura 9 — cascada P1 → B1g (anexo) | Cuadro 5.7, fila 2025 |
+| Cuadro 1 — fuentes administrativas | Cuadro 4.1 |
+| Cuadro 2 — variables no construibles | Cuadro 4.6 |
+| Cuadro 3 — estadística descriptiva | Cuadro 4.2 |
+
+Las Figuras 2 y 3 son deliberadamente la misma información en dos vistas: la 2 en
+niveles (ambos componentes crecen) y la 3 normalizada a 100 % (la proporción es
+estable). Sin la 3 no se puede responder qué parte del valor agregado va a
+remuneraciones, porque el crecimiento del nivel absoluto lo enmascara.
 
 ## Trazabilidad de las cifras
 

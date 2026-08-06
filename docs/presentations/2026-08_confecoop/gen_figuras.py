@@ -285,13 +285,84 @@ def fig_regional():
                  loc="left", pad=14)
     guardar(fig, "fig_regional.png")
 
+# ── Fig. 9 — Contraste internacional de órdenes de magnitud ────────────────
+def fig_contraste():
+    """Aporte de la economía social al VAB/PIB nacional en países que ya tienen
+    cuenta satélite, contra la cifra chilena.
+
+    ATENCIÓN AL LEER ESTA FIGURA: las tres primeras barras cubren la economía
+    social completa; la chilena cubre un solo subsector (las CAC). La diferencia
+    no mide tamaño económico, mide cobertura de medición. Fuentes en el
+    encabezado de cada entrada.
+    """
+    etiquetas = [
+        "Chile — solo CAC\n(2025)",
+        "Polonia — economía social\n(2018)",
+        "Portugal — economía social\n(2020)",
+        "España — economía social\n(2023)",
+    ]
+    valores = [0.082, 1.94, 3.2, 4.0]
+    colores = [ROJO, AZUL, AZUL, AZUL]
+
+    fig, ax = plt.subplots(figsize=(10, 4.6))
+    ax.barh(etiquetas, valores, color=colores, height=0.62)
+    for e, v in zip(etiquetas, valores):
+        texto = f"{v:.3f}".rstrip("0").rstrip(".").replace(".", ",") if v < 1 else f"{v}".replace(".", ",")
+        ax.text(v + 0.09, e, texto + " %", va="center", fontsize=11.5, color=TINTA)
+    ax.set_xlim(0, 4.9)
+    ax.set_xlabel("Valor agregado del sector, como % del total nacional")
+    ax.grid(axis="x")
+    ax.set_axisbelow(True)
+    ax.tick_params(axis="y", length=0)
+    ax.set_title("Chile mide un subsector; los demás miden toda la economía social",
+                 loc="left", pad=14)
+    guardar(fig, "fig_contraste_internacional.png")
+
+# ── Fig. 10 — Reparto del VAB en proporción (0–100 %) ──────────────────────
+def fig_reparto_pct():
+    """Misma información que fig_reparto_vab, pero normalizada: responde qué
+    PROPORCIÓN del valor agregado va a remuneraciones y cuánta a excedente,
+    sin que el crecimiento del nivel absoluto distorsione la lectura."""
+    tot = [d + b for d, b in zip(D1_TOT, B2G_TOT)]
+    d1_pct = [100 * d / t for d, t in zip(D1_TOT, tot)]
+    b2g_pct = [100 * b / t for b, t in zip(B2G_TOT, tot)]
+
+    fig, ax = plt.subplots(figsize=(10, 4.6))
+    ax.bar(ANIOS, d1_pct, color=AZUL, width=0.66, label="Remuneraciones (D1)")
+    ax.bar(ANIOS, b2g_pct, bottom=d1_pct, color=AMBAR, width=0.66,
+           linewidth=2, edgecolor=SUP, label="Excedente bruto de explotación (B2g)")
+
+    for a, d in zip(ANIOS, d1_pct):
+        ax.text(a, d / 2, f"{d:.0f}", ha="center", va="center",
+                fontsize=10, color="white")
+    ax.axhline(50, color=TINTA, linestyle=(0, (4, 3)), linewidth=1.2, zorder=3)
+    ax.text(2012.6, 52, "50 %", color=TINTA, fontsize=9.5)
+
+    ax.set_ylim(0, 100)
+    ax.set_yticks([0, 25, 50, 75, 100])
+    ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:.0f} %"))
+    ax.set_ylabel("Composición del valor agregado")
+    ax.set_xticks(ANIOS)
+    ax.set_xticklabels(ANIOS, fontsize=10)
+    ax.set_xlim(2012.3, 2025.7)
+    ax.grid(axis="y")
+    ax.set_axisbelow(True)
+    ax.legend(frameon=False, loc="lower left", fontsize=10.5,
+              bbox_to_anchor=(0, -0.32), ncol=2)
+    ax.set_title("En proporción, el reparto es estable: la participación salarial\n"
+                 "va de 38 % en 2013 a 44 % en 2025, sin quiebres",
+                 loc="left", pad=14)
+    guardar(fig, "fig_reparto_pct.png")
+
 
 if __name__ == "__main__":
     fig_ecuacion()
     fig_regional()
+    fig_contraste()
     fig_vab_segmentos()
     fig_aporte_pib()
     fig_cascada()
     fig_cobertura()
     fig_balance()
     fig_reparto()
+    fig_reparto_pct()

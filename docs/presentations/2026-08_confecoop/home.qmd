@@ -1,10 +1,10 @@
 ---
-title: "¿Cuánto vale el cooperativismo de ahorro y crédito en Chile?"
-subtitle: "Primera cuenta satélite de las CAC chilenas — resultados 2013–2025"
-author: "Ignacio Ureta · Antonio Ruiz Tagle"
+title: "Aplicación de metodología de cuentas satélite a organizaciones sin ánimo de lucro"
+subtitle: "Caso de aplicación: las cooperativas de ahorro y crédito en Chile"
+author: "Sebastián Cea · Joaquín Fernández"
 date: today
 lang: es
-institute: "Proyecto Huella Social — FICA, Universidad de los Andes.\\newline Prof. guía: Sebastián Cea Echenique · Prof. co-guía: Joaquín Fernández"
+institute: "Proyecto Huella Social — Laboratorio de Ingeniería Financiera (LIF)\\newline FICA, Universidad de los Andes"
 
 # ─── Salida PDF (Beamer) ───────────────────────────────────────────────────
 # Compilar:  quarto render home.qmd --to beamer
@@ -25,7 +25,7 @@ format:
     transition: none
     center: false
     logo: assets/logos/Flecha-Uandes.png
-    footer: "Cuenta satélite de las CAC — Huella Social, UANDES"
+    footer: "Huella Social LIF · Cuentas satélite"
     width: 1280
     height: 720
     margin: 0.05
@@ -39,87 +39,74 @@ format:
 ```
 
 ::: {.content-visible when-format="revealjs"}
-1. Por qué el sector necesita una cifra propia
-2. Cómo se mide: la lógica de una cuenta satélite
+1. Marco general: qué es una cuenta satélite y qué exige
+2. Caso de aplicación: las cooperativas de ahorro y crédito
 3. De dónde salen los datos
 4. El sector en cifras
 5. Resultados y hallazgos
-6. Qué falta — y qué puede hacer el gremio
+6. Qué falta — y qué puede hacer el sector
 :::
 
 ::: {.notes}
-30 minutos: 4' problema · 6' método · 5' datos · 6' cifras · 6' hallazgos · 3' agenda.
-Dejar 10' de preguntas.
+30 minutos: 7' marco general · 5' el caso y sus datos · 6' cifras · 6' hallazgos
+· 3' agenda. Dejar 10' de preguntas.
+
+El marco general (bloque 1) es transferible a cualquier organización sin ánimo
+de lucro; los bloques 2 a 6 son el caso CAC desarrollado por Ureta & Ruiz Tagle.
 :::
 
-# Por qué el sector necesita una cifra propia
+# Marco general: cuentas satélite para organizaciones sin ánimo de lucro
 
-## El problema en una frase
+## El problema: un sector que produce valor y no aparece
 
-::: {.callout-important title="El sector existe, pero no aparece"}
-Las cooperativas de ahorro y crédito mueven **4,5 billones de pesos en activos**
-y prestan a cientos de miles de socios — pero no existía **ninguna cifra oficial**
-de cuánto valor agregado producen para la economía chilena.
+::: {.callout-important title="La economía social es invisible para las cuentas nacionales"}
+Cooperativas, mutuales, fundaciones y asociaciones producen bienes y servicios,
+emplean trabajadores y generan valor agregado — pero el Sistema de Cuentas
+Nacionales **no las aísla como sector**. Sus cifras quedan repartidas dentro de
+las actividades económicas convencionales.
 :::
 
-Lo que sí existe:
+Consecuencias prácticas:
 
-- Estados financieros individuales, dispersos en dos reguladores distintos
-- Estadísticas bancarias donde las CAC aparecen como nota al pie
-- Cuentas nacionales que no distinguen a la cooperativa del banco
+- No hay línea base contra la cual evaluar ninguna política dirigida al sector
+- Cada gremio produce sus propias cifras, con metodologías no comparables
+- Chile no puede contrastarse con países que ya miden su economía social
 
 ::: {.aside-text}
-Sin cifra sectorial no hay línea base, y sin línea base toda política pública
-dirigida al sector se discute sobre percepciones.
+No es un problema de falta de datos: es que los datos existentes no están
+organizados bajo un marco contable común.
 :::
 
-## Qué cambia cuando el sector tiene su número
+## Qué es una cuenta satélite
+
+::: {.callout-note title="Definición operativa"}
+Una **cuenta satélite** es una extensión del Sistema de Cuentas Nacionales que
+aísla y mide un sector que las cuentas centrales no distinguen por sí solas,
+usando **las mismas definiciones y reglas contables** que el PIB.
+:::
 
 :::: {.columns}
 ::: {.column width="50%"}
-::: {.callout-note title="Sin cuenta satélite"}
-- "El sector es importante"
-- Comparaciones ad-hoc, año a año
-- Cada gremio con su propia metodología
-- Imposible comparar con España, Portugal o Polonia
-:::
+**Ya existen para:**
+
+- Turismo
+- Salud
+- Trabajo no remunerado
+- Economía social y sin fines de lucro
 :::
 ::: {.column width="50%"}
-::: {.callout-tip title="Con cuenta satélite"}
-- "El sector aporta 0,082 % del PIB"
-- Serie comparable 2013–2025
-- Una metodología auditable y pública
-- Homologable con los países que ya la tienen
-:::
+**Lo que aporta el "satélite":**
+
+- Cifra comparable internacionalmente
+- Serie temporal, no fotografía
+- Método auditable y replicable
 :::
 ::::
 
 ::: {.aside-text}
-Una cuenta satélite es el instrumento estándar de Naciones Unidas para medir un
-sector que las cuentas nacionales no aíslan por sí solas: turismo, salud,
-economía social.
+Satélite significa que orbita las cuentas nacionales: usa sus reglas, pero
+mira un objeto que ellas no enfocan.
 :::
-
-## Lo que este estudio entrega hoy
-
-::: {.callout-tip title="Primer resultado"}
-En 2025 las CAC chilenas generaron **277.519 millones de pesos** de valor agregado
-bruto — equivalente al **0,082 % del PIB nacional** — y destinaron
-**122.763 millones** directamente a remuneraciones.
-:::
-
-Y tres cosas más que la cifra:
-
-1. Una **serie de 13 años** (2013–2025), no una fotografía
-2. Un **método replicable** y documentado, alineado a tres manuales internacionales
-3. Un **tablero público** que permite verificar cada número, entidad por entidad
-
-::: {.aside-text}
-Todas las cifras de esta presentación son **cotas inferiores**: el aporte real es
-mayor. La razón está en la lámina 20 — y es una razón que el gremio puede cambiar.
-:::
-
-# Cómo se mide: la lógica de una cuenta satélite
 
 ## Los tres manuales que definen las reglas
 
@@ -131,28 +118,84 @@ mayor. La razón está en la lámina 20 — y es una razón que el gremio puede 
 
 ::: {.aside-text}
 Los tres convergen en un mismo núcleo de cinco variables. Esa convergencia es lo
-que permite que la cifra chilena sea comparable con la europea.
+que permite que una cifra nacional sea comparable con la europea.
 :::
 
 ## La ecuación central
 
-![](figuras/fig_ecuacion.png){width=78%}
-
-::: {.callout-note title="En castellano cooperativo"}
-**P1** = todo lo que la cooperativa ingresa por su operación.
-**P2** = lo que le compra a terceros para operar.
-
-**B1g** = lo que la cooperativa *agrega* con su propio trabajo. Eso, y solo eso,
-es lo que entra al PIB.
-:::
-
-## De los ingresos al aporte al PIB
-
-![](figuras/fig_cascada.png)
+![](figuras/fig_ecuacion.png){width=66%}
 
 ::: {.aside-text}
-Cifras 2025, MM\$ corrientes. El valor agregado se reparte entre remuneraciones
-(D1) y el excedente que queda para socios y reservas (B2g).
+Ecuaciones 4.1–4.3 de la memoria; notación del SCN 2025.
+:::
+
+::: {.callout-note title="Las cinco variables del núcleo común"}
+**P1** = todo lo que la organización ingresa por su operación.
+**P2** = lo que le compra a terceros para operar.
+
+**B1g** = lo que la organización *agrega* con su propio trabajo — eso, y solo eso,
+entra al PIB. Se reparte entre remuneraciones (**D1**) y excedente (**B2g**).
+:::
+
+## El cuello de botella es siempre el mismo: P2
+
+::: {.callout-important title="Dónde se traba toda aplicación"}
+P1, D1 y los stocks salen de los estados financieros. **P2 casi nunca es
+observable**: las organizaciones sin ánimo de lucro suelen estar exentas de los
+impuestos cuya declaración lo revelaría.
+:::
+
+| País | Cómo resuelve la captura de datos |
+|:--|:--|
+| **España** | Impuesto sobre Sociedades + cotizaciones a seguridad social |
+| **Portugal** | Información Empresarial Simplificada (IES) |
+| **Polonia** | Encuesta sectorial SOF/ES-S + declaración CIT-8 |
+| **Chile** | Registros administrativos dispersos; **sin encuesta al sector** |
+
+: {tbl-colwidths="[16,84]"}
+
+::: {.aside-text}
+Sin declaración desagregada, el SCN admite estimar P2 con un coeficiente técnico
+de la Matriz Insumo-Producto. Es la salida que toma el caso que sigue.
+:::
+
+# Caso de aplicación: las cooperativas de ahorro y crédito en Chile
+
+## Por qué las CAC como caso piloto
+
+::: {.callout-tip title="El subsector con mejores datos disponibles"}
+Dentro de la economía social chilena, las cooperativas de ahorro y crédito son
+las que **más información publican**: siete están supervisadas por la CMF con
+estados financieros auditados, y el resto publica memorias anuales en el portal
+DAES.
+:::
+
+Eso las hace el banco de pruebas natural: si el método no funciona aquí, no va a
+funcionar en subsectores con menos información.
+
+::: {.callout-note title="Autoría del caso"}
+La aplicación que se presenta a continuación corresponde a la memoria de título
+de **Ignacio Ureta y Antonio Ruiz Tagle** (Ingeniería Civil Industrial, FICA
+UANDES, 2026), desarrollada en el marco del proyecto Huella Social.
+:::
+
+## Lo que el caso entrega hoy
+
+::: {.callout-tip title="Primer resultado"}
+En 2025 las CAC chilenas generaron **277.519 millones de pesos** de valor agregado
+bruto — equivalente al **0,082 % del PIB nacional** — y destinaron
+**122.763 millones** directamente a remuneraciones.
+:::
+
+Y tres cosas más que la cifra:
+
+1. Una **serie de 13 años** (2013–2025), no una fotografía
+2. Un **método replicable** y documentado, alineado a los tres manuales
+3. Un **tablero público** que permite verificar cada número, entidad por entidad
+
+::: {.aside-text}
+Todas las cifras que siguen son **cotas inferiores**: el aporte real es mayor,
+por una razón de cobertura que se aborda más adelante.
 :::
 
 ## El nudo metodológico: nadie sabe cuánto compran las CAC
@@ -185,18 +228,18 @@ sector financiero.
 entre sí.
 :::
 ::: {.column width="48%"}
-::: {.callout-note title="Heterogeneidad detectada"}
-Coopeuch, Oriencoop y Coonfía: **0,23–0,28**
-
-CAPUAL y AHORROCOOP: **≈ 0,72**
+::: {.callout-note title="Indicio de heterogeneidad"}
+La revisión de los estados financieros auditados sugiere que las razones reales
+P2/P1 **se apartan del promedio sectorial en ambas direcciones**, según la
+entidad.
 :::
 :::
 ::::
 
 ::: {.callout-tip title="Lectura honesta"}
-Esto es una estimación de **orden de magnitud**, no una medición exacta. Afinar
-α por tipo de cooperativa es la primera mejora pendiente — y requiere
-desglose contable que hoy solo publican cinco entidades.
+Esto es una estimación de **orden de magnitud**, no una medición exacta.
+Cuantificar esa dispersión y recalibrar α es la primera mejora pendiente: exige
+un desglose de gastos que hoy solo permite un puñado de entidades supervisadas.
 :::
 
 # De dónde salen los datos
@@ -209,11 +252,11 @@ desglose contable que hoy solo publican cinco entidades.
 | **CMF** | 7 CAC | 2013–2025 | Estados financieros auditados + plataforma BEST |
 | **SII** | 12 CAC | complementario | Trabajadores y tramo de ventas por RUT |
 
-: {tbl-colwidths="[24,14,17,45]"}
+: **Cuadro 1** = Cuadro 4.1 de la memoria. {tbl-colwidths="[24,14,17,45]"}
 
 ::: {.callout-note title="Todo el insumo es información pública"}
-Ningún dato reservado ni encuesta: el estudio se construye sobre lo que las
-cooperativas **ya publican**.
+Ningún dato reservado ni encuesta: se construye sobre lo que las cooperativas
+**ya publican**.
 :::
 
 ## Un sector partido en dos por la regulación
@@ -239,8 +282,9 @@ cooperativas **ya publican**.
 
 ::: {.aside-text}
 Panel total: **42 CAC** con dato financiero en al menos un año — 213 observaciones
-cooperativa × año. La división de 2019 (Ley 20.881) explica la discontinuidad de
-las series DAES: las cooperativas grandes migraron a CMF, no desaparecieron.
+cooperativa × año. El corte lo fija el patrimonio: sobre 400.000 UF la CAC pasa a
+supervisión CMF (DFL N.º 5/2003). Por eso las series DAES se cortan entre 2017 y
+2019: las cooperativas grandes migraron de segmento, no desaparecieron.
 :::
 
 ## Cómo se construyó el panel
@@ -259,6 +303,42 @@ en el panel. No se rellena, no se interpola, no se proyecta. Es la decisión má
 conservadora posible — y la razón por la que todas las cifras son pisos.
 :::
 
+## Fuentes de los datos presentados
+
+| Cifra | Cuadro de origen |
+|:--|:--|
+| VAB por segmento y total | Cuadros 5.2, 5.5 y 5.7 |
+| Aporte al PIB | Cuadro 5.7; PIB: BCCh, Cuentas Nacionales Anuales |
+| Cuenta financiera agregada | Cuadro 5.8 |
+| Cobertura del panel DAES | Cuadro 5.1 |
+| Estadística descriptiva | Cuadro 4.2 |
+| Validación externa | Cuadro 5.9; CMF (dic-2025) y BCCh |
+| α = 0,3776 | MIP 2018 BCCh, actividad 94 |
+
+::: {.aside-text}
+Cada cifra de esta presentación es rastreable hasta un cuadro de la memoria.
+Referencias completas al cierre.
+:::
+
+## Control de calidad: el dato pasó por una auditoría independiente
+
+::: {.callout-tip title="Parte del método, no un resultado"}
+Antes de publicar cifras, se sometieron a una auditoría de datos completa:
+revisión aritmética de los nueve cuadros de resultados, recálculo desde los
+archivos fuente, y verificación de α contra la Matriz Insumo-Producto original
+del Banco Central.
+:::
+
+- Un error aritmético detectado, corregido **en la fórmula fuente** y verificado de
+  forma independiente en las tres capas: texto, dato y tablero público
+- Cero errores adicionales en los ocho cuadros restantes
+- Registro de decisiones metodológicas público y fechado
+
+::: {.aside-text}
+Para un sector que quiere usar estas cifras ante la autoridad, la trazabilidad
+del número importa tanto como el número.
+:::
+
 ## Lo que todavía no se puede medir en Chile
 
 | Variable | Por qué no se puede |
@@ -268,6 +348,8 @@ conservadora posible — y la razón por la que todas las cifras son pisos.
 | Horas trabajadas (PEH) | Sin microdatos de jornada públicos |
 | Trabajo voluntario (VOV) | Chile no tiene encuesta de uso del tiempo |
 | Depreciación uniforme (B1n) | CMF consolida gastos de apoyo sin desglose |
+
+: **Cuadro 2** = Cuadro 4.6 de la memoria.
 
 ::: {.aside-text}
 Costa Rica, México, Polonia y Portugal capturan estas variables con **encuestas
@@ -283,6 +365,8 @@ creadas para ese fin**. Chile no tiene ninguna. Ésa es la brecha estructural.
 | **CMF** (7 CAC) | 42.668 | 9.393 | 359.492 |
 | **DAES** (35 CAC) | 828 | 392 | 10.774 |
 
+: **Cuadro 3** = Cuadro 4.2 de la memoria.
+
 ::: {.callout-important title="Dos asimetrías, no una"}
 **Entre segmentos:** la producción media de una CAC supervisada es **50 veces**
 la de una no supervisada.
@@ -292,8 +376,7 @@ media** — Coopeuch domina el segmento supervisado.
 :::
 
 ::: {.aside-text}
-Cifras en MM\$ corrientes. La media muy por encima de la mediana, en ambos
-segmentos, indica que unas pocas entidades grandes arrastran el agregado.
+Cifras en MM\$ corrientes; la media sobre la mediana indica concentración.
 :::
 
 ## El valor agregado del sector, 2013–2025
@@ -301,6 +384,7 @@ segmentos, indica que unas pocas entidades grandes arrastran el agregado.
 ![](figuras/fig_vab_segmentos.png)
 
 ::: {.aside-text}
+**Figura 1** — elaborada desde los Cuadros 5.2, 5.5 y 5.7 de la memoria.
 El segmento CMF explica más del 90 % del valor agregado. El salto de 2022–2023
 refleja en parte más cooperativas DAES en el panel, no solo crecimiento real.
 :::
@@ -310,7 +394,17 @@ refleja en parte más cooperativas DAES en el panel, no solo crecimiento real.
 ![](figuras/fig_reparto_vab.png)
 
 ::: {.aside-text}
-Participación salarial estable durante trece años, sin cambios estructurales.
+**Figura 2** — Cuadro 5.7 de la memoria. En niveles: ambos componentes crecen.
+:::
+
+## …y en qué proporción se reparte
+
+![](figuras/fig_reparto_pct.png)
+
+::: {.aside-text}
+**Figura 3** — Cuadro 5.7 de la memoria, normalizado a 100 %. Responde la
+pregunta que la Figura 2 no puede: de cada 100 pesos de valor agregado, cuántos
+van a remuneraciones y cuántos quedan como excedente.
 :::
 
 ## El balance: activos, depósitos y colocaciones
@@ -318,6 +412,7 @@ Participación salarial estable durante trece años, sin cambios estructurales.
 ![](figuras/fig_balance.png)
 
 ::: {.aside-text}
+**Figura 4** — Cuadro 5.8 de la memoria.
 Las colocaciones son entre 68 % y 90 % de los activos: el sector es,
 estructuralmente, un sector de crédito a sus socios.
 :::
@@ -327,6 +422,7 @@ estructuralmente, un sector de crédito a sus socios.
 ![](figuras/fig_regional.png)
 
 ::: {.aside-text}
+**Figura 5** — corresponde a la Figura 5.3 de la memoria.
 El segmento DAES pesa poco en stocks agregados, pero es el que sostiene la
 cobertura territorial fuera de la Región Metropolitana.
 :::
@@ -338,14 +434,48 @@ cobertura territorial fuera de la Región Metropolitana.
 ![](figuras/fig_aporte_pib.png)
 
 ::: {.aside-text}
-Aporte esperado = "Servicios financieros" en el PIB (BCCh) × 2,41 % de peso
-patrimonial (CMF dic-2025). Dos cálculos independientes, el mismo orden de magnitud.
+**Figura 6** — Cuadros 5.7 y 5.9. Aporte esperado = "Servicios financieros" en el
+PIB (BCCh) × **2,41 %** de peso patrimonial (CMF, *Informe del Desempeño del
+Sistema Bancario y Cooperativas*, dic. 2025).
+:::
+
+## ¿Es mucho o poco? Contraste de órdenes de magnitud
+
+![](figuras/fig_contraste_internacional.png)
+
+::: {.aside-text}
+**Figura 7** — sin equivalente en la memoria; elaborada para esta presentación.
+España: INE, *Cuenta Satélite de la Economía Social* (2026). Portugal: INE &
+CASES, *Conta Satélite da Economia Social 2019/2020*. Polonia: Statistics Poland
+(2021).
+:::
+
+## La comparación correcta es contra lo que Chile todavía no mide
+
+::: {.callout-important title="No son cifras equivalentes"}
+España, Portugal y Polonia miden **toda su economía social**; Chile midió **un
+solo subsector**. La distancia entre 0,082 % y 4 % no mide tamaño económico:
+mide cuánto se ha medido.
+:::
+
+::: {.callout-tip title="El contraste que sí es válido, dentro del sistema financiero chileno"}
+Servicios financieros, sector completo: **3,1 % del PIB** (BCCh, 2025).
+
+Cooperativas de ahorro y crédito: **0,082 % del PIB** — es decir, un **2,6 %**
+del valor agregado financiero del país.
+:::
+
+::: {.aside-text}
+Cuadro 5.7 de la memoria y BCCh, Cuentas Nacionales. La CMF, por vía
+independiente, atribuye a las cooperativas un **2,41 %** del patrimonio del
+sistema bancario y cooperativo (*Informe del Desempeño del Sistema Bancario y
+Cooperativas*, dic. 2025): dos mediciones que coinciden.
 :::
 
 ## Hallazgo 1 — La caída del aporte no es una caída del sector
 
-::: {.callout-note title="Lo que dice el gráfico"}
-El aporte pasa de 0,119 % (2013) a 0,082 % (2025).
+::: {.callout-note title="Lo que dice la Figura 6 (aporte al PIB)"}
+La línea roja del aporte estimado baja de 0,119 % en 2013 a 0,082 % en 2025.
 :::
 
 ::: {.callout-tip title="Lo que realmente ocurrió"}
@@ -400,30 +530,12 @@ reportar el desglose.
 ![](figuras/fig_cobertura_daes.png)
 
 ::: {.aside-text}
+**Figura 8** — Cuadro 5.1 de la memoria.
 Ningún año cubre las 38 CAC vigentes; el mejor (2023) llega a 22. Cada memoria no
 publicada es valor agregado real que no entra en la cifra.
 :::
 
-## Hallazgo 5 — El resultado resiste una auditoría independiente
-
-::: {.callout-tip title="Proceso de verificación"}
-Los resultados fueron sometidos a una auditoría de datos completa: revisión
-aritmética de los nueve cuadros de resultados, recálculo desde los archivos
-fuente, y verificación del parámetro α contra la Matriz Insumo-Producto
-original del Banco Central.
-:::
-
-- Un error aritmético detectado, corregido **en la fórmula fuente** y verificado de
-  forma independiente en las tres capas: texto, dato y tablero público
-- Cero errores adicionales en los ocho cuadros restantes
-- Registro de decisiones metodológicas público y fechado
-
-::: {.aside-text}
-Para un gremio que quiere usar estas cifras ante la autoridad, la trazabilidad
-del número importa tanto como el número.
-:::
-
-# Qué falta — y qué puede hacer el gremio
+# Qué falta — y qué puede hacer el sector
 
 ## Las cuatro limitaciones que hay que declarar siempre
 
@@ -464,32 +576,36 @@ sectorial — y la más fácil de aportar.
 |:--|:--|
 | Estimar P2 directo para las CAC con desglose | Reemplaza el supuesto de α uniforme |
 | Análisis de sensibilidad de α (±10–20 %) | Comunica el rango de incertidumbre |
-| Factores de expansión para DAES | Convierte el piso en estimación del universo |
+| Ponderar las CAC que sí reportan, para representar a las que no | Convierte el piso en estimación del universo |
 | Encuesta sectorial (cuotas, empleo, voluntariado) | Cierra la brecha con España y Portugal |
 | Tablero con actualización periódica | Convierte el estudio en monitoreo continuo |
 
 ::: {.aside-text}
-Las tres primeras son trabajo de investigación en curso. Las dos últimas requieren
-al sector como contraparte activa, no como objeto de estudio.
+*Ponderar*: si en un año reportan 11 de 38 CAC, cada una cuenta por más de una
+para estimar el universo, como en una encuesta por muestreo. Hoy se suma solo lo
+observado, y por eso la cifra es un piso. Las dos últimas líneas requieren al
+sector como contraparte activa.
 :::
 
 ## Hacia una cuenta satélite de la economía social
 
-::: {.callout-tip title="Este piloto es el primer eslabón"}
+::: {.callout-tip title="Del caso particular al marco general"}
 Las CAC fueron el caso piloto porque son el subsector con **mejores datos
-disponibles**. El método probado aquí es directamente extensible a cooperativas de
-trabajo, de servicios, mutuales y al resto de la economía social chilena.
+disponibles**. Lo que se probó aquí no es una cifra: es que **el método funciona
+con registros administrativos chilenos**, y por tanto es extensible a cooperativas
+de trabajo y servicios, mutuales, fundaciones y asociaciones.
 :::
 
-Lo que se necesita para escalar:
+Lo que cambia al pasar a otros subsectores:
 
-- Sostener la serie CAC año a año (no dejarla como fotografía 2026)
-- Un convenio de datos con DAES, CMF e INAC
-- Financiamiento para el instrumento de encuesta que hoy no existe
+- **P1 y D1** siguen saliendo de estados financieros — misma lógica
+- **P2** se vuelve más difícil: menos entidades con contabilidad auditada
+- Aparecen variables que las CAC no tienen: **voluntariado, donaciones, cuotas**
+- Sin encuesta sectorial, esas variables seguirán en cero — como hoy
 
 ## Para llevarse
 
-::: {.callout-tip title="Tres frases utilizables desde mañana"}
+::: {.callout-tip title="Cuatro frases utilizables desde mañana"}
 **1.** Las cooperativas de ahorro y crédito chilenas generan **277.519 millones de
 pesos** de valor agregado al año — **0,082 % del PIB** — con **4,5 billones en
 activos** y **3,4 billones colocados** en sus socios.
@@ -500,42 +616,79 @@ independiente.
 
 **3.** Es un **piso**, no un techo — y la distancia entre el piso y la cifra real
 depende de cuánto publique el propio sector.
+
+**4.** El método es **transferible**: lo que se validó en las CAC sirve para medir
+al resto de la economía social chilena.
 :::
 
-## Gracias
+## Referencias — marcos y aplicaciones nacionales
 
-**Ignacio Ureta · Antonio Ruiz Tagle**
+**Marcos metodológicos**
 
-Memoria de título, Ingeniería Civil Industrial — FICA, Universidad de los Andes
+- United Nations, European Commission, IMF, OECD & World Bank (2025).
+  *System of National Accounts 2025* (ST/ESA/STAT/SER.F/2/Rev.6).
+- Naciones Unidas (2018). *Satellite Account on Non-profit and Related
+  Institutions and Volunteer Work*. Studies in Methods, Series F, N.º 91, Rev. 1.
+- Barea Tejeiro, J. & Monzón Campos, J. L. (2007). *Manual para la elaboración de
+  las cuentas satélite de las empresas de la economía social*. CIRIEC.
 
-Profesor guía: Sebastián Cea Echenique · Profesor co-guía: Joaquín Fernández
+**Aplicaciones nacionales citadas**
 
-::: {.aside-text}
-Tablero interactivo con todas las series por entidad y año:
-[github.com/Iureta1/Dashboard\_HuellaSocial](https://github.com/Iureta1/Dashboard_HuellaSocial)
+- Pedroso, E., Neves, E., Ramos, C. & Rodrigues, C. (2023). *Conta Satélite da
+  Economia Social 2019/2020*. CASES & INE, Lisboa. — **Portugal**
+- Statistics Poland (2021). *Social Economy Satellite Account for Poland 2018*.
+  Varsovia. — **Polonia**
+- Instituto Nacional de Estadística (2026). *Cuenta Satélite de la Economía
+  Social, serie 2019–2023*. Madrid. — **España, cifra de contraste**
 
-Metodología completa, cuadros de resultados y registro de decisiones:
-proyecto Huella Social, `ingUANDES/huellasocial`
+## Referencias — normativa y fuentes de datos
+
+**Normativa chilena**
+
+- Ministerio de Economía (2003). *DFL N.º 5, Ley General de Cooperativas* —
+  art. 78 (exención) y umbral de 400.000 UF para supervisión CMF.
+- Ley N.º 21.641 de Resiliencia Financiera (2023).
+- Leyes N.º 19.862 (transferencias públicas) y N.º 19.885 (donaciones).
+
+**Fuentes de datos**
+
+- Banco Central de Chile (2026). *PIB por clase de actividad económica*;
+  *Matriz Insumo-Producto 2018*, actividad 94.
+- CMF (2025). *Informe del Desempeño del Sistema Bancario y Cooperativas*, dic.
+- DAES (registro y memorias anuales) y SII (archivo maestro de personas jurídicas).
+
+**Caso de aplicación**
+
+- Ureta, I. & Ruiz Tagle, A. (2026). *Propuesta metodológica para una cuenta
+  satélite de las cooperativas de ahorro y crédito en Chile*. Memoria de título,
+  Universidad de los Andes.
+
+# Anexos
+
+## Anexos — material de respaldo
+
+::: {.callout-note title="Qué son estas láminas"}
+Lo que sigue **no se expone**: son láminas de respaldo, para responder preguntas
+sin tener que improvisar una cifra o un supuesto.
 :::
 
-# Anexo
+Contenido:
 
-## Fuentes de los datos presentados
+1. **De los ingresos al aporte al PIB** — la cascada P1 → P2 → B1g → D1 + B2g,
+   con las cifras de 2025
+2. **Nota sobre los gráficos** — criterios de diseño y cómo se generan
 
-| Cifra | Cuadro de origen |
-|:--|:--|
-| VAB por segmento y total | Cuadros 5.2, 5.5 y 5.7 |
-| Aporte al PIB | Cuadro 5.7; PIB: BCCh, Cuentas Nacionales Anuales |
-| Cuenta financiera agregada | Cuadro 5.8 |
-| Cobertura del panel DAES | Cuadro 5.1 |
-| Estadística descriptiva | Cuadro 4.3 |
-| Validación externa | Cuadro 5.9; CMF (dic-2025) y BCCh |
-| α = 0,3776 | MIP 2018 BCCh, actividad 94 |
+La trazabilidad de cada cifra hasta su cuadro de origen está en la lámina 15, y
+las referencias bibliográficas completas en las láminas 33 y 34.
+
+## De los ingresos al aporte al PIB
+
+![](figuras/fig_cascada.png)
 
 ::: {.aside-text}
-Ureta, I. & Ruiz Tagle, A. (2026). *Propuesta metodológica para una cuenta
-satélite de las cooperativas de ahorro y crédito en Chile*. Memoria de título,
-Universidad de los Andes.
+**Figura 9** — Cuadro 5.7 de la memoria, fila 2025. Cifras en MM\$ corrientes.
+El valor agregado se reparte entre remuneraciones (D1) y el excedente que queda
+para socios y reservas (B2g).
 :::
 
 ## Nota sobre los gráficos
