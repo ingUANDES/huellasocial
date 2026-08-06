@@ -303,22 +303,6 @@ en el panel. No se rellena, no se interpola, no se proyecta. Es la decisión má
 conservadora posible — y la razón por la que todas las cifras son pisos.
 :::
 
-## Fuentes de los datos presentados
-
-| Cifra | Cuadro de origen |
-|:--|:--|
-| VAB por segmento y total | Cuadros 5.2, 5.5 y 5.7 |
-| Aporte al PIB | Cuadro 5.7; PIB: BCCh, Cuentas Nacionales Anuales |
-| Cuenta financiera agregada | Cuadro 5.8 |
-| Cobertura del panel DAES | Cuadro 5.1 |
-| Estadística descriptiva | Cuadro 4.2 |
-| Validación externa | Cuadro 5.9; CMF (dic-2025) y BCCh |
-| α = 0,3776 | MIP 2018 BCCh, actividad 94 |
-
-::: {.aside-text}
-Cada cifra de esta presentación es rastreable hasta un cuadro de la memoria.
-Referencias completas al cierre.
-:::
 
 ## Control de calidad: el dato pasó por una auditoría independiente
 
@@ -689,6 +673,23 @@ las referencias bibliográficas completas en las láminas 33 y 34.
 **Figura 9** — Cuadro 5.7 de la memoria, fila 2025. Cifras en MM\$ corrientes.
 El valor agregado se reparte entre remuneraciones (D1) y el excedente que queda
 para socios y reservas (B2g).
+:::
+
+## Fuentes de los datos presentados
+
+| Cifra | Cuadro de origen |
+|:--|:--|
+| VAB por segmento y total | Cuadros 5.2, 5.5 y 5.7 |
+| Aporte al PIB | Cuadro 5.7; PIB: BCCh, Cuentas Nacionales Anuales |
+| Cuenta financiera agregada | Cuadro 5.8 |
+| Cobertura del panel DAES | Cuadro 5.1 |
+| Estadística descriptiva | Cuadro 4.2 |
+| Validación externa | Cuadro 5.9; CMF (dic-2025) y BCCh |
+| α = 0,3776 | MIP 2018 BCCh, actividad 94 |
+
+::: {.aside-text}
+Cada cifra de esta presentación es rastreable hasta un cuadro de la memoria.
+Referencias completas al cierre.
 :::
 
 ## Nota sobre los gráficos
