@@ -1,7 +1,7 @@
 ---
 title: "Aplicación de metodología de cuentas satélite a organizaciones sin ánimo de lucro"
 subtitle: "Caso de aplicación: las cooperativas de ahorro y crédito en Chile"
-author: "Sebastián Cea Echenique · Joaquín Fernández"
+author: "Sebastián Cea · Joaquín Fernández"
 date: today
 lang: es
 institute: "Proyecto Huella Social — Laboratorio de Ingeniería Financiera (LIF)\\newline FICA, Universidad de los Andes"
@@ -279,8 +279,9 @@ cooperativas **ya publican**.
 
 ::: {.aside-text}
 Panel total: **42 CAC** con dato financiero en al menos un año — 213 observaciones
-cooperativa × año. La división de 2019 (Ley 20.881) explica la discontinuidad de
-las series DAES: las cooperativas grandes migraron a CMF, no desaparecieron.
+cooperativa × año. El corte lo fija el patrimonio: sobre 400.000 UF la CAC pasa a
+supervisión CMF (DFL N.º 5/2003). Por eso las series DAES se cortan entre 2017 y
+2019: las cooperativas grandes migraron de segmento, no desaparecieron.
 :::
 
 ## Cómo se construyó el panel
@@ -297,6 +298,42 @@ las series DAES: las cooperativas grandes migraron a CMF, no desaparecieron.
 Si una cooperativa no publicó su memoria de un año, ese año simplemente **no está**
 en el panel. No se rellena, no se interpola, no se proyecta. Es la decisión más
 conservadora posible — y la razón por la que todas las cifras son pisos.
+:::
+
+## Fuentes de los datos presentados
+
+| Cifra | Cuadro de origen |
+|:--|:--|
+| VAB por segmento y total | Cuadros 5.2, 5.5 y 5.7 |
+| Aporte al PIB | Cuadro 5.7; PIB: BCCh, Cuentas Nacionales Anuales |
+| Cuenta financiera agregada | Cuadro 5.8 |
+| Cobertura del panel DAES | Cuadro 5.1 |
+| Estadística descriptiva | Cuadro 4.3 |
+| Validación externa | Cuadro 5.9; CMF (dic-2025) y BCCh |
+| α = 0,3776 | MIP 2018 BCCh, actividad 94 |
+
+::: {.aside-text}
+Cada cifra de esta presentación es rastreable hasta un cuadro de la memoria.
+Referencias completas al cierre.
+:::
+
+## Control de calidad: el dato pasó por una auditoría independiente
+
+::: {.callout-tip title="Parte del método, no un resultado"}
+Antes de publicar cifras, se sometieron a una auditoría de datos completa:
+revisión aritmética de los nueve cuadros de resultados, recálculo desde los
+archivos fuente, y verificación de α contra la Matriz Insumo-Producto original
+del Banco Central.
+:::
+
+- Un error aritmético detectado, corregido **en la fórmula fuente** y verificado de
+  forma independiente en las tres capas: texto, dato y tablero público
+- Cero errores adicionales en los ocho cuadros restantes
+- Registro de decisiones metodológicas público y fechado
+
+::: {.aside-text}
+Para un sector que quiere usar estas cifras ante la autoridad, la trazabilidad
+del número importa tanto como el número.
 :::
 
 ## Lo que todavía no se puede medir en Chile
@@ -444,25 +481,6 @@ Ningún año cubre las 38 CAC vigentes; el mejor (2023) llega a 22. Cada memoria
 publicada es valor agregado real que no entra en la cifra.
 :::
 
-## Hallazgo 5 — El resultado resiste una auditoría independiente
-
-::: {.callout-tip title="Proceso de verificación"}
-Los resultados fueron sometidos a una auditoría de datos completa: revisión
-aritmética de los nueve cuadros de resultados, recálculo desde los archivos
-fuente, y verificación del parámetro α contra la Matriz Insumo-Producto
-original del Banco Central.
-:::
-
-- Un error aritmético detectado, corregido **en la fórmula fuente** y verificado de
-  forma independiente en las tres capas: texto, dato y tablero público
-- Cero errores adicionales en los ocho cuadros restantes
-- Registro de decisiones metodológicas público y fechado
-
-::: {.aside-text}
-Para un gremio que quiere usar estas cifras ante la autoridad, la trazabilidad
-del número importa tanto como el número.
-:::
-
 # Qué falta — y qué puede hacer el sector
 
 ## Las cuatro limitaciones que hay que declarar siempre
@@ -547,23 +565,46 @@ depende de cuánto publique el propio sector.
 al resto de la economía social chilena.
 :::
 
-## Gracias
+## Referencias — marcos y aplicaciones nacionales
 
-**Sebastián Cea Echenique · Joaquín Fernández**
+**Marcos metodológicos**
 
-Proyecto Huella Social — Laboratorio de Ingeniería Financiera (LIF)
+- United Nations, European Commission, IMF, OECD & World Bank (2025).
+  *System of National Accounts 2025* (ST/ESA/STAT/SER.F/2/Rev.6). Nueva York.
+- Naciones Unidas (2018). *Satellite Account on Non-profit and Related
+  Institutions and Volunteer Work* (Studies in Methods, Series F, N.º 91, Rev. 1).
+- Barea Tejeiro, J. & Monzón Campos, J. L. (2007). *Manual para la elaboración de
+  las cuentas satélite de las empresas de la economía social: cooperativas y
+  mutuas*. CIRIEC. — **fuente del caso español**
 
-Facultad de Ingeniería y Ciencias Aplicadas, Universidad de los Andes
+**Aplicaciones nacionales citadas**
 
-::: {.callout-note title="Caso de aplicación"}
-Ignacio Ureta y Antonio Ruiz Tagle — memoria de título, Ingeniería Civil
-Industrial, FICA UANDES (2026).
-:::
+- Pedroso, E., Neves, E., Ramos, C. & Rodrigues, C. (2023). *Conta Satélite da
+  Economia Social 2019/2020*. CASES & INE, Lisboa. — **Portugal**
+- Statistics Poland (2021). *Social Economy Satellite Account for Poland 2018*.
+  Varsovia. — **Polonia**
 
-::: {.aside-text}
-Tablero interactivo: [github.com/Iureta1/Dashboard\_HuellaSocial](https://github.com/Iureta1/Dashboard_HuellaSocial) ·
-Metodología y registro de decisiones: `ingUANDES/huellasocial`
-:::
+## Referencias — normativa y fuentes de datos
+
+**Normativa chilena**
+
+- Ministerio de Economía (2003). *DFL N.º 5, Ley General de Cooperativas* —
+  art. 78 (exención) y umbral de 400.000 UF para supervisión CMF.
+- Ley N.º 21.641 de Resiliencia Financiera (2023).
+- Leyes N.º 19.862 (transferencias públicas) y N.º 19.885 (donaciones).
+
+**Fuentes de datos**
+
+- Banco Central de Chile (2026). *PIB por clase de actividad económica*;
+  *Matriz Insumo-Producto 2018*, actividad 94.
+- CMF (2025). *Informe del Desempeño del Sistema Bancario y Cooperativas*, dic.
+- DAES (registro y memorias anuales) y SII (archivo maestro de personas jurídicas).
+
+**Caso de aplicación**
+
+- Ureta, I. & Ruiz Tagle, A. (2026). *Propuesta metodológica para una cuenta
+  satélite de las cooperativas de ahorro y crédito en Chile*. Memoria de título,
+  Universidad de los Andes.
 
 # Anexos
 
@@ -578,9 +619,10 @@ Contenido:
 
 1. **De los ingresos al aporte al PIB** — la cascada P1 → P2 → B1g → D1 + B2g,
    con las cifras de 2025
-2. **Fuentes de los datos presentados** — de qué cuadro de la memoria sale cada
-   número de esta presentación
-3. **Nota sobre los gráficos** — criterios de diseño y cómo se generan
+2. **Nota sobre los gráficos** — criterios de diseño y cómo se generan
+
+La trazabilidad de cada cifra hasta su cuadro de origen está en la lámina 15, y
+las referencias bibliográficas completas en las láminas 33 y 34.
 
 ## De los ingresos al aporte al PIB
 
@@ -589,24 +631,6 @@ Contenido:
 ::: {.aside-text}
 Cifras 2025, MM\$ corrientes. El valor agregado se reparte entre remuneraciones
 (D1) y el excedente que queda para socios y reservas (B2g).
-:::
-
-## Fuentes de los datos presentados
-
-| Cifra | Cuadro de origen |
-|:--|:--|
-| VAB por segmento y total | Cuadros 5.2, 5.5 y 5.7 |
-| Aporte al PIB | Cuadro 5.7; PIB: BCCh, Cuentas Nacionales Anuales |
-| Cuenta financiera agregada | Cuadro 5.8 |
-| Cobertura del panel DAES | Cuadro 5.1 |
-| Estadística descriptiva | Cuadro 4.3 |
-| Validación externa | Cuadro 5.9; CMF (dic-2025) y BCCh |
-| α = 0,3776 | MIP 2018 BCCh, actividad 94 |
-
-::: {.aside-text}
-Ureta, I. & Ruiz Tagle, A. (2026). *Propuesta metodológica para una cuenta
-satélite de las cooperativas de ahorro y crédito en Chile*. Memoria de título,
-Universidad de los Andes.
 :::
 
 ## Nota sobre los gráficos

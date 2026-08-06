@@ -1,7 +1,7 @@
 # Presentación — Cuentas satélite para organizaciones sin ánimo de lucro
 
 *Aplicación de metodología de cuentas satélite a organizaciones sin ánimo de
-lucro*, de Sebastián Cea Echenique y Joaquín Fernández. Presentación de 30
+lucro*, de Sebastián Cea y Joaquín Fernández. Presentación de 30
 minutos ante una audiencia de dirigentes del cooperativismo de ahorro y crédito
 (asociación / confederación nacional de cooperativas), cuyo interés es
 **valorizar el sector** ante la autoridad y la opinión pública.
@@ -38,7 +38,7 @@ respaldo metodológico, y lo que el sector puede hacer para mejorarla.
 ```bash
 python3 gen_figuras.py                  # solo si cambian los datos
 quarto render home.qmd --to revealjs    # → home.html (autocontenido)
-quarto render home.qmd --to beamer      # → home.pdf  (36 láminas, 16:9)
+quarto render home.qmd --to beamer      # → home.pdf  (37 láminas, 16:9)
 ```
 
 Verificación de encuadre: la salida Beamer no debe producir ningún
@@ -58,17 +58,23 @@ texlive-lang-spanish lmodern`.
 |:--|:--|--:|
 | 1. Marco general: qué es una cuenta satélite y qué exige | 3–7 | 7 |
 | 2. Caso de aplicación: las CAC | 8–11 | 5 |
-| 3. De dónde salen los datos | 12–15 | 4 |
-| 4. El sector en cifras | 16–21 | 6 |
-| 5. Resultados y hallazgos | 22–26 | 5 |
-| 6. Qué falta — y qué puede hacer el sector | 27–30 | 3 |
-| Cierre | 31–32 | — |
-| Anexos | 33–36 | — |
+| 3. De dónde salen los datos y cómo se verifican | 12–17 | 5 |
+| 4. El sector en cifras | 18–23 | 6 |
+| 5. Resultados y hallazgos | 24–27 | 4 |
+| 6. Qué falta — y qué puede hacer el sector | 28–31 | 3 |
+| Cierre | 32 | — |
+| Referencias | 33–34 | — |
+| Anexos | 35–37 | — |
 
-Los anexos (láminas 33–36) **no se exponen**: son respaldo para preguntas. La
-lámina 33 los abre e indica qué contienen. La cascada P1 → P2 → B1g (lámina 34)
-vive ahí porque el detalle del cálculo solo hace falta si alguien lo pregunta:
-la lámina 6 ya entrega la ecuación, que es lo que la exposición necesita.
+El bloque 3 cierra con dos láminas de método, no de resultado: la **15** hace
+rastreable cada cifra hasta su cuadro de origen, y la **16** documenta la
+auditoría de datos. Esta última era el "Hallazgo 5": presentarla como control de
+calidad del método, y no como un hallazgo del caso, evita que se lea como un
+resultado del sector cuando es una propiedad del procedimiento.
+
+Las referencias van juntas en las láminas 33–34, y ninguna otra lámina repite
+citas completas. Los anexos (35–37) **no se exponen**: son respaldo para
+preguntas.
 
 ## Trazabilidad de las cifras
 
