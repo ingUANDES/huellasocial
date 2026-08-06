@@ -225,18 +225,18 @@ sector financiero.
 entre sí.
 :::
 ::: {.column width="48%"}
-::: {.callout-note title="Heterogeneidad detectada"}
-Coopeuch, Oriencoop y Coonfía: **0,23–0,28**
-
-CAPUAL y AHORROCOOP: **≈ 0,72**
+::: {.callout-note title="Indicio de heterogeneidad"}
+La revisión de los estados financieros auditados sugiere que las razones reales
+P2/P1 **se apartan del promedio sectorial en ambas direcciones**, según la
+entidad.
 :::
 :::
 ::::
 
 ::: {.callout-tip title="Lectura honesta"}
-Esto es una estimación de **orden de magnitud**, no una medición exacta. Afinar
-α por tipo de cooperativa es la primera mejora pendiente — y requiere
-desglose contable que hoy solo publican cinco entidades.
+Esto es una estimación de **orden de magnitud**, no una medición exacta.
+Cuantificar esa dispersión y recalibrar α es la primera mejora pendiente: exige
+un desglose de gastos que hoy solo permite un puñado de entidades supervisadas.
 :::
 
 # De dónde salen los datos
@@ -419,6 +419,37 @@ Aporte esperado = "Servicios financieros" en el PIB (BCCh) × 2,41 % de peso
 patrimonial (CMF dic-2025). Dos cálculos independientes, el mismo orden de magnitud.
 :::
 
+## ¿Es mucho o poco? Contraste de órdenes de magnitud
+
+![](figuras/fig_contraste_internacional.png)
+
+::: {.aside-text}
+España: INE, *Cuenta Satélite de la Economía Social* (2026). Portugal: INE &
+CASES, *Conta Satélite da Economia Social 2019/2020*. Polonia: Statistics Poland
+(2021).
+:::
+
+## La comparación correcta es contra lo que Chile todavía no mide
+
+::: {.callout-important title="No son cifras equivalentes"}
+España, Portugal y Polonia miden **toda su economía social**; Chile midió **un
+solo subsector**. La distancia entre 0,082 % y 4 % no mide tamaño económico:
+mide cuánto se ha medido.
+:::
+
+Dentro del sistema financiero chileno, en cambio, la cifra sí es comparable:
+
+| Referencia | % del PIB (2025) |
+|:--|--:|
+| Servicios financieros — sector completo (BCCh) | 3,1 |
+| **Cooperativas de ahorro y crédito** | **0,082** |
+
+::: {.aside-text}
+Las CAC son un **2,6 %** del valor agregado financiero del país. La CMF, por una
+vía independiente, les atribuye un **2,41 %** del patrimonio del sistema bancario
+y cooperativo: dos mediciones distintas que coinciden.
+:::
+
 ## Hallazgo 1 — La caída del aporte no es una caída del sector
 
 ::: {.callout-note title="Lo que dice el gráfico"}
@@ -570,12 +601,11 @@ al resto de la economía social chilena.
 **Marcos metodológicos**
 
 - United Nations, European Commission, IMF, OECD & World Bank (2025).
-  *System of National Accounts 2025* (ST/ESA/STAT/SER.F/2/Rev.6). Nueva York.
+  *System of National Accounts 2025* (ST/ESA/STAT/SER.F/2/Rev.6).
 - Naciones Unidas (2018). *Satellite Account on Non-profit and Related
-  Institutions and Volunteer Work* (Studies in Methods, Series F, N.º 91, Rev. 1).
+  Institutions and Volunteer Work*. Studies in Methods, Series F, N.º 91, Rev. 1.
 - Barea Tejeiro, J. & Monzón Campos, J. L. (2007). *Manual para la elaboración de
-  las cuentas satélite de las empresas de la economía social: cooperativas y
-  mutuas*. CIRIEC. — **fuente del caso español**
+  las cuentas satélite de las empresas de la economía social*. CIRIEC.
 
 **Aplicaciones nacionales citadas**
 
@@ -583,6 +613,8 @@ al resto de la economía social chilena.
   Economia Social 2019/2020*. CASES & INE, Lisboa. — **Portugal**
 - Statistics Poland (2021). *Social Economy Satellite Account for Poland 2018*.
   Varsovia. — **Polonia**
+- Instituto Nacional de Estadística (2026). *Cuenta Satélite de la Economía
+  Social, serie 2019–2023*. Madrid. — **España, cifra de contraste**
 
 ## Referencias — normativa y fuentes de datos
 

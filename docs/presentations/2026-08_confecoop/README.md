@@ -38,7 +38,7 @@ respaldo metodológico, y lo que el sector puede hacer para mejorarla.
 ```bash
 python3 gen_figuras.py                  # solo si cambian los datos
 quarto render home.qmd --to revealjs    # → home.html (autocontenido)
-quarto render home.qmd --to beamer      # → home.pdf  (37 láminas, 16:9)
+quarto render home.qmd --to beamer      # → home.pdf  (39 láminas, 16:9)
 ```
 
 Verificación de encuadre: la salida Beamer no debe producir ningún
@@ -60,11 +60,11 @@ texlive-lang-spanish lmodern`.
 | 2. Caso de aplicación: las CAC | 8–11 | 5 |
 | 3. De dónde salen los datos y cómo se verifican | 12–17 | 5 |
 | 4. El sector en cifras | 18–23 | 6 |
-| 5. Resultados y hallazgos | 24–27 | 4 |
-| 6. Qué falta — y qué puede hacer el sector | 28–31 | 3 |
-| Cierre | 32 | — |
-| Referencias | 33–34 | — |
-| Anexos | 35–37 | — |
+| 5. Contraste y hallazgos | 24–29 | 5 |
+| 6. Qué falta — y qué puede hacer el sector | 30–33 | 3 |
+| Cierre | 34 | — |
+| Referencias | 35–36 | — |
+| Anexos | 37–39 | — |
 
 El bloque 3 cierra con dos láminas de método, no de resultado: la **15** hace
 rastreable cada cifra hasta su cuadro de origen, y la **16** documenta la
@@ -75,6 +75,24 @@ resultado del sector cuando es una propiedad del procedimiento.
 Las referencias van juntas en las láminas 33–34, y ninguna otra lámina repite
 citas completas. Los anexos (35–37) **no se exponen**: son respaldo para
 preguntas.
+
+## Contraste de órdenes de magnitud (láminas 24–25)
+
+Las láminas 24 y 25 comparan la cifra chilena con países que ya tienen cuenta
+satélite de la economía social. La comparación es deliberadamente incómoda y hay
+que exponerla con cuidado: España (4,0 % del VAB, 2023), Portugal (3,2 %, 2020) y
+Polonia (1,94 %, 2018) miden **toda** su economía social, mientras Chile midió
+**un solo subsector** (0,082 %). La brecha mide cobertura de medición, no tamaño
+económico, y la lámina 25 lo dice explícitamente para que nadie la lea al revés.
+
+El contraste que sí es válido va en la misma lámina 25: dentro del sistema
+financiero chileno las CAC son 0,082 % del PIB frente al 3,1 % de los servicios
+financieros completos (BCCh), es decir un 2,6 % del sector — coherente con el
+2,41 % de participación patrimonial que la CMF calcula por una vía
+independiente.
+
+Fuentes internacionales verificadas contra la publicación original de cada
+oficina estadística; van citadas en la lámina 35.
 
 ## Trazabilidad de las cifras
 

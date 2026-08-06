@@ -285,10 +285,44 @@ def fig_regional():
                  loc="left", pad=14)
     guardar(fig, "fig_regional.png")
 
+# ── Fig. 9 — Contraste internacional de órdenes de magnitud ────────────────
+def fig_contraste():
+    """Aporte de la economía social al VAB/PIB nacional en países que ya tienen
+    cuenta satélite, contra la cifra chilena.
+
+    ATENCIÓN AL LEER ESTA FIGURA: las tres primeras barras cubren la economía
+    social completa; la chilena cubre un solo subsector (las CAC). La diferencia
+    no mide tamaño económico, mide cobertura de medición. Fuentes en el
+    encabezado de cada entrada.
+    """
+    etiquetas = [
+        "Chile — solo CAC\n(2025)",
+        "Polonia — economía social\n(2018)",
+        "Portugal — economía social\n(2020)",
+        "España — economía social\n(2023)",
+    ]
+    valores = [0.082, 1.94, 3.2, 4.0]
+    colores = [ROJO, AZUL, AZUL, AZUL]
+
+    fig, ax = plt.subplots(figsize=(10, 4.6))
+    ax.barh(etiquetas, valores, color=colores, height=0.62)
+    for e, v in zip(etiquetas, valores):
+        texto = f"{v:.3f}".rstrip("0").rstrip(".").replace(".", ",") if v < 1 else f"{v}".replace(".", ",")
+        ax.text(v + 0.09, e, texto + " %", va="center", fontsize=11.5, color=TINTA)
+    ax.set_xlim(0, 4.9)
+    ax.set_xlabel("Valor agregado del sector, como % del total nacional")
+    ax.grid(axis="x")
+    ax.set_axisbelow(True)
+    ax.tick_params(axis="y", length=0)
+    ax.set_title("Chile mide un subsector; los demás miden toda la economía social",
+                 loc="left", pad=14)
+    guardar(fig, "fig_contraste_internacional.png")
+
 
 if __name__ == "__main__":
     fig_ecuacion()
     fig_regional()
+    fig_contraste()
     fig_vab_segmentos()
     fig_aporte_pib()
     fig_cascada()
