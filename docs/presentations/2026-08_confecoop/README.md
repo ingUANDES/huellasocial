@@ -38,7 +38,7 @@ respaldo metodológico, y lo que el sector puede hacer para mejorarla.
 ```bash
 python3 gen_figuras.py                  # solo si cambian los datos
 quarto render home.qmd --to revealjs    # → home.html (autocontenido)
-quarto render home.qmd --to beamer      # → home.pdf  (39 láminas, 16:9)
+quarto render home.qmd --to beamer      # → home.pdf  (40 láminas, 16:9)
 ```
 
 Verificación de encuadre: la salida Beamer no debe producir ningún
@@ -59,12 +59,12 @@ texlive-lang-spanish lmodern`.
 | 1. Marco general: qué es una cuenta satélite y qué exige | 3–7 | 7 |
 | 2. Caso de aplicación: las CAC | 8–11 | 5 |
 | 3. De dónde salen los datos y cómo se verifican | 12–17 | 5 |
-| 4. El sector en cifras | 18–23 | 6 |
-| 5. Contraste y hallazgos | 24–29 | 5 |
-| 6. Qué falta — y qué puede hacer el sector | 30–33 | 3 |
-| Cierre | 34 | — |
-| Referencias | 35–36 | — |
-| Anexos | 37–39 | — |
+| 4. El sector en cifras | 18–24 | 6 |
+| 5. Contraste y hallazgos | 25–30 | 5 |
+| 6. Qué falta — y qué puede hacer el sector | 31–34 | 3 |
+| Cierre | 35 | — |
+| Referencias | 36–37 | — |
+| Anexos | 38–40 | — |
 
 El bloque 3 cierra con dos láminas de método, no de resultado: la **15** hace
 rastreable cada cifra hasta su cuadro de origen, y la **16** documenta la
@@ -93,6 +93,32 @@ independiente.
 
 Fuentes internacionales verificadas contra la publicación original de cada
 oficina estadística; van citadas en la lámina 35.
+
+## Numeración de figuras y cuadros
+
+Cada figura y cuadro de la presentación lleva su propio número correlativo
+(Figura 1–9, Cuadro 1–3) **y** la referencia al cuadro o figura equivalente de la
+memoria, para poder saltar de la lámina al documento. El mapeo:
+
+| Presentación | Memoria |
+|:--|:--|
+| Figura 1 — VAB por segmento | Cuadros 5.2, 5.5 y 5.7 |
+| Figura 2 — reparto del VAB en niveles | Cuadro 5.7 |
+| Figura 3 — reparto del VAB en proporción (0–100 %) | Cuadro 5.7, normalizado |
+| Figura 4 — balance agregado | Cuadro 5.8 |
+| Figura 5 — distribución regional | Figura 5.3 |
+| Figura 6 — aporte al PIB y validación | Cuadros 5.7 y 5.9 |
+| Figura 7 — contraste internacional | sin equivalente (nueva) |
+| Figura 8 — cobertura del panel DAES | Cuadro 5.1 |
+| Figura 9 — cascada P1 → B1g (anexo) | Cuadro 5.7, fila 2025 |
+| Cuadro 1 — fuentes administrativas | Cuadro 4.1 |
+| Cuadro 2 — variables no construibles | Cuadro 4.6 |
+| Cuadro 3 — estadística descriptiva | Cuadro 4.2 |
+
+Las Figuras 2 y 3 son deliberadamente la misma información en dos vistas: la 2 en
+niveles (ambos componentes crecen) y la 3 normalizada a 100 % (la proporción es
+estable). Sin la 3 no se puede responder qué parte del valor agregado va a
+remuneraciones, porque el crecimiento del nivel absoluto lo enmascara.
 
 ## Trazabilidad de las cifras
 

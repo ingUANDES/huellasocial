@@ -318,6 +318,42 @@ def fig_contraste():
                  loc="left", pad=14)
     guardar(fig, "fig_contraste_internacional.png")
 
+# ── Fig. 10 — Reparto del VAB en proporción (0–100 %) ──────────────────────
+def fig_reparto_pct():
+    """Misma información que fig_reparto_vab, pero normalizada: responde qué
+    PROPORCIÓN del valor agregado va a remuneraciones y cuánta a excedente,
+    sin que el crecimiento del nivel absoluto distorsione la lectura."""
+    tot = [d + b for d, b in zip(D1_TOT, B2G_TOT)]
+    d1_pct = [100 * d / t for d, t in zip(D1_TOT, tot)]
+    b2g_pct = [100 * b / t for b, t in zip(B2G_TOT, tot)]
+
+    fig, ax = plt.subplots(figsize=(10, 4.6))
+    ax.bar(ANIOS, d1_pct, color=AZUL, width=0.66, label="Remuneraciones (D1)")
+    ax.bar(ANIOS, b2g_pct, bottom=d1_pct, color=AMBAR, width=0.66,
+           linewidth=2, edgecolor=SUP, label="Excedente bruto de explotación (B2g)")
+
+    for a, d in zip(ANIOS, d1_pct):
+        ax.text(a, d / 2, f"{d:.0f}", ha="center", va="center",
+                fontsize=10, color="white")
+    ax.axhline(50, color=TINTA, linestyle=(0, (4, 3)), linewidth=1.2, zorder=3)
+    ax.text(2012.6, 52, "50 %", color=TINTA, fontsize=9.5)
+
+    ax.set_ylim(0, 100)
+    ax.set_yticks([0, 25, 50, 75, 100])
+    ax.yaxis.set_major_formatter(FuncFormatter(lambda v, _: f"{v:.0f} %"))
+    ax.set_ylabel("Composición del valor agregado")
+    ax.set_xticks(ANIOS)
+    ax.set_xticklabels(ANIOS, fontsize=10)
+    ax.set_xlim(2012.3, 2025.7)
+    ax.grid(axis="y")
+    ax.set_axisbelow(True)
+    ax.legend(frameon=False, loc="lower left", fontsize=10.5,
+              bbox_to_anchor=(0, -0.32), ncol=2)
+    ax.set_title("En proporción, el reparto es estable: la participación salarial\n"
+                 "va de 38 % en 2013 a 44 % en 2025, sin quiebres",
+                 loc="left", pad=14)
+    guardar(fig, "fig_reparto_pct.png")
+
 
 if __name__ == "__main__":
     fig_ecuacion()
@@ -329,3 +365,4 @@ if __name__ == "__main__":
     fig_cobertura()
     fig_balance()
     fig_reparto()
+    fig_reparto_pct()
