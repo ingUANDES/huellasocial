@@ -51,6 +51,7 @@ for x, y, n in zip(anios_cmf, b1g_cmf, n_cmf):
 
 ax1.set_ylabel("MM$")
 ax2.set_ylabel("Aporte PIB (%)")
+ax2.set_ylim(0, 0.13)
 ax1.set_xticks(anios_cmf)
 ax1.set_xticklabels(anios_cmf, rotation=45, ha="right")
 ax1.margins(x=0.02)
