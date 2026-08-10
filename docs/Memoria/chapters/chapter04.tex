@@ -453,15 +453,43 @@ todos los años.
 A partir de las fuentes anteriores se construyó una base
 limpia que contiene exclusivamente las variables necesarias
 para la cuenta satélite, organizada como un panel de
-observaciones CAC~$\times$~año. Cada fila corresponde a una
-cooperativa en un año determinado para el que existe
-información financiera disponible; las observaciones sin
-datos para un período específico no se incluyen en el panel
-y no se realiza imputación ni se utilizan proxies para cubrir
-años faltantes. El panel consolidado del segmento DAES suma
-133~observaciones y el del segmento CMF 91~observaciones,
-conformando en conjunto la base de estimación de la cuenta
-satélite.
+observaciones CAC~$\times$~año. Se define como
+\textbf{observación} una combinación cooperativa-año para la
+cual existe al menos el dato de producción total (P1)
+disponible en el estado de resultados correspondiente,
+variable que constituye el insumo mínimo indispensable para
+el cálculo del VAB. Las observaciones sin datos para un
+período específico no se incluyen en el panel y no se realiza
+imputación ni se utilizan proxies para cubrir años faltantes.
+
+El levantamiento inicial del segmento DAES identificó
+133~filas cooperativa-año para el período 2014--2024. De
+estas, 4 corresponden a cooperativas con otras variables
+disponibles pero sin dato de P1 (y por tanto no constituyen
+observaciones bajo la definición anterior), y 7 corresponden
+a registros duplicados de carga de la misma cooperativa y año
+detectados en el proceso de depuración, cuya inclusión doble
+habría sobreestimado el agregado sectorial. El panel de
+estimación del segmento DAES queda así conformado por
+122~observaciones. El segmento CMF, con cobertura completa y
+sin ambigüedades de carga, suma 91~observaciones para el
+período 2013--2025.
+
+Respecto de la vigencia legal de las cooperativas, el panel
+de estimación se construye exclusivamente en función de la
+disponibilidad de datos financieros y no excluye
+explícitamente a entidades que hayan sido disueltas o hayan
+cesado actividades con posterioridad al último período con
+información disponible: una cooperativa que reportó datos
+válidos en un año determinado se mantiene en el panel para
+ese año independientemente de su estado legal actual. Esta
+definición es consistente con el objetivo de la cuenta
+satélite de medir la actividad económica efectivamente
+generada por el sector en cada período, y explica además por
+qué el universo de cooperativas del panel de estimación
+(42, sección~\ref{sec:sintesis_trabajo}) difiere del número de cooperativas
+vigentes según el registro consolidado del proyecto
+(36, Figura~\ref{fig:dash_regional}).
 % ============================================================
 \newpage
 \subsection{Operacionalización de variables del SCN}
@@ -777,7 +805,7 @@ La estimación descansa en los siguientes supuestos principales:
     sentido del SCN 2025 (párr.~7.169) para cooperativas
     financieras de mercado.
     \item La razón CI/P es homogénea entre organizaciones
-    del mismo tipo ($\alpha = 0{,}3776$).
+    del mismo tipo ($\alpha = 0{,}3776$). El valor de $\alpha = 0{,}3776$ corresponde a la suma de la columna de coeficientes técnicos directos de la actividad 94 (Intermediación financiera) en la Matriz Insumo-Producto 2018 del Banco Central de Chile (111 actividades), equivalente a la razón consumo intermedio/producción bruta de dicho sector." \cite{banco_central_de_chile_matriz_2018}
     \item Las CAC identificadas en la DAES corresponden al
     universo activo del sector durante el período analizado.
 \end{itemize}
